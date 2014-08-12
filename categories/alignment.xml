@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (alignment)</title><link>https://vivekiitkgp.github.io/</link><description></description><language>en</language><lastBuildDate>Tue, 12 Aug 2014 11:05:17 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (alignment)</title><link>https://vivekiitkgp.github.io/</link><description></description><language>en</language><lastBuildDate>Tue, 12 Aug 2014 12:10:46 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
 mission recently with few one of contributions to &lt;a class="reference external" href="http://www.sequenceserver.com/"&gt;SequenceServer - A BLAST tool&lt;/a&gt;, which lets you set up custom BLAST+ server to perform BLAST queries with your
 own database locally or through a web interface. For those who are not familiar
 with &lt;strong&gt;BLAST&lt;/strong&gt; or Basic Local Search Alignment Tool &lt;a class="citation-reference" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#paper" id="id1"&gt;[paper]&lt;/a&gt; - it is an algorithm which allows
@@ -9,4 +9,22 @@ biologists all over the world to study newer organisms, discovery of genes and
 finding similarity between proteins and so on. One can see a working instance of the tool at
 &lt;a class="reference external" href="http://antgenomes.org/blast"&gt;Ant Genomes&lt;/a&gt; website, maintained by one of the developers and
 Professor at Queen Mary University London, &lt;a class="reference external" href="http://www.sbcs.qmul.ac.uk/staff/yannickwurm.html"&gt;Yannick Wurm&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item></channel></rss>
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;The program has already completed its major part of development and its stable version
+is readily available for use. However, there were many &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues"&gt;pending issues&lt;/a&gt; or feature requests
+that were pending and can be worked upon. I got in touch with the maintainers and submitted
+three pull requests for small few bugs and a feature. It was nothing a big task but I was
+quite motivated with this small experience of working with the community, engaging with
+the developers and obviously working with git. Also, since the tool is written in Ruby, I
+had to spend some time brushing up the concepts of Ruby and understanding the code structure,
+and methodologies followed for the development. Ruby is a concise and appealing language which is not very tough to
+understand once you are with the flow. Anyway, I plan to continue my contribution to sequenceserver
+for quite some time and also encourage you to take a look if you are even just a little bit of
+Biology enthusiast.&lt;/p&gt;
+&lt;p&gt;I will talk more about BLAST algorithm in general in my next post.&lt;/p&gt;
+&lt;table class="docutils citation" frame="void" id="paper" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#id1"&gt;[paper]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;: &lt;a class="reference external" href="http://www.blastalgorithm.com/"&gt;http://www.blastalgorithm.com/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item></channel></rss>
