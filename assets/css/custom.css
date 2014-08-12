@@ -1,0 +1,18 @@
+.social-icons {
+    right: 10px;
+    top: 50px;
+    margin: auto;
+    z-index: 2;
+    position: fixed;
+    list-style: none;
+    font-size: 40px;
+}
+
+.social-icons li {
+    padding: 10px;
+    line-height: 30px;
+}
+
+.social-icons li a:hover {
+    color: brown;
+}

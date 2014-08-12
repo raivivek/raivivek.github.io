@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Tue, 12 Aug 2014 11:05:17 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Understanding BLAST Output</title><link>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;In the last post, I mentioned about a project I was trying to work on -
+&lt;a href="http://www.sequenceserver.com"&gt;SequenceServer&lt;/a&gt;. Also, in the end I said that
+I would be writing about the BLAST algorithm (which is the backbone of this project) 
+and how does it works so efficiently in producing alignments even with very long 
+sequences. However, In this post I would like to talk about BLAST program and 
+it's output before we go into the algorithm some time later.&lt;/p&gt;
+&lt;p&gt;After talking to &lt;a href="https://github.com/yeban"&gt;Priyam&lt;/a&gt; (one of the project
+collaborators), I decided to work towards solving the &lt;a href="https://github.com/yannickwurm/sequenceserver/issues/21"&gt;issue
+21&lt;/a&gt;, which in turn
+would help us to solve a large number of other dependent issues as well. This
+was supposed to be a major improvement and I really liked the idea of it.
+Especially since it was concerned with understanding the BLAST program and its
+output format.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;</description><category>blast</category><category>ruby</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</guid><pubDate>Sat, 12 Jul 2014 21:17:45 GMT</pubDate></item><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
+mission recently with few one of contributions to &lt;a class="reference external" href="http://www.sequenceserver.com/"&gt;SequenceServer - A BLAST tool&lt;/a&gt;, which lets you set up custom BLAST+ server to perform BLAST queries with your
+own database locally or through a web interface. For those who are not familiar
+with &lt;strong&gt;BLAST&lt;/strong&gt; or Basic Local Search Alignment Tool &lt;a class="citation-reference" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#paper" id="id1"&gt;[paper]&lt;/a&gt; - it is an algorithm which allows
+quick comparison of biological sequence information like amino acids (in case of
+proteins) or nucleotides (in case of nucleic acids). It is exceedingly used by
+biologists all over the world to study newer organisms, discovery of genes and
+finding similarity between proteins and so on. One can see a working instance of the tool at
+&lt;a class="reference external" href="http://antgenomes.org/blast"&gt;Ant Genomes&lt;/a&gt; website, maintained by one of the developers and
+Professor at Queen Mary University London, &lt;a class="reference external" href="http://www.sbcs.qmul.ac.uk/staff/yannickwurm.html"&gt;Yannick Wurm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item><item><title>Blogging is fun!</title><link>https://vivekiitkgp.github.io/blog/blogging-is-fun.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Writing a blog and personalized webpage had been one of primary tasks on my
+mind for quite a long time. However, Always I was caught in some acitivity
+thereby preventing it to happen. Finally, after lurking through many
+static website generators, I decided to go ahead with the &lt;a class="reference external" href="http://getnikola.com"&gt;Nikola&lt;/a&gt; and Github
+Pages pair as the best combination. Static websites are easy to maintain,
+fun, and simply effective for most of my needs. It took some time to get hold
+of how these work but in the process I learned about &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Web_template_system"&gt;templating engines&lt;/a&gt;,
+few javascript libraries and how they are used.&lt;/p&gt;
+&lt;p&gt;Like all my other projects, the source code for this site is also made
+available on &lt;a class="reference external" href="https://github.com/vivekiitkgp/vivekiitkgp.github.io/"&gt;Github&lt;/a&gt;. Obviously, whatever I have created is very premature
+and just a working solution. If anyone has anything to say, just drop in an email
+or fork the site and send me a pull request. I would be happy to accept constructive
+changes. In the meantime, the looks and structure of the site will be subjected to frequent
+modifications.&lt;/p&gt;</description><guid>https://vivekiitkgp.github.io/blog/blogging-is-fun.html</guid><pubDate>Sat, 03 May 2014 13:11:08 GMT</pubDate></item></channel></rss>

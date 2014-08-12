@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (genes)</title><link>https://vivekiitkgp.github.io/</link><description></description><language>en</language><lastBuildDate>Tue, 12 Aug 2014 11:05:17 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
+mission recently with few one of contributions to &lt;a class="reference external" href="http://www.sequenceserver.com/"&gt;SequenceServer - A BLAST tool&lt;/a&gt;, which lets you set up custom BLAST+ server to perform BLAST queries with your
+own database locally or through a web interface. For those who are not familiar
+with &lt;strong&gt;BLAST&lt;/strong&gt; or Basic Local Search Alignment Tool &lt;a class="citation-reference" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#paper" id="id1"&gt;[paper]&lt;/a&gt; - it is an algorithm which allows
+quick comparison of biological sequence information like amino acids (in case of
+proteins) or nucleotides (in case of nucleic acids). It is exceedingly used by
+biologists all over the world to study newer organisms, discovery of genes and
+finding similarity between proteins and so on. One can see a working instance of the tool at
+&lt;a class="reference external" href="http://antgenomes.org/blast"&gt;Ant Genomes&lt;/a&gt; website, maintained by one of the developers and
+Professor at Queen Mary University London, &lt;a class="reference external" href="http://www.sbcs.qmul.ac.uk/staff/yannickwurm.html"&gt;Yannick Wurm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item></channel></rss>
