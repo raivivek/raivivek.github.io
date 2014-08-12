@@ -505,6 +505,14 @@ ul.breadcrumb > li:before {
     content: " / ";
 }
 
+.footnote {
+    font-size: 10px;
+}
+
+.label {
+    font-size: 10px;
+}
+
 .social-icons {
     right: 10px;
     top: 50px;
