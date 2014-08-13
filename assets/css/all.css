@@ -428,7 +428,7 @@ table.codetable { width: 100%;} td.linenos {text-align: right; width: 4em;}
 
 #container {
     width: 960px;
-    margin: 0 auto;
+    margin: 0px auto 10px auto;
 }
 
 #content {
