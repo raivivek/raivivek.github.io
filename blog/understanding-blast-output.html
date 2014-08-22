@@ -56,36 +56,41 @@ MathJax.Hub.Config({
     <div class="postdiv">
     <a href="#"><h2>Understanding BLAST Output</h2></a>
     <p>In the last post, I mentioned about a project I was trying to work on -
-<a href="http://www.sequenceserver.com">SequenceServer</a>. Also, in the end I said that
-I would be writing about the BLAST algorithm (which is the backbone of this project) 
-and how does it works so efficiently in producing alignments even with very long 
-sequences. However, In this post I would like to talk about BLAST program and 
-it's output before we go into the algorithm some time later.</p>
-<p>After talking to <a href="https://github.com/yeban">Priyam</a> (one of the project
-collaborators), I decided to work towards solving the <a href="https://github.com/yannickwurm/sequenceserver/issues/21">issue
-21</a>, which in turn
-would help us to solve a large number of other dependent issues as well. This
-was supposed to be a major improvement and I really liked the idea of it.
-Especially since it was concerned with understanding the BLAST program and its
-output format.
-<!-- TEASER_END --></p>
-<p><em>Background</em>: <a href="https://github.com/yannickwurm/sequenceserver/issues/21">Issue 21</a> 
-deals with displaying an overview graphic for the output
-results obtained from blasting. This is a nice feature as it adds more towards
-visualizing and understanding the data easily (than going over a large number of hits
-in many cases). The problem however is that because of the hacky way in which the
-current implementation worked for displaying the final output results, it was not
-very easy to work with generation of visuals. The data generated from BLAST output
-had to be parsed first into a data layer and then interfaced with other features like
-displaying overview graphic or other rich information. This required three things from
-my side - Ruby, BLAST and Patience.</p>
-<h3>[x] Part I</h3>
-<p><strong>BLAST Output</strong>: The blast output format can be reconfigured using the <code>outfmt</code>
-option which is described in the NCBI's <a href="www.ncbi.nlm.nih.gov/books/NBK1763/#!po=91.5094">BLAST
-Manual</a>. The
-sample XML output (standard settings) has the following structure (for a real
-example <a href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml">blast.xml</a>):</p>
-<pre class="code literal-block"><span class="nx">.</span><span class="o">?</span><span class="kt">xml</span> <span class="n">version</span><span class="o">=</span><span class="s2">"1.0"</span><span class="cp">?&gt;</span>
+<a class="reference external" href="http://www.sequenceserver.com">SequenceServer</a>. Also, in the end I
+said that I would be writing about the BLAST algorithm (which is the
+backbone of this project) and how does it works so efficiently in
+producing alignments even with very long sequences. However, In this
+post I would like to talk about BLAST program and it's output before we
+go into the algorithm some time later.</p>
+<p>After talking to <a class="reference external" href="https://github.com/yeban">Priyam</a> (one of the
+project collaborators), I decided to work towards solving the <a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21">issue
+21</a>, which
+in turn would help us to solve a large number of other dependent issues
+as well. This was supposed to be a major improvement and I really liked
+the idea of it. Especially since it was concerned with understanding the
+BLAST program and its output format.</p>
+<p><em>Background</em>: <a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21">Issue
+21</a> deals
+with displaying an overview graphic for the output results obtained from
+blasting. This is a nice feature as it adds more towards visualizing and
+understanding the data easily (than going over a large number of hits in
+many cases). The problem however is that because of the hacky way in
+which the current implementation worked for displaying the final output
+results, it was not very easy to work with generation of visuals. The
+data generated from BLAST output had to be parsed first into a data
+layer and then interfaced with other features like displaying overview
+graphic or other rich information. This required three things from my
+side - Ruby, BLAST and Patience.</p>
+<div class="section" id="x-part-i">
+<h2>[x] Part I</h2>
+<p><strong>BLAST Output</strong>: The blast output format can be reconfigured using the
+<tt class="docutils literal">outfmt</tt> option which is described in the NCBI's <a class="reference external" href="www.ncbi.nlm.nih.gov/books/NBK1763/#!po=91.5094">BLAST
+Manual</a>.
+The sample XML output (standard settings) has the following structure
+(for a real example
+<a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml">blast.xml</a>):</p>
+<pre class="code xml literal-block">
+.?xml version="1.0"?&gt;
 <span class="cp">&lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&gt;</span>
 <span class="nt">&lt;BlastOutput&gt;</span>
   <span class="nt">&lt;BlastOutput_program&gt;</span>
@@ -129,69 +134,73 @@ example <a href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-b
 <span class="nt">&lt;/BlastOutput_iterations&gt;</span>
 <span class="nt">&lt;/BlastOutput&gt;</span>
 </pre>
-
-
-<p>The XML output is as detailed as it could be including all the information
-about
-Hit's <a href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair">HSP</a>, the
-<code>query database</code>, <code>alignment lengths</code>, the <code>query and aligned sequences</code> along with
-the matches between them, and <code>query statistics</code>. This is as useful as it could be
-and helps to generate very detailed statistics and overview too. I would
-recommend one to look at the given example of blast.xml to understand what kind
-of data is generated. To parse this generated XML output easily, I used the
-<a href="https://rubygems.org/gems/ox">Ox</a> rubygem, which is a simple and
-<a href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html">faster</a> alternative
-of other XML parsers available in Ruby. In the beginning, I generated a simple
-Hash out of this parsed data using recursive traversal along the elements.</p>
-<pre class="code literal-block"><span class="n">def</span> <span class="n">report</span><span class="o">!</span> 
-    <span class="err">#</span> <span class="n">Generates</span> <span class="n">BLAST</span> <span class="n">report</span> <span class="n">which</span> <span class="n">one</span> <span class="n">or</span> <span class="n">more</span> <span class="n">multiple</span> <span class="n">Query</span> <span class="n">objects</span>
-    <span class="err">#</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">blast</span> <span class="n">query</span> <span class="n">string</span><span class="p">.</span>
-    <span class="n">parsed_out</span> <span class="o">=</span> <span class="n">Ox</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="err">@</span><span class="n">result</span><span class="p">)</span>
-    <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="p">.</span><span class="n">root</span><span class="p">)</span>
-    <span class="err">@</span><span class="n">program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="p">[</span><span class="s">"BlastOutput_program"</span><span class="p">]</span>
-    <span class="err">@</span><span class="n">querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="p">[</span><span class="s">"BlastOutput_db"</span><span class="p">]</span>
-
-    <span class="n">hashed_out</span><span class="p">[</span><span class="s">"BlastOutput_iterations"</span><span class="p">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
-        <span class="err">@</span><span class="n">queries</span> <span class="o">||=</span> <span class="p">{}</span>
-        <span class="err">@</span><span class="n">queries</span><span class="p">[</span><span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Query</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">n</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">{},</span> <span class="n">n</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="s">"Statistics"</span><span class="p">])</span>
-
-        <span class="err">#</span> <span class="n">Ensure</span> <span class="n">a</span> <span class="n">hit</span> <span class="n">object</span> <span class="n">is</span> <span class="n">received</span><span class="p">.</span> <span class="n">No</span> <span class="n">hits</span><span class="p">,</span> <span class="n">returns</span> <span class="n">a</span> <span class="n">newline</span><span class="p">.</span>
-        <span class="err">#</span> <span class="n">Note</span> <span class="n">that</span> <span class="n">checking</span> <span class="n">to</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">work</span> <span class="n">since</span> <span class="n">n</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">n</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">==</span><span class="p">[</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">]</span>
-            <span class="err">@</span><span class="n">queries</span><span class="p">[</span><span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">]][</span><span class="o">:</span><span class="n">hits</span><span class="p">]</span> <span class="o">=</span> <span class="s">"No hits found."</span>
-            <span class="n">puts</span> <span class="s">"true"</span>
-        <span class="k">else</span>
-            <span class="n">n</span><span class="p">[</span><span class="mi">4</span><span class="p">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
-                <span class="err">@</span><span class="n">queries</span><span class="p">[</span><span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">]][</span><span class="o">:</span><span class="n">hits</span><span class="p">][</span><span class="n">hits</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">Hit</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">hits</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">hits</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>\
-                                                <span class="n">hits</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">hits</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="p">{})</span>
-                <span class="err">@</span><span class="n">queries</span><span class="p">[</span><span class="n">n</span><span class="p">[</span><span class="mi">2</span><span class="p">]][</span><span class="o">:</span><span class="n">hits</span><span class="p">][</span><span class="n">hits</span><span class="p">[</span><span class="mi">1</span><span class="p">]][</span><span class="o">:</span><span class="n">hsp</span><span class="p">]</span> <span class="o">=</span> <span class="n">HSP</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="p">[</span><span class="mi">5</span><span class="p">][</span><span class="s">"Hsp"</span><span class="p">].</span><span class="n">values</span><span class="p">)</span>
-            <span class="n">end</span>
-        <span class="n">end</span>
-    <span class="n">end</span>
-<span class="n">end</span>
+<p>The XML output is as detailed as it could be including all the
+information about Hit's
+<a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair">HSP</a>,
+the <tt class="docutils literal">query database</tt>, <tt class="docutils literal">alignment lengths</tt>, the
+<tt class="docutils literal">query and aligned sequences</tt> along with the matches between them, and
+<tt class="docutils literal">query statistics</tt>. This is as useful as it could be and helps to
+generate very detailed statistics and overview too. I would recommend
+one to look at the given example of blast.xml to understand what kind of
+data is generated. To parse this generated XML output easily, I used the
+<a class="reference external" href="https://rubygems.org/gems/ox">Ox</a> rubygem, which is a simple and
+<a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html">faster</a>
+alternative of other XML parsers available in Ruby. In the beginning, I
+generated a simple Hash out of this parsed data using recursive
+traversal along the elements.</p>
+<pre class="code ruby literal-block">
+<span class="ln"> 1 </span><span class="k">def</span> <span class="nf">report!</span>
+<span class="ln"> 2 </span>    <span class="c1"># Generates BLAST report which one or more multiple Query objects</span>
+<span class="ln"> 3 </span>    <span class="c1"># based on the blast query string.</span>
+<span class="ln"> 4 </span>    <span class="n">parsed_out</span> <span class="o">=</span> <span class="no">Ox</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="vi">@result</span><span class="p">)</span>
+<span class="ln"> 5 </span>    <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+<span class="ln"> 6 </span>    <span class="vi">@program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_program"</span><span class="o">]</span>
+<span class="ln"> 7 </span>    <span class="vi">@querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_db"</span><span class="o">]</span>
+<span class="ln"> 8 </span>
+<span class="ln"> 9 </span>    <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_iterations"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+<span class="ln">10 </span>        <span class="vi">@queries</span> <span class="o">||=</span> <span class="p">{}</span>
+<span class="ln">11 </span>        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Query</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="p">{},</span> <span class="n">n</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Statistics"</span><span class="o">]</span><span class="p">)</span>
+<span class="ln">12 </span>
+<span class="ln">13 </span>        <span class="c1"># Ensure a hit object is received. No hits, returns a newline.</span>
+<span class="ln">14 </span>        <span class="c1"># Note that checking to "\n" doesn't work since n[4] = ["\n"]</span>
+<span class="ln">15 </span>        <span class="k">if</span> <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">]==[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">]</span>
+<span class="ln">16 </span>            <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"No hits found."</span>
+<span class="ln">17 </span>            <span class="nb">puts</span> <span class="s2">"true"</span>
+<span class="ln">18 </span>        <span class="k">else</span>
+<span class="ln">19 </span>            <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
+<span class="ln">20 </span>                <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Hit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,\</span>
+<span class="ln">21 </span>                                                <span class="n">hits</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">{})</span>
+<span class="ln">22 </span>                <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]][</span><span class="ss">:hsp</span><span class="o">]</span> <span class="o">=</span> <span class="no">HSP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Hsp"</span><span class="o">].</span><span class="n">values</span><span class="p">)</span>
+<span class="ln">23 </span>            <span class="k">end</span>
+<span class="ln">24 </span>        <span class="k">end</span>
+<span class="ln">25 </span>    <span class="k">end</span>
+<span class="ln">26 </span><span class="k">end</span>
 </pre>
-
-
 <p>This Hash is then used for easy templating (using
-<a href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">erb</a>) and
-display of results in a more elegant and modular way. This keeps the data at one
-place which can then be used for overview graphic display or integration of
-other features and bug fixes
-in near future. All my work related to this can be found at
-<a href="https://github.com/vivekiitkgp/sequenceserver/tree/issue21_1">@issue21_1</a>
-branch. The code written till now, is very premature and <em>just</em> works. I plan to
-refactor it majorily and incorporate some very nice features of Ruby language
-(which I am desperately trying to understand).</p>
-<p><a href="https://drive.google.com/file/d/0B3eGCB261PalWTJnODloLXAtdGM/edit?usp=sharing">Here</a> is a snapshot of what current output looks like, when SS is run.</p>
-<h3>[O] Part II</h3>
-<p>The second part of this task deals with actually displaying the overview graphic
-for the hits obtained using SS. To give an idea of what it looks like, see
-<a href="http://www.biodalliance.org/">here</a> and <a href="http://canvasxpress.org/genome.html">here</a>.
-The target is to display similar graphic (but simple and easy to load/configure)
-for each hit in the SS's output. I am yet to start working on and possibly the
-next post could be derived out of that work.</p>
+<a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">erb</a>) and
+display of results in a more elegant and modular way. This keeps the
+data at one place which can then be used for overview graphic display or
+integration of other features and bug fixes in near future. All my work
+related to this can be found at
+<a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/tree/issue21">@issue21</a>
+branch. The code written till now, is very premature and <em>just</em> works. I
+plan to refactor it majorily and incorporate some very nice features of
+Ruby language (which I am desperately trying to understand).</p>
+<p><a class="reference external" href="https://drive.google.com/file/d/0B3eGCB261PalWTJnODloLXAtdGM/edit?usp=sharing">Here</a>
+is a snapshot of what current output looks like, when SS is run.</p>
+</div>
+<div class="section" id="o-part-ii">
+<h2>[O] Part II</h2>
+<p>The second part of this task deals with actually displaying the overview
+graphic for the hits obtained using SS. To give an idea of what it looks
+like, see <a class="reference external" href="http://www.biodalliance.org/">here</a> and
+<a class="reference external" href="http://canvasxpress.org/genome.html">here</a>. The target is to display
+similar graphic (but simple and easy to load/configure) for each hit in
+the SS's output. I am yet to start working on and possibly the next post
+could be derived out of that work.</p>
 <p>I would be very glad if you drop by to review my code and send in any
 suggestions. Feel free to reach me by whatever means.</p>
+</div>
     </div>
     <div class="postmeta">
     <small> § 
