@@ -22,7 +22,7 @@
     Here are a bunch of my latest blog posts:
 
     .. post-list::
-        :start: -3
+        :stop: -1
 
 .. _Python : http://stackoverflow.com/questions/101268/hidden-features-of-python
 .. _Vim : http://www.vim.org
