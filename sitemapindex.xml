@@ -25,6 +25,14 @@
   <lastmod>2014-08-22</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://vivekiitkgp.github.io/categories/javascript.xml</loc>
+  <lastmod>2014-08-22</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://vivekiitkgp.github.io/categories/jquery.xml</loc>
+  <lastmod>2014-08-22</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://vivekiitkgp.github.io/categories/ruby.xml</loc>
   <lastmod>2014-08-22</lastmod>
  </sitemap>
