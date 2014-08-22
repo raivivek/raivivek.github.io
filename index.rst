@@ -19,6 +19,11 @@
     When I am not working with any of these, one can find me lurking on Wikipedia [1]_
     or Quora [2]_.
 
+    Here are a bunch of my latest blog posts:
+
+    .. post-list::
+        :start: -3
+
 .. _Python : http://stackoverflow.com/questions/101268/hidden-features-of-python
 .. _Vim : http://www.vim.org
 .. [1]  https://en.wikipedia.org/wiki/User:Vivek_Rai
