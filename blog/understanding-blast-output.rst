@@ -15,6 +15,8 @@ producing alignments even with very long sequences. However, In this
 post I would like to talk about BLAST program and it's output before we
 go into the algorithm some time later.
 
+.. TEASER_END
+
 After talking to `Priyam <https://github.com/yeban>`__ (one of the
 project collaborators), I decided to work towards solving the `issue
 21 <https://github.com/yannickwurm/sequenceserver/issues/21>`__, which
