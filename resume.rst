@@ -23,10 +23,11 @@ Interests
 =========
     * Machine Learning
     * Computational Biology
+    * Bio-inspired Artificial Intelligence
     * Bioinformatics
     * Systems Biology
+    * Data Analysis and Visualization
     * Cell and Molecular Biology
-    * Bio-inspired Artificial Intelligence
 
 Education
 =========
@@ -34,11 +35,11 @@ Education
 
     * **Indian Institute of Technology, Kharagpur**
 
-      Bachelor and Master of Technology, Biotechnology and Biochemical Engineering
+      Bachelor and Master of Technology, *Biotechnology and Biochemical Engineering*
 
       2012-2017 (Expected)
 
-      CGPA: 8.56 on a scale of 10
+      CGPA: 3.44 (4.0)
 
     * **Shree Jain Vidyalaya, Kolkata**
 
@@ -59,9 +60,10 @@ SequenceServer
 SequenceServer allows users to easily set up a BLAST+ server to be used locally
 or over the web with a nice and intuitive user inteface. It is a nice and
 elegant alternative to many other similar projects that are often an overkill
-or too complex to set up. I worked with introducing a number of features and improvements 
-over the current version. The important contribution includes (but not limited to) - introducing
-a graphical overview using D3, creating a data layer by parsing BLAST XML data, maintaining code 
+or too complex to set up. I worked with introducing a number of features and
+improvements over the current version. The important contribution includes (but
+not limited to) - :doc:`creating-graphical-overview-with-d3`,
+:doc:`understanding-blast-output` and creating the data layer, maintaining code
 compatiability with previous versions etc.,
 
 A list of my merged and umerged changes can be found at
@@ -89,15 +91,15 @@ Term Papers
 
     Mar, 2014
 
-        Technological advancement and next generation techniques are producing more
-        genomic data than what could be handled by scientists. This prompts
-        development of automatic techniques for understanding and analysis of raw
-        genomic data. Prediction of genes is critical for understanding the cell
-        regulatory network and hence the human health and medicine.  The paper
-        analyzes different fuzzy guided Genetic Algorithm and Neural Network based
-        models to predict the genes (on whole genome level in Prokaryotes). In the
-        end, future scope of emerging hybrid techniques and some inherent problems
-        associated with these methods are discussed.
+        Technological advancement and next generation techniques are producing
+        more genomic data than what could be handled by scientists. This
+        prompts development of automatic techniques for understanding and
+        analysis of raw genomic data. Prediction of genes is critical for
+        understanding the cell regulatory network and hence the human health
+        and medicine.  The paper analyzes different fuzzy guided Genetic
+        Algorithm and Neural Network based models to predict the genes. In the
+        end, future scope of emerging hybrid techniques and some inherent
+        problems associated with these methods are discussed.
 
 Applications
 ############
