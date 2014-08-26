@@ -6,6 +6,8 @@
 .. description: Resume - Vivek Rai
 
 
+Export to: [`PDF <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
+
 .. contents:: Contents
 
 .. sidebar:: Contact 
