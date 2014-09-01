@@ -12,15 +12,15 @@ where I was working with understanding and parsing the BLAST output data for
 creating the data layer in SequenceServer. A very critical and often demanded
 feature for the application was the ability to have a graphical overview of all
 the obtained hits. It had been sitting on project's urgent list for quite a
-long time and couldn't be delayed any longer. So, I assigned this task to
-myself after having a nod from the project maintainer Priyam.
+long time and couldn't be delayed any longer. So, after having a discussion
+with project maintainer Priyam, I assigned this task to myself.
 
 .. TEASER_END
 
 There were a couple of options for solving this problem.  Initially, we
-considered using Scribl_, a HTML5 canvas based library written specifically for
-drawing genomic regions, alignments, assembly data and so on. However the
-features and flexibility that we were looking for, wasn't simply available. And
+considered using Scribl_, an HTML5 canvas based library written specifically for
+drawing genomic regions, alignments, assembly data and so on. However, the
+features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.
 
 .. image:: ../d3.png
@@ -29,7 +29,7 @@ even if it was, it required a good amount of overriding on our part.
 
 
 The second obvious choice was the use of d3.js_ Javascript library, a powerful
-data driven visualization generator. It's fairly low level and allows a large
+data-driven visualization generator. It's fairly low level and allows a large
 degree of custom control and manipulation over components, thereby allowing
 users to create rich, high quality graphics rendered in SVG_. The library can
 be easily powered by the data obtained directly from the backend layer.
@@ -66,9 +66,9 @@ Since, I was relatively new to programming in Javascript, their implementation
 really helped me to think of my approach and come up with implementation of
 mine. The initial code I wrote went under a lot of changes with feedback from
 Priyam. Although we initially started with an inspiration from NCBI's graphical
-overview (shown beside) we improved many things over theirs e.g., the hits in our graphical
-overview were sorted by evalue, a gradient color scheme to display the strength
-and weakness of hits etc., 
+overview (shown beside) we improved many things over theirs e.g., the hits in
+our graphical overview were sorted by evalue, a gradient color scheme to
+display the strength and weakness of hits etc., 
 
 Finally,
 
@@ -86,19 +86,19 @@ Finally,
         ..
       </div>
 
-2. Packed the whole code in form of a Jquery plugin_.
+2. Packed the whole code in the form of a Jquery plugin_.
 #. Connected the HSPs per hit by a thin line without which the
    interpretation of results was little non obvious.
 
-In the meantime, we were upgrading to **Bootstrap 3** which broke and re-broke my
-implementation a number of times. Each time, when I'll sit to rewrite the it
-again, I would come up with a new and better understanding of my code. All this
+In the meantime, we were upgrading to **Bootstrap 3** which broke and re-broke
+my implementation everytime. Each time, when I'll sit to rewrite the it again,
+I would come up with a new and better understanding of my code. All this
 however, happened only after a lot of experimentation which I didn't talk about
-much in the post due to lack of time. Nevertheless, there were also a bunch of critical bug fixes and
-improvements in the backend code which can be followed here_. In the end, I
-feel that the newer and in development version is much more interactive,
-elegant and easy to use than the previous ones.  Here is a quick snapshot of
-how the graphical overview appears for a BLAST hit.
+much in the post due to lack of time. Nevertheless, there were also a bunch of
+critical bug fixes and improvements in the backend code which can be followed
+here_. In the end, I feel that the newer and in development version is much
+more interactive, elegant and easy to use than the previous ones. Here is a
+quick snapshot of the graphical overview for a sample BLAST hit.
 
 .. figure:: ../graph.png
     :align: center

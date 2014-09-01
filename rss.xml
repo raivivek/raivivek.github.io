@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Tue, 26 Aug 2014 07:37:16 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating graphical overview with D3</title><link>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;This is a follow up of the &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;previous post&lt;/a&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Mon, 01 Sep 2014 13:00:55 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating graphical overview with D3</title><link>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;This is a follow up of the &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;previous post&lt;/a&gt;
 where I was working with understanding and parsing the BLAST output data for
 creating the data layer in SequenceServer. A very critical and often demanded
 feature for the application was the ability to have a graphical overview of all
 the obtained hits. It had been sitting on project's urgent list for quite a
-long time and couldn't be delayed any longer. So, I assigned this task to
-myself after having a nod from the project maintainer Priyam.&lt;/p&gt;
+long time and couldn't be delayed any longer. So, after having a discussion
+with project maintainer Priyam, I assigned this task to myself.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;p&gt;There were a couple of options for solving this problem.  Initially, we
-considered using &lt;a class="reference external" href="http://chmille4.github.io/Scribl/"&gt;Scribl&lt;/a&gt;, a HTML5 canvas based library written specifically for
-drawing genomic regions, alignments, assembly data and so on. However the
-features and flexibility that we were looking for, wasn't simply available. And
+considered using &lt;a class="reference external" href="http://chmille4.github.io/Scribl/"&gt;Scribl&lt;/a&gt;, an HTML5 canvas based library written specifically for
+drawing genomic regions, alignments, assembly data and so on. However, the
+features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.&lt;/p&gt;
 &lt;img alt="../d3.png" class="align-center" src="https://vivekiitkgp.github.io/d3.png" style="width: 300pt;"&gt;
 &lt;p&gt;The second obvious choice was the use of &lt;a class="reference external" href="http://d3js.org"&gt;d3.js&lt;/a&gt; Javascript library, a powerful
-data driven visualization generator. It's fairly low level and allows a large
+data-driven visualization generator. It's fairly low level and allows a large
 degree of custom control and manipulation over components, thereby allowing
 users to create rich, high quality graphics rendered in &lt;a class="reference external" href="https://developer.mozilla.org/en/docs/Web/SVG"&gt;SVG&lt;/a&gt;. The library can
 be easily powered by the data obtained directly from the backend layer.
@@ -43,9 +43,9 @@ that used by NCBI except the fact that it was written using d3.&lt;/p&gt;
 really helped me to think of my approach and come up with implementation of
 mine. The initial code I wrote went under a lot of changes with feedback from
 Priyam. Although we initially started with an inspiration from NCBI's graphical
-overview (shown beside) we improved many things over theirs e.g., the hits in our graphical
-overview were sorted by evalue, a gradient color scheme to display the strength
-and weakness of hits etc.,&lt;/p&gt;
+overview (shown beside) we improved many things over theirs e.g., the hits in
+our graphical overview were sorted by evalue, a gradient color scheme to
+display the strength and weakness of hits etc.,&lt;/p&gt;
 &lt;p&gt;Finally,&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
 &lt;li&gt;Implemented the data collection using data-attribs,&lt;/li&gt;
@@ -61,19 +61,19 @@ and weakness of hits etc.,&lt;/p&gt;
 &lt;span class="ln"&gt;8 &lt;/span&gt;  &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ol class="arabic simple" start="2"&gt;
-&lt;li&gt;Packed the whole code in form of a Jquery &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js"&gt;plugin&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Packed the whole code in the form of a Jquery &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js"&gt;plugin&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Connected the HSPs per hit by a thin line without which the
 interpretation of results was little non obvious.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;In the meantime, we were upgrading to &lt;strong&gt;Bootstrap 3&lt;/strong&gt; which broke and re-broke my
-implementation a number of times. Each time, when I'll sit to rewrite the it
-again, I would come up with a new and better understanding of my code. All this
+&lt;p&gt;In the meantime, we were upgrading to &lt;strong&gt;Bootstrap 3&lt;/strong&gt; which broke and re-broke
+my implementation everytime. Each time, when I'll sit to rewrite the it again,
+I would come up with a new and better understanding of my code. All this
 however, happened only after a lot of experimentation which I didn't talk about
-much in the post due to lack of time. Nevertheless, there were also a bunch of critical bug fixes and
-improvements in the backend code which can be followed &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures"&gt;here&lt;/a&gt;. In the end, I
-feel that the newer and in development version is much more interactive,
-elegant and easy to use than the previous ones.  Here is a quick snapshot of
-how the graphical overview appears for a BLAST hit.&lt;/p&gt;
+much in the post due to lack of time. Nevertheless, there were also a bunch of
+critical bug fixes and improvements in the backend code which can be followed
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures"&gt;here&lt;/a&gt;. In the end, I feel that the newer and in development version is much
+more interactive, elegant and easy to use than the previous ones. Here is a
+quick snapshot of the graphical overview for a sample BLAST hit.&lt;/p&gt;
 &lt;div class="figure align-center"&gt;
 &lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/graph.png"&gt;&lt;img alt="SequenceServer's graphical overview" src="https://vivekiitkgp.github.io/graph.png"&gt;&lt;/a&gt;
 &lt;p class="caption"&gt;SequenceServer's graphical overview (using D3)&lt;/p&gt;

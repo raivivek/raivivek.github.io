@@ -60,17 +60,17 @@ where I was working with understanding and parsing the BLAST output data for
 creating the data layer in SequenceServer. A very critical and often demanded
 feature for the application was the ability to have a graphical overview of all
 the obtained hits. It had been sitting on project's urgent list for quite a
-long time and couldn't be delayed any longer. So, I assigned this task to
-myself after having a nod from the project maintainer Priyam.</p>
+long time and couldn't be delayed any longer. So, after having a discussion
+with project maintainer Priyam, I assigned this task to myself.</p>
 <!-- TEASER_END -->
 <p>There were a couple of options for solving this problem.  Initially, we
-considered using <a class="reference external" href="http://chmille4.github.io/Scribl/">Scribl</a>, a HTML5 canvas based library written specifically for
-drawing genomic regions, alignments, assembly data and so on. However the
-features and flexibility that we were looking for, wasn't simply available. And
+considered using <a class="reference external" href="http://chmille4.github.io/Scribl/">Scribl</a>, an HTML5 canvas based library written specifically for
+drawing genomic regions, alignments, assembly data and so on. However, the
+features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.</p>
 <img alt="../d3.png" class="align-center" src="../d3.png" style="width: 300pt;">
 <p>The second obvious choice was the use of <a class="reference external" href="http://d3js.org">d3.js</a> Javascript library, a powerful
-data driven visualization generator. It's fairly low level and allows a large
+data-driven visualization generator. It's fairly low level and allows a large
 degree of custom control and manipulation over components, thereby allowing
 users to create rich, high quality graphics rendered in <a class="reference external" href="https://developer.mozilla.org/en/docs/Web/SVG">SVG</a>. The library can
 be easily powered by the data obtained directly from the backend layer.
@@ -99,9 +99,9 @@ that used by NCBI except the fact that it was written using d3.</p>
 really helped me to think of my approach and come up with implementation of
 mine. The initial code I wrote went under a lot of changes with feedback from
 Priyam. Although we initially started with an inspiration from NCBI's graphical
-overview (shown beside) we improved many things over theirs e.g., the hits in our graphical
-overview were sorted by evalue, a gradient color scheme to display the strength
-and weakness of hits etc.,</p>
+overview (shown beside) we improved many things over theirs e.g., the hits in
+our graphical overview were sorted by evalue, a gradient color scheme to
+display the strength and weakness of hits etc.,</p>
 <p>Finally,</p>
 <ol class="arabic simple">
 <li>Implemented the data collection using data-attribs,</li>
@@ -117,19 +117,19 @@ and weakness of hits etc.,</p>
 <span class="ln">8 </span>  <span class="nt">&lt;/div&gt;</span>
 </pre>
 <ol class="arabic simple" start="2">
-<li>Packed the whole code in form of a Jquery <a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js">plugin</a>.</li>
+<li>Packed the whole code in the form of a Jquery <a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js">plugin</a>.</li>
 <li>Connected the HSPs per hit by a thin line without which the
 interpretation of results was little non obvious.</li>
 </ol>
-<p>In the meantime, we were upgrading to <strong>Bootstrap 3</strong> which broke and re-broke my
-implementation a number of times. Each time, when I'll sit to rewrite the it
-again, I would come up with a new and better understanding of my code. All this
+<p>In the meantime, we were upgrading to <strong>Bootstrap 3</strong> which broke and re-broke
+my implementation everytime. Each time, when I'll sit to rewrite the it again,
+I would come up with a new and better understanding of my code. All this
 however, happened only after a lot of experimentation which I didn't talk about
-much in the post due to lack of time. Nevertheless, there were also a bunch of critical bug fixes and
-improvements in the backend code which can be followed <a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures">here</a>. In the end, I
-feel that the newer and in development version is much more interactive,
-elegant and easy to use than the previous ones.  Here is a quick snapshot of
-how the graphical overview appears for a BLAST hit.</p>
+much in the post due to lack of time. Nevertheless, there were also a bunch of
+critical bug fixes and improvements in the backend code which can be followed
+<a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures">here</a>. In the end, I feel that the newer and in development version is much
+more interactive, elegant and easy to use than the previous ones. Here is a
+quick snapshot of the graphical overview for a sample BLAST hit.</p>
 <div class="figure align-center">
 <a class="reference external image-reference" href="../graph.png"><img alt="SequenceServer's graphical overview" src="../graph.png"></a>
 <p class="caption">SequenceServer's graphical overview (using D3)</p>
