@@ -6,10 +6,7 @@
 .. description: Resume - Vivek Rai
 
 
-Export to:
-
-* [`Academic CV <https://github.com/vivekiitkgp/resume/raw/master/academic_resume.pdf>`_]
-* [`Technical CV <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
+Export to: [`PDF <https://github.com/vivekiitkgp/resume/raw/master/academic_resume.pdf>`_]
 
 .. contents:: Contents
 
