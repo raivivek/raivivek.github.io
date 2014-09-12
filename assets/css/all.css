@@ -488,13 +488,13 @@ div.postdiv > p,
 div.postdiv * p,
 body
 {
-   font-size: 14px;
+   font-size: 16px;
    /* font-family: Times, 'Times New Roman', serif;*/
    font-family: 'PT Serif', sans-serif;
 }
 
-a { color: #000; }
-a:hover { color: #666; }
+a { color: #300; }
+a:hover { color: #b00; }
 
 .footer {
     text-align: center;
