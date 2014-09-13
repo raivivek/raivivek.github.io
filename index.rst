@@ -10,11 +10,11 @@
     ― Socrates
 
 .. admonition:: 
-    I am a third year undergraduate student at Indian Institute of Technology, 
-    Kharagpur majoring in in Biotechnology and Biochemical engineering. 
-    As a passionate learner and ardent linux user, I love Biology, Computer Science, 
-    `Python`_, `Vim`_ , coffee and sunsets. This website hosts my interests and description
-    besides the random rumblings of my life.
+    I am a third year undergraduate student at Indian Institute of Technology,
+    Kharagpur majoring in in Biotechnology and Biochemical engineering.  As a
+    passionate learner and ardent linux user, I love Biology, Computer Science,
+    `Python`_, `Vim`_, coffee, and sunset. This website hosts my work interests
+    and description besides few non-interesting things of my life.
 
     When I am not working with any of these, one can find me lurking on Wikipedia [1]_
     or Quora [2]_.
