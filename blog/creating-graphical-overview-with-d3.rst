@@ -23,7 +23,7 @@ drawing genomic regions, alignments, assembly data and so on. However, the
 features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.
 
-.. image:: ../d3.png
+.. image:: ../files/d3.png
     :align: center
     :width: 300pt
 
@@ -40,7 +40,6 @@ for obtaining data but also for applying custom styling and dynamic behavior
 using JS. For example, you could just do
 
 .. code-block:: js
-    :number-lines:
 
     /* This iterates over all elements with the mentioned data-attrib
        See public/js/jquery.graphit.js */
@@ -54,10 +53,10 @@ and found it quite interesting. Priyam then showed me the BLAST interface of
 genome resource. They had implemented a graphical overview feature similar to
 that used by NCBI except the fact that it was written using d3. 
 
-.. figure:: ../ncbi.png
+.. figure:: ../files/ncbi.png
     :align: right
     :figwidth: 350pt
-    :target: ../ncbi.png
+    :target: ../files/ncbi.png
     :alt: Graphical overview shown by NCBI
 
     NCBI's graphical overview (uses tables)
@@ -75,7 +74,6 @@ Finally,
 1. Implemented the data collection using data-attribs,
 
 .. code-block:: rhtml
-    :number-lines:
 
     <% hit.hsps.each do |hsp| %>
       <div
@@ -100,9 +98,9 @@ here_. In the end, I feel that the newer and in development version is much
 more interactive, elegant and easy to use than the previous ones. Here is a
 quick snapshot of the graphical overview for a sample BLAST hit.
 
-.. figure:: ../graph.png
+.. figure:: ../files/graph.png
     :align: center
-    :target: ../graph.png
+    :target: ../files/graph.png
     :alt: SequenceServer's graphical overview
 
     SequenceServer's graphical overview (using D3)

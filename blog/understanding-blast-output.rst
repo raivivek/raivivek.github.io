@@ -36,7 +36,7 @@ results, it was not very easy to work with generation of visuals. The
 data generated from BLAST output had to be parsed first into a data
 layer and then interfaced with other features like displaying overview
 graphic or other rich information. This required three things from my
-side - Ruby, BLAST and Patience.
+side - Ruby, BLAST, and Patience.
 
 [x] Part I
 ----------
@@ -50,7 +50,7 @@ The sample XML output (standard settings) has the following structure
 
 .. code-block:: xml
 
-    .?xml version="1.0"?>
+    <?xml version="1.0"?>
     <!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
     <BlastOutput>
       <BlastOutput_program>
@@ -94,49 +94,46 @@ The sample XML output (standard settings) has the following structure
     </BlastOutput_iterations>
     </BlastOutput>
 
-The XML output is as detailed as it could be including all the
-information about Hit's
-`HSP <https://genomevolution.org/wiki/index.php/High-scoring_segment_pair>`__,
-the ``query database``, ``alignment lengths``, the
-``query and aligned sequences`` along with the matches between them, and
-``query statistics``. This is as useful as it could be and helps to
-generate very detailed statistics and overview too. I would recommend
-one to look at the given example of blast.xml to understand what kind of
-data is generated. To parse this generated XML output easily, I used the
-`Ox <https://rubygems.org/gems/ox>`__ rubygem, which is a simple and
-`faster <http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html>`__
-alternative of other XML parsers available in Ruby. In the beginning, I
-generated a simple Hash out of this parsed data using recursive
-traversal along the elements.
+The XML output is as detailed as it could be including all the information
+about Hit's `HSP
+<https://genomevolution.org/wiki/index.php/High-scoring_segment_pair>`__, the
+``query-database``, ``alignment-lengths``, the ``query`` & ``aligned-sequences``
+along with the matches between them, and ``query-statistics``. This
+is as useful as it could be and helps to generate very detailed statistics and
+overview too. I would recommend one to look at the given example of blast.xml
+to understand what kind of data is generated. To parse this generated XML
+output easily, I used the `Ox <https://rubygems.org/gems/ox>`__ rubygem, which
+is a simple and `faster
+<http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html>`__ alternative of
+other XML parsers available in Ruby. In the beginning, I generated a simple
+Hash out of this parsed data using recursive traversal along the elements.
 
 .. code-block:: ruby
-    :number-lines:
 
     def report! 
-        # Generates BLAST report which one or more multiple Query objects
-        # based on the blast query string.
-        parsed_out = Ox.parse(@result)
-        hashed_out = node_to_dict(parsed_out.root)
-        @program = hashed_out["BlastOutput_program"]
-        @querydb = hashed_out["BlastOutput_db"]
+      # Generates BLAST report which one or more multiple Query objects
+      # based on the blast query string.
+      parsed_out = Ox.parse(@result)
+      hashed_out = node_to_dict(parsed_out.root)
+      @program = hashed_out["BlastOutput_program"]
+      @querydb = hashed_out["BlastOutput_db"]
 
-        hashed_out["BlastOutput_iterations"].each do |n|
-            @queries ||= {}
-            @queries[n[2]] = Query.new(n[1], n[2], n[3], {}, n[5]["Statistics"])
+      hashed_out["BlastOutput_iterations"].each do |n|
+        @queries ||= {}
+        @queries[n[2]] = Query.new(n[1], n[2], n[3], {}, n[5]["Statistics"])
 
-            # Ensure a hit object is received. No hits, returns a newline.
-            # Note that checking to "\n" doesn't work since n[4] = ["\n"]
-            if n[4]==["\n"]
-                @queries[n[2]][:hits] = "No hits found."
-                puts "true"
-            else
-                n[4].each do |hits|
-                    @queries[n[2]][:hits][hits[1]] = Hit.new(hits[0], hits[1], hits[2],\
-                                                    hits[3], hits[4], {})
-                    @queries[n[2]][:hits][hits[1]][:hsp] = HSP.new(*hits[5]["Hsp"].values)
-                end
-            end
+        # Ensure a hit object is received. No hits, returns a newline.
+        # Note that checking to "\n" doesn't work since n[4] = ["\n"]
+        if n[4]==["\n"]
+          @queries[n[2]][:hits] = "No hits found."
+        else
+          n[4].each do |hits|
+            @queries[n[2]][:hits][hits[1]] = Hit.new(hits[0], hits[1], hits[2],
+                                                     hits[3], hits[4], {})
+            @queries[n[2]][:hits][hits[1]][:hsp] = HSP.new(*hits[5]["Hsp"].values)
+          end
         end
+      end
     end
 
 This Hash is then used for easy templating (using

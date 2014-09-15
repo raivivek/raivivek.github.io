@@ -67,7 +67,7 @@ considered using <a class="reference external" href="http://chmille4.github.io/S
 drawing genomic regions, alignments, assembly data and so on. However, the
 features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.</p>
-<img alt="../d3.png" class="align-center" src="../d3.png" style="width: 300pt;">
+<img alt="../files/d3.png" class="align-center" src="../files/d3.png" style="width: 300pt;">
 <p>The second obvious choice was the use of <a class="reference external" href="http://d3js.org">d3.js</a> Javascript library, a powerful
 data-driven visualization generator. It's fairly low level and allows a large
 degree of custom control and manipulation over components, thereby allowing
@@ -79,11 +79,11 @@ data attributes. These data-attributes would then be highly useful, not only
 for obtaining data but also for applying custom styling and dynamic behavior
 using JS. For example, you could just do</p>
 <pre class="code js literal-block">
-<span class="ln">1 </span><span class="cm">/* This iterates over all elements with the mentioned data-attrib
-</span><span class="ln">2 </span><span class="cm">   See public/js/jquery.graphit.js */</span>
-<span class="ln">3 </span><span class="nx">$</span><span class="p">(</span><span class="s2">"[data-graphit='overview']"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-<span class="ln">4 </span>    <span class="cm">/* Do stuff here */</span>
-<span class="ln">5 </span><span class="p">});</span>
+<span class="cm">/* This iterates over all elements with the mentioned data-attrib
+   See public/js/jquery.graphit.js */</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"[data-graphit='overview']"</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* Do stuff here */</span>
+<span class="p">});</span>
 </pre>
 <p>After the basic idea was conceived, I started playing around a little with d3
 and found it quite interesting. Priyam then showed me the BLAST interface of
@@ -91,7 +91,7 @@ and found it quite interesting. Priyam then showed me the BLAST interface of
 genome resource. They had implemented a graphical overview feature similar to
 that used by NCBI except the fact that it was written using d3.</p>
 <div class="figure align-right" style="width: 350pt">
-<a class="reference external image-reference" href="../ncbi.png"><img alt="Graphical overview shown by NCBI" src="../ncbi.png"></a>
+<a class="reference external image-reference" href="../files/ncbi.png"><img alt="Graphical overview shown by NCBI" src="../files/ncbi.png"></a>
 <p class="caption">NCBI's graphical overview (uses tables)</p>
 </div>
 <p>Since, I was relatively new to programming in Javascript, their implementation
@@ -106,14 +106,14 @@ display the strength and weakness of hits etc.,</p>
 <li>Implemented the data collection using data-attribs,</li>
 </ol>
 <pre class="code rhtml literal-block">
-<span class="ln">1 </span><span class="cp">&lt;%</span> <span class="n">hit</span><span class="o">.</span><span class="n">hsps</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hsp</span><span class="o">|</span> <span class="cp">%&gt;</span>
-<span class="ln">2 </span>  <span class="nt">&lt;div</span>
-<span class="ln">3 </span>      <span class="na">class=</span><span class="s">"hsps"</span> <span class="na">id=</span><span class="s">"</span><span class="cp">&lt;%=</span><span class="s2">"Query_</span><span class="si">#{</span><span class="n">query</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">_hit_</span><span class="si">#{</span><span class="n">hit</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">hsp</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">"</span><span class="cp">%&gt;</span><span class="s">"</span>
-<span class="ln">4 </span>      <span class="na">data-hsp-evalue=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">evalue</span> <span class="cp">%&gt;</span><span class="s">"</span> <span class="na">data-hsp-start=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">qstart</span> <span class="cp">%&gt;</span><span class="s">"</span>
-<span class="ln">5 </span>      <span class="na">data-hsp-end=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">qend</span> <span class="cp">%&gt;</span><span class="s">"</span> <span class="na">data-hsp-frame=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">hframe</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
-<span class="ln">6 </span>      <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table-hsp"</span><span class="nt">&gt;</span>
-<span class="ln">7 </span>    ..
-<span class="ln">8 </span>  <span class="nt">&lt;/div&gt;</span>
+<span class="cp">&lt;%</span> <span class="n">hit</span><span class="o">.</span><span class="n">hsps</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hsp</span><span class="o">|</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;div</span>
+      <span class="na">class=</span><span class="s">"hsps"</span> <span class="na">id=</span><span class="s">"</span><span class="cp">&lt;%=</span><span class="s2">"Query_</span><span class="si">#{</span><span class="n">query</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">_hit_</span><span class="si">#{</span><span class="n">hit</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">hsp</span><span class="o">.</span><span class="n">number</span><span class="si">}</span><span class="s2">"</span><span class="cp">%&gt;</span><span class="s">"</span>
+      <span class="na">data-hsp-evalue=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">evalue</span> <span class="cp">%&gt;</span><span class="s">"</span> <span class="na">data-hsp-start=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">qstart</span> <span class="cp">%&gt;</span><span class="s">"</span>
+      <span class="na">data-hsp-end=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">qend</span> <span class="cp">%&gt;</span><span class="s">"</span> <span class="na">data-hsp-frame=</span><span class="s">"</span><span class="cp">&lt;%=</span> <span class="n">hsp</span><span class="o">.</span><span class="n">hframe</span> <span class="cp">%&gt;</span><span class="s">"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table-hsp"</span><span class="nt">&gt;</span>
+    ..
+  <span class="nt">&lt;/div&gt;</span>
 </pre>
 <ol class="arabic simple" start="2">
 <li>Packed the whole code in the form of a Jquery <a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js">plugin</a>.</li>
@@ -130,7 +130,7 @@ critical bug fixes and improvements in the backend code which can be followed
 more interactive, elegant and easy to use than the previous ones. Here is a
 quick snapshot of the graphical overview for a sample BLAST hit.</p>
 <div class="figure align-center">
-<a class="reference external image-reference" href="../graph.png"><img alt="SequenceServer's graphical overview" src="../graph.png"></a>
+<a class="reference external image-reference" href="../files/graph.png"><img alt="SequenceServer's graphical overview" src="../files/graph.png"></a>
 <p class="caption">SequenceServer's graphical overview (using D3)</p>
 </div>
 <p>The current source code of the plugin can be found on <a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/graphic_fixtures">Github</a>.  Feel free to
@@ -213,7 +213,7 @@ with its help. However, let's save it for some time later.</p>
     <hr>
     <div class="footer">
     <i class="fa fa-code"> </i> <i class="fa fa-copyright"> </i> <a href="mailto:vivekrai.iitkgp@gmail.com">Vivek Rai</a>, Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a><br>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../cc-by-sa4.png"></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../files/cc-by-sa4.png"></a>
 
     
     </div>

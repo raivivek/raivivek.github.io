@@ -80,7 +80,7 @@ results, it was not very easy to work with generation of visuals. The
 data generated from BLAST output had to be parsed first into a data
 layer and then interfaced with other features like displaying overview
 graphic or other rich information. This required three things from my
-side - Ruby, BLAST and Patience.</p>
+side - Ruby, BLAST, and Patience.</p>
 <div class="section" id="x-part-i">
 <h2>[x] Part I</h2>
 <p><strong>BLAST Output</strong>: The blast output format can be reconfigured using the
@@ -90,7 +90,7 @@ The sample XML output (standard settings) has the following structure
 (for a real example
 <a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml">blast.xml</a>):</p>
 <pre class="code xml literal-block">
-.?xml version="1.0"?&gt;
+<span class="cp">&lt;?xml version="1.0"?&gt;</span>
 <span class="cp">&lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&gt;</span>
 <span class="nt">&lt;BlastOutput&gt;</span>
   <span class="nt">&lt;BlastOutput_program&gt;</span>
@@ -134,47 +134,43 @@ The sample XML output (standard settings) has the following structure
 <span class="nt">&lt;/BlastOutput_iterations&gt;</span>
 <span class="nt">&lt;/BlastOutput&gt;</span>
 </pre>
-<p>The XML output is as detailed as it could be including all the
-information about Hit's
-<a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair">HSP</a>,
-the <tt class="docutils literal">query database</tt>, <tt class="docutils literal">alignment lengths</tt>, the
-<tt class="docutils literal">query and aligned sequences</tt> along with the matches between them, and
-<tt class="docutils literal">query statistics</tt>. This is as useful as it could be and helps to
-generate very detailed statistics and overview too. I would recommend
-one to look at the given example of blast.xml to understand what kind of
-data is generated. To parse this generated XML output easily, I used the
-<a class="reference external" href="https://rubygems.org/gems/ox">Ox</a> rubygem, which is a simple and
-<a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html">faster</a>
-alternative of other XML parsers available in Ruby. In the beginning, I
-generated a simple Hash out of this parsed data using recursive
-traversal along the elements.</p>
+<p>The XML output is as detailed as it could be including all the information
+about Hit's <a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair">HSP</a>, the
+<tt class="docutils literal"><span class="pre">query-database</span></tt>, <tt class="docutils literal"><span class="pre">alignment-lengths</span></tt>, the <tt class="docutils literal">query</tt> &amp; <tt class="docutils literal"><span class="pre">aligned-sequences</span></tt>
+along with the matches between them, and <tt class="docutils literal"><span class="pre">query-statistics</span></tt>. This
+is as useful as it could be and helps to generate very detailed statistics and
+overview too. I would recommend one to look at the given example of blast.xml
+to understand what kind of data is generated. To parse this generated XML
+output easily, I used the <a class="reference external" href="https://rubygems.org/gems/ox">Ox</a> rubygem, which
+is a simple and <a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html">faster</a> alternative of
+other XML parsers available in Ruby. In the beginning, I generated a simple
+Hash out of this parsed data using recursive traversal along the elements.</p>
 <pre class="code ruby literal-block">
-<span class="ln"> 1 </span><span class="k">def</span> <span class="nf">report!</span>
-<span class="ln"> 2 </span>    <span class="c1"># Generates BLAST report which one or more multiple Query objects</span>
-<span class="ln"> 3 </span>    <span class="c1"># based on the blast query string.</span>
-<span class="ln"> 4 </span>    <span class="n">parsed_out</span> <span class="o">=</span> <span class="no">Ox</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="vi">@result</span><span class="p">)</span>
-<span class="ln"> 5 </span>    <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
-<span class="ln"> 6 </span>    <span class="vi">@program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_program"</span><span class="o">]</span>
-<span class="ln"> 7 </span>    <span class="vi">@querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_db"</span><span class="o">]</span>
-<span class="ln"> 8 </span>
-<span class="ln"> 9 </span>    <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_iterations"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
-<span class="ln">10 </span>        <span class="vi">@queries</span> <span class="o">||=</span> <span class="p">{}</span>
-<span class="ln">11 </span>        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Query</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="p">{},</span> <span class="n">n</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Statistics"</span><span class="o">]</span><span class="p">)</span>
-<span class="ln">12 </span>
-<span class="ln">13 </span>        <span class="c1"># Ensure a hit object is received. No hits, returns a newline.</span>
-<span class="ln">14 </span>        <span class="c1"># Note that checking to "\n" doesn't work since n[4] = ["\n"]</span>
-<span class="ln">15 </span>        <span class="k">if</span> <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">]==[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">]</span>
-<span class="ln">16 </span>            <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"No hits found."</span>
-<span class="ln">17 </span>            <span class="nb">puts</span> <span class="s2">"true"</span>
-<span class="ln">18 </span>        <span class="k">else</span>
-<span class="ln">19 </span>            <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
-<span class="ln">20 </span>                <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Hit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,\</span>
-<span class="ln">21 </span>                                                <span class="n">hits</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">{})</span>
-<span class="ln">22 </span>                <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]][</span><span class="ss">:hsp</span><span class="o">]</span> <span class="o">=</span> <span class="no">HSP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Hsp"</span><span class="o">].</span><span class="n">values</span><span class="p">)</span>
-<span class="ln">23 </span>            <span class="k">end</span>
-<span class="ln">24 </span>        <span class="k">end</span>
-<span class="ln">25 </span>    <span class="k">end</span>
-<span class="ln">26 </span><span class="k">end</span>
+<span class="k">def</span> <span class="nf">report!</span>
+  <span class="c1"># Generates BLAST report which one or more multiple Query objects</span>
+  <span class="c1"># based on the blast query string.</span>
+  <span class="n">parsed_out</span> <span class="o">=</span> <span class="no">Ox</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="vi">@result</span><span class="p">)</span>
+  <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+  <span class="vi">@program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_program"</span><span class="o">]</span>
+  <span class="vi">@querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_db"</span><span class="o">]</span>
+
+  <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_iterations"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+    <span class="vi">@queries</span> <span class="o">||=</span> <span class="p">{}</span>
+    <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Query</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="p">{},</span> <span class="n">n</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Statistics"</span><span class="o">]</span><span class="p">)</span>
+
+    <span class="c1"># Ensure a hit object is received. No hits, returns a newline.</span>
+    <span class="c1"># Note that checking to "\n" doesn't work since n[4] = ["\n"]</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">]==[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">]</span>
+      <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"No hits found."</span>
+    <span class="k">else</span>
+      <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
+        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Hit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span>
+                                                 <span class="n">hits</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]][</span><span class="ss">:hsp</span><span class="o">]</span> <span class="o">=</span> <span class="no">HSP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Hsp"</span><span class="o">].</span><span class="n">values</span><span class="p">)</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </pre>
 <p>This Hash is then used for easy templating (using
 <a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">erb</a>) and
@@ -271,7 +267,7 @@ suggestions. Feel free to reach me by whatever means.</p>
     <hr>
     <div class="footer">
     <i class="fa fa-code"> </i> <i class="fa fa-copyright"> </i> <a href="mailto:vivekrai.iitkgp@gmail.com">Vivek Rai</a>, Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a><br>
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../cc-by-sa4.png"></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../files/cc-by-sa4.png"></a>
 
     
     </div>

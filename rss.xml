@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Sat, 13 Sep 2014 18:58:39 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating graphical overview with D3</title><link>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;This is a follow up of the &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;previous post&lt;/a&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Mon, 15 Sep 2014 18:47:54 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Creating graphical overview with D3</title><link>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;This is a follow up of the &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;previous post&lt;/a&gt;
 where I was working with understanding and parsing the BLAST output data for
 creating the data layer in SequenceServer. A very critical and often demanded
 feature for the application was the ability to have a graphical overview of all
@@ -12,7 +12,7 @@ considered using &lt;a class="reference external" href="http://chmille4.github.i
 drawing genomic regions, alignments, assembly data and so on. However, the
 features and flexibility that we were looking for wasn't simply available. And
 even if it was, it required a good amount of overriding on our part.&lt;/p&gt;
-&lt;img alt="../d3.png" class="align-center" src="https://vivekiitkgp.github.io/d3.png" style="width: 300pt;"&gt;
+&lt;img alt="../files/d3.png" class="align-center" src="https://vivekiitkgp.github.io/files/d3.png" style="width: 300pt;"&gt;
 &lt;p&gt;The second obvious choice was the use of &lt;a class="reference external" href="http://d3js.org"&gt;d3.js&lt;/a&gt; Javascript library, a powerful
 data-driven visualization generator. It's fairly low level and allows a large
 degree of custom control and manipulation over components, thereby allowing
@@ -24,11 +24,11 @@ data attributes. These data-attributes would then be highly useful, not only
 for obtaining data but also for applying custom styling and dynamic behavior
 using JS. For example, you could just do&lt;/p&gt;
 &lt;pre class="code js literal-block"&gt;
-&lt;span class="ln"&gt;1 &lt;/span&gt;&lt;span class="cm"&gt;/* This iterates over all elements with the mentioned data-attrib
-&lt;/span&gt;&lt;span class="ln"&gt;2 &lt;/span&gt;&lt;span class="cm"&gt;   See public/js/jquery.graphit.js */&lt;/span&gt;
-&lt;span class="ln"&gt;3 &lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"[data-graphit='overview']"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;span class="ln"&gt;4 &lt;/span&gt;    &lt;span class="cm"&gt;/* Do stuff here */&lt;/span&gt;
-&lt;span class="ln"&gt;5 &lt;/span&gt;&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="cm"&gt;/* This iterates over all elements with the mentioned data-attrib
+   See public/js/jquery.graphit.js */&lt;/span&gt;
+&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"[data-graphit='overview']"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="cm"&gt;/* Do stuff here */&lt;/span&gt;
+&lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;After the basic idea was conceived, I started playing around a little with d3
 and found it quite interesting. Priyam then showed me the BLAST interface of
@@ -36,7 +36,7 @@ and found it quite interesting. Priyam then showed me the BLAST interface of
 genome resource. They had implemented a graphical overview feature similar to
 that used by NCBI except the fact that it was written using d3.&lt;/p&gt;
 &lt;div class="figure align-right" style="width: 350pt"&gt;
-&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/ncbi.png"&gt;&lt;img alt="Graphical overview shown by NCBI" src="https://vivekiitkgp.github.io/ncbi.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/files/ncbi.png"&gt;&lt;img alt="Graphical overview shown by NCBI" src="https://vivekiitkgp.github.io/files/ncbi.png"&gt;&lt;/a&gt;
 &lt;p class="caption"&gt;NCBI's graphical overview (uses tables)&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Since, I was relatively new to programming in Javascript, their implementation
@@ -51,14 +51,14 @@ display the strength and weakness of hits etc.,&lt;/p&gt;
 &lt;li&gt;Implemented the data collection using data-attribs,&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre class="code rhtml literal-block"&gt;
-&lt;span class="ln"&gt;1 &lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hsps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
-&lt;span class="ln"&gt;2 &lt;/span&gt;  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt;
-&lt;span class="ln"&gt;3 &lt;/span&gt;      &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"hsps"&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt;&lt;span class="s2"&gt;"Query_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_hit_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
-&lt;span class="ln"&gt;4 &lt;/span&gt;      &lt;span class="na"&gt;data-hsp-evalue=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evalue&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-start=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
-&lt;span class="ln"&gt;5 &lt;/span&gt;      &lt;span class="na"&gt;data-hsp-end=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-frame=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hframe&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="ln"&gt;6 &lt;/span&gt;      &lt;span class="nt"&gt;&amp;lt;table&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"table-hsp"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="ln"&gt;7 &lt;/span&gt;    ..
-&lt;span class="ln"&gt;8 &lt;/span&gt;  &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hsps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt;
+      &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"hsps"&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt;&lt;span class="s2"&gt;"Query_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_hit_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
+      &lt;span class="na"&gt;data-hsp-evalue=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evalue&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-start=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
+      &lt;span class="na"&gt;data-hsp-end=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-frame=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hframe&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;table&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"table-hsp"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    ..
+  &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 &lt;ol class="arabic simple" start="2"&gt;
 &lt;li&gt;Packed the whole code in the form of a Jquery &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js"&gt;plugin&lt;/a&gt;.&lt;/li&gt;
@@ -75,7 +75,7 @@ critical bug fixes and improvements in the backend code which can be followed
 more interactive, elegant and easy to use than the previous ones. Here is a
 quick snapshot of the graphical overview for a sample BLAST hit.&lt;/p&gt;
 &lt;div class="figure align-center"&gt;
-&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/graph.png"&gt;&lt;img alt="SequenceServer's graphical overview" src="https://vivekiitkgp.github.io/graph.png"&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/files/graph.png"&gt;&lt;img alt="SequenceServer's graphical overview" src="https://vivekiitkgp.github.io/files/graph.png"&gt;&lt;/a&gt;
 &lt;p class="caption"&gt;SequenceServer's graphical overview (using D3)&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The current source code of the plugin can be found on &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/graphic_fixtures"&gt;Github&lt;/a&gt;.  Feel free to
@@ -112,7 +112,7 @@ results, it was not very easy to work with generation of visuals. The
 data generated from BLAST output had to be parsed first into a data
 layer and then interfaced with other features like displaying overview
 graphic or other rich information. This required three things from my
-side - Ruby, BLAST and Patience.&lt;/p&gt;
+side - Ruby, BLAST, and Patience.&lt;/p&gt;
 &lt;div class="section" id="x-part-i"&gt;
 &lt;h2&gt;[x] Part I&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;BLAST Output&lt;/strong&gt;: The blast output format can be reconfigured using the
@@ -122,7 +122,7 @@ The sample XML output (standard settings) has the following structure
 (for a real example
 &lt;a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml"&gt;blast.xml&lt;/a&gt;):&lt;/p&gt;
 &lt;pre class="code xml literal-block"&gt;
-.?xml version="1.0"?&amp;gt;
+&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
 &lt;span class="cp"&gt;&amp;lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;BlastOutput&amp;gt;&lt;/span&gt;
   &lt;span class="nt"&gt;&amp;lt;BlastOutput_program&amp;gt;&lt;/span&gt;
@@ -166,47 +166,43 @@ The sample XML output (standard settings) has the following structure
 &lt;span class="nt"&gt;&amp;lt;/BlastOutput_iterations&amp;gt;&lt;/span&gt;
 &lt;span class="nt"&gt;&amp;lt;/BlastOutput&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
-&lt;p&gt;The XML output is as detailed as it could be including all the
-information about Hit's
-&lt;a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair"&gt;HSP&lt;/a&gt;,
-the &lt;tt class="docutils literal"&gt;query database&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;alignment lengths&lt;/tt&gt;, the
-&lt;tt class="docutils literal"&gt;query and aligned sequences&lt;/tt&gt; along with the matches between them, and
-&lt;tt class="docutils literal"&gt;query statistics&lt;/tt&gt;. This is as useful as it could be and helps to
-generate very detailed statistics and overview too. I would recommend
-one to look at the given example of blast.xml to understand what kind of
-data is generated. To parse this generated XML output easily, I used the
-&lt;a class="reference external" href="https://rubygems.org/gems/ox"&gt;Ox&lt;/a&gt; rubygem, which is a simple and
-&lt;a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html"&gt;faster&lt;/a&gt;
-alternative of other XML parsers available in Ruby. In the beginning, I
-generated a simple Hash out of this parsed data using recursive
-traversal along the elements.&lt;/p&gt;
+&lt;p&gt;The XML output is as detailed as it could be including all the information
+about Hit's &lt;a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair"&gt;HSP&lt;/a&gt;, the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-database&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;alignment-lengths&lt;/span&gt;&lt;/tt&gt;, the &lt;tt class="docutils literal"&gt;query&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;aligned-sequences&lt;/span&gt;&lt;/tt&gt;
+along with the matches between them, and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-statistics&lt;/span&gt;&lt;/tt&gt;. This
+is as useful as it could be and helps to generate very detailed statistics and
+overview too. I would recommend one to look at the given example of blast.xml
+to understand what kind of data is generated. To parse this generated XML
+output easily, I used the &lt;a class="reference external" href="https://rubygems.org/gems/ox"&gt;Ox&lt;/a&gt; rubygem, which
+is a simple and &lt;a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html"&gt;faster&lt;/a&gt; alternative of
+other XML parsers available in Ruby. In the beginning, I generated a simple
+Hash out of this parsed data using recursive traversal along the elements.&lt;/p&gt;
 &lt;pre class="code ruby literal-block"&gt;
-&lt;span class="ln"&gt; 1 &lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;report!&lt;/span&gt;
-&lt;span class="ln"&gt; 2 &lt;/span&gt;    &lt;span class="c1"&gt;# Generates BLAST report which one or more multiple Query objects&lt;/span&gt;
-&lt;span class="ln"&gt; 3 &lt;/span&gt;    &lt;span class="c1"&gt;# based on the blast query string.&lt;/span&gt;
-&lt;span class="ln"&gt; 4 &lt;/span&gt;    &lt;span class="n"&gt;parsed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Ox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vi"&gt;@result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ln"&gt; 5 &lt;/span&gt;    &lt;span class="n"&gt;hashed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node_to_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parsed_out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ln"&gt; 6 &lt;/span&gt;    &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_program"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="ln"&gt; 7 &lt;/span&gt;    &lt;span class="vi"&gt;@querydb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_db"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="ln"&gt; 8 &lt;/span&gt;
-&lt;span class="ln"&gt; 9 &lt;/span&gt;    &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_iterations"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-&lt;span class="ln"&gt;10 &lt;/span&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt; &lt;span class="o"&gt;||=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
-&lt;span class="ln"&gt;11 &lt;/span&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Statistics"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ln"&gt;12 &lt;/span&gt;
-&lt;span class="ln"&gt;13 &lt;/span&gt;        &lt;span class="c1"&gt;# Ensure a hit object is received. No hits, returns a newline.&lt;/span&gt;
-&lt;span class="ln"&gt;14 &lt;/span&gt;        &lt;span class="c1"&gt;# Note that checking to "\n" doesn't work since n[4] = ["\n"]&lt;/span&gt;
-&lt;span class="ln"&gt;15 &lt;/span&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]==[&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="ln"&gt;16 &lt;/span&gt;            &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"No hits found."&lt;/span&gt;
-&lt;span class="ln"&gt;17 &lt;/span&gt;            &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;"true"&lt;/span&gt;
-&lt;span class="ln"&gt;18 &lt;/span&gt;        &lt;span class="k"&gt;else&lt;/span&gt;
-&lt;span class="ln"&gt;19 &lt;/span&gt;            &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-&lt;span class="ln"&gt;20 &lt;/span&gt;                &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,\&lt;/span&gt;
-&lt;span class="ln"&gt;21 &lt;/span&gt;                                                &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{})&lt;/span&gt;
-&lt;span class="ln"&gt;22 &lt;/span&gt;                &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hsp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;HSP&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Hsp"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ln"&gt;23 &lt;/span&gt;            &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="ln"&gt;24 &lt;/span&gt;        &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="ln"&gt;25 &lt;/span&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
-&lt;span class="ln"&gt;26 &lt;/span&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;report!&lt;/span&gt;
+  &lt;span class="c1"&gt;# Generates BLAST report which one or more multiple Query objects&lt;/span&gt;
+  &lt;span class="c1"&gt;# based on the blast query string.&lt;/span&gt;
+  &lt;span class="n"&gt;parsed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Ox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vi"&gt;@result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="n"&gt;hashed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node_to_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parsed_out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_program"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+  &lt;span class="vi"&gt;@querydb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_db"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+
+  &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_iterations"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="vi"&gt;@queries&lt;/span&gt; &lt;span class="o"&gt;||=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Statistics"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Ensure a hit object is received. No hits, returns a newline.&lt;/span&gt;
+    &lt;span class="c1"&gt;# Note that checking to "\n" doesn't work since n[4] = ["\n"]&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]==[&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+      &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"No hits found."&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+      &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                                                 &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{})&lt;/span&gt;
+        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hsp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;HSP&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Hsp"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="k"&gt;end&lt;/span&gt;
+    &lt;span class="k"&gt;end&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;
 &lt;p&gt;This Hash is then used for easy templating (using
 &lt;a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html"&gt;erb&lt;/a&gt;) and
