@@ -11,12 +11,12 @@
 
 .. admonition:: 
     I am an undergraduate student at Indian Institute of Technology, Kharagpur
-    majoring in in Biotechnology and Biochemical engineering.  I am a
+    majoring in Biotechnology and Biochemical engineering.  I am a
     passionate learner and ardent linux user who loves Biology, Computer Science,
-    `Python`_, `Vim`_, coffee, and beautiful sunsets. This website hosts my work interests
-    and description besides few interesting things happening in my life.
+    `Python`_, `Vim`_, coffee, and beautiful sunsets.
 
-    One can often find me lurking on Wikipedia [1]_ (semi-active) or Quora [2]_.
+    This website hosts my work interests and description besides few
+    interesting things happening in my life. Other than this place, one can often find me lurking on Wikipedia [1]_ (semi-active) or Quora [2]_.
 
     Here are a bunch of my latest blog posts:
 
