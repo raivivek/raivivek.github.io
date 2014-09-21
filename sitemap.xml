@@ -6,82 +6,102 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://vivekiitkgp.github.io/</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/2014/</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/404.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/archive.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/blog/</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/blog/blogging-is-fun.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
+ </url>
+ <url>
+  <loc>https://vivekiitkgp.github.io/blog/curated-list-of-biology-resources.html</loc>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/alignment.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
+ </url>
+ <url>
+  <loc>https://vivekiitkgp.github.io/categories/awesome-biology.html</loc>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/biology.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/blast.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
+ </url>
+ <url>
+  <loc>https://vivekiitkgp.github.io/categories/books.html</loc>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/d3js.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/genes.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
+ </url>
+ <url>
+  <loc>https://vivekiitkgp.github.io/categories/github.html</loc>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/javascript.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/jquery.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
+ </url>
+ <url>
+  <loc>https://vivekiitkgp.github.io/categories/resources.html</loc>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/ruby.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/categories/sequenceserver.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
  <url>
   <loc>https://vivekiitkgp.github.io/resume.html</loc>
-  <lastmod>2014-09-14</lastmod>
+  <lastmod>2014-09-21</lastmod>
  </url>
 </urlset>
