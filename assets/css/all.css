@@ -509,6 +509,11 @@ ul.breadcrumb > li:before {
 
 .label {
     font-size: 10px;
+    background-color: transparent;
+}
+
+table.docutils {
+    border: none;
 }
 
 a.footnote-reference,
