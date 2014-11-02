@@ -10,7 +10,7 @@
     ― Socrates
 
 .. admonition:: 
-    I am an undergraduate student at Indian Institute of Technology, Kharagpur
+    I am an undergraduate student at Indian Institute of Technology, Kharagpur.
     A passionate learner and ardent linux user who loves Biology, Computer Science,
     `Python`_, `Vim`_, Coffee, and beautiful sunsets.
 
