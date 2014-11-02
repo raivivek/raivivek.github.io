@@ -7,10 +7,10 @@
 .. type: text
 .. author: Vivek Rai
 
-It's been couple of years since I made my first edit on Wikipedia. Over these
+It's been a couple of years since I made my first edit on Wikipedia. Over these
 years, I have garnered over 1600 [#]_ edits of which most are on
 `en.wikipedia.org <https://en.wikiepdia.org>`_. However, as you may notice, my
-contribution was highest during the first years and quickly it dwindled to
+contribution was highest during the first years and quickly it dwindled to a
 handful of rare patrol edits over the next two years. A part of the answer lies
 in the fact that I began my undergraduate studies in the same year and ever
 since then I could find very less time to edit or create articles.
