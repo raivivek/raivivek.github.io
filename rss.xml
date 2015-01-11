@@ -1,5 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Sun, 09 Nov 2014 16:37:43 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Introduction to Functional Programming</title><link>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;I had heard fascinating tales of Functional Programming and how it has been a
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Sun, 11 Jan 2015 15:42:27 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>BLAST+ and It's Inconsistencies</title><link>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;BLAST+ is an amazing tool and does it job in a pretty decent way.  However,
+anyone who has worked with it for some time and with some non trivial details
+has his own horror stories to tell. For the past few months where I have been
+engaged in development of SequenceServer, we got a lot of opportunities to see
+the ugly inconsistencies crept within the otherwise beautiful program.&lt;/p&gt;
+&lt;p&gt;BLAST+ is the newer and improved version of legacy BLAST executables with
+improved performance and feature inclusion. It goes through close to two cycles
+of release every year and includes further performance patches or fixes
+introduced against community bug reports.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;I will talk in brief about few problems that we encountered while developing
+SequenceServer.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;One of my major tasks with SS was to create a data layer which will be
+helpful in creating flexible interface. This required me to BLAST and obtain the
+results in XML format, parse and store it accordingly.&lt;/p&gt;
+&lt;p&gt;One of the curious things to notice in the XML file is the presence of
+&lt;tt class="docutils literal"&gt;&amp;lt;Iteration_stat&amp;gt;&lt;/tt&gt; tag within each query. Although if you compare the
+values you will find that each of these stats across all the queries are
+same, and indeed they represent statistical information based on the entire
+query and not per query. You can examine one sample XML file
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/blob/master/spec/ss_sample_blast_with_hits.xml"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you examined the XML file, you can notice that the sequence alignments,
+start, and end co-ordinates are all provided very nicely. When using the HTML
+format output option (provided with all BLAST programs) like prior versions
+of SS, we receive a well formatted output where longer sequences are properly
+broken on multiple lines along with start and end coordinates for the same.
+But as we were generating the HTML ourselves, we had to manually calculate
+the start and stop ends for each line.&lt;/p&gt;
+&lt;p&gt;In general, the start and end coordinates are agnostic of the reading frame and
+one has to properly infer them from the &lt;tt class="docutils literal"&gt;qframe&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;hframe&lt;/tt&gt; values. In
+other words, you need to see whether you are moving on the positive strand or
+the negative stand. However, &lt;tt class="docutils literal"&gt;blastn&lt;/tt&gt; makes an exception to this rule and
+automatically makes this informed decision. I don't know if that should be the
+scenario but whatever be the case, it certainly is not consistent. This had
+to be taken in care of separately in the commit shown below.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code ruby literal-block"&gt;
+&lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="n"&gt;def28ff&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;.cb236fa&lt;/span&gt; &lt;span class="mi"&gt;100644&lt;/span&gt;
+&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;span class="o"&gt;+++&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;SequenceServer&lt;/span&gt;
+                  &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;
+
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# blastn results are inconsistent with the other methods as it&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# automatically reverse the start and end coordinates (based on&lt;/span&gt;
+&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# frame), while for others it has to be inferred.&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'blastn'&lt;/span&gt;
+            &lt;span class="n"&gt;nqseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;
+            &lt;span class="n"&gt;nsseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;In an issue &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id3" id="id1"&gt;[1]&lt;/a&gt; opened
+by our early contributer &lt;a class="reference external" href="https://github.com/wwood"&gt;@wwood&lt;/a&gt;, we found that
+FASTA ids with only numbers in it didn't play very well with &lt;tt class="docutils literal"&gt;blastdbcmd&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;The bug since then, went on without activity until recently when we tried to fix it
+using a simple hack. As hits can also be queried using accession number and not only
+ids, we simply started using accession number with a &lt;tt class="docutils literal"&gt;lcl|&lt;/tt&gt; added to the start.
+This not only preserved the previous and desired behavior but also solved the problem
+of error with numeric ids (&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/commit/6d83a0833c42ec3a9e944ebc7873603f4a82d774"&gt;commit&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;However, soon with the release of BLAST+ 2.2.30 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id4" id="id2"&gt;[2]&lt;/a&gt; we noticed that our hack didn't play
+well with the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-target-only&lt;/span&gt;&lt;/tt&gt; option. Since, our implementation moves according to the
+latest version of BLAST+, we had to revert the commit.&lt;/p&gt;
+&lt;p&gt;As of now, the issue is still open and we wait for it to be fixed upstream. Apparently,
+the BLAST+ team is aware of the issue but it seems to be poorly documented.
+Here is what they had to say -&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+... but when lcl|integer is used (either directly on the definition line, or when
+only an integer is used), the programs assume that the integer is a gi
+number.We will investigate the feasibility of applying a check.
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Another weird issue popped us when we were playing around with some funky
+ids. These ids contained some symbols and weird characters like hashes and
+pipes. I'm not yet sure if this is an undesired behavior but it is certainly
+queer. Here is a small demo -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+$ cat funky_ids.fa
+&amp;gt;abc|def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abcdef#
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abc#def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+
+$ blastdbcmd -db funky_ids.fa -entry all -outfmt '%a'
+abc:def
+abcdef#
+abc#def
+&lt;/pre&gt;
+&lt;p&gt;If you noticed the first line of both commands you can see that the pipe
+character in first case is being weirdly displayed as a colon. As I said, I
+don't know yet if it is a desired or intentional behavior but whatever it is,
+it sure needs some explanation or documentation. I have already emailed the
+BLAST+ team about this and expecting their reply anytime soon.&lt;/p&gt;
+&lt;p&gt;I will have some more updates with my recent adventures with &lt;a class="reference external" href="https://github.com/yeban/afra"&gt;Afra (an
+annotation editor)&lt;/a&gt; in coming week.&lt;/p&gt;
+&lt;p&gt;Stay tuned!&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Retrieving blast sequences doesn't work well with numbers #88,
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/88"&gt;SequenceServer, GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;NCBI BLAST+ Release Notes, October 2nd, 2014. Christiam Camacho, NCBI,
+&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK131777/"&gt;http://www.ncbi.nlm.nih.gov/books/NBK131777/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description><category>blast</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</guid><pubDate>Sun, 11 Jan 2015 06:33:17 GMT</pubDate></item><item><title>Why do Functional Programming?</title><link>https://vivekiitkgp.github.io/blog/why-do-functional-programming.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;Write your post here.&lt;/p&gt;</description><guid>https://vivekiitkgp.github.io/blog/why-do-functional-programming.html</guid><pubDate>Wed, 12 Nov 2014 03:40:49 GMT</pubDate></item><item><title>Introduction to Functional Programming</title><link>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;I had heard fascinating tales of Functional Programming and how it has been a
 food for thought to many exceptional programmers. Over a year ago when I was
 looking for Python mastery tips on the web, I came across &lt;a class="reference external" href="https://stackoverflow.com/questions/2573135/python-progression-path-from-apprentice-to-guru"&gt;this&lt;/a&gt;
 question on StackOverflow, that laid down an ultimate path for progression from an apprentice to
