@@ -7,11 +7,13 @@
 .. type: text
 .. author: Vivek Rai
 
-BLAST+ is an amazing tool and does it job in a pretty decent way.  However,
-anyone who has worked with it for some time and with some non trivial details
-has his own horror stories to tell. For the past few months where I have been
-engaged in development of SequenceServer, we got a lot of opportunities to see
-the ugly inconsistencies crept within the otherwise beautiful program.
+`BLAST+ <http://www.ncbi.nlm.nih.gov/books/NBK1763/>`_ is an amazing tool and
+does it job in a pretty decent way.  However, anyone who has worked with it for
+some time and with some non trivial details has his own horror stories to tell.
+For the past few months where I have been engaged in development of
+`SequenceServer <https://github.com/yannickwurm/sequenceserver>`_, we got a lot
+of opportunities to see the ugly inconsistencies crept within the otherwise
+beautiful program.
 
 BLAST+ is the newer and improved version of legacy BLAST executables with
 improved performance and feature inclusion. It goes through close to two cycles
