@@ -1,15 +1,15 @@
-.. title: Welcome
+.. title: Introduction
 .. slug: index
 .. tags: programming, biology, computer science
-.. link: 
+.. link:
 .. description: Code, Biology and bits of my life...
 .. type: text
 
-.. epigraph:: 
-    “The only true wisdom is in knowing you know nothing.” 
+.. epigraph::
+    “The only true wisdom is in knowing you know nothing.”
     ― Socrates
 
-.. admonition:: 
+.. admonition::
     I am an undergraduate student at Indian Institute of Technology, Kharagpur.
     A passionate learner and ardent linux user who loves Biology, Computer Science,
     `Python`_, `Vim`_, Coffee, and beautiful sunsets.
