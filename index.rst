@@ -6,22 +6,21 @@
 .. type: text
 
 .. epigraph::
-    “The only true wisdom is in knowing you know nothing.”
+    “*The only true wisdom is in knowing you know nothing.*”
     ― Socrates
 
-.. admonition::
-    I am an undergraduate student at Indian Institute of Technology, Kharagpur.
-    A passionate learner and ardent linux user who loves Biology, Computer Science,
-    `Python`_, `Vim`_, Coffee, and beautiful sunsets.
+I am an undergraduate student at Indian Institute of Technology, Kharagpur.
+A passionate learner and ardent linux user who loves Biology, Computer Science,
+`Python`_, `Vim`_, Coffee, and beautiful sunsets.
 
-    This website hosts my work interests and description besides few
-    interesting things happening in my life. Other than this place, one can
-    often find me lurking on `Wikipedia`_ (semi-active) or `Quora`_.
+This website hosts my work interests and description besides few
+interesting things happening in my life. Other than this place, one can
+often find me lurking on `Wikipedia`_ (semi-active) or `Quora`_.
 
-    Here are a bunch of my latest blog posts:
+Here are a bunch of my latest blog posts:
 
-    .. post-list::
-        :stop: 5
+.. post-list::
+    :stop: 6
 
 -----------------------
 
