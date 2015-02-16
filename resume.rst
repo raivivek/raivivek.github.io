@@ -6,7 +6,7 @@
 .. description: Resume - Vivek Rai
 
 
-**Detailed CV:** [`PDF <https://github.com/vivekiitkgp/resume/raw/master/academic_resume.pdf>`_]
+**Detailed CV:** [`PDF <https://github.com/vivekiitkgp/resume/raw/master/vivekrai_cv.pdf>`_]
 
 .. contents:: Contents
 
