@@ -29,6 +29,10 @@
   <lastmod>2015-02-16</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://vivekiitkgp.github.io/categories/compbiol.xml</loc>
+  <lastmod>2015-02-16</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://vivekiitkgp.github.io/categories/d3js.xml</loc>
   <lastmod>2015-02-16</lastmod>
  </sitemap>
@@ -78,6 +82,10 @@
  </sitemap>
  <sitemap>
   <loc>https://vivekiitkgp.github.io/categories/sequenceserver.xml</loc>
+  <lastmod>2015-02-16</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://vivekiitkgp.github.io/categories/wikiepdia.xml</loc>
   <lastmod>2015-02-16</lastmod>
  </sitemap>
  <sitemap>

@@ -1,7 +1,7 @@
 .. title: Contributing to Wikipedia WikiProjects
 .. slug: contributing-to-wikipedia-wikiprojects
 .. date: 2015-02-16 10:23:11 UTC+05:30
-.. tags:
+.. tags: wikiepdia, biology, compbiol
 .. link:
 .. description:
 .. type: text
@@ -12,6 +12,8 @@ content. Since its inception in 2001 [#]_, it has grown to over 34 million
 articles and now attracts 450 million unique visitors amounting to a staggering
 20 billion page views per month [#]_. Not to mention that it is
 continually reviewed, refined and updated every moment [#]_.
+
+.. TEASER_END
 
 While most of the edits made to Wikipedia are non-registered IP edits [#]_, a
 significant portion of the active community is focused on improving particular
