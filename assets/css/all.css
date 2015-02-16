@@ -543,18 +543,13 @@ code, pre {
 }
 
 .social-icons {
-  right: 0px;
-  top: 0px;
-  margin: auto;
-  z-index: 2;
-  position: fixed;
   list-style: none;
-  font-size: 20px;
+  margin: auto;
 }
 
 .social-icons li {
-  padding: 10px;
-  line-height: 30px;
+  display: inline;
+  padding: 5px;
 }
 
 .social-icons li a:hover {
