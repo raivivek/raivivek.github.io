@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Thu, 29 Jan 2015 20:26:16 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>BLAST+ and Its Inconsistencies</title><link>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK1763/"&gt;BLAST+&lt;/a&gt; is an amazing tool and
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><language>en</language><lastBuildDate>Mon, 16 Feb 2015 15:22:51 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Contributing to Wikipedia WikiProjects</title><link>https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;&lt;a class="reference external" href="https://wikipedia.org"&gt;Wikipedia&lt;/a&gt; is one of the largest openly editable, web-based encyclopedias with free
+content. Since its inception in 2001 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id5" id="id1"&gt;[1]&lt;/a&gt;, it has grown to over 34 million
+articles and now attracts 450 million unique visitors amounting to a staggering
+20 billion page views per month &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id6" id="id2"&gt;[2]&lt;/a&gt;. Not to mention that it is
+continually reviewed, refined and updated every moment &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id7" id="id3"&gt;[3]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;While most of the edits made to Wikipedia are non-registered IP edits &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id8" id="id4"&gt;[4]&lt;/a&gt;, a
+significant portion of the active community is focused on improving particular
+sections of the site. People often team up according to their specific topic of
+interest, specific location or a specific kind of task and work in an organized
+manner. This results in the creation of more accurate, consistent and high-quality
+articles that are often promoted to the status of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:Featured_articles"&gt;featured articles&lt;/a&gt; or &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:GA"&gt;good articles&lt;/a&gt;. Currently, there are over &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:Database_reports/WikiProjects_by_changes"&gt;2000
+such WikiProjects&lt;/a&gt;
+on English Wikipedia alone with varying level of activity. Naturally, areas
+which demand specialization or expertise in a particular field (for example
+Mathematics, Biology, Physics) are less active than the ones more accessible to
+general public (for example places, monuments, biographies). A complete
+directory of already available WikiProjects can be found &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Council/Directory"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Initially, when I began contributing articles to Wikipedia, a local and regional
+familiarity prompted me to join the &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_India"&gt;WikiProject India&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_West_Bengal"&gt;WikiProject West
+Bengal&lt;/a&gt; groups. Both of them had a plenty of active and experienced contributors
+who would occasionally meet up and organize talks or events of interest. The community is very warm and welcoming to new users
+and soon I was invited to one such meetup. Unfortunately, I couldn't attend it
+because of college work.&lt;/p&gt;
+&lt;p&gt;Yesterday while reading an article on Ribonucleic acids on Wikipedia, my mind
+veered off for few minutes and came across the WikiProject pages of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Molecular_and_Cellular_Biology"&gt;Cell and
+Molecular Biology&lt;/a&gt;
+and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology"&gt;Computational Biology&lt;/a&gt;.
+The portal were neatly organized with significant instructions for a newcomer,
+but there was hardly any noticeable recent activity. Being a computational
+biology enthusiast myself, I thought this opportunity can readily be used for
+learning more about the subject and at the same time contributing more articles
+and content to this project. I quickly went through their scope and guidelines
+articles and drafted a vague timeline and coverage of my contributions.
+However, just then I came across a very interesting section on the homepage
+that highlighted an international &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISCB_competition_announcement_2014"&gt;article writing competition&lt;/a&gt;
+organized in association with &lt;a class="reference external" href="http://www.iscb.org/"&gt;International Society for Computational Biology
+(ISCB)&lt;/a&gt;.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;ISCB article competition&lt;/dt&gt;
+&lt;dd&gt;The competition, running since 2012, awards students
+and trainees for the best contributions to computational biology-related
+articles. Entry is open internationally, to students and trainees of any
+level.
+We particularly encourage lecturers or course organisers to use this competition as a class assignment.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;This competition runs through August-January and allows participants to submit
+one article within the scope of the project, where they have added or improved
+significant content. The results are judged by a committee consisting of experienced Wiki editors, and scientists with
+expertise in the related field (for example, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/User:Alexbateman"&gt;Alex Bateman&lt;/a&gt;, Head of Protein Sequence
+Resources, &lt;a class="reference external" href="http://ebi.ac.uk/"&gt;EBI&lt;/a&gt;). The best part? A total cash prize of $1000 is awarded to the
+winners. What could be better than getting paid for learning!&lt;/p&gt;
+&lt;p&gt;However, the main goal of this post was not to encourage people to join my
+efforts or channel interests specifically towards Computational Biology (I
+would be more than happy if it happens). Rather to let others know about such
+exciting opportunities present around us all the time, in places where we least expect them to be.
+Who knows this was just one of such tons of activities
+going on there? Wikipedia is full of mysteries!&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:UuU"&gt;Wikipedia UuU&lt;/a&gt;, contains
+the earliest surviving edit on the English Wikipedia (and hence any Wikipedia
+and project in the Wikimedia Foundation), which was made on January 16, 2001 at
+20:08 UTC.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;WMF Labs, Report Card v2.0
+(&lt;a class="reference external" href="http://reportcard.wmflabs.org/#core-graphs-tab"&gt;http://reportcard.wmflabs.org/#core-graphs-tab&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://stats.wikimedia.org"&gt;Wikipedia Stats&lt;/a&gt;, A statistic of &lt;a class="reference external" href="https://stats.wikimedia.org/EN/TablesArticlesNewPerDay.htm"&gt;new
+articles per day&lt;/a&gt;
+across all language wikipedias. Also see &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:About"&gt;About Wikipedia&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;See: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/User:Opabinia_regalis/Article_statistics#Recent_mainspace_changes_survey"&gt;Opabinia regalis' studies&lt;/a&gt;, Feb 2007&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description><guid>https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html</guid><pubDate>Mon, 16 Feb 2015 04:53:11 GMT</pubDate></item><item><title>BLAST+ and Its Inconsistencies</title><link>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;p&gt;&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK1763/"&gt;BLAST+&lt;/a&gt; is an amazing tool and
 does it job in a pretty decent way.  However, anyone who has worked with it for
 some time and with some non trivial details has his own horror stories to tell.
 For the past few months where I have been engaged in development of

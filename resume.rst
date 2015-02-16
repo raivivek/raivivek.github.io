@@ -21,13 +21,13 @@
 
 Interests
 =========
-    * Machine Learning
-    * Computational Biology
-    * Bio-inspired Artificial Intelligence
     * Bioinformatics
+    * Computational Biology
     * Systems Biology
-    * Data Analysis and Visualization
     * Cell and Molecular Biology
+    * Machine Learning
+    * Bio-inspired Artificial Intelligence
+    * Data Analysis and Visualization
 
 Education
 =========
@@ -61,6 +61,24 @@ compatibility with previous versions etc.,
 A list of my merged and unmerged changes can be found at
 `gh:vivekiitkgp/sequenceserver
 <https://github.com/vivekiitkgp/sequenceserver>`_.
+
+Afra
+####
+
+`gh:yeban/afra <https://github.com/yeban/afra>`_
+------------------------------------------------
+Afra is a gene annotation platform inspired by crowdsourcing approaches and platforms
+including Foldit, Galaxy Zoo and Crowdflower to recruit additional gene feature curators.
+It aims to simply and provide an easy learning curve so that even a complicated task like
+quality gene curation can be performed by general public.
+
+I have mainly worked with the user interface of the program improving the
+overall look and experience. While these changes may seem insignificant in
+general, they play a very important role in a client-side heavy application
+(such as this one) where user is highly reliant on visual feedback.
+
+A list of my merge commits can be found at `Afra - Contributers
+<https://github.com/yeban/afra/commits?author=vivekiitkgp>`_.
 
 gistie
 ######
