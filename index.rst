@@ -22,11 +22,6 @@ Here are a bunch of my latest blog posts:
 .. post-list::
     :stop: 6
 
-`GitHub <https://github.com/vivekiitkgp/>`_
-`LinkedIn <http://in.linkedin.com/pub/vivek-rai/58/505/130/>`_
-`Google+ <https://plus.google.com/u/0/+vivekraikgp>`_
-`Twitter <https://twitter.com/vivek_ziel>`_
-
 -----------------------
 
 .. _Indian Institute of Technology, Kharagpur: http://www.iitkgp.ac.in
