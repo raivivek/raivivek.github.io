@@ -1,7 +1,7 @@
 .. title: Contributing to Wikipedia WikiProjects
 .. slug: contributing-to-wikipedia-wikiprojects
 .. date: 2015-02-16 10:23:11 UTC+05:30
-.. tags: wikiepdia, biology, compbiol
+.. tags: wikipedia, biology, compbiol
 .. link:
 .. description:
 .. type: text
