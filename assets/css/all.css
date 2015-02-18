@@ -531,6 +531,15 @@ table.docutils {
   border: none;
 }
 
+ul.post-tags {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+ul.post-tags >li {
+  display: inline;
+}
+
 a.footnote-reference,
 a.citation-reference {
   position: relative; top: -0.5em; font-size: 60%;

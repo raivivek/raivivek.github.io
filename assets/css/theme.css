@@ -94,3 +94,12 @@ ul.breadcrumb > li:before {
 table.docutils {
   border: none;
 }
+
+ul.post-tags {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+ul.post-tags >li {
+  display: inline;
+}

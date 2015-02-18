@@ -1,5 +1,4 @@
-// Footnote.js taken from gwern.net
-// All due credits to original author.
+// Footnote.js taken from gwern.net with minor modifications.
 
 $(document).ready(function() {
     Footnotes.setup();
@@ -7,15 +6,17 @@ $(document).ready(function() {
 
 var Footnotes = {
     footnotetimeout: false,
+
     setup: function() {
         var footnotelinks = $('.footnote-reference')
 
-        footnotelinks.unbind('mouseover',Footnotes.footnoteover);
-        footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
+        footnotelinks.unbind('mouseover', Footnotes.footnoteover);
+        footnotelinks.unbind('mouseout', Footnotes.footnoteoout);
 
-        footnotelinks.bind('mouseover',Footnotes.footnoteover);
-        footnotelinks.bind('mouseout',Footnotes.footnoteoout);
+        footnotelinks.bind('mouseover', Footnotes.footnoteover);
+        footnotelinks.bind('mouseout', Footnotes.footnoteoout);
     },
+
     footnoteover: function() {
         clearTimeout(Footnotes.footnotetimeout);
         $('#footnotediv').stop();
@@ -32,28 +33,32 @@ var Footnotes = {
             re = /#id\d+$/;
             id = href.match(re)[0];
 
-        div.html('<div>'+$('tbody tr td:nth-child(2)', id).html()+'</div>');
+        var footnoteContent = $('tbody tr td:nth-child(2)', id).html() || 'See post';
+        div.html('<div>'+ footnoteContent +'</div>');
 
         $(document.body).append(div);
 
         var left = position.left;
         var maxWidth = $(window).width()/2;
-        if(left + 420  > $(window).width() + $(window).scrollLeft())
-            left = $(window).width() - 420 + $(window).scrollLeft();
+        if(left + 450  > $(window).width() + $(window).scrollLeft())
+            left = $(window).width() - 450 + $(window).scrollLeft();
         var top = position.top+20;
         if(top + div.height() > $(window).height() + $(window).scrollTop())
             top = position.top - div.height() - 15;
 
-        console.log(maxWidth);
-        div.attr('style', 'font-size: 8px; padding-left: 5px; max-width:' + maxWidth + 'px');
+        div.attr('style',
+                 'font-size: 12px; padding: 0 5px 0 5px; max-width:' + maxWidth + 'px'
+                );
+
         div.css({
             left:left,
             top:top,
-            opacity:0.95,
+            opacity:1.0,
             background: "bisque",
             position: "absolute",
         });
     },
+
     footnoteoout: function() {
         Footnotes.footnotetimeout = setTimeout(function() {
             $('#footnotediv').animate({
@@ -63,6 +68,7 @@ var Footnotes = {
             });
         },100);
     },
+
     divover: function() {
         clearTimeout(Footnotes.footnotetimeout);
         $('#footnotediv').stop();
