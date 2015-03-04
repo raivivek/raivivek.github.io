@@ -58,8 +58,7 @@ Open Source
 SequenceServer allows users to easily set up a **BLAST+ server to be used locally**
 or over the web with a nice and intuitive user interface. It is an
 elegant alternative to many other similar projects that are often an overkill
-or too complex to set up. I worked with introducing a number of features and
-improvements over the current version. The important contribution includes (but
+or too complex to set up. My important contribution includes (but
 not limited to) - :doc:`creating-graphical-overview-with-d3`,
 :doc:`understanding-blast-output` and creating the data layer, maintaining code
 compatibility with previous versions etc.,
