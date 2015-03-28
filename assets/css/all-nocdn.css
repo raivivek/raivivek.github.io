@@ -500,9 +500,9 @@ div.postdiv > p,
 div.postdiv * p,
 body
 {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Open Sans', sans-serif;
-  text-align: justify;
+  line-height: 1.4em;
   font-weight: 300;
 }
 

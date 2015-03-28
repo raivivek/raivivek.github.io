@@ -9,13 +9,13 @@
     “*The only true wisdom is in knowing you know nothing.*”
     ― Socrates
 
-I am an undergraduate student at `Indian Institute of Technology, Kharagpur`_.
-A passionate learner and ardent linux user who loves Biology, Programming,
-`Python`_, `Vim`_, coffee, and beautiful sunsets.
+A programmer and keen open source enthusiast who is also passionate about
+Biology. I love to spend my time coding or reading a reasearch paper during a
+beautiful sunset while sipping on my hot coffee.
 
-This website hosts my work interests and description besides few
-interesting things happening in my life. Other than this place, one can
-often find me lurking on `Wikipedia`_ or `Quora`_.
+This website hosts my interests and activities, some of which can also be found
+on `Wikipedia`_ and `Quora`_.
+
 
 Here are a bunch of my latest blog posts:
 
@@ -24,8 +24,5 @@ Here are a bunch of my latest blog posts:
 
 -----------------------
 
-.. _Indian Institute of Technology, Kharagpur: http://www.iitkgp.ac.in
-.. _Python : http://stackoverflow.com/questions/101268/hidden-features-of-python
-.. _Vim : http://www.vim.org
 .. _Wikipedia :  https://en.wikipedia.org/wiki/User:Vivek_Rai
 .. _Quora :  https://www.quora.com/Vivek-Rai-5
