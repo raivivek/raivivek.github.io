@@ -1,0 +1,35 @@
+%head
+  %link{href:'styles.css', rel:'stylesheet'}
+  %link{href:'http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400',
+  rel:'stylesheet'}
+%body
+  .container
+    #banner
+      .banner-title
+        %a{href:".."} Shorts
+      .banner-subclause
+        Musings of a free mind, treasured recollections & visions of a distant future
+      .divider
+      .archive
+        .category
+          archives:
+          %a{href:"./places"} places,
+          %a{href:"./books"} books,
+          %a{href:"./science"} science,
+          %a{href:"./programming"} programming,
+          %a{href:"./unfinished"} unfinished
+      .divider
+    .content
+      #article
+        .metadata
+          .category
+            {{ page.category }}
+          .timestamp
+            {{ page.date.strftime ("%d %b %Y")}}
+        .title
+          {{ page.title }}
+        .subtitle
+          {{ page.subtitle }}
+        {{ page.content }}
+        .article-end
+          Published by {{ page.author }}

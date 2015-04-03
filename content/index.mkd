@@ -1,0 +1,7 @@
+template: index.haml
+index: True
+sort_key: date
+sort_reverse: True
+max_subpages: 10
+title: Recently Posted
+---

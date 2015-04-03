@@ -1,0 +1,33 @@
+template: post.haml
+category: unfinished
+author: Vivek Rai
+title: The importance of reading
+---
+Why reading is one thing that can change your life.
+---
+> “As he read, I fell in love the way you fall asleep: slowly, and then all at once.”
+> ― [John Green](https://www.goodreads.com/author/show/1406384.John_Green),
+> [The Fault in Our
+> Stars](https://www.goodreads.com/book/show/11870085-the-fault-in-our-stars)
+
+Reading is one of the fundamental habits that we learn as a child. Even before our
+temporal abilities are decently developed (usually by the end of third month
+after birth), people sing songs, lullabies, read stories or make interesting noises
+to stimulate our brain. Not much later, reading becomes out favorite activity where
+we have already irritated our parents to read *Winnie-the-Pooh* over and again
+for umpteenth time. This habit, however, grows only up to the teenage years and
+then starts to diminish, only to increase again later in life.[1](http://files.eric.ed.gov/fulltext/ED496343.pdf)
+
+A simple Google search yields thousands of blog posts, articles and research
+papers discussing the benefits. Although, all of those can be discussed in much
+finer details and every point be further analyzed, it suffices to say that reading
+is important for personal development and growth of social, economic and civic
+life (Holden, 2004); almost as if it a prerequisite for all cultural and social
+activities. Not only one becomes a better reader, writer and self-confident
+person but also *creative* by experience other worlds and newer roles in
+imagination.
+
+> “Imagination is more important than knowledge. For knowledge is limited to all
+> we now know and understand, while imagination embraces the entire world, and
+> all there ever will be to know and understand.”
+> ― [Albert Einstein](https://wikipedia.com/wiki/Albert_Einstein)
