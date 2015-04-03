@@ -1,0 +1,9 @@
+template: 404.haml
+type: 404
+title: Oops! 404
+---
+Nothing found!
+---
+> “Not all those who wander are lost.” ― [J.R.R.
+> Tolkien](https://www.goodreads.com/author/show/656983.J_R_R_Tolkien), The
+> Fellowship of the Ring
