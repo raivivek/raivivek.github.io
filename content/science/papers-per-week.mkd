@@ -1,0 +1,43 @@
+template: post.haml
+category: science
+author: Vivek Rai
+title: Papers per week
+---
+One must understand good research to do good research.
+---
+> Research is to see what everybody else has seen, and to think what nobody
+> else has thought. -- Albert Szent-Gyorgyi
+
+Reading research papers, literature survey as one may call it, is one of the
+primary tasks of any research enthusiast, student, academician, or researcher.
+As we advance through our academic career, the complexity and quantity of
+content keeps increasing until the text books give up. The inflow of
+information is too rapid and too vast to be contained and sufficiency conveyed
+to the target audience, thus necessitating the need of specialized sources.
+
+Research papers act as such specialized source and focus clearly on a topic,
+express rigorous discussions, distinguishes between reliable and biased
+sources, between authoritative and questionable statistics, and between fact
+and opinion. Peer reviewed journals take this even further by ensuring that
+submitted articles always meet a certain quality and standard criteria. It is
+one of the reasons that journals like [nature](https://nature.org),
+[science](https://sciencemag.org) are highly acclaimed.
+
+Although, reading research papers often requires effort mostly because of
+highly condensed information and intended audience, but they provide a great
+insight into the design and thought process. They help you picture the whole
+setup and perform each and every step mentally (even reproduce in your lab!)
+and understand the big picture.
+
+Consequently, in an effort to align my research interests and expand knowledge
+pool, I have started an initiative to try reading at least two papers a week.
+These papers will be selected based on my interest area, its popularity and
+faculty recommendations. Also, to ensure that I'm just not skimming through
+the content but trying to understand it, I'll try writing an one page review
+according to a fixed template. Following this template should ensure that I do
+a critical and creative thinking of the paper.
+
+You can find a list of all the papers I have read along with the one page
+reviews at
+[**gh:papers-per-week**](https://github.com/vivekiitkgp/papers-per-week). Feel
+free to star and send in your comments. ^_^

@@ -1,7 +1,8 @@
 template: index.haml
 index: True
+category: unfinished
 sort_key: date
 sort_reverse: True
 max_subpages: 10
-subtitle: Recently Posted
+subtitle: Excerpts lost in time
 ---
