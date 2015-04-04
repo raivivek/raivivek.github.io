@@ -6,24 +6,25 @@
   .container
     #banner
       .banner-title
-        %a{href:".."} Shorts
+        %a{href:"{{ site.url }}"} Shorts
       .banner-subclause
         Musings of a free mind, treasured recollections & visions of a distant future
       .divider
       .archive
         .category
           archives:
-          %a{href:"./places"} places,
-          %a{href:"./books"} books,
-          %a{href:"./science"} science,
-          %a{href:"./programming"} programming,
-          %a{href:"./unfinished"} unfinished
+          %a{href:"{{ site.url }}/places"} places,
+          %a{href:"{{ site.url }}/books"} books,
+          %a{href:"{{ site.url }}/science"} science,
+          %a{href:"{{ site.url }}/programming"} programming,
+          %a{href:"{{ site.url }}/unfinished"} unfinished
       .divider
     .content
       #article
         .metadata
           .category
-            {{ page.category }}
+            %a{href:"{{ site.url }}/{{ page.category }}"}
+              {{ page.category }}
           .timestamp
             {{ page.date.strftime ("%d %b %Y")}}
         .title
