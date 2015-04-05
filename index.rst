@@ -22,7 +22,10 @@ Here are a bunch of my latest blog posts:
 .. post-list::
     :stop: 6
 
+I also write (short) posts about miscellaneous topics in my `shorts`_ section.
+
 -----------------------
 
 .. _Wikipedia :  https://en.wikipedia.org/wiki/User:Vivek_Rai
 .. _Quora :  https://www.quora.com/Vivek-Rai-5
+.. _shorts : https://vivekiitkgp.github.io/shorts
