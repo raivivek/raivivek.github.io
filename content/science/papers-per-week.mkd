@@ -20,8 +20,8 @@ express rigorous discussions, distinguishes between reliable and biased
 sources, between authoritative and questionable statistics, and between fact
 and opinion. Peer reviewed journals take this even further by ensuring that
 submitted articles always meet a certain quality and standard criteria. It is
-one of the reasons that journals like [nature](https://nature.org),
-[science](https://sciencemag.org) are highly acclaimed.
+one of the reasons that journals like [nature](https://nature.com),
+[science](https://sciencemag.com) are highly acclaimed.
 
 Although, reading research papers often requires effort mostly because of
 highly condensed information and intended audience, but they provide a great
