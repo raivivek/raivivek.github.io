@@ -127,3 +127,8 @@ p {
   margin: 40px auto 30px auto;
   border-bottom: 1px solid #CCC;
 }
+
+.share {
+  text-align: center;
+  font-size: 8px;
+}
