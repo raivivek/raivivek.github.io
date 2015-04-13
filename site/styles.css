@@ -2,7 +2,6 @@ body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  margin: 40px auto;
   letter-spacing: 0.05em;
 }
 
@@ -33,7 +32,7 @@ p {
 
 .banner-title {
   text-transform: uppercase;
-  font-size: 55px;
+  font-size: 5em;
   letter-spacing: 0.2em;
   line-height: 1em;
   margin-top: 1em;
@@ -131,4 +130,5 @@ p {
 .share {
   text-align: center;
   font-size: 8px;
+  margin-botton: 10px;
 }
