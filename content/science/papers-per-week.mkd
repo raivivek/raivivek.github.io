@@ -39,5 +39,5 @@ a critical and creative thinking of the paper.
 
 You can find a list of all the papers I have read along with the one page
 reviews at
-[**gh:papers-per-week**](https://github.com/vivekiitkgp/papers-per-week). Feel
+[**papers-per-week**](https://github.com/vivekiitkgp/papers-per-week). Feel
 free to star and send in your comments. ^_^

@@ -3,26 +3,39 @@ body
   letter-spacing: 0.05em
   font-family: 'Georgia', serif
 
-a
-  text-decoration: none
+::-moz-selection
+    background: #333;
+    color:white;
+    text-shadow: none;
+
+::selection
+    background: #333;
+    color:white;
+    text-shadow: none;
+
+a:link, a:visited, a:hover, a:active
+    color:inherit;
+    text-decoration:none;
+    border-bottom:1px dotted rgba(50,50,50,.5);
+
+a:hover, a:active
+    border-bottom:2px solid rgba(50,50,50,.7);
 
 p
   font-size: 18px
   line-height: 1.5em
 
 .container
-  width: 100%
-  height: 100%
   margin: 0 auto
 
 #banner
-  width: 750px
   margin: 0 auto
-  padding-top: 20px
 
-#article
-  width: 600px
+article
   margin: 0 auto
+
+article blockquote
+  color: grey
 
 .banner-title
   font-family: 'Open Sans', sans-serif
@@ -30,10 +43,10 @@ p
   font-size: 6em
   letter-spacing: 0.2em
   line-height: 1em
-  margin-top: 1em
+  margin: 1em 0 .3em 0
 
 .banner-subclause
-  font-size: 18px
+  font-size: 1.125em
   font-style: italic
   line-height: 1.2em
   margin: .5em auto 1em auto
@@ -45,15 +58,13 @@ p
 .title
   text-align: center
   text-transform: uppercase
-  font-size: 2em
+  font-size: 2.250em
   margin-bottom: 1em
 
 .content
-  height: 100%
   padding: 20px 40px 150px 40px
 
 .nav
-  font-style: italic
   font-size: 12px
 
 .category
@@ -62,12 +73,6 @@ p
   font-size: 15px
   letter-spacing: 0.1em
   line-height: 1.2em
-
-.category a
-  color: black
-
-.category a:hover
-  text-decoration: underline
 
 .timestamp
   font-style: italic
@@ -85,17 +90,20 @@ p
   margin: 5px auto 5px auto
   border-top: 1px solid #CCC
 
-.list
+.list-item
+  text-align: center
+  margin-top: 1.25em
+  line-height: 1.5em
+
+.list-item a
   font-size: 18px
-  font-weight: 400
   text-transform: uppercase
-
-.list a
   color: black
-  letter-spacing: 0.15em
+  letter-spacing: 0.1em
 
-.list a:hover
-  text-decoration: underline
+.list-nav
+  font-size: 12px
+  font-style: italic
 
 .article-end
   text-align: center
@@ -108,4 +116,3 @@ p
 .share
   text-align: center
   font-size: 8px
-  margin-botton: 10px

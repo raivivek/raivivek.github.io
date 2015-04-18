@@ -1,14 +1,15 @@
 %head
+  %link{href:'../normalize.css', rel:'stylesheet'}
   %link{href:'../styles.css', rel:'stylesheet'}
   %link{href:'//fonts.googleapis.com/css?family=Open+Sans:300', rel:'stylesheet'}
 %body
   .container
-    #banner
+    #banner.no-print
       .banner-title
         %a{href:"{{ site.url }}"} Shorts
       .banner-subclause
         Musings of a free mind, treasured recollections & visions of a distant future
-      .divider
+      -#.divider
       .archive
         .category
           archives:
@@ -17,9 +18,9 @@
           %a{href:"{{ site.url }}/science.html"} science,
           %a{href:"{{ site.url }}/programming.html"} programming,
           %a{href:"{{ site.url }}/unfinished.html"} unfinished
-      .divider
+      -#.divider
     .content
-      #article
+      %article
         .metadata
           .category
             %a{href:"{{ site.url }}/{{ page.category }}.html"}
@@ -35,7 +36,7 @@
           Published by {{ page.author }}
         .share
           %a{href:"https://twitter.com/share",class:"twitter-share-button",
-          data-text:"{{page.title}}: Shorts by Vivek Rai", data-via:"vivek_ziel",
+          data-text:"{{page.title.title()}}: Shorts by Vivek Rai", data-via:"vivek_ziel",
           data-hashtags:"{{page.category}}",data-dnt:"true"} Tweet
           %a{href:"https://twitter.com/vivek_ziel",class:"twitter-follow-button",
           data-show-count:"false",data-show-screen-name:"false",data-dnt:"true"} Follow @vivek_ziel

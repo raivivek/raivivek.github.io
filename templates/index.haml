@@ -1,14 +1,15 @@
 %head
+  %link{href:'normalize.css', rel:'stylesheet'}
   %link{href:'styles.css', rel:'stylesheet'}
   %link{href:'//fonts.googleapis.com/css?family=Open+Sans:300', rel:'stylesheet'}
 %body
   .container
-    #banner
+    #banner.no-print
       .banner-title
         %a{href:"{{ site.url }}"} Shorts
       .banner-subclause
         Musings of a free mind, treasured recollections & visions of a distant future
-      .divider
+      -#.divider
       .archive
         .category
           archives:
@@ -17,9 +18,9 @@
           %a{href:"{{ site.url }}/science.html"} science,
           %a{href:"{{ site.url }}/programming.html"} programming,
           %a{href:"{{ site.url }}/unfinished.html"} unfinished
-      .divider
+      -#.divider
     .content
-      #article
+      %article
         .metadata
           .category
             %a{href:"{{ site.url }}/{{ page.category }}.html"}
@@ -27,19 +28,14 @@
         .title
           {{ page.subtitle }}
         {{ page.content }}
-        %ul
-          - for subpage in page.subpages:
-            - if not subpage.type == 404:
-              %li
-                .list
-                  %a{href:"{{ page.rel_site_url }}/{{ subpage.url }}"}
-                    {{ subpage.title }}
-                %i {{ subpage.excerpt }}
-                %br
-              .nav
+        - for subpage in page.subpages:
+          - if not subpage.type == 404:
+            .list-item
+              .list-nav
                   - if subpage['category']:
-                    category: {{ subpage.category }}
-                    %br
-                  date: {{ subpage.date.strftime("%d %b %Y") }}
+                    {{ subpage.category }}, {{ subpage.date.strftime("%d %b %Y") }}
+              .list-title
+                %a{href:"{{ page.rel_site_url }}/{{ subpage.url }}"}
+                  {{ subpage.title }}
                 %br
-                %br
+                {{ subpage.excerpt }}
