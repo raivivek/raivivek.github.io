@@ -1,0 +1,8 @@
+template: index.haml
+index: True
+category: programming
+sort_key: date
+sort_reverse: True
+max_subpages: 10
+subtitle: Making computers work
+---

@@ -1,0 +1,132 @@
+<head>
+  <link href='../normalize.css' rel='stylesheet' />
+  <link href='../styles.css' rel='stylesheet' />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' />
+</head>
+<body>
+  <div class='container'>
+    <div id='banner' class='no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/shorts'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections & visions of a distant future
+      </div>
+      <div class='archive'>
+        <div class='category'>
+          archives:
+          <a href='https://vivekiitkgp.github.io/shorts/places.html'>places,</a>
+          <a href='https://vivekiitkgp.github.io/shorts/books.html'>books,</a>
+          <a href='https://vivekiitkgp.github.io/shorts/science.html'>science,</a>
+          <a href='https://vivekiitkgp.github.io/shorts/programming.html'>programming,</a>
+          <a href='https://vivekiitkgp.github.io/shorts/unfinished.html'>unfinished</a>
+        </div>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='https://vivekiitkgp.github.io/shorts/programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            18 Apr 2015
+          </div>
+        </div>
+        <div class='title'>
+          Designing a Responsive Blog
+        </div>
+        <div class='subtitle'>
+          
+        </div>
+        <p>Anyone who has subscribed to a web design magazine, a blog, or any <em>hacker's</em>
+newsletter for that matter, must be having their inbox crammed up with
+suggestions on how to create a responsive interface, responsive images, smart
+CSS, or better <em>real life</em> web design. If you too, are wondering as I did, about all
+this fuss and what does it mean to have your website respond, then I hope that this
+short can provide you an initial understanding of concepts.</p>
+<p>With an increasing fraction of public connecting to Internet and accessing
+content through their mobile devices, it has become necessary to design your website's
+interface keeping in mind proper layout and display across most of these
+devices (if not all). These devices may vary significantly in resolution,
+aspect-ratio, orientation and other features making it difficult to write clean
+CSS and design a layout that displays appropriately across all.</p>
+<p>No worries!</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/CSS/CSS3">CSS3</a> introduced media
+queries that greatly simplified the task of tailoring the content presentation
+without having to change the content itself. As appropriately summed up in this
+responsive web design
+<a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en">guide</a>
+by Google -</p>
+<blockquote>
+<p>Media queries are simple filters that can be applied to CSS styles. They make
+it easy to change styles based on the characteristics of the device rendering
+the content, including the display type, width, height, orientation and even
+resolution.</p>
+</blockquote>
+<p>Media queries are simple rules that take a <code>media-type</code> and at least one
+expression that defines the scope of CSS styles within the block of that
+particular query. These queries are evaluated each time as the values of
+associated features change and are applied to your page dynamically as soon as
+any of them evaluates to <code>true</code>.</p>
+<h4>Pseudo code</h4>
+<div class="codehilite"><pre>@media (query) {
+/* CSS Rules used when query matches */
+}
+</pre></div>
+
+
+<p>The expressions can be defined using <code>media-features</code> and several
+of them combined into powerful expressions using logical operators <code>and</code>,
+<code>not</code>, <code>only</code> and commas (equivalent to <code>or</code>).</p>
+<h4>Example</h4>
+<div class="codehilite"><pre>@media (min-width: 700px) and (orientation: landscape) {
+    .sidebar {
+        margin: 0;
+    }
+}
+</pre></div>
+
+
+<p>In this example, the expression will evaluate to <code>true</code> if your viewport size
+is more than <code>700px</code> and orientation set in <code>landscape</code> mode, thereby applying
+the styles within the block and setting the sidebar margin to 0. Also, note
+that in this example we didn't specify any <code>media-type</code> which means <code>media-type
+all</code>. For complete description of supported media types and media features, you
+can refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Pseudo-BNF_(for_those_of_you_that_like_that_kind_of_thing)">Mozilla Web
+Guide</a>.</p>
+<p>Once you have the media expressions set up based on the devices you want to
+support, you need to design the corresponding rules like changing the layout,
+updating font size, hiding/showing elements and so on depending on your
+requirements. Once you're done, go ahead and test for the intended effects
+at <a href="http://responsivetest.net/">responsivetest.net</a>.</p>
+<p>An example from my own site:</p>
+<div class="codehilite"><pre>/* Apply this rule if the device type is screen and minimum screen width is
+   800px. */
+
+@media only screen and (min-width: 50em) {
+    html { font-size: 90%; }
+    #banner { width: 750px; }
+    article { width: 600px; }
+}
+</pre></div>
+
+
+<p>Few hours spent for worth!</p>
+        <div class='article-end'>
+          Published by Vivek Rai
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Designing A Responsive Blog: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>Tweet</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>Follow @vivek_ziel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
