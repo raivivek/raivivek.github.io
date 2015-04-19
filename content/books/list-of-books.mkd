@@ -1,0 +1,22 @@
+template: post.haml
+category: books
+title: List of books I have read
+---
+Books are magic.
+---
+
+[\*] Currently reading
+
+### 2015
+
+1. The Terminal Man
+2. **1984**
+3. \* Language in Thought and Action
+4. The Metamorphosis
+5. JavaScript: The Good Parts
+6. \* Structure and Interpretation of Computer Programs
+
+### 2014
+
+1. **A Fine Balance**
+2. Godan

@@ -33,7 +33,8 @@
           {{ page.subtitle }}
         {{ page.content }}
         .article-end
-          Published by {{ page.author }}
+          - if page.author:
+            Published by {{ page.author }}
         .share
           %a{href:"https://twitter.com/share",class:"twitter-share-button",
           data-text:"{{page.title.title()}}: Shorts by Vivek Rai", data-via:"vivek_ziel",

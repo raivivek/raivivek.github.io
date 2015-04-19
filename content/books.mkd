@@ -1,0 +1,8 @@
+template: index.haml
+index: True
+category: book
+sort_key: date
+sort_reverse: True
+max_subpages: 10
+subtitle: So many books, so little time
+---
