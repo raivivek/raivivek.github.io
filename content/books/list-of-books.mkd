@@ -5,7 +5,7 @@ title: List of books I have read
 Books are magic.
 ---
 
-[\*] Currently reading
+[\*] Currently reading, **strongly recommended**
 
 ### 2015
 
@@ -15,6 +15,7 @@ Books are magic.
 4. The Metamorphosis
 5. JavaScript: The Good Parts
 6. \* Structure and Interpretation of Computer Programs
+7. **Animal Farm**
 
 ### 2014
 
