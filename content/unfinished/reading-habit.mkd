@@ -1,6 +1,7 @@
 template: post.haml
 category: unfinished
 author: Vivek Rai
+date: 04/04/2015
 title: The importance of reading
 ---
 Why reading is one thing that can change your life.

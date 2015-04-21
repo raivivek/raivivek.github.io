@@ -1,6 +1,7 @@
 template: post.haml
 category: programming
 author: Vivek Rai
+date: 18/04/2015
 title: Designing a Responsive Blog
 ---
 Better display and readability across all devices.

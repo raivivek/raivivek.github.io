@@ -1,6 +1,7 @@
 template: post.haml
 category: science
 author: Brian Farley on Quora.
+date: 4/8/2015
 title: research needs funding
 ---
 Please free research of marketplace thinking.

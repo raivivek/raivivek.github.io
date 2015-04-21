@@ -1,5 +1,6 @@
 template: post.haml
 category: books
+pinned: True
 title: List of books I have read
 ---
 Books are magic.

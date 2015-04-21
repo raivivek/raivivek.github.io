@@ -1,6 +1,7 @@
 template: post.haml
 category: science
 author: Vivek Rai
+date: 04/04/2015
 title: Papers per week
 ---
 One must understand good research to do good research.
