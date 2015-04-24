@@ -1,6 +1,7 @@
 template: post.haml
 category: books
 pinned: True
+hover: Pinned Post
 title: List of books I have read
 ---
 Books are magic.
@@ -15,7 +16,7 @@ Books are magic.
 3. \* Language in Thought and Action
 4. The Metamorphosis
 5. JavaScript: The Good Parts
-6. \* Structure and Interpretation of Computer Programs
+6. \* **Structure and Interpretation of Computer Programs**
 7. **Animal Farm**
 
 ### 2014
