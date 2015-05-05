@@ -30,6 +30,11 @@ ol {
   line-height: 1.5em;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+}
+
 p {
   font-size: 18px;
   line-height: 1.5em;
