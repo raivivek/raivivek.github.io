@@ -14,7 +14,7 @@ University of Cailifornia, Berkeley. The project aims at quantifying and
 presenting the situation of gender gap on Wikipedia by observing the *gender of
 biography articles*.
 
-<img src="../wigi_map.png" title="WIGI map by Maximilian Klein." style="width: auto; height:
+<img src="/shorts/wigi_map.png" title="WIGI map by Maximilian Klein." style="width: auto; height:
 300px"/>
 
 The obvious question that arises here is that why should we investigate the
