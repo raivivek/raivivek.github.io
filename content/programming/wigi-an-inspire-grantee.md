@@ -8,7 +8,7 @@ Assessing gender gap on Wikipedia
 ---
 
 [WIGI](https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index),
-the Wikipedia Gender Index, is a project by Maximilian Klein
+THE WIKIPEDIA GENDER INDEX, is a project by Maximilian Klein
 [(notconfusing.com)](http://notconfusing.com) who is a PhD student at
 University of Cailifornia, Berkeley. The project aims at quantifying and
 presenting the situation of gender gap on Wikipedia by observing the *gender of

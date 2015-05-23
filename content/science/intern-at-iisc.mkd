@@ -1,0 +1,68 @@
+template: post.haml
+category: science
+author: Vivek Rai
+date: 23/05/2015
+title: Working with pore forming toxin-1
+---
+An introduction to my research internship
+---
+> “A learning experience is one of those things that says, 'You know that thing
+> you just did? Don't do that.”
+>
+> Douglas Adams, *The Salmon of Doubt*
+
+THEY SAY EXPERIENCE IS THE best teacher and unless you have had a moment during
+your work when you scream, "Never do it this way again!", you haven't really
+learned it to your heart.
+
+<figure style="text-align:center">
+<img src="/shorts/alphahemolysin.jpg"
+     title="Splendid beauty of proteins. Needless to say, they are natural artifacts, best piece of design."
+     style="width:auto; height:350px"/>
+<figcaption>
+    Ribbon diagram of &alpha;-hemolysin 7-subunit membrane protein (PDB file <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/7ahl">7AHL</a>,
+    view down transmembrane pore). </br> <a href="https://commons.wikimedia.org/wiki/File:AlphaHemolysin_membrane_heptamer_7AHL_VwDownPore.jpg"> Wikipedia </a>.
+</figcaption>
+</figure>
+
+The two crucial summers of my fresher and sophomore years were mostly spent
+exploring new subjects and trying out everything that I can. I was greatly (I
+am!) interested in programming and spent considerable time learning algorithms,
+doing competitive programming, using Python, and mastering tools like Vim and
+git. It was a time spent well.
+
+However, during this time, exposure to various aspects of biology opened to me
+an altogether new world - a fascinating, microscopic, *living* world, the
+organization and structure of which cannot be matched even by our sophisticated
+societies. It is my effort to take a closer look at this world and understand
+its underlying intricacy that brought me to **Indian Institute of Science,
+Bangalore**.
+
+Selected through the **B**io **E**ngineering **S**ummer **T**raining program
+(BEST), I'll be spending two months in [Prof. Sandhya S.
+Visweswariah](http://www.mrdg.iisc.ernet.in/sandhyav/index.htm) lab,
+[MRDG](http://www.mrdg.iisc.ernet.in/) department, with Pradeep S. working on
+*Characterization of pore forming toxin ClyA in E. coli*.
+
+The program has been nicely designed and also includes regular lectures,
+seminars, interactive sessions and special talks. It has been a week since the
+program started, and I'm throughly enjoying my stay within the lab. The
+interaction with people working in the lab, attending grilling lab meetings,
+discussions with professor, all have enriched my understanding and experience
+of research.
+
+I feel responsible for the work I do and every moment that I spend in lab, and
+it is in this regard that I have decided to document my daily and weekly
+activities in a neatly maintained log book. These logs will describe the
+experiments I undertook in lab, any papers I read, or any profound personality
+or even a friend that I met. This will not only serve as a milestone but also
+help as a marker to recollect and present whatever I have been able to learn.
+This **intern diary** is maintained at [my
+github](https://github.com/vivekiitkgp/intern-diary) profile and publicly
+accessible. I will be glad to have any pair of eyes going through them and
+offering their constructive criticism - regarding any approach I took or any
+mistake I made.
+
+While you may get a bit of idea about my work from these logs, I shall reserve
+the details for another post, mostly in order to stick to the essence of
+creating *shorts*.

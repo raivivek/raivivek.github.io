@@ -7,9 +7,11 @@ title: Papers per week
 One must understand good research to do good research.
 ---
 > Research is to see what everybody else has seen, and to think what nobody
-> else has thought. -- Albert Szent-Gyorgyi
+> else has thought.
 
-Reading research papers, literature survey as one may call it, is one of the
+> Albert Szent-Gyorgyi
+
+READING RESEARCH PAPERS, literature survey as one may call it, is one of the
 primary tasks of any research enthusiast, student, academician, or researcher.
 As we advance through our academic career, the complexity and quantity of
 content keeps increasing until the text books give up. The inflow of
