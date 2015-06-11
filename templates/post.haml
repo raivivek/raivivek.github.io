@@ -14,22 +14,23 @@
       .archive
         .category
           archives:
-          %a{href:"{{ site.url }}/places.html"} places,
-          %a{href:"{{ site.url }}/books.html"} books,
-          %a{href:"{{ site.url }}/science.html"} science,
-          %a{href:"{{ site.url }}/programming.html"} programming,
-          %a{href:"{{ site.url }}/unfinished.html"} unfinished
+          %a{href:"{{ page.rel_site_url }}/places.html"} places,
+          %a{href:"{{ page.rel_site_url }}/books.html"} books,
+          %a{href:"{{ page.rel_site_url }}/science.html"} science,
+          %a{href:"{{ page.rel_site_url }}/programming.html"} programming,
+          %a{href:"{{ page.rel_site_url }}/unfinished.html"} unfinished
       -#.divider
-    .content
+    #main.content
       %article
         .metadata
           .category
-            %a{href:"{{ site.url }}/{{ page.category }}.html"}
+            %a{href:"{{ page.rel_site_url }}/{{ page.category }}.html"}
               {{ page.category }}
           .timestamp
             {{ page.date.strftime ("%d %b %Y")}}
         .title
-          {{ page.title }}
+          %a{href:"{{page.rel_site_url}}/{{page.url}}#main"}
+            {{ page.title }}
         .subtitle
           {{ page.subtitle }}
         {{ page.content }}

@@ -7,28 +7,24 @@ title: List of books I have read
 Books are magic.
 ---
 
-[\*] Currently reading,
-
-[+] strongly recommended,
-
-[-] annoying
+[\*] currently reading, [+] recommended, [-] annoying
 
 #### 2015
 
-1. Crichton, Michael "The Terminal Man"
-2. \+ Orwell, George "1984"
-3. \* Hayakawa, S.I. "Language in Thought and Action"
-4. Kafka, Franz, "The Metamorphosis"
-5. Crockford, Douglas "JavaScript: The Good Parts"
-6. \* "Structure and Interpretation of Computer Programs"
-7. \+ Orwell, George "Animal Farm"
-8. \* Dawkins, Richard "The Greatest Show on Earth"
-9. \* Sompayrac, Lauren M. "How the Immune System Works"
-10. Wodehouse, P. G. "The Code of the Woosters"
-11. \+ Khandekar, V. S. "**Yayati: A Classic Tale of Lust**"
-12. \- Gladwell, Malcolm. "The Tipping Point"
+1. Crichton, Michael 'The Terminal Man'
+2. \+ Orwell, George '1984'
+3. \* Hayakawa, S.I. 'Language in Thought and Action'
+4. Kafka, Franz, 'The Metamorphosis'
+5. Crockford, Douglas 'JavaScript: The Good Parts'
+6. \* Sussman et al., 'SICP'
+7. \+ Orwell, George 'Animal Farm'
+8. \* Dawkins, Richard 'The Greatest Show on Earth'
+9. \* Sompayrac, Lauren M. 'How the Immune System Works'
+10. Wodehouse, P. G. 'The Code of the Woosters'
+11. \+ Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
+12. \- Gladwell, Malcolm 'The Tipping Point'
 
 #### 2014
 
-1. Mistry, Rohinton "**A Fine Balance**"
-2. Premchand "Godan"
+1. \+ Mistry, Rohinton 'A Fine Balance'
+2. Premchand 'Godan'
