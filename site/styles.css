@@ -21,10 +21,6 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-a:hover, a:active {
-  border-bottom: 1px dotted rgba(50, 50, 50, 0.7);
-}
-
 ol {
   line-height: 1.5em;
 }
@@ -80,7 +76,7 @@ article blockquote {
 .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.6em;
   margin-bottom: 1em;
 }
 
@@ -94,7 +90,6 @@ article blockquote {
 
 .category {
   color: black;
-  text-transform: uppercase;
   font-size: 15px;
   letter-spacing: 0.1em;
   line-height: 1.2em;
@@ -111,6 +106,7 @@ article blockquote {
   margin: 5px auto 0px auto;
   padding: 0 10px;
   text-align: center;
+  font-size: 22px;
 }
 
 .divider {
