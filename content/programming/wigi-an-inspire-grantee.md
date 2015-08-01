@@ -8,14 +8,23 @@ Assessing gender gap on Wikipedia
 ---
 
 [WIGI](https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index),
-THE WIKIPEDIA GENDER INDEX, is a project by Maximilian Klein
+The Wikipedia Indicators of Gender Inequality, is a project by Maximilian Klein
 [(notconfusing.com)](http://notconfusing.com) who is a PhD student at
-University of Cailifornia, Berkeley. The project aims at quantifying and
-presenting the situation of gender gap on Wikipedia by observing the *gender of
-biography articles*.
+University of California, Berkeley. The project aims at quantifying and
+presenting the situation of gender gap on Wikipedia by observing the *trends of gender in biography articles*.
 
-<img src="/shorts/wigi_map.png" title="WIGI map by Maximilian Klein." style="width: auto; height:
-300px"/>
+<figure style="text-align:center">
+<img
+    src="/shorts/wigi_map.png"
+    title="Wikipedia Gender Indicators infographic by Maximilian Klein and Frances Soong."
+    target="https://github.com/notconfusing/WIGI/issues/22"
+    style="width: 400px; height: auto"/>
+<figcaption>
+An infographic showing some indicators of gender trends in Wikipedia biography
+articles, which is much easier to measure and reliable. Designed by Frances
+Soong and Max Klein.
+</figcaption>
+</figure>
 
 The obvious question that arises here is that why should we investigate the
 trends in the gender of biography articles instead of the *trends in
@@ -54,3 +63,5 @@ I've been fortunate enough to discover the project during it's formulation
 period and to be a part of it as a developer and research team contributor. The
 project is open to contribution and available entirely [on
 github](https://github.com/notconfusing/WIGI).
+
+**Updated on August 01, 2015**.

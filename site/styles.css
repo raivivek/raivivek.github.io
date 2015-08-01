@@ -4,6 +4,10 @@ body {
   font-family: 'Georgia', serif;
 }
 
+figcaption {
+  padding: 10px;
+}
+
 ::-moz-selection {
   background: #333;
   color: white;
