@@ -49,6 +49,7 @@ pre.code .nt { color: #204a87; font-weight: bold } /* Name.Tag */
 pre.code .nv { color: #000000 } /* Name.Variable */
 pre.code .ow { color: #204a87; font-weight: bold } /* Operator.Word */
 pre.code .w { color: #f8f8f8; text-decoration: underline } /* Text.Whitespace */
+pre.code .mb { color: #0000cf; font-weight: bold } /* Literal.Number.Bin */
 pre.code .mf { color: #0000cf; font-weight: bold } /* Literal.Number.Float */
 pre.code .mh { color: #0000cf; font-weight: bold } /* Literal.Number.Hex */
 pre.code .mi { color: #0000cf; font-weight: bold } /* Literal.Number.Integer */

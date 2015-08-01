@@ -6,40 +6,29 @@
 .. description: Resume - Vivek Rai
 
 
-**Detailed CV:** [`PDF <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
+**Compact CV:** [`PDF <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
 
-.. contents:: Contents
-
-.. sidebar:: Contact
-
-    vivekraiiitkgp[at]gmail[dot]com
-
-    vivekrai[at]iitkgp[dot]com
-
-    **freenode**: vivekrai
-
+.. contents::   
 
 Interests
 =========
-    * Bioinformatics
-    * Computational Biology
-    * Systems Biology
-    * Cell and Molecular Biology
-    * Machine Learning
-    * Bio-inspired Artificial Intelligence
-    * Data Analysis and Visualization
+
+Molecular biophysics,
+computational neuroscience,
+computational biology,
+systems biology,
+cell and molecular biology,
+data analysis and visualization.
 
 Education
 =========
 .. class:: multiple
 
-    * **Indian Institute of Technology, Kharagpur**
+    * `Indian Institute of Technology Kharagpur <http://iitkgp.ac.in>`_
 
-      Bachelor and Master of Technology, *Biotechnology and Biochemical Engineering*
+      Dual Degree (B.Tech & M.Tech), *Biotechnology and Biochemical Engineering*
 
-      2012-2017 (Expected)
-
-      CGPA = 8.53 on a scale of 10
+      GPA: **8.65** (scale of 10), 2012-2017
 
 
 Publications
@@ -49,8 +38,45 @@ Publications
   assistive graphical BLAST frontends for custom sequence databases (*in
   preparation*)
 
+Research Experience
+===================
+
+`BEST Fellow, Indian Institute of Science <https://http://www.be.iisc.ernet.in/BEST.html>`_
+############################################################################################
+
+`Prof. Sandya S. Visweswariah <www.mrdg.iisc.ernet.in/sandhyav/index.htm>`_, **May - July 2015**
+
+Extraction, verification and purification of Cytolysin A pore forming toxin of
+*E. coli* and its mutant (ClyA Q56C) from expression constructs. Several experiments
+for verifying the activity and kinetic efficacy of the toxins were examined
+using hemolytic assay and calcein leakage assay. The mutant protein was further
+labeled using appropriate fluorescent dye and after assuring activity, was used
+for imaging studies.
+
+We also investigated the lipid phase dependent kinetic behavior of Cytolysin A,
+and observed that ClyA behaved distinctly in a two component and three
+component systems (double exponential versus single exponential curve).
+
+More details (including links to my data, presentation and report) in my
+*shorts* `series
+<https://vivekiitkgp.github.io/shorts/science/intern-at-iisc.html#main>`_.
+
 Open Source
 ===========
+
+`Wikpedia Gender Indicators <https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index>`_
+###########################################################################################################
+
+Wikipedia Gender Indicators or WIGI, is a Wikimedia sponsored inspire project
+which aims at **developing statistical and quantitative indicators for gender
+gap** and raise awareness by observing the trend of gender in biography
+articles. I'm a **co-developer** on the project and work on creating data pipelines and an
+interactive portal where we will display the data and analyses of the
+emerging trends, along with any significant inferences that we can obtain. The
+project is based on a prototype research done by Maximilian Klein
+(`<notconfusing.com>`_), who is a PhD student at University of California, Berkeley.
+
+More details in my *shorts* `post <https://vivekiitkgp.github.io/shorts/programming/wigi-an-inspire-grantee.html#main>`_.
 
 `SequenceServer <https://github.com/yannickwurm/sequenserver>`_
 ###############################################################
@@ -138,6 +164,13 @@ Miscellaneous
 
 Positions of Responsibility
 ###########################
+
+Team Member, iGEM
+-----------------
+
+A core team member of college team participating in `iGEM 2015
+<http://2015.igem.org>`_ to be held at MIT. Involved in conceptualization and
+executation of participation idea and experiments.
 
 Captain, Opensoft
 -----------------
