@@ -1,0 +1,55 @@
+template: post.haml
+category: science
+author: Vivek Rai
+date: 22/08/2015
+title: Protein Knots&colon; A tangled story
+---
+My first talk in a Journal Club session
+---
+
+Journal Club is a weekly paper presentation session organized in our department
+by us students, where one could present an remarkable research finding,
+discuss a new experimental technique or simply introduce everyone to a new or
+less explored field in the area of biology. I have mentioned about this
+initiative in my earlier posts, and it is something that I really feel excited
+to talk about. The audience size is pretty decent (around 15-20 people)
+consisting of professors, research scholar, graduates and undergraduate
+students.
+
+<figure style="text-align:center">
+<img src="/shorts/first_page.png"
+     title="Cover page of my presentation delivered in a Journal Club session, IIT Kharagpur."
+     style="width:auto; height:350px; border:solid 1px #ccc"/>
+<figcaption>
+    A first page of my 25 minute talk presentation delivered to a group of
+professors and students in a Journal Club session organized within the
+department.
+</figcaption>
+</figure>
+
+This semester marked the second session of our initiative, and I had the
+opportunity to speak to people about a topic of my interest i.e., Knotted
+Proteins. Since I didn't have much time to do a thorough literature survey, I
+summarized a *review-like* presentation of the topic along with the motivation
+of study, questions we ask, and general techniques and approaches adopted by
+the scientists. I thought that explaining a protein knots can be greatly
+simplified by using a rope, and it did. I used it throughout my talk to convey
+several important ideas like *closure*, *crossing number*, *deep and shallow
+knots* etc.
+
+The talk was well received, and I'm glad to have raised a lot of questions in
+everyone's mind. I received several questions and duly addressed them to the
+best of my knowledge and with assistance from research scholars in the audience
+who had worked on similar protein structures. The discussion was fruitful, and
+I received numerous questions from my fellow class mates as well.
+
+A crucial feedback that I received post presentation was that I should include
+some experimental (*hands on*) studies which prevent the talk from being tagged
+as plain theoretical and boring.
+
+All in all, it was a good experience, and I'm really looking forward to further
+chances to speak again.
+
+My presentation for the talk can be found
+[here](https://github.com/vivekiitkgp/talks/raw/master/journal-club/jc-20-aug.pdf).
+A video will be uploaded shortly as well.
