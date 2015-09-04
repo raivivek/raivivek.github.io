@@ -1,0 +1,95 @@
+<head>
+  <link href='../normalize.css' rel='stylesheet' />
+  <link href='../styles.css' rel='stylesheet' />
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' />
+  <title>Getting rid of proxy issues | Shorts - Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div id='banner' class='no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/shorts'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections & visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <a href='../unfinished.html'>unfinished</a>
+      </div>
+    </div>
+    <div id='main' class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            04 Sep 2015
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../programming/digitalocean-droplet.html#main'>
+            Getting rid of proxy issues
+          </a>
+        </div>
+        <div class='subtitle'>
+          
+        </div>
+        <p>Anyone who's been to a college which uses proxy servers (almost all of them!)
+must have firewall horror stories to tell! Difficulties in SSH, accessing
+<em>ill-fated</em> websites, or inability to use some programs become the ugliest part
+of your life, especially if you are a programmer.</p>
+<p>After being bugged by this fate for around 3 years and having difficulties
+working on <a href="http://vivekiitkgp.github.io/shorts/programming/wigi-an-inspire-grantee.html#main">WIGI
+project</a>,
+I finally decided to take care of this problem once and for all by getting
+myself a <a href="https://www.digitalocean.com">DigitalOcean</a> tiny
+<a href="https://www.digitalocean.com/community/questions/what-is-a-droplet">droplet</a>.
+Thanks to the <a href="https://education.github.com/pack">GitHub student developer
+pack</a>, which gives a 100$ credit in your
+account, I can now enjoy 20 months of seamless service at the rate of 5$ per
+month (that's ofcourse assuming reasonable usage!). If you are skeptical of
+being charged more, rest assured that exceeding 1 TB of bandwidth utilization
+per month is <em>very</em> difficult. The instance also offers you a 20 GB of SSD
+storage.</p>
+<p>The only requirement is that you need a credit card or PayPal account to
+activate your DigitalOcean account. This is also the case with Amazon Web
+Services (AWS), so it is not an issue if you were already using it. For others,
+procuring either of these essentially boils down to having an access to a
+credit card. During setup, your account is billed for one time with 5$ to
+ensure that payments are successfully processed. Don't worry, this money is added to
+your total credit.</p>
+<h2>Setup</h2>
+<p>Setting up a droplet is surprisingly easy and much more comforting if you are a
+frequent user of Amazon services. Within minutes, I could log into my server,
+setup SSH configuration and add more accounts. Make sure you find a transient
+access to your server from other source (your mobile!) to configure <code>sshd</code> to
+listen on port 443.</p>
+<h2>Proxy</h2>
+<p>I also setup up local SSH configuration to quickly create a <a href="https://mikeash.com/ssh_socks.html">SOCKS
+proxy</a> for tunneling web traffic and some
+programs. <a href="https://topcoder.com">Topcoder</a> had given a lot of trouble in easy
+days .. but now? a breeze.</p>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Getting Rid Of Proxy Issues: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
