@@ -34,7 +34,7 @@ Education
 Publications
 ============
 
-* Priyam, Woodcroft, **Rai** & Wurm: Sequenceserver: rapid creation of
+* Priyam et al: Sequenceserver: rapid creation of
   assistive graphical BLAST frontends for custom sequence databases (*in
   preparation*)
 
@@ -67,6 +67,8 @@ Open Source
 `Wikpedia Gender Indicators <https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index>`_
 ###########################################################################################################
 
+**May 2015 - Present**
+
 Wikipedia Gender Indicators or WIGI, is a Wikimedia sponsored inspire project
 which aims at **developing statistical and quantitative indicators for gender
 gap** and raise awareness by observing the trend of gender in biography
@@ -80,6 +82,8 @@ More details in my *shorts* `post <https://vivekiitkgp.github.io/shorts/programm
 
 `SequenceServer <https://github.com/yannickwurm/sequenserver>`_
 ###############################################################
+
+**May 2014 - Present**
 
 SequenceServer allows users to easily set up a **BLAST+ server to be used locally**
 or over the web with a nice and intuitive user interface. It is an
@@ -95,6 +99,8 @@ A list of my merged and unmerged changes can be found at
 
 `Afra <https://github.com/yeban/afra>`_
 #######################################
+
+**Dec 2014 - Jan 2015**
 
 Afra is a **gene annotation platform** inspired by crowdsourcing approaches and
 platforms including Foldit, Galaxy Zoo and Crowdflower to recruit additional
@@ -113,6 +119,15 @@ A list of my merge commits can be found at `Afra - Contributers
 
 Other Projects
 ==============
+
+MetaKGP
+#######
+
+A collaborative effort to promote Wikipedia style open content culture,
+collect, curate and archive the unfathomable amount of regularly generated
+information in the college.
+
+The efforts of project are live at `MetaKGP <https://wiki.metakgp.org>`_.
 
 Sign Language Interpreter
 #########################
