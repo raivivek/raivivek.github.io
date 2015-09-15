@@ -6,7 +6,7 @@
 .. description: Resume - Vivek Rai
 
 
-**Compact CV:** [`PDF <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
+**Compact CV:** [`View <https://drive.google.com/file/d/0B3eGCB261PaldTk0a0hWX21sYmc/view?usp=sharing>_`] [`Download <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
 
 .. contents::   
 
