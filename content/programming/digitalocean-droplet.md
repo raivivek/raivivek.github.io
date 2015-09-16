@@ -31,7 +31,7 @@ Services (AWS), so it is not an issue if you were already using it. For others,
 procuring either of these essentially boils down to having an access to a
 credit card. During setup, your account is billed for one time with 5$ to
 ensure that payments are successfully processed. Don't worry, this money is added to
-your total credit.
+your total account credit.
 
 ## Setup
 
@@ -45,5 +45,5 @@ listen on port 443.
 
 I also setup up local SSH configuration to quickly create a [SOCKS
 proxy](https://mikeash.com/ssh_socks.html) for tunneling web traffic and some
-programs. [Topcoder](https://topcoder.com) had given a lot of trouble in easy
+programs. [Topcoder](https://topcoder.com) had given a lot of trouble in early
 days .. but now? a breeze.
