@@ -1,0 +1,59 @@
+template: post.haml
+category: science
+author: Vivek Rai
+date: 15/09/2015
+title: A challenging course catalog
+---
+A close encounter with neuroscience.
+---
+
+I'm very excited to talk about my course catalog for the fall semester, specially
+because it's turning about to be pretty challenging and full of new
+information.
+
+**Prologue:**
+During my research internship at Indian Institute of Science, I had the
+opportunity to attend several lecture series by eminent professors, who
+introduced us to different fields (e.g., Biomechanics, Systems Biology) and
+relevant research they have done in their careers. While all of the lectures
+were insightful, one which caught my most attention were those delivered
+Dr. Aditya Murthy on neuroscience. His amazing presentation skills, sense of
+humor and rigor left me in awe!
+
+The end of the internship marked the beginning of the seventh semester and my
+pre-final year. I felt fresh and enthused about learning more of what I had
+just scratched the surface back then. Accordingly, I had to formulate a course
+plan to steer me in that direction. While, I was still on it, finding
+*meaningful* subjects among tens of options, freeing up slots and what not, I
+learned about a new course being offered this fall. Guess what? **Computational
+Neuroscience**! There was no time to waste.
+
+The course is taken by by [Prof. Sharba
+Bandhopadhyay](http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=SWmdR&depts_name=EC)
+of E&ECE department. As expected, the course turned out to be very demanding
+from the very beginning. A lot of background in mathematics, some in subjects
+of electronics which are usually not taught to biotechnology students, had to
+be covered for clearer understanding. Moreover, the course involved several
+simulation based projects to be done in MATLAB. Top up the entire package with
+surprise quizzes. Unfortunately, it took a heavy toll on a lot of people who
+weren't prepared to devote enough time and therefore dropped from the course.
+At this point, I must praise the efforts by the teacher in order to help out
+the students. He allowed all the class tests and even exams to be open
+book/notes (with access to laptops if need be!) and took great care in
+dispensing proper resources for catching up on concepts.
+
+As far the content of the course is considered, I learned a lot of new things.
+**First**, it forced me to revisit my mathematical knowledge which I was beginning
+to lose due to continued exposure to just biology. **Second**, it provided an
+incentive to learn MATLAB (and equivalent in Python) for simulation projects.
+**Finally**, it helped me understand the process of computational modeling, setting
+up equations, and the model complexity-interpretability trade-off.
+
+Beside this, I also have several other courses among which **Gene Expression** and
+**Data Analytics** are my next favorites. The latter course is an applied version
+of more formal Machine Learning course and involves programming assignments
+and data analysis projects in R.
+
+Overall, this semester has a well balanced mix of courses to equip me with some
+more skills and practical experience as I work across different projects. Looking
+forward to completing it with great success.

@@ -1,4 +1,4 @@
-url: https://vivekiitkgp.github.io/shorts # if empty then use relative urls
+#url: https://vivekiitkgp.github.io/shorts # if empty then use relative urls
 content_dir: content  # look for markdown files
 template_dir: templates  # look for templates
 output_dir: site  # generated files and static files put here
