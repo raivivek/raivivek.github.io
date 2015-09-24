@@ -33,10 +33,12 @@
     *,
     *:before,
     *:after {
+        margin: 1em 0 0 0;
         background: transparent !important;
         color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
+        font-size: 98%;
     }
 
     .no-print, .no-print * {
@@ -46,19 +48,6 @@
     a,
     a:visited {
         text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
     }
 
     pre,

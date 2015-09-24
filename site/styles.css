@@ -1,11 +1,17 @@
 body {
   background-color: #fff;
   letter-spacing: 0.05em;
-  font-family: 'Georgia', serif;
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua",
+    Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",
+    Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook",
+    "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5em;
 }
 
 figcaption {
   padding: 10px;
+  font-size: 0.75em;
 }
 
 ::-moz-selection {
@@ -20,9 +26,17 @@ figcaption {
   text-shadow: none;
 }
 
-a:link, a:visited, a:hover, a:active {
-  color: #0051B8;
+a:link, a:visited, a:active {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content a:link, .content a:visited, .content a:active, .content a:hover {
+  color: #0D47A1;
 }
 
 ol {
@@ -34,18 +48,14 @@ img {
   margin: 0 auto;
 }
 
-p {
-  line-height: 1.5em;
-}
-
 .container {
   margin: 0 auto;
 }
 
 #banner {
   margin: 0 auto;
-  padding-bottom: 30px;
   border-bottom: 1px solid #E2E2E2;
+  text-align: center;
 }
 
 article {
@@ -57,18 +67,16 @@ article blockquote {
 }
 
 .banner-title {
-  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 6em;
-  letter-spacing: 0.2em;
-  line-height: 1em;
-  margin: 0.5em 0 0.3em 0;
+  font-size: 4em;
+  letter-spacing: 0.5em;
+  margin: 0.5em 0 0.5em 0;
 }
 
 .banner-subclause {
   font-size: 1.125em;
-  line-height: 1.2em;
   margin: 0.5em auto 1em auto;
+  padding: 0 5em 0 5em;
   color: #999;
 }
 
@@ -80,7 +88,8 @@ article blockquote {
 .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 1.25em;
+  letter-spacing: 0.2em;
   margin-bottom: 1em;
 }
 
@@ -94,21 +103,17 @@ article blockquote {
 
 .category {
   color: black;
-  font-size: 15px;
   letter-spacing: 0.1em;
-  line-height: 1.2em;
 }
 
 .timestamp {
   font-style: italic;
   font-size: 15px;
   letter-spacing: 0.1em;
-  line-height: 1.2em;
 }
 
 .archive {
-  margin: 5px auto 0px auto;
-  padding: 0 10px;
+  padding: 0 0 1em 0;
   text-align: center;
   font-size: 18px;
 }
@@ -122,11 +127,9 @@ article blockquote {
 .list-item {
   text-align: center;
   margin-top: 1.25em;
-  line-height: 1.5em;
 }
 
 .list-item a {
-  font-size: 18px;
   text-transform: uppercase;
   color: black;
   letter-spacing: 0.1em;
