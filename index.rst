@@ -9,16 +9,15 @@
     “*The only true wisdom is in knowing you know nothing.*”
     ― Socrates
 
-A programmer and keen open source enthusiast who is also passionate about
-Biology. I love to spend my time coding or reading a reasearch paper during a
-beautiful sunset while sipping on my hot coffee.
+A biologist with keen interest in programming and open source culture. However,
+my self steered personality and natural curiosity continue to feed me with
+rich and diverse information.
 
-This website hosts my interests and activities, some of which can also be found
-on `Wikipedia`_ and `Quora`_. Although, most of my regular updates are now
-posted in the `shorts`_ section.
+This blog is archived since now I write only on `shorts`_.
 
 **Recent shorts**
 
+* `A Challenging Course Catalog`_
 * `Protein Knots: A Tangled Story`_
 * `Working With Pore Forming Toxin - 2`_
 * `Working With Pore Forming Toxin - 1`_
@@ -42,3 +41,4 @@ posted in the `shorts`_ section.
 .. _Contributing to Wikipedia WikiProjects: https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html
 .. _BLAST+ and Its Inconsistencies: https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html
 .. _Introduction to Functional Programming: https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html
+.. _A Challenging Course Catalog: https://vivekiitkgp.github.io/shorts/science/course-catalog.html
