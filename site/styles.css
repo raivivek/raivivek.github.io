@@ -2,9 +2,9 @@ body {
   background-color: #fff;
   letter-spacing: 0.05em;
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua",
-    Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L",
-    Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook",
-    "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+    Baskerville, "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond",
+    "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook",
+    "Century Schoolbook L", Georgia, serif;
   text-rendering: optimizeLegibility;
   line-height: 1.5em;
 }
@@ -35,6 +35,9 @@ a:hover {
   text-decoration: underline;
 }
 
+.content {
+  margin-top: 2rem;
+}
 .content a:link, .content a:visited, .content a:active, .content a:hover {
   color: #0D47A1;
 }
@@ -50,12 +53,27 @@ img {
 
 .container {
   margin: 0 auto;
+  margin-bottom: 5rem;
 }
 
 #banner {
   margin: 0 auto;
   border-bottom: 1px solid #E2E2E2;
   text-align: center;
+}
+
+.banner-title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 0.5em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+.banner-subclause {
+  font-size: 1.125rem;
+  margin: 0.5em auto 1em auto;
+  padding: 0 5em 0 5em;
+  color: #999;
 }
 
 article {
@@ -66,20 +84,6 @@ article blockquote {
   color: #555;
 }
 
-.banner-title {
-  text-transform: uppercase;
-  font-size: 4em;
-  letter-spacing: 0.5em;
-  margin: 0.5em 0 0.5em 0;
-}
-
-.banner-subclause {
-  font-size: 1.125em;
-  margin: 0.5em auto 1em auto;
-  padding: 0 5em 0 5em;
-  color: #999;
-}
-
 .metadata {
   text-align: center;
   margin: 0 0 2em 0;
@@ -88,17 +92,9 @@ article blockquote {
 .title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   letter-spacing: 0.2em;
   margin-bottom: 1em;
-}
-
-.content {
-  padding: 20px 40px 100px 40px;
-}
-
-.nav {
-  font-size: 12px;
 }
 
 .category {
@@ -115,7 +111,6 @@ article blockquote {
 .archive {
   padding: 0 0 1em 0;
   text-align: center;
-  font-size: 18px;
 }
 
 .divider {
@@ -136,7 +131,7 @@ article blockquote {
 }
 
 .list-nav {
-  font-size: 12px;
+  font-size: 0.75em;
   font-style: italic;
 }
 
@@ -152,4 +147,14 @@ article blockquote {
 .share {
   text-align: center;
   font-size: 8px;
+}
+
+pre {
+  font-family: 'Source Code Pro';
+}
+
+.codehilite {
+  background-color: #fafafa;
+  padding: 5px;
+  font-size: 0.8em;
 }

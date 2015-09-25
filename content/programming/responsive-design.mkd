@@ -73,8 +73,9 @@ at [responsivetest.net](http://responsivetest.net/).
 
 An example from my own site:
 
-    /* Apply this rule if the device type is screen and minimum screen width is
-       800px. */
+    /* Apply this rule if the device type is screen and minimum
+     * screen width is 800px.
+     */
 
     @media only screen and (min-width: 50em) {
         html { font-size: 90%; }

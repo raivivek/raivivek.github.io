@@ -1,28 +1,37 @@
+/*
+ * Fonts
+ */
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
 /* Responsive styles
  */
 
+@media all {
+    html { font-size: 18px;}
+}
+
 /* 560px */
 @media only screen and (min-width: 35em) {
-    html { font-size: 75%; }
+    html { font-size: 14px; }
     #banner { width: auto; }
     article { width: auto; }
 }
 
 /* 800px */
 @media only screen and (min-width: 50em) {
-    html { font-size: 90%; }
+    html { font-size: 16px%; }
     #banner { width: 750px; }
     article { width: 600px; }
 }
 
 /* 1440 px */
 @media only screen and (min-width: 90em) {
-    html { font-size: 100%; }
+    html { font-size: 18px; }
 }
 
 /* 1900px+ */
 @media only screen and (min-width: 120em) {
-    html { font-size: 110%; }
+    html { font-size: 24px; }
     article { width: 650px; }
 }
 

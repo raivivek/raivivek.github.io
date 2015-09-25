@@ -2,11 +2,12 @@ body
   background-color: #fff
   letter-spacing: 0.05em
   font-family: "Palatino Linotype", Palatino, Palladio,
-  "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style",
-  "Bitstream Charter", "Nimbus Roman No9 L", Garamond,
-  "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook",
-  "Century Schoolbook", "Century Schoolbook L", Georgia, serif
+               "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style",
+               "Bitstream Charter", "Nimbus Roman No9 L", Garamond,
+               "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook",
+               "Century Schoolbook", "Century Schoolbook L", Georgia, serif
   text-rendering:optimizeLegibility;
+  font-size: 18px
   line-height: 1.5em
 
 figcaption
@@ -23,9 +24,16 @@ figcaption
     color:white
     text-shadow: none
 
-a:link, a:visited, a:hover, a:active
-    text-decoration:none
-    color: black;
+a:link, a:visited, a:active
+  text-decoration:none
+  color: black
+
+a:hover
+  text-decoration: underline
+
+.content
+  a:link, a:visited, a:active, a:hover
+    color: #0D47A1
 
 ol
   line-height: 1.5em
@@ -39,7 +47,6 @@ img
 
 #banner
   margin: 0 auto
-  padding-bottom: 30px
   border-bottom: 1px solid #E2E2E2
   text-align: center
 
@@ -52,12 +59,13 @@ article blockquote
 .banner-title
   text-transform: uppercase
   font-size: 4em
-  letter-spacing: 0.4em
+  letter-spacing: 0.5em
   margin: .5em 0 .5em 0
 
 .banner-subclause
   font-size: 1.125em
   margin: .5em auto 1em auto
+  padding: 0 5em 0 5em
   color: #999
 
 .metadata
@@ -87,8 +95,7 @@ article blockquote
   letter-spacing: 0.1em
 
 .archive
-  margin: 5px auto 0px auto
-  padding: 0 10px
+  padding: 0 0 1em 0
   text-align: center
   font-size: 18px
 
