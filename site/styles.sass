@@ -2,12 +2,11 @@ body
   background-color: #fff
   letter-spacing: 0.05em
   font-family: "Palatino Linotype", Palatino, Palladio,
-               "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style",
+               "URW Palladio L", "Book Antiqua", Baskerville,
                "Bitstream Charter", "Nimbus Roman No9 L", Garamond,
                "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook",
                "Century Schoolbook", "Century Schoolbook L", Georgia, serif
   text-rendering:optimizeLegibility;
-  font-size: 18px
   line-height: 1.5em
 
 figcaption
@@ -15,14 +14,14 @@ figcaption
   font-size: .75em
 
 ::-moz-selection
-    background: #333
-    color:white
-    text-shadow: none
+  background: #333
+  color:white
+  text-shadow: none
 
 ::selection
-    background: #333
-    color:white
-    text-shadow: none
+  background: #333
+  color:white
+  text-shadow: none
 
 a:link, a:visited, a:active
   text-decoration:none
@@ -34,6 +33,7 @@ a:hover
 .content
   a:link, a:visited, a:active, a:hover
     color: #0D47A1
+  margin-top: 2rem
 
 ol
   line-height: 1.5em
@@ -44,29 +44,30 @@ img
 
 .container
   margin: 0 auto
+  margin-bottom: 5rem
 
 #banner
   margin: 0 auto
   border-bottom: 1px solid #E2E2E2
   text-align: center
 
+.banner-title
+  text-transform: uppercase
+  font-size: 5rem
+  letter-spacing: 0.5em
+  margin: .5em 0 .5em 0
+
+.banner-subclause
+  font-size: 1.125rem
+  margin: .5em auto 1em auto
+  padding: 0 5em 0 5em
+  color: #999
+
 article
   margin: 0 auto
 
 article blockquote
   color: #555
-
-.banner-title
-  text-transform: uppercase
-  font-size: 4em
-  letter-spacing: 0.5em
-  margin: .5em 0 .5em 0
-
-.banner-subclause
-  font-size: 1.125em
-  margin: .5em auto 1em auto
-  padding: 0 5em 0 5em
-  color: #999
 
 .metadata
   text-align: center
@@ -75,15 +76,9 @@ article blockquote
 .title
   text-align: center
   text-transform: uppercase
-  font-size: 1.25em
+  font-size: 1.25rem
   letter-spacing: .2em
   margin-bottom: 1em
-
-.content
-  padding: 20px 40px 100px 40px
-
-.nav
-  font-size: 12px
 
 .category
   color: black
@@ -97,7 +92,6 @@ article blockquote
 .archive
   padding: 0 0 1em 0
   text-align: center
-  font-size: 18px
 
 .divider
   width: 300px
@@ -114,7 +108,7 @@ article blockquote
   letter-spacing: 0.1em
 
 .list-nav
-  font-size: 12px
+  font-size: .75em
   font-style: italic
 
 .article-end
@@ -128,3 +122,11 @@ article blockquote
 .share
   text-align: center
   font-size: 8px
+
+pre
+  font-family: 'Source Code Pro'
+
+.codehilite
+  background-color: #fafafa
+  padding: 5px;
+  font-size: .8em

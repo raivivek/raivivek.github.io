@@ -2,6 +2,6 @@ template: index.haml
 index: True
 sort_key: date
 sort_reverse: True
-max_subpages: 10
+max_subpages: 20
 subtitle: Recently Posted
 ---
