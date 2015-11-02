@@ -31,15 +31,14 @@ a:link, a:visited, a:active {
   color: black;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 .content {
   margin-top: 2rem;
 }
-.content a:link, .content a:visited, .content a:active, .content a:hover {
+.content a:link, .content a:visited, .content a:active {
   color: #0D47A1;
+}
+.content a:hover {
+  text-decoration: underline;
 }
 
 ol {
@@ -63,14 +62,15 @@ img {
 }
 
 .banner-title {
+  font-family: 'Open sans', 'Roboto', 'San Francisco', sans-serif;
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 4.5rem;
   letter-spacing: 0.5em;
   margin: 0.5em 0 0.5em 0;
 }
 
 .banner-subclause {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   margin: 0.5em auto 1em auto;
   padding: 0 5em 0 5em;
   color: #999;

@@ -3,4 +3,5 @@ content_dir: content  # look for markdown files
 template_dir: templates  # look for templates
 output_dir: site  # generated files and static files put here
 media_dir: media  # files to be correctly directly into the output file
+recursive: True
 ext: .html

@@ -29,7 +29,7 @@
             {{ page.subtitle }}
         {{ page.content }}
         - for subpage in page.subpages:
-          - if not subpage.type == 404:
+          - if not (subpage.type == 404 or subpage.draft):
             .list-item
               .list-nav
                   - if subpage['category']:
