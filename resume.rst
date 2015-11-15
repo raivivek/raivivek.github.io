@@ -6,19 +6,19 @@
 .. description: Resume - Vivek Rai
 
 
-**Compact CV:** [`View <https://drive.google.com/file/d/0B3eGCB261PaldTk0a0hWX21sYmc/view?usp=sharing>`_] [`Download <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
+**Compact CV:** [`View <https://drive.google.com/file/d/0B3eGCB261PalU283NDJYWGRkeVE/view?usp=sharing>`_] [`Download <https://github.com/vivekiitkgp/resume/raw/master/resume.pdf>`_]
 
 .. contents::   
 
 Interests
 =========
 
-Molecular biophysics,
-computational neuroscience,
+Bioinformatics,
 computational biology,
 systems biology,
-cell and molecular biology,
-data analysis and visualization.
+computational neuroscience,
+data analysis and visualization,
+molecular biophysics.
 
 Education
 =========
@@ -26,7 +26,7 @@ Education
 
     * `Indian Institute of Technology Kharagpur <http://iitkgp.ac.in>`_
 
-      Dual Degree (B.Tech & M.Tech), *Biotechnology and Biochemical Engineering*
+      B.Tech & M.Tech, *Biotechnology*
 
       GPA: **8.65** (scale of 10), 2012-2017
 
@@ -35,11 +35,28 @@ Publications
 ============
 
 * Priyam et al: Sequenceserver: rapid creation of
-  assistive graphical BLAST frontends for custom sequence databases (*in
-  preparation*)
+  assistive graphical BLAST frontends for custom sequence databases (*submitted*)
 
 Research Experience
 ===================
+
+B.Tech Thesis, IIT Kharagpur
+#############################
+
+`Prof. Amit Kumar Das <http://www.iitkgp.ac.in/fac-profiles/showprofile.php?empcode=aZmXU>`_, **August 2015 - ongoing**
+
+The existence of knots in proteins is an curious event and has aroused interest
+in researchers for over a decade. They are rarely found in nature (<1%), and
+their folding process is described to be slow and energetically unfavorable.
+The knots are not known to perform quite an useful function across all knot
+examples, which otherwise cannot be done with an unknotted structure. Despite
+significant advancement in our understanding of the underlying mechanism, much
+remains elusive to our notebooks. In this study, I set up a two-dimensional
+objective to investigate the sequence and structure-related properties of a
+protein knot and build upon our previous understanding of the related
+questions.
+
+More details in my *shorts* `post <https://vivekiitkgp.github.io/shorts/science/journal-club-1.html#main>`_.
 
 `BEST Fellow, Indian Institute of Science <https://http://www.be.iisc.ernet.in/BEST.html>`_
 ############################################################################################
@@ -69,16 +86,20 @@ Open Source
 
 **May 2015 - Present**
 
-Wikipedia Gender Indicators or WIGI, is a Wikimedia sponsored inspire project
-which aims at **developing statistical and quantitative indicators for gender
-gap** and raise awareness by observing the trend of gender in biography
-articles. I'm a **co-developer** on the project and work on creating data pipelines and an
-interactive portal where we will display the data and analyses of the
-emerging trends, along with any significant inferences that we can obtain. The
-project is based on a prototype research done by Maximilian Klein
-(`<notconfusing.com>`_), who is a PhD student at University of California, Berkeley.
+WIGI is a project producing a open data set about the gender, date of birth,
+place of birth, ethnicity, occupation, and language of biography articles in
+all Wikipedias. Our data set comes from Wikidata, the database the feeds
+Wikipedia, and is updated weekly. I'm a **co-developer** and **reseracher** on
+the project. I have worked on creating interactive analysis graphs using the
+data we have collected as a demo, contributed to the research paper
+review, and formulation of problem statements for further analysis.
 
-More details in my *shorts* `post <https://vivekiitkgp.github.io/shorts/programming/wigi-an-inspire-grantee.html#main>`_.
+This project started as a `personal research interest
+<http://arxiv.org/abs/1502.03086>`_ by Maximilian Klein
+(`<notconfusing.com>`_), and is now funded by a Wikimedia Foundation Grant.
+
+More details in my *shorts* `post
+<https://vivekiitkgp.github.io/shorts/programming/wigi-an-inspire-grantee.html#main>`_.
 
 `SequenceServer <https://github.com/yannickwurm/sequenserver>`_
 ###############################################################
@@ -184,7 +205,7 @@ Team Member, iGEM
 -----------------
 
 A core team member of college team participating in `iGEM 2015
-<http://2015.igem.org>`_ to be held at MIT. Involved in conceptualization and
+<http://2015.igem.org>`_ held at MIT. Involved in conceptualization and
 executation of participation idea and experiments.
 
 Captain, Opensoft

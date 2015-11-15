@@ -1,2 +1,4 @@
 Sitemap: https://vivekiitkgp.github.io/sitemapindex.xml
 
+User-Agent: *
+Host: vivekiitkgp.github.io

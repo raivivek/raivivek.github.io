@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Understanding BLAST Output | Vivek Rai</title>
-
-    
-            <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
-
-    
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
-
-      <link rel="canonical" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html">
-
-
-
-    
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Understanding BLAST Output | Vivek Rai</title>
+<link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="canonical" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -27,19 +18,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script>
-
-        <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
-
-    
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css">
-
-
-
-
-
-
-
+</script><!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container" id="container">
@@ -49,12 +28,13 @@ MathJax.Hub.Config({
     <a href="https://vivekiitkgp.github.io/"><h1>Vivek Rai</h1></a>
     </div>
     <hr>
-    <div id="content">
+<div id="content">
         
         
     <div class="postdiv">
     <a href="#"><h2>Understanding BLAST Output</h2></a>
-    <p>In the last post, I mentioned about a project I was trying to work on -
+    <div>
+<p>In the last post, I mentioned about a project I was trying to work on -
 <a class="reference external" href="http://www.sequenceserver.com">SequenceServer</a>. Also, in the end I
 said that I would be writing about the BLAST algorithm (which is the
 backbone of this project) and how does it works so efficiently in
@@ -84,55 +64,54 @@ side - Ruby, BLAST, and Patience.</p>
 <div class="section" id="x-part-i">
 <h2>[x] Part I</h2>
 <p><strong>BLAST Output</strong>: The blast output format can be reconfigured using the
-<tt class="docutils literal">outfmt</tt> option which is described in the NCBI's <a class="reference external" href="www.ncbi.nlm.nih.gov/books/NBK1763/#!po=91.5094">BLAST
+<tt class="docutils literal">outfmt</tt> option which is described in the NCBI's <a class="reference external" href="www.ncbi.nlm.nih.gov/books/NBK1763/?report=reader#!po=91.5094">BLAST
 Manual</a>.
 The sample XML output (standard settings) has the following structure
 (for a real example
 <a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml">blast.xml</a>):</p>
-<pre class="code xml literal-block">
-<span class="cp">&lt;?xml version="1.0"?&gt;</span>
-<span class="cp">&lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&gt;</span>
-<span class="nt">&lt;BlastOutput&gt;</span>
-  <span class="nt">&lt;BlastOutput_program&gt;</span>
-  <span class="nt">&lt;BlastOutput_version&gt;</span>
-  <span class="nt">&lt;BlastOutput_reference&gt;</span>
-  <span class="nt">&lt;BlastOutput_db&gt;</span>
-  <span class="nt">&lt;BlastOutput_query-ID&gt;</span>
-  <span class="nt">&lt;BlastOutput_query-def&gt;</span>
-  <span class="nt">&lt;BlastOutput_query-len&gt;</span>
-  <span class="nt">&lt;BlastOutput_param&gt;</span>
-    <span class="nt">&lt;Parameters&gt;</span>
-      <span class="nt">&lt;Parameters_matrix&gt;</span>
-      <span class="nt">&lt;Parameters_expect&gt;</span>
-      <span class="nt">&lt;Parameters_gap-open&gt;</span>
-      <span class="nt">&lt;Parameters_gap-extend&gt;</span>
-      <span class="nt">&lt;Parameters_filter&gt;</span>
-    <span class="nt">&lt;/Parameters&gt;</span>
-  <span class="nt">&lt;/BlastOutput_param&gt;</span>
-<span class="nt">&lt;BlastOutput_iterations&gt;</span>
-<span class="nt">&lt;Iteration&gt;</span>
-  -- Iteration details --
-<span class="nt">&lt;Iteration_hits&gt;</span>
-<span class="nt">&lt;Hit&gt;</span>
-  <span class="nt">&lt;Hit_num&gt;</span>
-  <span class="nt">&lt;Hit_id&gt;</span>
-  <span class="nt">&lt;Hit_def&gt;</span>
-  <span class="nt">&lt;Hit_accession&gt;</span>
-  <span class="nt">&lt;Hit_len&gt;</span>
-  <span class="nt">&lt;Hit_hsps&gt;</span>
-    <span class="nt">&lt;Hsp&gt;</span>
-  -- HSP Details --
-    <span class="nt">&lt;/Hsp&gt;</span>
-  <span class="nt">&lt;/Hit_hsps&gt;</span>
-<span class="nt">&lt;/Hit&gt;</span>
-<span class="nt">&lt;Hit&gt;</span> <span class="nt">&lt;/Hit&gt;</span>
-<span class="nt">&lt;/Iteration_hits&gt;</span>
-<span class="nt">&lt;Iteration_stat&gt;</span>
-  -- Statistics about Query --
-<span class="nt">&lt;/Iteration_stat&gt;</span>
-<span class="nt">&lt;/Iteration&gt;</span>
-<span class="nt">&lt;/BlastOutput_iterations&gt;</span>
-<span class="nt">&lt;/BlastOutput&gt;</span>
+<pre class="code xml"><a name="rest_code_0cec5c6687504c06b6542d9de2189486-1"></a><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-2"></a><span class="cp">&lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-3"></a><span class="nt">&lt;BlastOutput&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-4"></a>  <span class="nt">&lt;BlastOutput_program&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-5"></a>  <span class="nt">&lt;BlastOutput_version&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-6"></a>  <span class="nt">&lt;BlastOutput_reference&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-7"></a>  <span class="nt">&lt;BlastOutput_db&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-8"></a>  <span class="nt">&lt;BlastOutput_query-ID&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-9"></a>  <span class="nt">&lt;BlastOutput_query-def&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-10"></a>  <span class="nt">&lt;BlastOutput_query-len&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-11"></a>  <span class="nt">&lt;BlastOutput_param&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-12"></a>    <span class="nt">&lt;Parameters&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-13"></a>      <span class="nt">&lt;Parameters_matrix&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-14"></a>      <span class="nt">&lt;Parameters_expect&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-15"></a>      <span class="nt">&lt;Parameters_gap-open&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-16"></a>      <span class="nt">&lt;Parameters_gap-extend&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-17"></a>      <span class="nt">&lt;Parameters_filter&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-18"></a>    <span class="nt">&lt;/Parameters&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-19"></a>  <span class="nt">&lt;/BlastOutput_param&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-20"></a><span class="nt">&lt;BlastOutput_iterations&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-21"></a><span class="nt">&lt;Iteration&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-22"></a>  -- Iteration details --
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-23"></a><span class="nt">&lt;Iteration_hits&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-24"></a><span class="nt">&lt;Hit&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-25"></a>  <span class="nt">&lt;Hit_num&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-26"></a>  <span class="nt">&lt;Hit_id&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-27"></a>  <span class="nt">&lt;Hit_def&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-28"></a>  <span class="nt">&lt;Hit_accession&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-29"></a>  <span class="nt">&lt;Hit_len&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-30"></a>  <span class="nt">&lt;Hit_hsps&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-31"></a>    <span class="nt">&lt;Hsp&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-32"></a>  -- HSP Details --
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-33"></a>    <span class="nt">&lt;/Hsp&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-34"></a>  <span class="nt">&lt;/Hit_hsps&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-35"></a><span class="nt">&lt;/Hit&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-36"></a><span class="nt">&lt;Hit&gt;</span> <span class="nt">&lt;/Hit&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-37"></a><span class="nt">&lt;/Iteration_hits&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-38"></a><span class="nt">&lt;Iteration_stat&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-39"></a>  -- Statistics about Query --
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-40"></a><span class="nt">&lt;/Iteration_stat&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-41"></a><span class="nt">&lt;/Iteration&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-42"></a><span class="nt">&lt;/BlastOutput_iterations&gt;</span>
+<a name="rest_code_0cec5c6687504c06b6542d9de2189486-43"></a><span class="nt">&lt;/BlastOutput&gt;</span>
 </pre>
 <p>The XML output is as detailed as it could be including all the information
 about Hit's <a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair">HSP</a>, the
@@ -145,32 +124,31 @@ output easily, I used the <a class="reference external" href="https://rubygems.o
 is a simple and <a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html">faster</a> alternative of
 other XML parsers available in Ruby. In the beginning, I generated a simple
 Hash out of this parsed data using recursive traversal along the elements.</p>
-<pre class="code ruby literal-block">
-<span class="k">def</span> <span class="nf">report!</span>
-  <span class="c1"># Generates BLAST report which one or more multiple Query objects</span>
-  <span class="c1"># based on the blast query string.</span>
-  <span class="n">parsed_out</span> <span class="o">=</span> <span class="no">Ox</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="vi">@result</span><span class="p">)</span>
-  <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
-  <span class="vi">@program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_program"</span><span class="o">]</span>
-  <span class="vi">@querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_db"</span><span class="o">]</span>
-
-  <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_iterations"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
-    <span class="vi">@queries</span> <span class="o">||=</span> <span class="p">{}</span>
-    <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Query</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="p">{},</span> <span class="n">n</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Statistics"</span><span class="o">]</span><span class="p">)</span>
-
-    <span class="c1"># Ensure a hit object is received. No hits, returns a newline.</span>
-    <span class="c1"># Note that checking to "\n" doesn't work since n[4] = ["\n"]</span>
-    <span class="k">if</span> <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">]==[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">]</span>
-      <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"No hits found."</span>
-    <span class="k">else</span>
-      <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
-        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Hit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span>
-                                                 <span class="n">hits</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">{})</span>
-        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]][</span><span class="ss">:hsp</span><span class="o">]</span> <span class="o">=</span> <span class="no">HSP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Hsp"</span><span class="o">].</span><span class="n">values</span><span class="p">)</span>
-      <span class="k">end</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+<pre class="code ruby"><a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-1"></a><span class="k">def</span> <span class="nf">report!</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-2"></a>  <span class="c1"># Generates BLAST report which one or more multiple Query objects</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-3"></a>  <span class="c1"># based on the blast query string.</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-4"></a>  <span class="n">parsed_out</span> <span class="o">=</span> <span class="no">Ox</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="vi">@result</span><span class="p">)</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-5"></a>  <span class="n">hashed_out</span> <span class="o">=</span> <span class="n">node_to_dict</span><span class="p">(</span><span class="n">parsed_out</span><span class="o">.</span><span class="n">root</span><span class="p">)</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-6"></a>  <span class="vi">@program</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_program"</span><span class="o">]</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-7"></a>  <span class="vi">@querydb</span> <span class="o">=</span> <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_db"</span><span class="o">]</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-8"></a>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-9"></a>  <span class="n">hashed_out</span><span class="o">[</span><span class="s2">"BlastOutput_iterations"</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-10"></a>    <span class="vi">@queries</span> <span class="o">||=</span> <span class="p">{}</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-11"></a>    <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Query</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">n</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span> <span class="n">n</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="p">{},</span> <span class="n">n</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Statistics"</span><span class="o">]</span><span class="p">)</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-12"></a>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-13"></a>    <span class="c1"># Ensure a hit object is received. No hits, returns a newline.</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-14"></a>    <span class="c1"># Note that checking to "\n" doesn't work since n[4] = ["\n"]</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-15"></a>    <span class="k">if</span> <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">]==[</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">]</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-16"></a>      <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">]</span> <span class="o">=</span> <span class="s2">"No hits found."</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-17"></a>    <span class="k">else</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-18"></a>      <span class="n">n</span><span class="o">[</span><span class="mi">4</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">hits</span><span class="o">|</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-19"></a>        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]]</span> <span class="o">=</span> <span class="no">Hit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">hits</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">,</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-20"></a>                                                 <span class="n">hits</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="p">,</span> <span class="n">hits</span><span class="o">[</span><span class="mi">4</span><span class="o">]</span><span class="p">,</span> <span class="p">{})</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-21"></a>        <span class="vi">@queries</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="mi">2</span><span class="o">]][</span><span class="ss">:hits</span><span class="o">][</span><span class="n">hits</span><span class="o">[</span><span class="mi">1</span><span class="o">]][</span><span class="ss">:hsp</span><span class="o">]</span> <span class="o">=</span> <span class="no">HSP</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="o">*</span><span class="n">hits</span><span class="o">[</span><span class="mi">5</span><span class="o">][</span><span class="s2">"Hsp"</span><span class="o">].</span><span class="n">values</span><span class="p">)</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-22"></a>      <span class="k">end</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-23"></a>    <span class="k">end</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-24"></a>  <span class="k">end</span>
+<a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-25"></a><span class="k">end</span>
 </pre>
 <p>This Hash is then used for easy templating (using
 <a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html">erb</a>) and
@@ -196,6 +174,7 @@ the SS's output. I am yet to start working on and possibly the next post
 could be derived out of that work.</p>
 <p>I would be very glad if you drop by to review my code and send in any
 suggestions. Feel free to reach me by whatever means.</p>
+</div>
 </div>
     </div>
     <div class="postmeta">
@@ -228,8 +207,7 @@ suggestions. Feel free to reach me by whatever means.</p>
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
 </noscript>
     <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
@@ -239,7 +217,7 @@ suggestions. Feel free to reach me by whatever means.</p>
     <div class="row-fluid">
         <div class="span6" style="text-align: right; border-right: 2px solid #ccc; padding-right: 20px;">
             <ul class="unstyled bottom">
-                        <li>
+<li>
 <a href=".">Blog</a>
                         </li>
 <li>
@@ -253,22 +231,19 @@ suggestions. Feel free to reach me by whatever means.</p>
                 
             </li>
 </ul>
-        </div>
+</div>
         <div class="span6" style="margin-left: 20px;">
             <ul class="unstyled bottom">
-            
-            
-             
-            <li>Shares: <div id="share"></div>
+<li>Shares: <div id="share"></div>
 </li>
             </ul>
-            <div>
+<div>
             
             </div>
         </div>
     </div>
     <hr>
-    <div class="footer">
+<div class="footer">
     
 <div class="social-icons">
 <li> <a href="https://github.com/vivekiitkgp/"> <i class="fa fa-2x fa-github"></i> </a> </li>
@@ -277,24 +252,12 @@ suggestions. Feel free to reach me by whatever means.</p>
 <li> <a href="https://plus.google.com/u/0/+vivekraikgp"> <i class="fa fa-2x fa-google-plus"></i> </a> </li>
 <li> <a href="https://twitter.com/vivek_ziel"> <i class="fa fa-2x fa-twitter"></i> </a> </li>
 </div>
-<a href="mailto:vivekrai.iitkgp@gmail.com">Vivek Rai</a>, Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a><br>
-
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../files/cc-by-sa4.png"></a>
+<a href="mailto:vivekrai.iitkgp@gmail.com">Vivek Rai</a>, Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a><br><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../files/cc-by-sa4.png"></a>
 <br>
-
-    
-    </div>
 </div>
-    <ul class="social-icons">
-        
-
-    </ul>
-    
-            <script src="../assets/js/all-nocdn.js"></script>
-     
-
-    <script type="text/javascript" src="../assets/js/jquery.sharrre-1.3.4.min.js"></script>
-    <script type="text/javascript">
+</div>
+    <ul class="social-icons"></ul>
+<script src="../assets/js/all-nocdn.js"></script><script type="text/javascript" src="../assets/js/jquery.sharrre-1.3.4.min.js"></script><script type="text/javascript">
         /* jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true}); */
         $('#share').sharrre({
         share: {
@@ -313,17 +276,12 @@ suggestions. Feel free to reach me by whatever means.</p>
         },
         urlCurl: ""
         });
-    </script>
-    
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script> -->
-<script src="../assets/js/footnote.js"></script>
-<script>
+    </script><!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script> --><script src="../assets/js/footnote.js"></script><script>
 $('li>a', '.social-icons').hover(
        function(){ $(this).addClass('tossing') },
        function(){ $(this).removeClass('tossing') }
 )
-</script>
-<script type="text/javascript">
+</script><script type="text/javascript">
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -332,7 +290,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-51413315-1', 'auto');
 ga('send', 'pageview');
 </script>
-
-    
 </body>
 </html>
