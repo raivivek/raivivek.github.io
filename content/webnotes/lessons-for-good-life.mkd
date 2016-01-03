@@ -1,0 +1,43 @@
+template: post.haml
+category: webnotes
+author: Vivek Rai
+date: 12/29/2015
+title: Lessons for good life
+---
+Robert Waldinger's TED Talk
+---
+
+[Robert Waldinger: What makes a good life? Lessons from the longest study on
+happiness](http://www.ted.com/talks/robert_waldinger_what_makes_a_good_life_lessons_from_the_longest_study_on_happiness/transcript?language=en)
+
+Robert Waldinger,[1] a psychiatrist at Harvard Medical School talks about a famous
+long term study of adult development done by Harvard and shares his findings
+about what made the lives of the participants happy or sad as they aged. While
+the talk itself isn't very detailed and offers a *too long, didn't read* summary
+(quite typical of a TED talk, probably one of the important reasons to hate it
+if you are critical), the publications page[2] on the website offers
+a comprehensive and interesting list of findings.
+
+The main ideas that he put forward in this talk:
+
+- Good relations will be the major source of happiness in different stages of
+life, specially towards the end.
+- Loneliness, though, attractive philosophically, is a *killing* force.
+- Lean towards your social relationships by making intermittent efforts
+throughout.
+- Good relationships will buffer your from the physical and emotional pain due
+to other engagements.
+
+All these effects were markedly correlated with the changes in the cognitive
+ability, mortality and general well-being.
+
+There is one thing, however, that I would have loved to know. In the beginning,
+Robert described two groups of people participating in the study. One group
+consisting of students from the Harvard and the other group from poor
+neighborhoods of Boston. What differences did he observe in these groups as they
+aged? How did the 'happiness' versus 'age' graph of these groups look like? Just
+because the latter group had lower expectations, they were happier or could it
+be something else?
+
+[1]: http://www.ncbi.nlm.nih.gov/pmc/?term=Robert+J.+Waldinger
+[2]: http://adultdevelopment.wix.com/harvardstudy#!publications/c1xn4
