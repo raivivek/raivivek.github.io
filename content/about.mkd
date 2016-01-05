@@ -3,13 +3,13 @@ index: True
 subtitle: About Me
 ---
 
-A [biology](shorts/science.html) enthusiast with a wide spectrum of interests in
-[computing](shorts/programming.html).
+A [biology](science.html) enthusiast with a wide spectrum of interests in
+[computing](programming.html).
 
 I write mostly on this blog and sometimes on [Quora](http://quora.com) or
 [Wikipedia](https://en.wikipedia.org/wiki/User:Vivek_Rai).
 
-I love to [read](shorts/books.html).
+I love to [read](books.html).
 
 Posts from the previous blog are now [archived](https://vivekiitkgp.github.io).
 
@@ -36,17 +36,17 @@ Haskell to my major lifetime crush.
 #### Science
 
 A significant amount of my time is spent in nurturing my orientation towards
-research through [undergraduate projects](/shorts/science/journal-club-1.html), writing term papers, [attending
+research through [undergraduate projects](science/journal-club-1.html), writing term papers, [attending
 conferences](https://github.com/vivekiitkgp/qsb-school-diary) and doing relevant
 [internships](https://github.com/vivekiitkgp/intern-diary).
 
 As this blog develops, I plan to write several primer
-[articles](shorts/science.html) on topics in my
+[articles](science.html) on topics in my
 areas of interest.
 
 *Coming soon*
 
 Lastly, a record of my public published or in progress work:
 
-1. Priyam, A., Woodcroft, B.J., Ra,i V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
+1. Priyam, A., Woodcroft, B.J., Rai V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
 
