@@ -1,0 +1,23 @@
+template: post.haml
+category: places
+draft: yes
+title: Traveling back to my roots
+---
+A place I call *home*
+---
+
+This Druga Puja, I took leave from the enormous, bustling crowd of metropoliton
+city and traveled with my family back to our ancestral home. The current place
+in the heart of the city has been my home only for a decade. We moved here when
+I was learning my alphabets in search of better education and life. Looking
+over the past, the idea of coming here feels to be one of the best decisions
+ever taken. However, we did take out a couple of months time to make sure we
+visit our rest of the big family every year, typically during the summers.
+
+It is a tiny
+village consisting of population barely crossing few thousands. However, as
+small this figure may seem, all of this population is nicely accomodated in
+well build *pukka* houses (made of brick, cement and concrete) with a marginal
+fraction owning or living in *clay* houses. Earlier when I was a kid, all of my
+family used to travel every summer - thanks to 2 months of summer vacation that
+all of us siblings had during schooltime.

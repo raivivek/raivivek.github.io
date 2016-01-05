@@ -10,4 +10,4 @@ git push -f origin gh-pages:gh-pages
 # Remove so that later the process can be repeated
 git branch -D gh-pages
 # Push master
-git push origin master -f
+git push origin master

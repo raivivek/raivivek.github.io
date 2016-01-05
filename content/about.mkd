@@ -1,0 +1,52 @@
+template: about.haml
+index: True
+subtitle: About Me
+---
+
+A [biology](shorts/science.html) enthusiast with a wide spectrum of interests in
+[computing](shorts/programming.html).
+
+I write mostly on this blog and sometimes on [Quora](http://quora.com) or
+[Wikipedia](https://en.wikipedia.org/wiki/User:Vivek_Rai).
+
+I love to [read](shorts/books.html).
+
+Posts from the previous blog are now [archived](https://vivekiitkgp.github.io).
+
+Email: [vivekrai.iitkgp@gmail.com](mailto:vivekrai.iitkgp@gmail.com) <br> 
+Github: [github.com/vivekiitkgp](http://github.com/vivekiitkgp) <br>
+Resume: [Download](https://github.com/vivekiitkgp/resume/raw/master/resume.pdf)
+
+#### Programming
+
+I am hooked to open-source software development, an ambitious outgrowth of my
+personal interests to create [free](https://www.gnu.org/philosophy/free-sw.html)
+(as in [freedom!](http://c2.com/cgi/wiki?FreeAsInBeer)) and
+[open-source](http://c2.com/cgi/wiki?OpenSource) content.
+
+I have learned a lot by contributing to these projects:
+
+* [Sequenceserver](https://github.com/wurlmab/sequenceserver)
+* [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
+* [Afra](https://github.com/wurlmab/afra)
+
+Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. However, I find
+Haskell to my major lifetime crush.
+
+#### Science
+
+A significant amount of my time is spent in nurturing my orientation towards
+research through [undergraduate projects](/shorts/science/journal-club-1.html), writing term papers, [attending
+conferences](https://github.com/vivekiitkgp/qsb-school-diary) and doing relevant
+[internships](https://github.com/vivekiitkgp/intern-diary).
+
+As this blog develops, I plan to write several primer
+[articles](shorts/science.html) on topics in my
+areas of interest.
+
+*Coming soon*
+
+Lastly, a record of my public published or in progress work:
+
+1. Priyam, A., Woodcroft, B.J., Ra,i V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
+

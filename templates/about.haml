@@ -23,23 +23,7 @@
       -#.divider
     #main.content
       %article
-        .metadata
-          .category
-            %a{href:"{{ site.url }}/{{ page.category }}.html"}
-              {{ page.category }}
         .title
           %a{href:"{{page.rel_site_url}}/{{page.url}}#main"}
             {{ page.subtitle }}
         {{ page.content }}
-        - for subpage in page.subpages:
-          - if not (subpage.type == 404 or subpage.draft):
-            .list-item
-              .list-nav
-                  - if subpage['category']:
-                    {{ subpage.category }}, {{ subpage.date.strftime("%d %b %Y") }}
-              .list-title
-                %a{href:"{{ page.rel_site_url }}/{{ subpage.url }}#main",
-                   title:"{{ subpage.hover }}"}
-                  {{ subpage.title }}
-                %br
-                {{ subpage.excerpt }}
