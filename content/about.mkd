@@ -30,13 +30,14 @@ I have learned a lot by contributing to these projects:
 * [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
 * [Afra](https://github.com/wurlmab/afra)
 
-Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. However, I find
-Haskell to my major lifetime crush.
+Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. However,
+I find Haskell to my major lifetime crush.
 
 #### Science
 
 A significant amount of my time is spent in nurturing my orientation towards
-research through [undergraduate projects](science/journal-club-1.html), writing term papers, [attending
+research through [undergraduate projects](science/journal-club-1.html), writing
+term papers, [attending
 conferences](https://github.com/vivekiitkgp/qsb-school-diary) and doing relevant
 [internships](https://github.com/vivekiitkgp/intern-diary).
 
