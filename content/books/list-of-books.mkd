@@ -15,6 +15,9 @@ Challenge: 24
 
 #### 2015
 
+Challenge: 20 <br>
+Completed: 13
+
 1. Crichton, Michael 'The Terminal Man'
 2. \+ Orwell, George '1984'
 3. \* Hayakawa, S.I. 'Language in Thought and Action'
@@ -31,9 +34,6 @@ Challenge: 24
 14. Murakami, Haruki 'Kafka On The Shore'
 15. \+ Duhigg, Charles 'The Power of Habit'
 16. \+ Schrödinger, Erwin, 'What is Life?'
-
-Challenge: 20
-Completed: 13
 
 #### 2014
 
