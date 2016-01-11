@@ -1,8 +1,8 @@
 template: index.haml
 index: True
-category: webnotes
+category: notes
 sort_key: date
 sort_reverse: True
 max_subpages: 10
-subtitle: Where most of our times goes
+subtitle: Useful comments, opinion dump
 ---

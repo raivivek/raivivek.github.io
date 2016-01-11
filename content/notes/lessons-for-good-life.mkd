@@ -1,5 +1,5 @@
 template: post.haml
-category: webnotes
+category: notes
 author: Vivek Rai
 date: 12/29/2015
 title: Lessons for good life
