@@ -12,7 +12,7 @@ Before reading the set of comments, please understand that I am not a seasoned
 public speaker with years of experience. Heck! I am not even a *beginner*.
 
 <small> *Caution: The comments below are inspired by watching a lot of other
-people, reading other stories, and from my personal experiences. Naturally,
+people, reading their stories, and from my personal experiences. Naturally,
 they may not be the best fit for you.* </small>
 
 ---------

@@ -16,60 +16,59 @@ by [NNMCB](http://www.iiserpune.ac.in/~mbio/?q=nnmcb), a group of multiple
 premier institutions in India that coordinate activities in the area of
 interest.
 
-The main motivation of participating in this workshop was to present
+The primary motivation for participating in this workshop was to present
 my ongoing work on the knotted proteins. It seemed like a reasonable place to
 attract further ideas and help. Sadly, I could not get in touch with my advisor
 before the abstract submission deadline and did not submit a poster.
-Nevertheless, it was fun to listen new speakers and learn about new developments
+Nevertheless, it was fun to listen to new speakers and learn about new developments
 in a field. You never know where ideas can come from.
 
 The workshop consisted of 8 invited lectures, 6 short talks combined with
 a poster session spanning over two days. There were no *hands on* or practical
 component even though the workshop was called *a workshop*. I guess it is
-because of the short talks, a 15 minute presentation given by PhD students as
+because of the short talks, a 15-minute presentation given by Ph.D. students as
 a demonstration of their work.
 
 #### Venue
 
 IISER-K is
 [located](https://www.google.co.in/maps/place/Indian+Institute+of+Science+Education+and+Research+Kolkata/@22.962533,88.5201464,17z/data=!4m2!3m1!1s0x39f8bf0ebd68bc8b:0x92d423474389ff5c?hl=en)
-some 50 kms off [Kolkata](https://en.wikipedia.org/wiki/Kolkata), the nearest metropolitan.
-Located in a countryside area with almost nothing around, IISER-K stands proudly
-with its large, lush green and beautiful campus. Although, a few of building
-units are still under construction, the place will soon be a great center of
-research in India.
-
-I visited the main Mohanpur campus.
+some 50 km off [Kolkata](https://en.wikipedia.org/wiki/Kolkata), the nearest metropolitan.
+Located in a countryside area with almost nothing around, the new Mohanpur
+campus of IISER-K stands proudly with its large and lush green beauty.
+Although, a few of building units are still under construction, the place will
+soon become a buzzing center of education and research in India.
 
 #### Talks
 
-The complete list of research talks, short talks, list of posters can be found
+The complete list of research talks, short talks, the list of posters can be found
 on the
 [website](https://web.archive.org/web/20160111112304/http://www.iiserkol.ac.in/~mathbio/WMCB2016/).
-In the space below, I'll talk in brief about my impression of the workshop along
-with brief description as necessary.
+In space below, I'll talk in brief about my impression of the workshop along
+with short description as necessary.
 
 ##### Complex systems and networks
 
 There has been growing interest in modeling and analysis of complex biological
 networks in the past decade ([Barabasi](http://barabasilab.com/) *et al.*).
 Primarily because advancement in data acquisition platforms has enabled us to
-generate huge amount of *omics* data
-- genomics, transcriptomics, protemics, metabolomics, fluxomics to name a few.
-Naturally, there is a lot of inter-disciplinary participation from physics and
+generate a huge amount of *omics* data
+- genomics, transcriptomics, proteomics, metabolomics, fluxomics to name a few.
+Naturally, there is a lot of interdisciplinary participation from physics and
 mathematics departments.
 
 [**Sarika Jalan**](http://iiti.ac.in/people/~sarika/) heads the Complex Systems Lab at Indian Institute of Technology
-Indore. She is trying to create an universal framework for a generalized
-analysis of protein-protein interaction data from diseased cells. The framework
-will allow one to easily identify key players
+Indore. She is trying to create a universal framework for a generalized
+analysis of protein-protein interaction data from diseased cells. It 
+will allow one to easily identify key players that cause transition from normal
+to the cancerous stage.
 
 Later, [**Indrani Bose**](http://bic.boseinst.ernet.in/indrani/), an eminent senior physicist at Bose Institute provided
 a hardcore illustration of the cells as complex systems by expanding on the
 topic of cell differentiation. The talk was dense but the key idea was to convey
 the importance of noise and heterogeneity in the cellular system as an important
-component of decision including cell differentiation. I will list a couple of
-interesting papers she suggested for more information.
+component of the decision making including cell differentiation. I will list
+a couple of interesting papers she suggested for more information.
 
 ##### Big Data Analysis
 
@@ -85,17 +84,18 @@ trying to reduce its complexity.
 
 ##### Computational Protein Design
 
-[**Pralay Mitra**](http://cse.iitkgp.ac.in/~pralay/), gave an interesting talk
+[**Pralay Mitra**](http://cse.iitkgp.ac.in/~pralay/) gave an interesting talk
 outlining a general computational strategy of protein design. For those who are
 unfamiliar, protein design is an inverse problem of protein folding, wherein you
 start from a known structure and its sequence and work out alternative
 sequences. The motivation for this problem is rather subtle as to why would
-anyone want to have a different sequence for same structure. And if different,
-why not just carry out a single mutagenesis. The key idea, however, is not to
+anyone want to have a different sequence for the same structure. And if different,
+why not just carry out a single mutagenesis. The central idea, however, is not to
 generate just a different sequence but a novel sequence with strikingly
 different properties of interest. For example, we may want a protein structure
 with same sequence but different affinity so that it acts as an inhibitor.
-Similar to reverse engineering.
+Similar to reverse engineering. One may also notice that protein design problem
+inherently involve a protein folding problem as well.
 
 But how do you do it? I will write about it in detail in my other posts.
 
@@ -104,23 +104,23 @@ But how do you do it? I will write about it in detail in my other posts.
 The talks by [**Anirban
 Sain**](http://www.iitb.ac.in/en/employee/prof-anirban-sain) (IIT Bombay) and
 [**Ranjith Padinhateeri**](http://www.bio.iitb.ac.in/~ranjith/) (IIT Bombay)
-aimed to understand the mechanical organization of a cell. How do the dynamics
+aimed to understand the mechanical organization of a cell. How does the dynamics
 of cytoskeletal filaments drive shape transformation, cell division and other
-process that require force generation and modulation.
+processes that require force generation and modulation?
 
 A good part about these talks were the pretty electron microscopy pictures they
 show.
 
 ##### Short Talks and Posters
 
-Several short talks and posters by PhD students were presented. Several concepts
+Several short talks and posters by Ph.D. students were presented. Several concepts
 like game theory, protein-protein interaction networks, molecular
-dynamics simulation, spectral graph theory and neuroscience came up in
+dynamics simulation, spectral graph theory and neuroscience came up in the
 discussion.
 
 ##### Misc. Tech
 
-A number of relevant techniques (or terms) that I wish to read upon and explore
+Some relevant techniques (or terms) that I wish to read upon and explore
 further are:
 
 * Replica Exchange Molecular Dynamics (REMD)
@@ -133,7 +133,7 @@ Possibly in my undergraduate thesis itself.
 ### Criticism
 
 One fact that disappoints me slightly is that most of the researchers do not
-really care about an experimental evidence in support of the theory or analysis
+really care about experimental evidence in support of the theory or analysis
 they put forward. The general attitude is, "*we're done. it is now up to
 experimentalists to build on this work.*" We need more collaborations.
 
