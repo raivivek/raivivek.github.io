@@ -2,6 +2,7 @@ template: post.haml
 category: science
 author: Vivek Rai
 date: 01/6/2016
+draft: true
 title: Notes from Systems Biology Winter School
 ---
 A comprehensive and thrilling experience
@@ -158,10 +159,9 @@ everything inside a cell simply driven by thermodynamics and a careful design of
 free energy cascade? Do these processes have any fundamental limitations that
 biological systems have to obey?&ensp;&ensp;&ensp;&ensp;
 
-As it turns out, 
-> *Reality* is not so simple.
+As it turns out, *reality* is not so simple.
 
-\* <small> </small> 
+\*<small>Sensing the chemical gradient, Random walks, [Slime molds](http://www.nature.com/news/how-brainless-slime-molds-redefine-intelligence-1.11811) etc.</small> 
 
 **Pankaj Mehta**, a physicist from Boston University works on elegant theories
 to answer these questions. They key motivation of his talks was to investigate

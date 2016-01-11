@@ -2,6 +2,7 @@ template: post.haml
 category: notes
 author: Vivek Rai
 date: 01/12/2016
+draft: true
 title: How to give a good talk
 ---
 A collection of useful comments
