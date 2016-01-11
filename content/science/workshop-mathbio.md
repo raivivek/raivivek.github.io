@@ -11,7 +11,7 @@ This weekend (Jan 9 - Jan 10), I participated in a workshop on mathematical and
 computational biology
 ([WMCB-2016](https://web.archive.org/web/20160111112304/http://www.iiserkol.ac.in/~mathbio/WMCB2016/))
 organized at [Indian Institute of Science Education and Research
-Kolkata](http://iiserkol.ac.in/) (IISER-K). This annual workshop is co-sponsored
+Kolkata](http://www.iiserkol.ac.in/) (IISER-K). This annual workshop is co-sponsored
 by [NNMCB](http://www.iiserpune.ac.in/~mbio/?q=nnmcb), a group of multiple
 premier institutions in India that coordinate activities in the area of
 interest.
