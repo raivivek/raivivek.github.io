@@ -1,12 +1,55 @@
-body {
-  background-color: #fff;
-  letter-spacing: 0.05em;
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua",
-    Baskerville, "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond",
-    "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook",
-    "Century Schoolbook L", Georgia, serif;
+html {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  line-height: 1.5em;
+}
+
+html, body {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: large / 1.556 "Libertine", Palatino, "Palatino Linotype", "Book Antiqua",
+    Georgia, "Times New Roman", serif;
+  word-spacing: 0.1em;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+h1:before {
+  content: '';
+}
+
+h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  line-height: 64px;
+  text-align: center;
+  clear: both;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+pre, kbd, samp, code, var {
+  font: medium / 1.75 Consolas, "Andale Mono", Monaco, "Liberation Mono",
+    "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+  word-spacing: 0;
+  letter-spacing: 0;
 }
 
 figcaption {
@@ -31,16 +74,6 @@ a:link, a:visited, a:active {
   color: black;
 }
 
-.content {
-  margin-top: 2rem;
-}
-.content a:link, .content a:visited, .content a:active {
-  color: #0D47A1;
-}
-.content a:hover {
-  text-decoration: underline;
-}
-
 ol {
   line-height: 1.5em;
 }
@@ -50,37 +83,43 @@ img {
   margin: 0 auto;
 }
 
-.container {
-  margin: 0 auto;
-  margin-bottom: 5rem;
-}
-
-#banner {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.banner-title {
-  font-family: 'Open sans', 'Roboto', 'San Francisco', sans-serif;
-  text-transform: uppercase;
-  font-size: 5rem;
-  letter-spacing: 0.5em;
-  margin: 0.5em 0 0.5em 0.3em;
-}
-
-.banner-subclause {
-  font-size: 1.05rem;
-  margin: 0.5em auto 1em auto;
-  padding: 0 5em 0 5em;
-  color: #999;
-}
-
 article {
   margin: 0 auto;
 }
 
 article blockquote {
   color: #555;
+}
+
+.container {
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.content {
+  margin-top: 2rem;
+  padding: 0 15%;
+}
+.content a:link, .content a:visited, .content a:active {
+  color: #0D47A1;
+}
+.content a:hover {
+  border-bottom: 1px dotted;
+}
+
+.banner {
+  text-align: center;
+}
+.banner .banner-title {
+  text-transform: uppercase;
+  font-size: 5rem;
+  letter-spacing: 0.3em;
+}
+.banner .banner-subclause {
+  font-size: large;
+  margin: 0.5em auto 1em auto;
+  padding: 0 5em 0 5em;
+  color: #999;
 }
 
 .metadata {
@@ -92,7 +131,7 @@ article blockquote {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.25rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   margin-bottom: 2em;
 }
 
@@ -122,7 +161,6 @@ article blockquote {
   text-align: center;
   margin-top: 1.25em;
 }
-
 .list-item a {
   text-transform: uppercase;
   color: black;
@@ -148,12 +186,15 @@ article blockquote {
   font-size: 8px;
 }
 
-pre {
-  font-family: 'Source Code Pro';
-}
-
 .codehilite {
   background-color: #fafafa;
   padding: 5px;
   font-size: 0.8em;
+}
+
+.post p:nth-of-type(1):first-letter {
+  font-size: 4em;
+  float: left;
+  margin-right: 0.02em;
+  line-height: 0.75;
 }

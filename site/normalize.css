@@ -1,38 +1,68 @@
 /*
  * Fonts
  */
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+@font-face 
+  font-family: "Libertine"
+  src: url("f/Libertine.eot?") format("eot"), url("f/Libertine.woff") format("woff"), url("f/Libertine.ttf") format("truetype")
+
+@font-face 
+  font-family: "Libertine"
+  font-weight: bold
+  src: url("f/Libertine-bold.eot?") format("eot"), url("f/Libertine-bold.woff") format("woff"), url("f/Libertine-bold.ttf") format("truetype")
+
+@font-face 
+  font-family: "Libertine"
+  font-style: italic
+  src: url("f/Libertine-italic.eot?") format("eot"), url("f/Libertine-italic.woff") format("woff"), url("f/Libertine-italic.ttf") format("truetype")
+
+@font-face 
+  font-family: "Libertine"
+  font-style: italic
+  font-weight: bold
+  src: url("f/Libertine-bold-italic.eot?") format("eot"), url("f/Libertine-bold-italic.woff") format("woff"), url("f/Libertine-bold-italic.ttf") format("truetype")
 
 /* Responsive styles
  */
 
 @media all {
-    html { font-size: 18px;}
+    html { font-size: 14px;}
 }
 
-/* 560px */
-@media only screen and (min-width: 35em) {
-    html { font-size: 14px; }
-    #banner { width: auto; }
-    article { width: auto; }
+@media only screen and (max-width: 480px) {
+		html {
+			font-size: 12px !important;
+		}
+		body {
+			margin-top: 2rem !important;
+			font-size: 14px !important;
+		}
+		.content {
+			padding: 0 5% !important;
+		}
+		.banner-title {
+			font-size: 4rem !important;
+		}
+		.banner-subclause {
+			padding: 0px !important;
+			font-size: small !important;
+		}
 }
 
-/* 800px */
-@media only screen and (min-width: 50em) {
-    html { font-size: 16px%; }
-    #banner { width: 750px; }
-    article { width: 600px; }
-}
-
-/* 1440 px */
-@media only screen and (min-width: 90em) {
-    html { font-size: 18px; }
-}
-
-/* 1900px+ */
-@media only screen and (min-width: 120em) {
-    html { font-size: 24px; }
-    article { width: 650px; }
+@media only screen and (max-width: 800px) and (min-width: 480px) {
+		html {
+			font-size: 16px !important;
+		}
+		body {
+			font-size: 18px !important;
+		}
+		.content {
+			padding: 0 10% !important;
+		}
+		.banner-subclause {
+			padding: 0px !important;
+			font-size: 1rem !important;
+		}
 }
 
 /* Print styles

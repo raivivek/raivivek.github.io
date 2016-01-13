@@ -1,15 +1,15 @@
 %head
+  %meta{charset:'utf-8'}
   %link{href:'../normalize.css', rel:'stylesheet'}
   %link{href:'../styles.css', rel:'stylesheet'}
-  %link{href:'//fonts.googleapis.com/css?family=Open+Sans:300', rel:'stylesheet'}
-  %title {{ page.title }} | Shorts - Vivek Rai
+  %title {{ page.title }} | Shorts by Vivek Rai
 %body
   .container
-    #banner.no-print
+    .banner.no-print
       .banner-title
         %a{href:"{{ site.url }}"} Shorts
       .banner-subclause
-        Musings of a free mind, treasured recollections &amp; visions of a distant future
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
       -#.divider
       .archive
         %a{href:"{{ page.rel_site_url }}/places.html"} places,
@@ -21,7 +21,7 @@
         %a{href:"{{ page.rel_site_url }}/unfinished.html"} unfinished,
         %a{href:"{{ page.rel_site_url }}/about.html"} about me
       -#.divider
-    #main.content
+    .content
       %article
         .metadata
           .category
@@ -32,9 +32,8 @@
         .title
           %a{href:"{{page.rel_site_url}}/{{page.url}}#main"}
             {{ page.title }}
-        .subtitle
-          {{ page.subtitle }}
-        {{ page.content }}
+        .post
+          {{ page.content }}
         .article-end
           - if page.author:
             Published by {{ page.author }}
@@ -44,5 +43,6 @@
           data-hashtags:"{{page.category}}",data-dnt:"true"} tweet |&nbsp;
           %a{href:"https://twitter.com/vivek_ziel",class:"twitter-follow-button",
           data-show-count:"false",data-show-screen-name:"false",data-dnt:"true"} follow @vivek_ziel
+  %script{src:"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"}
   %script
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

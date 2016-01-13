@@ -26,9 +26,9 @@ understood by them.**
 * It is wise to outline a rough transcript of what you are going to say and
 memorize some key sentences that introduce critical slides.
 
-* Practice at least once.
+* Practice. And not just a little practice, but many, many hours of it.
 
-> TODO: A motivational remark from TED
+> An effortless presentation takes hours of work.([2](http://www.forbes.com/sites/carminegallo/2014/03/17/the-one-habit-that-brilliant-ted-speakers-practice-up-to-200-times/))
 
 ### Presentation Content
 

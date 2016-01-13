@@ -18,6 +18,7 @@ It was an extraordinarily fun-filled learning experience. Here is a brief
 summary of my impressions of the school.
 <br>
 <br>
+<small>*Caution: Not so short. Also, the post may be frequently updated.*</small> 
 
 -----
 
@@ -76,7 +77,7 @@ A gross categorization:
 #### Pre-school
 
 * Numbers in Biology                ([Mukund Thattai]())
-* Mathematical modeling of processes([Sandeep Krishna]())
+* Mathematical modeling of processes ([Sandeep Krishna]())
 * Ecology and Evolution             ([Deepa Agashe]())
 * Primer on Biology                 ([Supreet Saini]())
 * Metagenomics                      ([Nagasuma Chandra]())
@@ -114,7 +115,7 @@ work on [*mother machine*](http://jun.ucsd.edu/mother_machine.php) and how they 
 key idea of his lectures were to infer the physiological and metabolic control
 parameters of a bacterial cell that can explain the phenomenon of size and
 growth homeostasis. They have proposed **adder theory** as an explanation to
-cell size homeostasis and hypothesize growth (λ) and size (Δ) as two independent
+cell size homeostasis and hypothesize growth \\( (\lambda) \\) and size \\((\Delta)\\) as two independent
 and sufficient control parameters for bacterial physiological regulation.
 
 \* <small> Thanks to Cooper, Monod, Helmstetter, Schaechter et al. in 50s. </small>
@@ -133,8 +134,8 @@ Reconstruction and Analysis (COBRA) that employs physicochemical and biological
 constraints to limit the space of phenotypic states of a network in a given
 condition. Naturally, here *more data means better model*.
 
-&ensp;&ensp;&ensp;&ensp;Once you have constructed a valid metabolic network, the
-network step could be to integrate it with the regulatory network. The enhanced
+&ensp;&ensp;Once we have constructed a valid metabolic network, the
+next step could be to integrate it with the regulatory network. The enhanced
 network can now be used in retrospect to improve gene annotation, identify new
 metabolites and thereby improve itself. It also incorporates an amazing
 predictive power that may guide new biological hypothesis development. Infact,
@@ -149,8 +150,59 @@ demonstrated the phenotypic bistability of *E.coli*'s central carbon metabolism
 and how it can be achieved by a simple use of few *flux-sensors* along the
 network.
 
+Incidentally, the project component I was involved in was also based on
+metabolic network analysis. Perhaps, that should go in my next post.
+
 #### Evolution
 
+Since the seminal work of Darwin and Wallace almost two centuries ago, evolution
+is still one of the hottest studied areas. The school witnessed several lectures
+and research talks on topics like evolutionary dynamics, molecular evolution
+with interesting theories put forward frequently.
+
+At ETH Zurich, Andreas Wagner is trying to understand the origin of innovations,
+complexity and diversity of life using *systems approach*. The primary question
+being, "*Are there any principles of innovability in nature that govern the
+arrival of fittest? Or is it just random mutation and selection over
+evolutionary period?*".
+> Innovation is the origin of a major qualitative feature that cannot a
+> It can occur in following forms: <br>
+> 1. Metabolic innovation <br>
+> 2. Regulatory innovation <br>
+> 3. New macromolecule
+
+However, one must carefully distinguish *innovation* with *adaptation* to
+understand the question correctly.
+
+&ensp;&ensp;His group is looking for answers by probing the metabolic phenotype and
+genotype space and their relation in a network. The analysis yield few
+curious results like - 
+
+1. Two genotypes can differ (determined by a distance function D) strikingly
+despite having same phenotype.
+2. A genotype can have quite diverse neighborhood. 
+
+A consequence of these two properties is that it is really *not that difficult*
+for a genotype to acquire a new, unique phenotype. Combine with regulatory
+phenotype space, protein sequence space \\((20^n)\\), RNA sequence space
+\\((4^n)\\) etc., you have a multi-dimensional space to possibly generate any
+combination with very few step movements across the hyperspace. More info in his
+papers.
+
+If this seems too computational to your taste, [**Tzachi Pilpel**](http://longitude.weizmann.ac.il/) discussed how
+evolution occurs at the level of gene expression and related processes with
+great experimental effort. A series of interesting papers on how transcription
+and translation networks may have evolved. The fact that even *tRNA abundance*
+could be optimized for, and can be used as an active means of control is
+beautiful.
+
+Another exciting set of experiments were done by **Tom Kuhlmann** whose group
+wanted to understand the role of transposons in evolution. The experiments
+beautifully showed transposons in action, in *real-time* using a rather simple
+plasmid construct. Quite a few conclusions follow from these experiments that
+I encourage anyone to look up in his papers.
+
+Finally, the research talk by **Kunihiko Kaneko**, professor at Un
 
 #### Energy, information and computation in cells
 

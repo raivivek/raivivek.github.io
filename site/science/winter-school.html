@@ -1,17 +1,17 @@
 <head>
+  <meta charset='utf-8' />
   <link href='../normalize.css' rel='stylesheet' />
   <link href='../styles.css' rel='stylesheet' />
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' />
-  <title>Notes from Systems Biology Winter School | Shorts - Vivek Rai</title>
+  <title>Notes from Systems Biology Winter School | Shorts by Vivek Rai</title>
 </head>
 <body>
   <div class='container'>
-    <div id='banner' class='no-print'>
+    <div class='banner no-print'>
       <div class='banner-title'>
         <a href='https://vivekiitkgp.github.io/shorts'>Shorts</a>
       </div>
       <div class='banner-subclause'>
-        Musings of a free mind, treasured recollections &amp; visions of a distant future
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
       </div>
       <div class='archive'>
         <a href='../places.html'>places,</a>
@@ -24,7 +24,7 @@
         <a href='../about.html'>about me</a>
       </div>
     </div>
-    <div id='main' class='content'>
+    <div class='content'>
       <article>
         <div class='metadata'>
           <div class='category'>
@@ -41,10 +41,8 @@
             Notes from Systems Biology Winter School
           </a>
         </div>
-        <div class='subtitle'>
-          
-        </div>
-        <p>This winter I attended the fourth session of <a href="https://www.icts.res.in/program/current/details/361/">Winter School on Quantitative
+        <div class='post'>
+          <p>This winter I attended the fourth session of <a href="https://www.icts.res.in/program/current/details/361/">Winter School on Quantitative
 Systems Biology</a> at <a href="https://icts.res.in">International Centre for Theoretical Sciences (ICTS)</a>,
 Bangalore. The school is organized by the ICTS, Bangalore and <a href="https://www.ictp.it">ICTP,
 Italy</a> in
@@ -52,7 +50,8 @@ succession as a part of their ICTP-ICTS Programme in Biology since 2012.</p>
 <p>It was an extraordinarily fun-filled learning experience. Here is a brief
 summary of my impressions of the school.
 <br>
-<br></p>
+<br>
+<small><em>Caution: Not so short. Also, the post may be frequently updated.</em></small> </p>
 <hr />
 <h3>TL;DR</h3>
 <p>The winter school provides great learning experience and an excellent platform
@@ -98,7 +97,7 @@ company of people who, generally, are better at it.</p>
 <h4>Pre-school</h4>
 <ul>
 <li>Numbers in Biology                (<a href="">Mukund Thattai</a>)</li>
-<li>Mathematical modeling of processes(<a href="">Sandeep Krishna</a>)</li>
+<li>Mathematical modeling of processes (<a href="">Sandeep Krishna</a>)</li>
 <li>Ecology and Evolution             (<a href="">Deepa Agashe</a>)</li>
 <li>Primer on Biology                 (<a href="">Supreet Saini</a>)</li>
 <li>Metagenomics                      (<a href="">Nagasuma Chandra</a>)</li>
@@ -133,7 +132,7 @@ work on <a href="http://jun.ucsd.edu/mother_machine.php"><em>mother machine</em>
 key idea of his lectures were to infer the physiological and metabolic control
 parameters of a bacterial cell that can explain the phenomenon of size and
 growth homeostasis. They have proposed <strong>adder theory</strong> as an explanation to
-cell size homeostasis and hypothesize growth (λ) and size (Δ) as two independent
+cell size homeostasis and hypothesize growth \( (\lambda) \) and size \((\Delta)\) as two independent
 and sufficient control parameters for bacterial physiological regulation.</p>
 <p>* <small> Thanks to Cooper, Monod, Helmstetter, Schaechter et al. in 50s. </small></p>
 <h4>Metabolism and biochemical networks</h4>
@@ -148,8 +147,8 @@ technique used for network reconstruction and analysis is COnstraint-Based
 Reconstruction and Analysis (COBRA) that employs physicochemical and biological
 constraints to limit the space of phenotypic states of a network in a given
 condition. Naturally, here <em>more data means better model</em>.</p>
-<p>&ensp;&ensp;&ensp;&ensp;Once you have constructed a valid metabolic network, the
-network step could be to integrate it with the regulatory network. The enhanced
+<p>&ensp;&ensp;Once we have constructed a valid metabolic network, the
+next step could be to integrate it with the regulatory network. The enhanced
 network can now be used in retrospect to improve gene annotation, identify new
 metabolites and thereby improve itself. It also incorporates an amazing
 predictive power that may guide new biological hypothesis development. Infact,
@@ -162,7 +161,53 @@ environment and carry out internal changes. A fantastic study by his group
 demonstrated the phenotypic bistability of <em>E.coli</em>'s central carbon metabolism
 and how it can be achieved by a simple use of few <em>flux-sensors</em> along the
 network.</p>
+<p>Incidentally, the project component I was involved in was also based on
+metabolic network analysis. Perhaps, that should go in my next post.</p>
 <h4>Evolution</h4>
+<p>Since the seminal work of Darwin and Wallace almost two centuries ago, evolution
+is still one of the hottest studied areas. The school witnessed several lectures
+and research talks on topics like evolutionary dynamics, molecular evolution
+with interesting theories put forward frequently.</p>
+<p>At ETH Zurich, Andreas Wagner is trying to understand the origin of innovations,
+complexity and diversity of life using <em>systems approach</em>. The primary question
+being, "<em>Are there any principles of innovability in nature that govern the
+arrival of fittest? Or is it just random mutation and selection over
+evolutionary period?</em>".</p>
+<blockquote>
+<p>Innovation is the origin of a major qualitative feature that cannot a
+It can occur in following forms: <br>
+1. Metabolic innovation <br>
+2. Regulatory innovation <br>
+3. New macromolecule</p>
+</blockquote>
+<p>However, one must carefully distinguish <em>innovation</em> with <em>adaptation</em> to
+understand the question correctly.</p>
+<p>&ensp;&ensp;His group is looking for answers by probing the metabolic phenotype and
+genotype space and their relation in a network. The analysis yield few
+curious results like - </p>
+<ol>
+<li>Two genotypes can differ (determined by a distance function D) strikingly
+despite having same phenotype.</li>
+<li>A genotype can have quite diverse neighborhood. </li>
+</ol>
+<p>A consequence of these two properties is that it is really <em>not that difficult</em>
+for a genotype to acquire a new, unique phenotype. Combine with regulatory
+phenotype space, protein sequence space \((20^n)\), RNA sequence space
+\((4^n)\) etc., you have a multi-dimensional space to possibly generate any
+combination with very few step movements across the hyperspace. More info in his
+papers.</p>
+<p>If this seems too computational to your taste, <a href="http://longitude.weizmann.ac.il/"><strong>Tzachi Pilpel</strong></a> discussed how
+evolution occurs at the level of gene expression and related processes with
+great experimental effort. A series of interesting papers on how transcription
+and translation networks may have evolved. The fact that even <em>tRNA abundance</em>
+could be optimized for, and can be used as an active means of control is
+beautiful.</p>
+<p>Another exciting set of experiments were done by <strong>Tom Kuhlmann</strong> whose group
+wanted to understand the role of transposons in evolution. The experiments
+beautifully showed transposons in action, in <em>real-time</em> using a rather simple
+plasmid construct. Quite a few conclusions follow from these experiments that
+I encourage anyone to look up in his papers.</p>
+<p>Finally, the research talk by <strong>Kunihiko Kaneko</strong>, professor at Un</p>
 <h4>Energy, information and computation in cells</h4>
 <p>How do cells perform computation?(*) And what is it that requires energy? Is
 everything inside a cell simply driven by thermodynamics and a careful design of
@@ -178,6 +223,7 @@ Proofreading</em> by Hopfield et al. (1994), and <em>Physics of Chemoreception</
 Purcell (1975). The two papers provide an excellent discussion of how cells employ
 active processes to increase their specificity. Turns out, that's where you
 break the <em>time-reversal symmetry</em> and hence <em>have to</em> consume energy.</p>
+        </div>
         <div class='article-end'>
           
             Published by Vivek Rai
@@ -190,6 +236,7 @@ break the <em>time-reversal symmetry</em> and hence <em>have to</em> consume ene
       </article>
     </div>
   </div>
+  <script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
