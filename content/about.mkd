@@ -6,10 +6,11 @@ subtitle: About Me
 A [biology](science.html) enthusiast with a wide spectrum of interests in
 [computing](programming.html).
 
-I write mostly on this blog and sometimes on [Quora](http://quora.com) or
-[Wikipedia](https://en.wikipedia.org/wiki/User:Vivek_Rai).
+I like to [write](http://quora.com) and [read](books.html)
 
-I love to [read](books.html).
+I love to [code](https://github.com/vivekiitkgp).
+
+I enjoy sharing my [experiences](./)
 
 Posts from the previous blog are now [archived](https://vivekiitkgp.github.io).
 
@@ -30,8 +31,7 @@ I have learned a lot by contributing to these projects:
 * [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
 * [Afra](https://github.com/wurlmab/afra)
 
-Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. However,
-I find Haskell to my major lifetime crush.
+Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH.
 
 #### Science
 

@@ -2,6 +2,7 @@
   %meta{charset:'utf-8'}
   %link{href:'normalize.css', rel:'stylesheet'}
   %link{href:'styles.css', rel:'stylesheet'}
+%link{rel:"stylesheet", href:"//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"}
   %title {{ page.subtitle }} | Shorts by Vivek Rai
 %body
   .container
@@ -33,7 +34,7 @@
         .post
           {{ page.content }}
         - for subpage in page.subpages:
-          - if not (subpage.type == 404 or subpage.draft):
+          - if subpage.pinned:
             .list-item
               .list-nav
                   - if subpage['category']:
@@ -41,6 +42,18 @@
               .list-title
                 %a{href:"{{ page.rel_site_url }}/{{ subpage.url }}#main",
                    title:"{{ subpage.hover }}"}
-                  {{ subpage.title }}
+                  <i class="fa fa-thumb-tack"></i> {{ subpage.title }}
+                %br
+                {{ subpage.excerpt }}
+        - for subpage in page.subpages:
+          - if not (subpage.type == 404 or subpage.draft or subpage.pinned):
+            .list-item
+              .list-nav
+                  - if subpage['category']:
+                    {{ subpage.category }}, {{ subpage.date.strftime("%d %b %Y") }}
+              .list-title
+                %a{href:"{{ page.rel_site_url }}/{{ subpage.url }}#main",
+                   title:"{{ subpage.hover }}"}
+                   {{ subpage.title }}
                 %br
                 {{ subpage.excerpt }}
