@@ -16,7 +16,7 @@ your work when you scream, "Never do it this way again!", you haven't really
 learned it to your heart.
 
 <figure style="text-align:center">
-<img src="/shorts/alphahemolysin.jpg"
+<img src="/images/alphahemolysin.jpg"
      title="Splendid beauty of proteins. Needless to say, they are natural artifacts, best piece of design."
      style="width:auto; height:350px"/>
 <figcaption>

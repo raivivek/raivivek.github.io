@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (awesome-biology)</title><link>https://vivekiitkgp.github.io/</link><description></description><atom:link rel="self" href="https://vivekiitkgp.github.io/categories/awesome-biology.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 15 Nov 2015 06:27:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Curated List Of Biology Resources</title><link>https://vivekiitkgp.github.io/blog/curated-list-of-biology-resources.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;It always has been a dreaded task for me to study during the examinations. For
+those who may not be aware of my college's curriculum, may note
+that we have a mid-semester and an end-semester evaluation exams; one during
+September and the other in November. However, I appreciate the idea of a more
+integrated and continuous evaluation schemes where the progress of students and
+their understanding is continuously being monitored through small, concept based
+tests, quizzes or other discussions than few life changing exams.
+Moreover, these require one to divert all their attention exclusively towards
+the exams, and it's preparation thereby hampering all the other engagements of a
+student. Regardless, I won't discuss the pros and cons of such a system because
+I have a more interesting thing to share.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Now while preparing from one of my subjects (&lt;em&gt;Genetics&lt;/em&gt;), I noticed that the
+information about different educational resources in Biology (or Biotechnology)
+is very much fragmented unlike Computer Science. The knowledge about
+established textbooks, popular research papers, and other resources is not
+readily available, and one often has to go through a larger number of searches,
+forums, and blogs to find some information worth reading. It's not surprising
+to see different papers which review, collect and organize other tools and
+resources, getting accepted into prestigious Journals. This effort is enough to
+show the need to organize the vast amount of content out there in public.&lt;/p&gt;
+&lt;p&gt;Meanwhile, I came upon &lt;a class="reference external" href="https://github.com/josephmisiti/awesome-machine-learning"&gt;this&lt;/a&gt; repository on GitHub, which curates a list of
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;awesome-machine-learning&lt;/span&gt;&lt;/tt&gt; frameworks, libraries and software (by language).
+This project itself was inspired from another project called &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;awesome-php&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;This motivated me to attempt a similar collection of biological resources with
+the help of online community. I don't know if it'd be the best place to
+end ones' search, but it'd be one of the best places to start with.&lt;/p&gt;
+&lt;p&gt;The repository is available at &lt;a class="reference external" href="https://github.com/vivekiitkgp/awesome-biology"&gt;vivekiitkgp/awesome-biology&lt;/a&gt;.  Feel free to send in your
+suggestions by creating a pull request, opening an issue or dropping me an
+email (please do). This desperately needs more and more contributers for
+ensuring visibility, and quality content. Let me know what you think.&lt;/p&gt;&lt;/div&gt;</description><category>awesome-biology</category><category>books</category><category>github</category><category>resources</category><guid>https://vivekiitkgp.github.io/blog/curated-list-of-biology-resources.html</guid><pubDate>Fri, 19 Sep 2014 20:09:40 GMT</pubDate></item></channel></rss>

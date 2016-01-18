@@ -18,7 +18,7 @@ internship concluded on 10th of July with a [report](https://github.com/vivekiit
 [presentation](https://github.com/vivekiitkgp/intern-diary/tree/master/presentation) on the 15th of July.
 
 <figure style="text-align:center">
-<img src="/shorts/cover_ppt.png"
+<img src="/images/cover_ppt.png"
      title="Cover page of my presentation delivered at MRDG seminar hall, IISc."
      style="width:auto; height:350px; border:solid 1px #ccc"/>
 <figcaption>

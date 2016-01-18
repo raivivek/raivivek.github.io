@@ -15,7 +15,7 @@ presenting the situation of gender gap on Wikipedia by observing the *trends of 
 
 <figure style="text-align:center">
 <img
-    src="/shorts/wigi_map.png"
+    src="/images/wigi_map.png"
     title="Wikipedia Gender Indicators infographic by Maximilian Klein and Frances Soong."
     target="https://github.com/notconfusing/WIGI/issues/22"
     style="width: 400px; height: auto"/>

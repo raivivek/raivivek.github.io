@@ -17,7 +17,7 @@ consisting of professors, research scholar, graduates and undergraduate
 students.
 
 <figure style="text-align:center">
-<img src="/shorts/first_page.png"
+<img src="/images/first_page.png"
      title="Cover page of my presentation delivered in a Journal Club session, IIT Kharagpur."
      style="width:auto; height:350px; border:solid 1px #ccc"/>
 <figcaption>

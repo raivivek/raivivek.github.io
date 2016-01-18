@@ -3,16 +3,17 @@ index: True
 subtitle: About Me
 ---
 
-A [biology](science.html) enthusiast with a wide spectrum of interests in
+[biology](science.html) enthusiast with a wide spectrum of interests in
 [computing](programming.html).
 
-I like to [write](http://quora.com) and [read](books.html)
+<br>
+I like to [write](http://quora.com) and [read](books.html).
 
 I love to [code](https://github.com/vivekiitkgp).
 
 I enjoy sharing my [experiences](./)
 
-Posts from the previous blog are now [archived](https://vivekiitkgp.github.io).
+Posts from the previous blog are now [archived](/old/index.html).
 
 Email: [vivekrai.iitkgp@gmail.com](mailto:vivekrai.iitkgp@gmail.com) <br> 
 Github: [github.com/vivekiitkgp](http://github.com/vivekiitkgp) <br>
@@ -31,7 +32,8 @@ I have learned a lot by contributing to these projects:
 * [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
 * [Afra](https://github.com/wurlmab/afra)
 
-Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH.
+Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. <br>
+Tools I love: Git, Vim.
 
 #### Science
 
