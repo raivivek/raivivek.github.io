@@ -10,5 +10,5 @@ git push -f blog gh-pages:master
 # Remove so that later the process can be repeated
 git branch -D gh-pages
 # Push master
-git push blog shorts
+git push blog master:shorts
 git push origin master
