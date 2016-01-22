@@ -24,8 +24,6 @@ a particular genre or of specific interest to a group. In loose terms, WikiProje
   </figcaption>
 </figure>
 
- 
-
 In the same blog post, I shared my excitement about an interesting article
 writing competition that I had found on [Computational Biology
 WikiProject](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/).

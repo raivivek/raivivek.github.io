@@ -47,8 +47,8 @@ This paper though contains preliminary results are very less studied when
 compared to other trends, offer promising insights on worldwide longitudinal
 gender inequality trends.
 
-However, these results were discussed only for a single point in time and to
-extend this research further required time and effort in form of a dedicated
+However, these results were discussed only for a single snapshot in time and to
+extend this research required further time and effort in form of a dedicated
 team. With the help of a [$22,500
 funding](https://blog.wikimedia.org/2015/05/01/meet-the-inspire-grantees/) from
 [Wikipedia Inspire Grant](https://meta.wikimedia.org/wiki/Grants:Inspire), the
@@ -59,7 +59,7 @@ the data on weekly basis and offer insightful statistical analyses.
 The ultimate goal being to raise awareness of the gender gap using statistical
 and quantitative means.
 
-I've been fortunate enough to discover the project during it's formulation
+I've been fortunate enough to discover the project during its formulation
 period and to be a part of it as a developer and research team contributor. The
 project is open to contribution and available entirely [on
 github](https://github.com/notconfusing/WIGI).
