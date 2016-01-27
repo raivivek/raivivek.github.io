@@ -3,23 +3,53 @@ index: True
 subtitle: About Me
 ---
 
-[biology](science.html) enthusiast with a wide spectrum of interests in
-[computing](programming.html).
+Hi!
+
 
 <br>
-I like to [write](http://quora.com) and [read](books.html).
+I am a [Biology](science.html) enthusiast with a wide spectrum of interests in
+[computing](programming.html).
 
-I love to [code](https://github.com/vivekiitkgp).
+* I like to [write](http://quora.com) and [read](books.html).
+* I love to [code](https://github.com/vivekiitkgp).
+* I enjoy sharing my [experiences](./).
 
-I enjoy sharing my [experiences](./)
-
-Posts from the previous blog are now [archived](/old/index.html).
+My older blog has retired and all posts are now [archived](/old/index.html).
 
 Email: [vivekrai.iitkgp@gmail.com](mailto:vivekrai.iitkgp@gmail.com) <br> 
-Github: [github.com/vivekiitkgp](http://github.com/vivekiitkgp) <br>
+Github: [vivekiitkgp](http://github.com/vivekiitkgp) <br>
 Resume: [Download](https://github.com/vivekiitkgp/resume/raw/master/resume.pdf)
+<br>
+GPG Key: [820BA5F1](http://pgp.mit.edu/pks/lookup?op=get&search=0x918E0EF6820BA5F1)
 
-#### Programming
+### Science
+
+Science provides intellectual freedom. It enables us to explore and understand
+the nature around us — from tiny atoms, living cells and organisms, to
+the magnanimous universe.
+
+Doing science, however, requires a careful and systematic research, perseverance,
+and a lot of knowledge. In my view, it is more of a collective sport than an
+individual one.
+
+With every [project](science/journal-club-1.html), term paper,
+[conference](https://github.com/vivekiitkgp/qsb-school-diary), or
+[internship](https://github.com/vivekiitkgp/intern-diary) I do, I seek to
+become part of this sport and develop my own *niche*.
+
+I am becoming increasingly interested in the system level analysis of cellular
+phenomenon, with the aim of unifying *omics* data with biological networks.
+
+As this blog develops, I plan to write several primer
+[articles](science.html) on my topics of interest.
+
+(*Coming soon*)
+
+Lastly, a record of my public published or in progress work:
+
+1. Priyam, A., Woodcroft, B.J., Rai V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
+
+### Programming
 
 I am hooked to open-source software development, an ambitious outgrowth of my
 personal interests to create [free](https://www.gnu.org/philosophy/free-sw.html)
@@ -32,24 +62,8 @@ I have learned a lot by contributing to these projects:
 * [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
 * [Afra](https://github.com/wurlmab/afra)
 
-Languages I use: Python, Ruby, Javascript, HTML/CSS, MATLAB, BASH. <br>
-Tools I love: Git, Vim.
+I use [GNU/Linux](https://www.debian.org/releases/squeeze/i386/ch01s02.html.en),
+keep files under [version control](https://git-scm.com/), and edit using
+[Vim](http://vim.org).
 
-#### Science
-
-A significant amount of my time is spent in nurturing my orientation towards
-research through [undergraduate projects](science/journal-club-1.html), writing
-term papers, [attending
-conferences](https://github.com/vivekiitkgp/qsb-school-diary) and doing relevant
-[internships](https://github.com/vivekiitkgp/intern-diary).
-
-As this blog develops, I plan to write several primer
-[articles](science.html) on topics in my
-areas of interest.
-
-*Coming soon*
-
-Lastly, a record of my public published or in progress work:
-
-1. Priyam, A., Woodcroft, B.J., Rai V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
-
+Languages I use: Python, Ruby, JavaScript, MATLAB, BASH. <br>
