@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/xtinct
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://vivekiitkgp.github.io
+  * I am xtinct (https://keybase.io/xtinct) on keybase.
+  * I have a public key with fingerprint 3292 74CE 04A7 C80B 79B1  9D4C 918E 0EF6 820B A5F1
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01011eceaa7a51a0df3c3f23789764be892ef096c244c87b9c7e955287a01f7d38150a",
+            "fingerprint": "329274ce04a7c80b79b19d4c918e0ef6820ba5f1",
+            "host": "keybase.io",
+            "key_id": "918e0ef6820ba5f1",
+            "kid": "01011eceaa7a51a0df3c3f23789764be892ef096c244c87b9c7e955287a01f7d38150a",
+            "uid": "b809a97ddc6a58280148523c7f469719",
+            "username": "xtinct"
+        },
+        "service": {
+            "hostname": "vivekiitkgp.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1456158527,
+    "expire_in": 157680000,
+    "prev": "24ec37fb39f16417681b057c6bd6743b67685edb8344cb8a27c5a800009543b5",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.51
+Comment: https://keybase.io/crypto
+
+yMIuAnicrZJdSBRRFMd3rZQ0LQgqKxCGsoe2mjszd+7MQgX1kKYlWklRuNx75846
+rM5uu7PrqhRWD+WDoX0Q9RBqWRlISRAWFmVf+NEnGBVElAWV9RClRd93zN567L5c
+7jn/87v/czjXMyd40r1Ne7NGd2a0ffD2Xz0a95T2o+W1Agkb1YK/VgixsYtVGCzm
+BEKWIfgFEYgAMMowRhgCLBqmTGVTkpGmI1UhTNMlZoq6SiVFoRoiOkVMh1DSEBaB
+iQxZA1DEgk8wLTvIopGoZTscK0u6hBTKRAUjqokE6QTohkJ1oDGRmaomiQRDE/DC
+8nDMreDmCI6xxVaYx/gjMGbvH/r/7Ds+hiOaqGMdGQZVMdQkTQSKBiWZIlNRdQR0
+VxhjURtXMq5OOpZNHWGbT+CxhEWZO1a3j/F8wkqwkGU5oWBkcdByyuPkT1uRaNgJ
+03AFl5Q7TiTmdxFOdcStqWIkME4LEMs2+Dh5RYJFY1bYFvyAK6ljuXigQBVAbg/5
+BJaMWFEWsFwFRKom8uP+wxIcKSmMysgksm4CVQE8DYgIEVWJoSJFJiqPQGYQTeYz
+IhqWEIV4DKFDnoaC299WOyz4ZW4TBzkyZgVt7MSjTNjWc2XLRI833ZM6KcVdM0/6
+5Gl/l08qTfvpy7pYULf9HJje5gnMJYfWdF5cMvVZ37rRdhT52V4wOjLY2/k8VL3g
+ZMacZEfu63nS92MqfHOgozvvtPpyKOPEjuLh1q7s3de6fd8WLb2UO/ClLlly7Vyd
+2rqscfan7Duk71bOpqeF0Cy8m/X+SeYKs2l1S95hqX76mbSa3goy/DGtcdY9IhQ3
+rx8sW3kh2JC9auPbxHb7xfGylD0birse3HhlDiUKFg6h/K5fB2fcTD5KPgSXB1qm
+dd+dLL6bsmLYu/ZI1e2BNYMz68vOF7XFn9SVCDXl9+XN+0/V9BQ1fGns8Peo3/b1
+nvgxIn3dlay587gytfn8YZwzv6S06+ymz/mi9zcbcESh
+=1FbW
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/xtinct
+
+==================================================================
