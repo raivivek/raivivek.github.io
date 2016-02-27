@@ -198,3 +198,7 @@ article blockquote {
   margin-right: 0.02em;
   line-height: 0.75;
 }
+
+.hint {
+  color: #060;
+}
