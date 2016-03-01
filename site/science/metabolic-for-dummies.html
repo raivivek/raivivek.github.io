@@ -1,0 +1,156 @@
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/normalize.css' rel='stylesheet' />
+  <link href='/css/styles.css' rel='stylesheet' />
+  <title>Metabolic Network Analysis for Dummies | Shorts by Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='banner no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <br>
+        <a href='../notes.html'>notes,</a>
+        <a href='../unfinished.html'>unfinished,</a>
+        <a href='../about.html'>about me</a>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../science.html'>
+              science
+            </a>
+          </div>
+          <div class='timestamp'>
+            20 Jan 2016
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../science/metabolic-for-dummies.html#main'>
+            Metabolic Network Analysis for Dummies
+          </a>
+        </div>
+        <div class='post'>
+          <p>In this short tutorial, we will explore the basic steps of a metabolic network
+analysis. For our convenience, we will take a small model organism and set up
+a simple objective. However, the steps can be scaled without any loss of
+generality.</p>
+<h3>Introduction</h3>
+<h4>What is a metabolic network?</h4>
+<p>Metabolic networks are one type of many biological networks. However,
+irrespective of that, it is just a regular network consisting of <em>nodes</em>
+connected by <em>edges</em>. The nodes carry data while edges indicate the nature of
+relationship between them. For example, think of a social network where people
+are nodes and friends are connected by edges.</p>
+<p>A metabolic network, thus, must represent the cellular metabolic process using
+nodes and edges.</p>
+<h4>Storing the data</h4>
+<p>Thousands of chemical reactions occur at a time, even in relatively simpler
+organisms like <em>E.coli</em>. A popular and computationally amenable way to store
+this information is in the form of a matrix, called a <a href="http://www.bio-physics.at/wiki/index.php?title=Stoichiometric_Matrix"><strong>stoichiometry
+matrix</strong></a>.</p>
+<p>A stoichiometry matrix records the relationship between different metabolites and
+the particular chemical reactions they participate in. If you are familiar with
+networks already, it is similar to an <a href="https://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a> representation.</p>
+<h4>Example</h4>
+<p>Consider the following sample of chemical reactions take from <em>E.coli</em> BL21(DE3)
+strain, a popularly used <a href="">expression host</a>.</p>
+<p>$$ ade_c + prpp_c → amp_c + ppi_c \tag{1} $$
+$$ 3amac_c + h_c + h2o_c → msa_c + nh4_c \tag{2} $$
+$$ accoa_c + h2o_c + oaa_c → cit_c + coa_c + h_c \tag{3} $$</p>
+<p><small class="hint">Hint: Confused about symbols? See <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/ADPT">1</a>, <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/3AMACHYD">2</a>, <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/CS">3</a> </small></p>
+<p>A complete set of reactions along with list of metabolites and genes for
+a particular organism can be obtained from online databases like
+<a href="http://bigg.ucsd.edu/">BiGG</a>.</p>
+<p>The dataset can be obtained in several file formats like <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
+<a href="http://sbml.org">SBML</a>, or <a href="http://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf">MAT</a> depending on application used for further analysis. We’ll
+come back to this later.</p>
+<h3>Network construction</h3>
+<h4>Creating stoichiometry matrix</h4>
+<p>To construct a stoichiometry matrix, we need to have the following information
+(both of which are present in model file):</p>
+<ul>
+<li>Participating metabolites \(( \vec{m} )\)</li>
+<li>(Balanced) Chemical reactions \(( \vec{R} )\)</li>
+</ul>
+<p>Following from previous example, we can see that \( \vec{m} \) is
+a vector of size \( m = 13 \) (unique metabolites) and \( \vec{R} \) is of
+size \( n = 3 \). The resulting stoichiometry matrix \(( S )\) is of size \(
+m \times n \), where each row represents a metabolite and each column represents
+a reaction. Each cell \((c_{ij})\) populated using a simple rule — \(a\) if
+a metabolite is produced in that reaction, \(- a\) if consumed, 0 otherwise;
+where \(a\) is the stoichiometry coefficient of the metabolite.</p>
+<p>For example, a stoichiometry for reaction \( (1) \) will be:</p>
+<p>$$
+\mathbf{S} = 
+\left(
+\begin{array}{c|c}
+ade_c &amp; -1\\ prpp_c &amp; -1\\ amp_c &amp; 1\\ ppi_c &amp; 1 \\
+\end{array}\right)
+$$
+<small class="hint">
+Exercise: Try writing S matrix for all three reactions.<br>
+Exercise: Write a (Python?) script to create S matrix from a list of reactions. </small></p>
+<h4>Other matrices</h4>
+<p>Similarly, you can create different matrices containing other kind of reaction
+information. For example, elemental matrix (\( \vec{E} \)), charge-balance
+matrix, moiety matrix, flux matrix (\( \vec{v} \)).
+All of them when multiplied with stoichiometry matrix can yield complete
+information about a reaction, like atoms involved, charged species involved,
+rate of concentration changes etc.</p>
+<p>The advantage of using matrices is that conservation principles can be simply
+verified through a matrix multiplication.</p>
+<h4>Reaction and compound maps</h4>
+<p>Stoichiometry matrix, though easy to understand, is a fairly comprehensive
+description of the metabolic network. An alternative is to use a <em>reaction
+map</em> and <em>compound map</em>.</p>
+<ul>
+<li>A reaction map consists of metabolites as nodes and reactions as edges, drawn
+    from metabolites which are consumed to the metabolites which are produced.</li>
+<li>A compound map consists of reactions as nodes and metabolites as edges, drawn
+    from the reactions in which they are produced to the reactions in which they
+    are produced.</li>
+</ul>
+<p><small class="hint">
+Exercise: Write the compound map for the S matrix of above three reactions.<br>
+Exercise: Given a metabolite, write a program to find the common reaction.</small></p>
+<h3>Visualizing the network</h3>
+<p>Once the metabolic network model grows beyond a few reactions and metabolites,
+it becomes increasingly difficult to visualize the relationship between the
+components. Visualization allows us to observe key network structures, critical
+pathways and important metabolites without much analysis.</p>
+<p>Some common ways to visualize a network is:</p>
+<ul>
+<li>Cytospace</li>
+<li>Genomatica’s visualization</li>
+</ul>
+        </div>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Metabolic Network Analysis For Dummies: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='science'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
