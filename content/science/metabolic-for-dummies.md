@@ -2,10 +2,10 @@ template: post.haml
 category: science
 author: Vivek Rai
 date: 01/20/2016
-draft: false
+draft: true
 title: Metabolic Network Analysis for Dummies
 ---
-A beginners guide to analysing cellular metabolic networks
+A beginners guide to analysing biological metabolic networks
 ---
 
 In this short tutorial, we will explore the basic steps of a metabolic network
