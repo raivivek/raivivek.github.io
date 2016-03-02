@@ -7,7 +7,7 @@ title: List of books I have read
 Books are magic.
 ---
 
-[\*] currently reading, [+] recommended, [-] annoying
+<small>(\*) currently reading, (+) recommended, (-) annoying</small>
 
 #### 2016
 
@@ -17,6 +17,12 @@ Challenge: 24
 2. Orwell, George ‘Burmese Days’
 3. \* Murakami, Haruki ‘The Elephant Vanishes’
 4. \+ Satrapi, Marjane ‘The Complete Persepolis’
+5. Thorsby, Øyvind ‘Transdimensional Brain Chip’ (*comic*)<br>
+  <small> Thoroughly enjoyed this Thorsby’s comic based on invention of a new
+  brain chip that allows you to communicate with versions of yourself in other
+  universe. I would also recommend his other work <a
+  href="http://spacespy.thecomicseries.com/Mycomics/"> The Accidental Space
+  Spy</a>.</small>
 
 #### 2015
 
@@ -36,7 +42,7 @@ Completed: 13
 11. \+ Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
 12. \- Gladwell, Malcolm 'The Tipping Point'
 13. Camus, Albert 'The Outsider'
-14. Murakami, Haruki 'Kafka On The Shore'
+14. \+ Murakami, Haruki 'Kafka On The Shore'
 15. \+ Duhigg, Charles 'The Power of Habit'
 16. \+ Schrödinger, Erwin, 'What is Life?'
 
