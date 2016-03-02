@@ -2,7 +2,7 @@
   <meta charset='utf-8' />
   <link href='/css/normalize.css' rel='stylesheet' />
   <link href='/css/styles.css' rel='stylesheet' />
-  <title>Metabolic Network Analysis for Dummies | Shorts by Vivek Rai</title>
+  <title>Metabolic Network Analysis - I | Shorts by Vivek Rai</title>
 </head>
 <body>
   <div class='container'>
@@ -33,28 +33,41 @@
             </a>
           </div>
           <div class='timestamp'>
-            20 Jan 2016
+            02 Mar 2016
           </div>
         </div>
         <div class='title'>
           <a href='../science/metabolic-for-dummies.html#main'>
-            Metabolic Network Analysis for Dummies
+            Metabolic Network Analysis - I
           </a>
         </div>
         <div class='post'>
           <p>In this short tutorial, we will explore the basic steps of a metabolic network
-analysis. For our convenience, we will take a small model organism and set up
-a simple objective. However, the steps can be scaled without any loss of
-generality.</p>
+analysis.</p>
+<p>For our convenience, we will avoid using full models or discuss their
+reconstruction methods, instead focus on simple reactions to create
+a theoretical background. However, the steps can be scaled without any loss of
+generality. The related exercises should help build a theoretical background
+along with necessary programming skills.  </p>
+<figure style="text-align:center;">
+  <img src="/images/metabolic_network.png" height="350px">  </img>
+  <figcaption>
+      Metabolic network showing interactions between enzymes and metabolites in the
+      Arabidopsis thaliana citric acid cycle. Enzymes and metabolites are the red dots
+      and interactions between them are the lines. (<a href="https://en.wikipedia.org/wiki/Metabolic_network_modelling">Wikipedia</a>)
+  </figcaption>
+</figure>
+
 <h3>Introduction</h3>
 <h4>What is a metabolic network?</h4>
-<p>Metabolic networks are one type of many biological networks. However,
-irrespective of that, it is just a regular network consisting of <em>nodes</em>
-connected by <em>edges</em>. The nodes carry data while edges indicate the nature of
-relationship between them. For example, think of a social network where people
-are nodes and friends are connected by edges.</p>
-<p>A metabolic network, thus, must represent the cellular metabolic process using
-nodes and edges.</p>
+<p>A metabolic network is just a collection of <em>nodes</em> and <em>edges</em> used to
+represent the relationship between different cellular components.  These
+components could be genes, enzymes, reactions, metabolites or other factors.
+The nodes store data while edges relate them according to a specific nature of
+relationship. For example, think of a social network where people are nodes and edges
+store the friendship information.</p>
+<p>A metabolic network, thus, must represent the metabolic process using nodes and
+edges.</p>
 <h4>Storing the data</h4>
 <p>Thousands of chemical reactions occur at a time, even in relatively simpler
 organisms like <em>E.coli</em>. A popular and computationally amenable way to store
@@ -65,14 +78,14 @@ the particular chemical reactions they participate in. If you are familiar with
 networks already, it is similar to an <a href="https://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a> representation.</p>
 <h4>Example</h4>
 <p>Consider the following sample of chemical reactions take from <em>E.coli</em> BL21(DE3)
-strain, a popularly used <a href="">expression host</a>.</p>
+strain, a popularly used <a href="https://en.wikipedia.org/wiki/Protein_expression_%28biotechnology%29">expression host</a>.</p>
 <p>$$ ade_c + prpp_c → amp_c + ppi_c \tag{1} $$
 $$ 3amac_c + h_c + h2o_c → msa_c + nh4_c \tag{2} $$
 $$ accoa_c + h2o_c + oaa_c → cit_c + coa_c + h_c \tag{3} $$</p>
 <p><small class="hint">Hint: Confused about symbols? See <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/ADPT">1</a>, <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/3AMACHYD">2</a>, <a href="http://bigg.ucsd.edu/models/iECD_1391/reactions/CS">3</a> </small></p>
 <p>A complete set of reactions along with list of metabolites and genes for
 a particular organism can be obtained from online databases like
-<a href="http://bigg.ucsd.edu/">BiGG</a>.</p>
+<a href="http://bigg.ucsd.edu/">BiGG</a>, <a href="https://kegg.jp">KEGG</a>.</p>
 <p>The dataset can be obtained in several file formats like <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>,
 <a href="http://sbml.org">SBML</a>, or <a href="http://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf">MAT</a> depending on application used for further analysis. We’ll
 come back to this later.</p>
@@ -98,43 +111,60 @@ where \(a\) is the stoichiometry coefficient of the metabolite.</p>
 \begin{array}{c|c}
 ade_c &amp; -1\\ prpp_c &amp; -1\\ amp_c &amp; 1\\ ppi_c &amp; 1 \\
 \end{array}\right)
-$$
-<small class="hint">
+$$</p>
+<p><small class="hint">
 Exercise: Try writing S matrix for all three reactions.<br>
-Exercise: Write a (Python?) script to create S matrix from a list of reactions. </small></p>
+Exercise: Write a (Python?) script to create S matrix from a <a href="https://gist.github.com/vivekiitkgp/6474b821b96dfdb9b21a">list</a> of reactions.
+Exercise: Write a program to find all the reactions in which a given metabolite participates.
+</small></p>
 <h4>Other matrices</h4>
 <p>Similarly, you can create different matrices containing other kind of reaction
 information. For example, elemental matrix (\( \vec{E} \)), charge-balance
-matrix, moiety matrix, flux matrix (\( \vec{v} \)).
-All of them when multiplied with stoichiometry matrix can yield complete
-information about a reaction, like atoms involved, charged species involved,
-rate of concentration changes etc.</p>
-<p>The advantage of using matrices is that conservation principles can be simply
-verified through a matrix multiplication.</p>
-<h4>Reaction and compound maps</h4>
-<p>Stoichiometry matrix, though easy to understand, is a fairly comprehensive
-description of the metabolic network. An alternative is to use a <em>reaction
-map</em> and <em>compound map</em>.</p>
-<ul>
-<li>A reaction map consists of metabolites as nodes and reactions as edges, drawn
-    from metabolites which are consumed to the metabolites which are produced.</li>
-<li>A compound map consists of reactions as nodes and metabolites as edges, drawn
-    from the reactions in which they are produced to the reactions in which they
-    are produced.</li>
-</ul>
-<p><small class="hint">
-Exercise: Write the compound map for the S matrix of above three reactions.<br>
-Exercise: Given a metabolite, write a program to find the common reaction.</small></p>
+matrix, moiety matrix, flux matrix (\( \vec{v} \)).</p>
+<p>These matrices combined with a stoichiometry matrix yield necessary information
+about a reaction, like atoms and charged species involved, rate of concentration
+changes etc.</p>
+<p>The advantage of using matrices is that conservation principles can be verified
+through a simple matrix multiplication.</p>
 <h3>Visualizing the network</h3>
 <p>Once the metabolic network model grows beyond a few reactions and metabolites,
 it becomes increasingly difficult to visualize the relationship between the
 components. Visualization allows us to observe key network structures, critical
 pathways and important metabolites without much analysis.</p>
-<p>Some common ways to visualize a network is:</p>
-<ul>
-<li>Cytospace</li>
-<li>Genomatica’s visualization</li>
-</ul>
+<h4>Reaction and compound maps</h4>
+<p>A common strategy is to visualize the content of stoichiometry matrix in two
+ways - a <em>reaction map</em> and <em>metabolite map</em>.</p>
+<p>A reaction map is drawn with metabolites as nodes and reactions as edges. The
+edges link the metabolite nodes which are consumed in the reaction to the
+metabolite nodes which are produced in the reaction. The nature of
+(ir)reversible nature of reaction can be indicated by the direction of the link.</p>
+<p>On the other hand, a compound map consists of reactions as nodes and metabolites
+as edges. In a similar manner, edges link the reaction nodes where a metabolite
+is produced to the reaction where it is consumed.</p>
+<p>Both of these representations draw attention to different aspects of the same
+metabolic network. For example, the reaction map allows us to visualize
+the most important metabolites of the network while the metabolite map allows us
+to distinguish the core reactions.</p>
+<p><small class="hint">
+Exercise: Write the compound map for the S matrix of above three reactions.<br>
+Exercise: Write a program to generate reaction and compound map graphs in
+memory.
+</small></p>
+<h4>Other tools</h4>
+<p>Some common ways to visualize a network is to use a tool like
+<a href="http://www.cytoscape.org/">Cytospace</a> or <a href="http://visant.bu.edu/">visANT</a>.</p>
+<p><small class="hint">
+Exercise: Draw the graphs using a visualization library in your language of
+choice (networkx in Python).
+</small></p>
+<h3>Further</h3>
+<p>A lot remains to be discussed. In the next tutorial of this series, we’ll look
+closely at stoichiometry matrix, use complete models, derive useful properties,
+and learn ways to simulate the model. Towards the end, I hope that a small
+case-study will serve as a comprehensive example to assimilate all the
+information.</p>
+<p>In the meantime, feel free to experiment with the exercises and send in your
+suggestions.</p>
         </div>
         <div class='article-end'>
           
@@ -142,7 +172,7 @@ pathways and important metabolites without much analysis.</p>
           
         </div>
         <div class='share'>
-          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Metabolic Network Analysis For Dummies: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='science'>tweet |&nbsp;</a>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Metabolic Network Analysis - I: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='science'>tweet |&nbsp;</a>
           <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
         </div>
       </article>
