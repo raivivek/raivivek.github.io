@@ -5,8 +5,7 @@ html {
 }
 
 html, body {
-  background: #fff;
-  color: #000;
+  background: #333;
   margin: 0;
   padding: 0;
 }
@@ -17,7 +16,6 @@ body {
   word-spacing: 0.1em;
   max-width: 960px;
   margin: 0 auto;
-  padding-bottom: 2em;
 }
 
 h1:before {
@@ -46,10 +44,11 @@ h3 {
 }
 
 pre, kbd, samp, code, var {
-  font: medium / 1.75 Consolas, "Andale Mono", Monaco, "Liberation Mono",
+  font: small / 1.5 Consolas, "Andale Mono", Monaco, "Liberation Mono",
     "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
   word-spacing: 0;
   letter-spacing: 0;
+  padding: 5px;
 }
 
 figcaption {
@@ -58,14 +57,14 @@ figcaption {
 }
 
 ::-moz-selection {
-  background: #333;
-  color: white;
+  background: #ccc;
+  color: black;
   text-shadow: none;
 }
 
 ::selection {
-  background: #333;
-  color: white;
+  background: #ccc;
+  color: black;
   text-shadow: none;
 }
 
@@ -93,18 +92,19 @@ article blockquote {
 
 .container {
   margin: 0 auto;
-  margin-bottom: 5rem;
+  color: black;
+  background-color: white;
 }
 
 .content {
-  margin-top: 2rem;
-  padding: 0 15%;
+  padding: 0 15% 5% 15%;
 }
 .content a:link, .content a:visited, .content a:active {
-  color: #0D47A1;
+  border-bottom: 1px dotted;
+  color: #333;
 }
 .content a:hover {
-  border-bottom: 1px dotted;
+  border-bottom: 1px solid;
 }
 
 .banner {
@@ -112,14 +112,14 @@ article blockquote {
 }
 .banner .banner-title {
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 6rem;
   letter-spacing: 0.3em;
 }
 .banner .banner-subclause {
   font-size: large;
   margin: 0.5em auto 1em auto;
   padding: 0 5em 0 5em;
-  color: #999;
+  color: #aaa;
 }
 
 .metadata {
@@ -184,12 +184,12 @@ article blockquote {
 .share {
   text-align: center;
   font-size: 8px;
+  padding-bottom: 2em;
 }
 
 .codehilite {
   background-color: #fafafa;
   padding: 5px;
-  font-size: 0.8em;
 }
 
 .post p:nth-of-type(1):first-letter {

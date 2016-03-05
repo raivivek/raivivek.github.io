@@ -8,8 +8,7 @@ html
   text-rendering:optimizeLegibility
 
 html, body
-  background: #fff
-  color: #000
+  background: #333
   margin: 0
   padding: 0
 
@@ -18,7 +17,6 @@ body
   word-spacing: 0.1em
   max-width: 960px
   margin: 0 auto
-  padding-bottom: 2em
 
 h1:before
   content:''
@@ -41,22 +39,23 @@ h3
   font-size:x-large
 
 pre, kbd, samp, code, var
-  font: medium/1.75 Consolas, "Andale Mono", Monaco, "Liberation Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace
+  font: small/1.5 Consolas, "Andale Mono", Monaco, "Liberation Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace
   word-spacing: 0
   letter-spacing: 0
+  padding: 5px
 
 figcaption
   padding: 10px
   font-size: .75em
 
 ::-moz-selection
-  background: #333
-  color:white
+  background: #ccc
+  color:black
   text-shadow: none
 
 ::selection
-  background: #333
-  color:white
+  background: #ccc
+  color:black
   text-shadow: none
 
 a:link, a:visited, a:active
@@ -80,30 +79,32 @@ article blockquote
 
 .container
   margin: 0 auto
-  margin-bottom: 5rem
+  color: black
+  background-color: white
 
 .content
-  a:link, a:visited, a:active
-    color: #0D47A1
-  a:hover
-    border-bottom: 1px dotted
 
-  margin-top: 2rem
-  padding: 0 15%
+  a:link, a:visited, a:active
+    border-bottom: 1px dotted
+    color: #333
+  a:hover
+    border-bottom: 1px solid
+  
+  padding: 0 15% 5% 15%
 
 .banner
   text-align: center
 
   .banner-title
     text-transform: uppercase
-    font-size: 5rem
+    font-size: 6rem
     letter-spacing: 0.3em
 
   .banner-subclause
     font-size: large
     margin: .5em auto 1em auto
     padding: 0 5em 0 5em
-    color: #999
+    color: #aaa
 
 .metadata
   text-align: center
@@ -158,11 +159,11 @@ article blockquote
 .share
   text-align: center
   font-size: 8px
+  padding-bottom: 2em
 
 .codehilite
   background-color: #fafafa
   padding: 5px
-  font-size: .8em
 
 .post
   p:nth-of-type(1):first-letter
