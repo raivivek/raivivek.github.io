@@ -5,7 +5,8 @@ html {
 }
 
 html, body {
-  background: #333;
+  background: #fff;
+  color: #000;
   margin: 0;
   padding: 0;
 }
@@ -16,6 +17,7 @@ body {
   word-spacing: 0.1em;
   max-width: 960px;
   margin: 0 auto;
+  padding-bottom: 2em;
 }
 
 h1:before {
@@ -57,14 +59,14 @@ figcaption {
 }
 
 ::-moz-selection {
-  background: #ccc;
-  color: black;
+  background: #333;
+  color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: #ccc;
-  color: black;
+  background: #333;
+  color: white;
   text-shadow: none;
 }
 
@@ -92,19 +94,16 @@ article blockquote {
 
 .container {
   margin: 0 auto;
-  color: black;
-  background-color: white;
 }
 
 .content {
   padding: 0 15% 5% 15%;
 }
 .content a:link, .content a:visited, .content a:active {
-  border-bottom: 1px dotted;
-  color: #333;
+  color: #0D47A1;
 }
 .content a:hover {
-  border-bottom: 1px solid;
+  border-bottom: 1px dotted;
 }
 
 .banner {
@@ -119,7 +118,6 @@ article blockquote {
   font-size: large;
   margin: 0.5em auto 1em auto;
   padding: 0 5em 0 5em;
-  color: #aaa;
 }
 
 .metadata {
