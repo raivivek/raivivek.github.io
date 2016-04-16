@@ -11,18 +11,32 @@ Books are magic.
 
 #### 2016
 
+<small>
+
+<b>Update:</b> Recently bought an Amazon kindle to mitigate the limitations of
+carrying paperbacks. Quite enjoying it till now. Hoping to ramp up my reading
+list faster now.
+<br>
+</small>
+
 Challenge: 24
 
 1. \* Mahajan, Sanjoy 'Street-Fighting Mathematics'
-2. Orwell, George ‘Burmese Days’
-3. \* Murakami, Haruki ‘The Elephant Vanishes’
+2. Orwell, George ‘Burmese Days’ [<small>[review](http://127.0.0.1:24948/books/burmese-days.html#main)</small>]
+3. Murakami, Haruki ‘The Elephant Vanishes’ <br>
+  <blockquote>
+  <small> Reading this book after <i> Kafka on the Shore </i> might make you
+  find it less bizarre, but hey, we are talking about Murakami here!</small>
+  </blockquote>
 4. \+ Satrapi, Marjane ‘The Complete Persepolis’
 5. Thorsby, Øyvind ‘Transdimensional Brain Chip’ (*comic*)<br>
+  <blockquote>
   <small> Thoroughly enjoyed this Thorsby’s comic based on invention of a new
   brain chip that allows you to communicate with versions of yourself in other
   universe. I would also recommend his other work <a
   href="http://spacespy.thecomicseries.com/Mycomics/"> The Accidental Space
   Spy</a>.</small>
+  </blockquote>
 6. **\*** Murakami, Haruki ‘1Q84 - Trilogy (#1)’
 6. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’
 
@@ -51,6 +65,6 @@ Completed: 13
 #### 2014
 
 1. \+ Mistry, Rohinton 'A Fine Balance'
-2. Premchand 'Godan'
+2. Premchand, Munshi 'Godan'
 
 **P.S. Gift books? Thank you!**
