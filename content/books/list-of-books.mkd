@@ -22,7 +22,7 @@ list faster now.
 Challenge: 24
 
 1. \* Mahajan, Sanjoy 'Street-Fighting Mathematics'
-2. Orwell, George ‘Burmese Days’ [<small>[review](http://127.0.0.1:24948/books/burmese-days.html#main)</small>]
+2. Orwell, George ‘Burmese Days’ [<small>[review](https://vivekiitkgp.github.io/books/burmese-days.html)</small>]
 3. Murakami, Haruki ‘The Elephant Vanishes’ <br>
   <blockquote>
   <small> Reading this book after <i> Kafka on the Shore </i> might make you
@@ -38,7 +38,7 @@ Challenge: 24
   Spy</a>.</small>
   </blockquote>
 6. **\*** Murakami, Haruki ‘1Q84 - Trilogy (#1)’
-6. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’
+6. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ [<small>[review](https://vivekiitkgp.github.io/books/inner-game.html)</small>]
 
 #### 2015
 

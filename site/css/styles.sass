@@ -8,7 +8,8 @@ html
   text-rendering:optimizeLegibility
 
 html, body
-  background: #333
+  background: #fff
+  color: #000
   margin: 0
   padding: 0
 
@@ -17,6 +18,7 @@ body
   word-spacing: 0.1em
   max-width: 960px
   margin: 0 auto
+  padding-bottom: 2em
 
 h1:before
   content:''
@@ -49,13 +51,13 @@ figcaption
   font-size: .75em
 
 ::-moz-selection
-  background: #ccc
-  color:black
+  background: #333
+  color:white
   text-shadow: none
 
 ::selection
-  background: #ccc
-  color:black
+  background: #333
+  color:white
   text-shadow: none
 
 a:link, a:visited, a:active
@@ -75,21 +77,20 @@ article
 article blockquote
   color: #555
 
+ul li
+  margin: 1rem 0
+
 /* custom rules */
 
 .container
   margin: 0 auto
-  color: black
-  background-color: white
 
 .content
-
   a:link, a:visited, a:active
-    border-bottom: 1px dotted
-    color: #333
+    color: #0D47A1
   a:hover
-    border-bottom: 1px solid
-  
+    border-bottom: 1px dotted
+
   padding: 0 15% 5% 15%
 
 .banner
@@ -104,7 +105,6 @@ article blockquote
     font-size: large
     margin: .5em auto 1em auto
     padding: 0 5em 0 5em
-    color: #aaa
 
 .metadata
   text-align: center
@@ -166,11 +166,12 @@ article blockquote
   padding: 5px
 
 .post
-  p:nth-of-type(1):first-letter
+  p:first-of-type:first-letter
     font-size: 4em
     float: left
-    margin-right: 0.02em
-    line-height: 0.75
+    margin-top: 7px
+    margin-right: 5px
+    line-height: 1
 
 .hint
   color: #060

@@ -92,6 +92,10 @@ article blockquote {
   color: #555;
 }
 
+ul li {
+  margin: 1rem 0;
+}
+
 .container {
   margin: 0 auto;
 }
@@ -190,11 +194,12 @@ article blockquote {
   padding: 5px;
 }
 
-.post p:nth-of-type(1):first-letter {
+.post p:first-of-type:first-letter {
   font-size: 4em;
   float: left;
-  margin-right: 0.02em;
-  line-height: 0.75;
+  margin-top: 7px;
+  margin-right: 5px;
+  line-height: 1;
 }
 
 .hint {
