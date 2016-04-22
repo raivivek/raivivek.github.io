@@ -28,18 +28,20 @@ Challenge: 24
   <small> Reading this book after <i> Kafka on the Shore </i> might make you
   find it less bizarre, but hey, we are talking about Murakami here!</small>
   </blockquote>
-4. \+ Satrapi, Marjane ‘The Complete Persepolis’
+4. **+** Satrapi, Marjane ‘The Complete Persepolis’
 5. Thorsby, Øyvind ‘Transdimensional Brain Chip’ (*comic*)<br>
   <blockquote>
   <small> Thoroughly enjoyed this Thorsby’s comic based on invention of a new
   brain chip that allows you to communicate with versions of yourself in other
   universe. I would also recommend his other work <a
-  href="http://spacespy.thecomicseries.com/Mycomics/"> The Accidental Space
+  href="http://spacespy.thecomicseries.com/Mycomics/"> (<b>++</b>) The Accidental Space
   Spy</a>.</small>
   </blockquote>
 6. **\*** Murakami, Haruki ‘1Q84 - Trilogy (#1)’
 7. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ [<small>[review](https://vivekiitkgp.github.io/books/inner-game.html)</small>]
-8. **\*** Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
+8. Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
+9. **\*** Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
+10. **\*** Ford, Michael T. ‘Suicide Notes’
 
 #### 2015
 
@@ -47,25 +49,25 @@ Challenge: 20 <br>
 Completed: 13
 
 1. Crichton, Michael 'The Terminal Man'
-2. \+ Orwell, George '1984'
+2. **++** Orwell, George '1984'
 3. \* Hayakawa, S.I. 'Language in Thought and Action'
 4. Kafka, Franz, 'The Metamorphosis'
 5. Crockford, Douglas 'JavaScript: The Good Parts'
 6. \* Sussman et al., 'SICP'
-7. \+ Orwell, George 'Animal Farm'
+7. **+** Orwell, George 'Animal Farm'
 8. Dawkins, Richard 'The Greatest Show on Earth'
 9. \* Sompayrac, Lauren M. 'How the Immune System Works'
 10. Wodehouse, P. G. 'The Code of the Woosters'
 11. \+ Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
 12. \- Gladwell, Malcolm 'The Tipping Point'
 13. Camus, Albert 'The Outsider'
-14. \+ Murakami, Haruki 'Kafka On The Shore'
-15. \+ Duhigg, Charles 'The Power of Habit'
-16. \+ Schrödinger, Erwin, 'What is Life?'
+14. **++** Murakami, Haruki 'Kafka On The Shore'
+15. **+** Duhigg, Charles 'The Power of Habit'
+16. **++** Schrödinger, Erwin, 'What is Life?'
 
 #### 2014
 
-1. \+ Mistry, Rohinton 'A Fine Balance'
+1. **++** Mistry, Rohinton 'A Fine Balance'
 2. Premchand, Munshi 'Godan'
 
 **P.S. Gift books? Thank you!**
