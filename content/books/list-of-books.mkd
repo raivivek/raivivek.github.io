@@ -7,9 +7,9 @@ title: List of books I have read
 Books are magic.
 ---
 
-<small>(\*) currently reading, (+) recommended, (-) annoying</small>
+<small>[*] currently reading, [+] recommended, [-] annoying</small>
 
-#### 2016
+### 2016
 
 <small>
 
@@ -42,8 +42,9 @@ Challenge: 24
 8. Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
 9. **\*** Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
 10. **\*** Ford, Michael T. ‘Suicide Notes’
+10. **\*** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
 
-#### 2015
+### 2015
 
 Challenge: 20 <br>
 Completed: 13
@@ -65,9 +66,9 @@ Completed: 13
 15. **+** Duhigg, Charles 'The Power of Habit'
 16. **++** Schrödinger, Erwin, 'What is Life?'
 
-#### 2014
+### 2014
 
 1. **++** Mistry, Rohinton 'A Fine Balance'
 2. Premchand, Munshi 'Godan'
 
-**P.S. Gift books? Thank you!**
+**Reviews and recommendations are always welcome!**
