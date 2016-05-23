@@ -1,0 +1,178 @@
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/normalize.css' rel='stylesheet' />
+  <link href='/css/styles.css' rel='stylesheet' />
+  <title>Quick Data Plotting in R | Shorts by Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='banner no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <br>
+        <a href='../notes.html'>notes,</a>
+        <a href='../unfinished.html'>unfinished,</a>
+        <a href='../about.html'>about me</a>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            20 May 2016
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../programming/quickplotting-in-r.html#main'>
+            Quick Data Plotting in R
+          </a>
+        </div>
+        <div class='post'>
+          <p>Python is my all time favorite programming language. I use it all the time. It
+is simple, readable and easy to get started, something which I picked up four
+years ago when I went through the first offering of <em>Interactive Programming
+with Python</em> course on Coursera. Python’s simplicity and appeal has continued to
+grow over time, supported by a wide community and a rich environment of
+packages.</p>
+<p>Today, however, I am not going to talk about Python. This post shares some of my
+experiences with <a href="https://www.r-project.org/">R programming language</a> and how it helped me postpone my
+struggle with visualizations in Python (a short back-story at the end).</p>
+<p>Plotting figures is real quick. An example below using the famous <a href="https://www.kaggle.com/c/titanic/data">Titanic</a>
+dataset from <a href="http://kaggle.com">Kaggle</a> competition.</p>
+<div class="codehilite"><pre>&gt; data &lt;- read.table(‘data.txt’, header=TRUE) # TSV file
+&gt; names(d) # fetch columns
+[1]  &quot;PassengerId&quot; &quot;Survived&quot;   &quot;Pclass&quot;    &quot;Name&quot;        &quot;Sex&quot;
+[6]  &quot;Age&quot;         &quot;SibSp&quot;      &quot;Parch&quot;     &quot;Ticket&quot;      &quot;Fare&quot;
+[11] &quot;Cabin&quot;       &quot;Embarked&quot;
+</pre></div>
+
+
+<p>Looking at the columns, it would be interesting to explore the age distribution
+of the people, along with their survivor, class and sex distribution. Let’s take
+a look.</p>
+<div class="codehilite"><pre>&gt; boxplot(Age ~ as.factor(Pclass), data=data)
+&gt; title(xlab=&#39;Passenger class&#39;, ylab=&#39;Passenger age&#39;,
++       main=&#39;Boxplot: Passenger Age vs Class&#39;)
+&gt; abline(h=median(data$Age, na.rm = TRUE), col=&#39;red&#39;)
+</pre></div>
+
+
+<p>Boxplot is a good way to visualize the age distribution across passenger
+classes.</p>
+<figure style="text-align:center">
+<img
+    src="/images/class_age.png"
+    title="Boxplot demo"
+    style="width: 600px; height: auto"/>
+<figcaption>
+ The <span style='color: red;'>red </span> indicates overall age media while the
+ individual class-wise median ages are displayed in thick <b> black </b> lines.
+</figcaption>
+</figure>
+
+<p>The histogram below is generated in a single line.</p>
+<div class="codehilite"><pre>&gt; hist(data$Age, xlab=&#39;Age&#39;, main=&#39;Histogram of Age&#39;, col=&#39;brown&#39;,
++      breaks=50, border=&#39;white&#39;)
+</pre></div>
+
+
+<figure style="text-align:center">
+<img
+    src="/images/hist.png"
+    title="A quick histogram."
+    style="width: 600px; height: auto"/>
+<figcaption>
+A quick histogram with some fancy colors, if you will.
+</figcaption>
+</figure>
+
+<p>While it may take a bit of time to find out which functions to use (most of the
+times they have intuitive names), it becomes super easy to generate complex
+figures by simply composing simple ones.</p>
+<p>Also, when handling a large amount of data, plotting with a few tweaked
+parameters can save quite a bit of processing time. A few of these suggestions
+and helpful functions are compiled below with relevant examples.</p>
+<h3>Functions</h3>
+<ul>
+<li><code>ifelse()</code> - inline conditional <br>
+      <code>.. col &lt;- ifelse(data$Survived == 1, 'red', 'gray'))</code></li>
+<li><code>boxplot()</code> - boxplot, demo above <br>
+      <code>.. boxplot(Age ~ as.factor(Pclass), data=data)</code></li>
+<li><code>split()</code> - split dataframe, useful with <code>boxplot</code><br>
+      <code>.. df &lt;- split(data$Age, f='Pclass')</code></li>
+<li><code>hsv()</code> - generate colors <br>
+      <code>.. cols &lt;- hsv((2/3)*as.integer(data$Pclass)/25, 1, 7/8)</code></li>
+<li><code>points()</code> - draw points on a graph <br>
+      <code>.. points(data$Age, col=ifelse(data$SibSp &gt; 0, 'green', NA))</code></li>
+<li><code>abline()</code> - draw a line on the graph given by <code>y=a+bx</code> <br>
+      <code>.. abline(h=median(data$Age), na.rm=TRUE)</code></li>
+<li><code>par()</code>, <code>layout()</code> - set graph properties, split the graph <br>
+      <code>.. layout(c(2,1)) # split the graph in 2 rows</code></li>
+<li><code>title()</code> - set graph title, axes labels</li>
+<li><code>text()</code> - write text anywhere on the graph</li>
+<li><code>legend()</code> - write graph legend</li>
+<li><code>qqplot()</code> - a <a href="http://onlinestatbook.com/2/advanced_graphs/q-q_plots.html">quantile-quantile plot</a></li>
+<li><code>hist()</code> - plot a histogram</li>
+</ul>
+<h3>Tricks</h3>
+<ul>
+<li>Use <code>pch='.'</code> in <code>plot</code>commands to use dots in place of big circles. This
+    saves a lot of time especially if there are many points. In case points are
+    too small to see, use <code>cex=2</code> or higher to increase the point size.<br><br>
+      <code>&gt; plots(data$Age, pch='.', cex=2)</code> <br></li>
+<li>Use <code>data.table</code> library to load very large tables quickly. This could be upto
+    10x faster than default <code>read.table</code> function of R. Read more <a href="https://github.com/vivekiitkgp/til/blob/master/misc/r-large-data.md">here</a>.</li>
+</ul>
+<hr />
+<p><em>Background</em></p>
+<p><small>
+<p></p>
+This post is an outgrowth of my struggle with generating exploratory
+visualizations in Python. While using <code>pandas</code>, <code>scipy</code> and <code>numpy</code> combination
+is a natural and super effective combination, visualization with <code>matplotlib</code>
+or its alternatives like <code>seaborn</code> is equally confusing. The documentation is
+too verbose and often there are many ways to do the same thing. While R is not
+without its own flaws, I was awestruck with the simplicity and ease of use in
+getting started with it (at least for the purpose I was interested in). All
+thanks to senior researcher Max.</p>
+<p>For the curious, I was analyzing several gigabytes of derivative data obtained
+from whole-genomes sequences of thousands of humans. Using the scipy stack
+above, combined with the power of <code>multiprocessing</code> module, I could spawn 16
+processes on the multi-core cluster and reduced the processing time from 35 min
+to 2 min. A big win!</p>
+<p>However, I do hope to eventually return to Python stack and figure out things
+with a cool head.  Who knows if that’s going to be my next blog post.
+</small></p>
+        </div>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Quick Data Plotting In R: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
