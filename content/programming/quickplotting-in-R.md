@@ -102,7 +102,8 @@ and helpful functions are compiled below with relevant examples.
 
 * Use ``pch='.'`` in ``plot``commands to use dots in place of big circles. This
     saves a lot of time especially if there are many points. In case points are
-    too small to see, use `cex=2` or higher to increase the point size.<br><br>
+    too small to see, use `cex=2` or higher to increase the point size. Use
+    `par(pch='.')` to set the behavior for all plots.<br><br>
       ``> plots(data$Age, pch='.', cex=2)`` <br>
 * Use `data.table` library to load very large tables quickly. This could be upto
     10x faster than default `read.table` function of R. Read more [here](https://github.com/vivekiitkgp/til/blob/master/misc/r-large-data.md).

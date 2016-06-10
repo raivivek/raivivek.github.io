@@ -41,8 +41,9 @@ Challenge: 24
 7. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ [<small>[review](https://vivekiitkgp.github.io/books/inner-game.html)</small>]
 8. Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
 9. **\*** Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
-10. **\*** Ford, Michael T. ‘Suicide Notes’
-10. **\*** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
+10. Ford, Michael T. ‘Suicide Notes’
+11. **++** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
+12. **\*** Sandel, Peter ‘101 Things Everyone .. about Economics’
 
 ### 2015
 
@@ -59,7 +60,7 @@ Completed: 13
 8. Dawkins, Richard 'The Greatest Show on Earth'
 9. \* Sompayrac, Lauren M. 'How the Immune System Works'
 10. Wodehouse, P. G. 'The Code of the Woosters'
-11. \+ Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
+11. **+** Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
 12. \- Gladwell, Malcolm 'The Tipping Point'
 13. Camus, Albert 'The Outsider'
 14. **++** Murakami, Haruki 'Kafka On The Shore'
