@@ -1,0 +1,135 @@
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/normalize.css' rel='stylesheet' />
+  <link href='/css/styles.css' rel='stylesheet' />
+  <title>Quick Data Plotting in R - II | Shorts by Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='banner no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <br>
+        <a href='../notes.html'>notes,</a>
+        <a href='../unfinished.html'>unfinished,</a>
+        <a href='../about.html'>about me</a>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            26 May 2016
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../programming/quickplotting-in-r-ii.html#main'>
+            Quick Data Plotting in R - II
+          </a>
+        </div>
+        <div class='post'>
+          <p>In the
+<a href="https://vivekiitkgp.github.io/programming/quickplotting-in-r.html">first</a> part
+of the posts on R, I outlined a couple of useful strategies for quick
+exploratory data analysis and visualization using R programming language. In
+this post, I will share a few more examples (in a case-study like manner) along
+with relevant plots for better demonstration.</p>
+<h4>Getting rid of artificial patterns</h4>
+<p>Plotting a graph where one or more attributes have identical values results in
+a graph which looks stratified. Closely spaced points with similar values tend
+to fall along a line and create artificial patterns. Consider for example,
+the plot shown below where Y-axis has many identical values.</p>
+<figure style="text-align:center">
+<img
+    src="/images/non_random.png"
+    title="Boxplot demo"
+    style="width: 600px; height: auto"/>
+<figcaption>
+A stratified appearance of a non-random repeated data.
+</figcaption>
+</figure>
+
+<p>This artifact looks bad and hides the appearance of the data. It is difficult to
+figure out which regions are denser or sparser than the others. To get rid of it,
+we add a small random noise independently to the axes which have many identical
+values and contribute to the artifact. It will cause the values to shift
+sufficiently enough to appear dispersed without influencing your analyses (since
+there perturbations are random).</p>
+<div class="codehilite"><pre>&gt; dy &lt;- runif(length(y))
+&gt; plot(x, y+dy)
+
+# in case plotting two independent variables
+&gt; dx &lt;- runif(length(x))
+&gt; plot(x+dx, y+dy)
+</pre></div>
+
+
+<p>The result:</p>
+<figure style="text-align:center">
+<img
+    src="/images/dy_nonrandom.png"
+    title="Noise addition demo"
+    style="width: 600px; height: auto"/>
+<figcaption>
+Same as previous except with additional random noise.
+</figcaption>
+</figure>
+
+<h4>Transparency helps</h4>
+<p>If we have a large number of data points, our scatter plot can easily become
+a blob despite using <code>pch='.'</code>. A good idea in those cases is to color the
+points with a level of transparency. This allows the regions of the plot with
+dense cluster of points to show up as dark regions when compared to less dense
+regions. It also makes it easy to spot and estimate outliers.</p>
+<div class="codehilite"><pre>&gt; plot(x+dx, y+dy, col=gray(0, .5))
+</pre></div>
+
+
+<figure style="text-align:center">
+<img
+    src="/images/quad_plot.png"
+    title="Transparency demo"
+    style="width: 600px; height: auto"/>
+<figcaption>
+The <b>col</b> parameter is changed from top left (opaque) to bottom right (.3)
+with increasing transparency. Notice the edges as they appear more diffused.
+</figcaption>
+</figure>
+
+<p>One can further enrich these visuals by drawing the outlier boundaries (<a href="https://en.wikipedia.org/wiki/Median_absolute_deviation">median
+absolute deviation</a>)
+and coloring the points that lie outside the range.</p>
+<p>That’s all for now. Will add more later.</p>
+        </div>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Quick Data Plotting In R - Ii: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+  <script src='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
