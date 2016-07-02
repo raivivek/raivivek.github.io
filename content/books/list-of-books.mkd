@@ -14,8 +14,7 @@ Books are magic.
 <small>
 
 <b>Update:</b> Recently bought an Amazon kindle to mitigate the limitations of
-carrying paperbacks. Quite enjoying it till now. Hoping to ramp up my reading
-list faster now.
+carrying paperbacks. It’s a handy gadget.
 <br>
 </small>
 
@@ -25,13 +24,13 @@ Challenge: 24
 2. Orwell, George ‘Burmese Days’ [<small>[review](https://vivekiitkgp.github.io/books/burmese-days.html)</small>]
 3. Murakami, Haruki ‘The Elephant Vanishes’ <br>
   <blockquote>
-  <small> Reading this book after <i> Kafka on the Shore </i> might make you
-  find it less bizarre, but hey, we are talking about Murakami here!</small>
+  <small> Not as good as <i>Kafka on the Shore</i>, but hey, we are talking
+  about Murakami here!</small>
   </blockquote>
 4. **+** Satrapi, Marjane ‘The Complete Persepolis’
 5. Thorsby, Øyvind ‘Transdimensional Brain Chip’ (*comic*)<br>
   <blockquote>
-  <small> Thoroughly enjoyed this Thorsby’s comic based on invention of a new
+  <small> Thoroughly enjoyed this Thorsby’s comic - Based on invention of a new
   brain chip that allows you to communicate with versions of yourself in other
   universe. I would also recommend his other work <a
   href="http://spacespy.thecomicseries.com/Mycomics/"> (<b>++</b>) The Accidental Space
@@ -43,7 +42,8 @@ Challenge: 24
 9. **\*** Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
 10. Ford, Michael T. ‘Suicide Notes’
 11. **++** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
-12. **\*** Sandel, Peter ‘101 Things Everyone .. about Economics’
+12. \- Sandel, Peter ‘101 Things Everyone .. about Economics’
+13. **++** Salinger, J. D. ‘The Catcher in The Rye’
 
 ### 2015
 
