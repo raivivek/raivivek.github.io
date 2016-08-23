@@ -1,0 +1,262 @@
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/normalize.css' rel='stylesheet' />
+  <link href='/css/styles.css' rel='stylesheet' />
+  <title>Open {data, science, source} - OpenSNP.org | Shorts by Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='banner no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <br>
+        <a href='../notes.html'>notes,</a>
+        <a href='../unfinished.html'>unfinished,</a>
+        <a href='../about.html'>about me</a>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            22 Aug 2016
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../programming/gsoc-16-wrap-up.html#main'>
+            Open {data, science, source} - OpenSNP.org
+          </a>
+        </div>
+        <div class='post'>
+          <h4>April, 2016</h4>
+<p>“What’s the worst that can happen? I have experienced it all anyway. Just get
+some sleep”, I tell myself anxiously. With every passing minute, the clock moves
+closer to midnight. But I am too tired to think about <em>it</em> anymore.</p>
+<p>About half an hour in my dead sleep, I am startled by a loud phone call. My
+friend is asking me to check the announcements of <a href="https://summerofcodewith.google.com">Google Summer of
+Code</a> project selections. I had applied
+too, just like previous two years.</p>
+<hr />
+<h4>August, 2016</h4>
+<figure style="text-align:center;">
+  <img src="/images/GSoC2016Logo.jpg" width="80%">  </img>
+  <figcaption>
+    (Google, <a
+    href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC-BY-NC-ND</a>)
+  </figcaption>
+</figure>
+
+<p>It is the <a href="https://developers.google.com/open-source/gsoc/timeline">final week</a> of Google Summer of Code. Participating students are
+required to present their work and submit a final wrap up post about their
+project as the last task before final evaluation.</p>
+<p>This blog post is my submission.</p>
+<p>Through the summers, I have
+been working on my proposed project ‘<a href="https://summerofcode.withgoogle.com/organizations/5693436329984000/#4637393399316480">Linking Phenotypes to
+Genotypes</a>’
+for <a href="https://opensnp.org">OpenSNP</a> under the umbrella of <a href="https://en.wikipedia.org/wiki/Op en_Bioinformatics_Foundation">Open Bioinformatics Foundation
+(OBF)</a>. This post
+is also a personal account of my experiences besides being a suitably technical
+introduction to my project.</p>
+<p>So, by the end of this post, I hope to provide everyone a clear idea of what
+I have been working on and why it matters, describe my progress on the project,
+and share the marvelous experience of working with the OpenSNP team.</p>
+<h3>Project</h3>
+<blockquote>
+<small>
+Currently, OpenSNP portal has a decent database collection of <a href="https://en.wikipedia.org/wiki/Genotype">genotypes</a> (3000+
+users), <a href="https://en.wikipedia.org/wiki/Phenotype">phenotypes</a>, <a
+href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">SNPs</a> and
+associated literature information all available in an easily searchable way.
+There is, however, a lot of scope in improving the impact and reach of the
+project by modernizing the interface, studying the aggregated data, and
+providing intuitive analysis to the users to allow for quicker yet improved and
+comprehensive understanding. For example, OpenSNP portal currently displays the
+<a href="https://en.wikipedia.org/wiki/Allele">allele</a> frequency of a genotype - a valuable insight into how rare your mutation
+is.
+
+<p></p>
+This proposal seeks to work on the second problem of bridging different
+components to allow for better interactivity and information conveyance.
+
+<footer>
+<cite>
+— (<a href="https://summerofcode.withgoogle.com/serve/5261308333129728/">Original proposal</a>, revised)
+</cite>
+</footer>
+</small>
+</blockquote>
+
+<p>In line with the proposition set up in the introduction, my project aims to
+<a href="https://github.com/openSNP/snpr/blob/master/ROADMAP.md#long-term-6-months">Link the SNPs with
+Phenotypes in the
+portal</a>.</p>
+<p><em>What do I mean by linking?</em></p>
+<p><a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">SNPs</a> (pronounced
+<em>snips</em>), simply, are single nucleotide variations in DNA that occur with
+a certain percentage in a population.[<a href="#1">1</a>] They can affect how humans
+develop diseases and respond to pathogens, chemicals, drugs, vaccines, and other
+agents. A set of SNPs for a single individual can also act as an unique
+signature useful in identification and forensics. Naturally, figuring out the
+possible downstream effects of a SNP is really useful. And that’s exactly what
+we mean by linking SNPs to phenotypes.[<a href="#2">2</a>]</p>
+<p>However, a <strong>word of caution</strong> here. Figuring out the <em>causal</em> effects of
+a particular SNP is a tricky task with significant computational and
+experimental challenges, enough to be a <a href="https://en.wikipedia.org/wiki/Genome-wide_association_study">widely
+studied</a> biological
+problem. <em>We couldn’t be doing the original research here, are we?</em> Well, no.
+Instead, we are going to use the research data that has already been generated
+and available to us as valuable references — through secondary analysis using
+<a href="https://en.wikipedia.org/wiki/Text_mining">text mining</a>.</p>
+<h3>Motivation</h3>
+<figure style="text-align:center;">
+  <img src="/images/opensnp.png" width="60%">  </img>
+  <figcaption>
+    (<a href="https://github.com/openSNP/Community-Design/tree/master/openSNP/RGB">Source</a>)
+  </figcaption>
+</figure>
+
+<p><a href="https://opensnp.org">OpenSNP.org</a> has a single purpose —  to act as a free,
+open-data repository by collecting personal genomics data into the public
+domain. The web-portal, thus, is a critical component of the infrastructure. From my
+understanding, I can imagine two immediate benefits of this project.</p>
+<ul>
+<li>Improve the overall user-experience by making to easier to understand possible
+    associations between a SNP to a phenotype and vice-versa.</li>
+<li>Build a semantic data structure (or network) of SNPs and Phenotypes linked
+    based on literature information.</li>
+</ul>
+<p>Although the second point is not the obvious goal of this project, I believe it
+could potentially serve as a useful data source to openSNP users in future.</p>
+<h3>Progress</h3>
+<p>The main components of the project were (<a href="https://github.com/vivekiitkgp/snpr/commits/master">commits on GitHub</a>):</p>
+<ul>
+<li>Schema updates, database model, building association table</li>
+<li>Updating the controllers and views</li>
+<li>Algorithm to search and score literature for phenotypes</li>
+<li>Writing the worker script</li>
+<li>Writing tests for everything above</li>
+<li>Executing Rake tasks</li>
+</ul>
+<p>In the first step, I familiarized myself with Rails and ActiveRecord pattern before
+moving to database associations. A useful strategy to learn fast was to set up
+dummy examples. For example, using <code>rails console</code>, one could examine arbitrary
+objects, query database, or modify objects. It became super easy to understand
+concepts like foreign key, indexing, migration and debug errors. Through this,
+I could learn how pieces of code come together to create a coherent
+architecture, like the MVC pattern.  —  exciting start!</p>
+<p>Next step was to write code to score phenotype matches across the references
+corresponding to each SNP and rank the possible matches. The first strategy was
+to try a simple frequency lookup. While this sounds easy and attractive
+option, it <em>really</em> is a naive solution and there are some serious limitations
+to it. For instance:</p>
+<ul>
+<li>OpenSNP’s <a href="https://opensnp.org/phenotypes">phenotypes table</a> is populated manually by users. The added phenotypes
+    often do no correspond to the phenotypes as reported in references. Hence,
+    there will be no match.</li>
+<li>Since we are not searching through the full text of the references but only through
+    title and summary (for certain papers, if available), it creates an issue
+    since many papers do not name a phenotype in title to avoid coming as too
+    strong when studies are only suggestive.</li>
+</ul>
+<p>All in all, you end up with too few phenotypes detected for a single SNP even
+though it has tons of references. We discussed about this and thought of several
+ideas - use additional data aggregation tools (for example,
+<a href="http://myvariant.info">myvariant.info</a>), use a standard list of phenotypes, or
+even <em>better</em> create a phenotype network and leverage phenotype associations.</p>
+<figure style="text-align:center;">
+  <img src="/images/pheno_list.png" width="100%">  </img>
+  <figcaption>
+    The SNP info dashboard showing current columns of genotype and allele
+    frequency along with newly implemented (for demo purposes!) list of
+    suggestive phenotypes.
+  </figcaption>
+</figure>
+
+<p>However, for sake of simplicity and as a first milestone, we proceeded with the
+initial naive approach hoping to improve it in future iterations. The final
+logic was packed into a <code>Sidekiq</code> <a href="https://github.com/vivekiitkgp/snpr/blob/master/app/workers/link_snp_phenotype.rb">worker
+script</a>
+—  so far so good.</p>
+<p>The next critical task was to write extensive unit tests and document all of the
+implemented changes. This is what I have been mainly doing in the last
+few weeks of the project. In the remaining time, I hope to continue testing and
+improving on the worker script. I obtained an actual data dump from the
+production database that I can use to actually test and see the performance.
+Specially because it’s a per SNP operation and there are thousands of it. So, it
+would be crucial to see how much additional overhead it adds to the production
+server.</p>
+<p>Besides, during this process I came across several aspects of code that could be
+improved. For example, Phenotype table did not have an <a href="https://github.com/openSNP/snpr/issues/304">unique key
+constraint</a> on the characteristic
+column. So, you could have two (or more!) rows describing <em>hair color</em> or
+<em>height</em>.</p>
+<p>Overall, I would not say that I delivered perfectly on each deliverable, but we
+definitely moved in a forward direction. Several new challenges came up but
+we hope to continue working on their resolution - after and beyond the scope of GSoC.</p>
+<h3>Journey</h3>
+<p>I cannot thank my mentors enough for their continuous effort throughout the
+project. <a href="https://twitter.com/PhilippBayer">Philipp</a> and
+<a href="https://twitter.com/gedankenstuecke">Bastian</a> are one of the most enthusiastic
+and voracious readers I have met so far. Thanks to an excellent stroke of luck,
+I got to meet Bastian at BOSC 2016 in Orlando, Florida. More about it soon!</p>
+<figure style="text-align:center">
+<img
+    src="/images/bastian-note.jpg"
+    title="A lovely card along with cute OpenSNP stickers!"
+    style="width: 300px; height: auto"/>
+<figcaption>
+  A little surprise by Bastian. A lovely card with a personal message and free
+  OpenSNP stickers!
+</figcaption>
+</figure>
+
+<p>Last but not the least, a big thanks to Google for the amazing program!</p>
+<hr />
+<ol>
+<li><small id=1>Variations in DNA arise all the time due to intrinsic error rates
+in various biological process (DNA replication, DNA transcription, for example).
+However, most of these changes are <em>neutral</em> and do not affect the organism in
+any way, while others are auto corrected by cellular machinery. Rarely, a few
+variations occur in critical regions of the genome (a gene that codes critical
+protein, for example) and manage to escape correction. This variation (including
+the phenotype or disease it may be responsible for!) could then propagate
+through the population via sexual recombination.</small></li>
+<li><small id=2>May be not exactly. What we are doing here is very limited
+expression of what could be done. In any case, if you are interested in the
+techniques with which SNPs are detected then take a look at <a
+href="https://en.wikipedia.org/wiki/SNP_genotyping">SNP Genotyping</a>. </small></li>
+</ol>
+        </div>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Open {Data, Science, Source} - Opensnp.Org: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>

@@ -2,6 +2,7 @@ template: post.haml
 category: science
 author: Vivek Rai
 date: 03/02/2016
+math: true
 title: "Metabolic Network Analysis - I"
 ---
 The Beginners’ guide
