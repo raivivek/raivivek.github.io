@@ -43,6 +43,8 @@
           data-hashtags:"{{page.category}}",data-dnt:"true"} tweet |&nbsp;
           %a{href:"https://twitter.com/vivek_ziel",class:"twitter-follow-button",
           data-show-count:"false",data-show-screen-name:"false",data-dnt:"true"} follow @vivek_ziel
-  %script{src:"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"}
+
+  - if page.math
+    %script{src:"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"}
   %script
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
