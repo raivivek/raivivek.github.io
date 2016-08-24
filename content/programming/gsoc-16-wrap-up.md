@@ -20,6 +20,8 @@ friend is asking me to check the announcements of [Google Summer of
 Code](https://summerofcodewith.google.com) project selections. I had applied
 too, just like previous two years.
 
+[Proposal](https://summerofcode.withgoogle.com/serve/5261308333129728/)  •  [Trello Board](https://trello.com/b/ubBNKnmT/opensnp) • [GitHub](https://github.com/vivekiitkgp/snpr)
+
 ------------
 
 #### August, 2016
@@ -46,9 +48,10 @@ for [OpenSNP](https://opensnp.org) under the umbrella of [Open Bioinformatics Fo
 is also a personal account of my experiences besides being a suitably technical
 introduction to my project.
 
-So, by the end of this post, I hope to provide everyone a clear idea of what
+So, by the end of this post, I hope to provide everyone with a clear idea of what
 I have been working on and why it matters, describe my progress on the project,
 and share the marvelous experience of working with the OpenSNP team.
+
 
 ### Project
 
@@ -86,11 +89,11 @@ portal](https://github.com/openSNP/snpr/blob/master/ROADMAP.md#long-term-6-month
 
 [SNPs](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism) (pronounced
 *snips*), simply, are single nucleotide variations in DNA that occur with
-a certain percentage in a population.[[1](#1)] They can affect how humans
+a certain percentage of a population.[[1](#1)] They can affect how humans
 develop diseases and respond to pathogens, chemicals, drugs, vaccines, and other
-agents. A set of SNPs for a single individual can also act as an unique
+agents. A set of SNPs for a single individual can also act as a unique
 signature useful in identification and forensics. Naturally, figuring out the
-possible downstream effects of a SNP is really useful. And that’s exactly what
+possible downstream effects of an SNP is indeed useful. And that’s exactly what
 we mean by linking SNPs to phenotypes.[[2](#2)]
 
 However, a **word of caution** here. Figuring out the *causal* effects of
@@ -117,7 +120,7 @@ domain. The web-portal, thus, is a critical component of the infrastructure. Fro
 understanding, I can imagine two immediate benefits of this project.
 
 * Improve the overall user-experience by making to easier to understand possible
-    associations between a SNP to a phenotype and vice-versa.
+    associations between an SNP to a phenotype and vice-versa.
 * Build a semantic data structure (or network) of SNPs and Phenotypes linked
     based on literature information.
 
@@ -126,14 +129,14 @@ could potentially serve as a useful data source to openSNP users in future.
 
 ### Progress
 
-The main components of the project were ([commits on GitHub](https://github.com/vivekiitkgp/snpr/commits/master)):
+The main components of the project were: [[commits on GitHub](https://github.com/vivekiitkgp/snpr/commits/master)]
 
-* Schema updates, database model, building association table
-* Updating the controllers and views
-* Algorithm to search and score literature for phenotypes
-* Writing the worker script
-* Writing tests for everything above
-* Executing Rake tasks
+* Schema updates, database model, building association table - ✓
+* Updating the controllers and views - ✓
+* Algorithm to search and score literature for phenotypes - ✓, *v1.0*
+* Writing the worker script - ✓
+* Writing tests for everything above - *in progress*
+* Executing Rake tasks - *later*
 
 In the first step, I familiarized myself with Rails and ActiveRecord pattern before
 moving to database associations. A useful strategy to learn fast was to set up
@@ -146,19 +149,19 @@ architecture, like the MVC pattern.  —  exciting start!
 Next step was to write code to score phenotype matches across the references
 corresponding to each SNP and rank the possible matches. The first strategy was
 to try a simple frequency lookup. While this sounds easy and attractive
-option, it *really* is a naive solution and there are some serious limitations
+option, it is a *naive* solution, and there are some serious limitations
 to it. For instance:
 
 - OpenSNP’s [phenotypes table](https://opensnp.org/phenotypes) is populated manually by users. The added phenotypes
     often do no correspond to the phenotypes as reported in references. Hence,
     there will be no match.
 - Since we are not searching through the full text of the references but only through
-    title and summary (for certain papers, if available), it creates an issue
-    since many papers do not name a phenotype in title to avoid coming as too
+    title and summary (for some papers, if available), it creates an issue
+    since many references do not name a phenotype in the title to avoid coming as too
     strong when studies are only suggestive.
 
 All in all, you end up with too few phenotypes detected for a single SNP even
-though it has tons of references. We discussed about this and thought of several
+though it has tons of references. We discussed this and thought of several
 ideas - use additional data aggregation tools (for example,
 [myvariant.info](http://myvariant.info)), use a standard list of phenotypes, or
 even *better* create a phenotype network and leverage phenotype associations.
@@ -172,7 +175,7 @@ even *better* create a phenotype network and leverage phenotype associations.
   </figcaption>
 </figure>
 
-However, for sake of simplicity and as a first milestone, we proceeded with the
+However, for the sake of simplicity and as a first milestone, we proceeded with the
 initial naive approach hoping to improve it in future iterations. The final
 logic was packed into a `Sidekiq` [worker
 script](https://github.com/vivekiitkgp/snpr/blob/master/app/workers/link_snp_phenotype.rb)
@@ -182,19 +185,19 @@ The next critical task was to write extensive unit tests and document all of the
 implemented changes. This is what I have been mainly doing in the last
 few weeks of the project. In the remaining time, I hope to continue testing and
 improving on the worker script. I obtained an actual data dump from the
-production database that I can use to actually test and see the performance.
-Specially because it’s a per SNP operation and there are thousands of it. So, it
+production database that I can use actually to check and see the performance.
+Especially because it’s a per SNP operation and there are thousands of it. So, it
 would be crucial to see how much additional overhead it adds to the production
 server.
 
-Besides, during this process I came across several aspects of code that could be
-improved. For example, Phenotype table did not have an [unique key
-constraint](https://github.com/openSNP/snpr/issues/304) on the characteristic
+Besides, during this process, I came across several aspects of the code that could be
+improved. For example, Phenotype table did not have a [unique key
+constraint](https://github.com/openSNP/snpr/issues/304) on the `characteristic`
 column. So, you could have two (or more!) rows describing *hair color* or
 *height*.
 
-Overall, I would not say that I delivered perfectly on each deliverable, but we
-definitely moved in a forward direction. Several new challenges came up but
+Overall, I would not say that I delivered entirely on each deliverable, but we
+definitely moved in a forward direction. Several new challenges came up, but
 we hope to continue working on their resolution - after and beyond the scope of GSoC.
 
 ### Journey
@@ -223,10 +226,10 @@ company throughout.
 --------
 
 1. <small id=1>Variations in DNA arise all the time due to intrinsic error rates
-in various biological process (DNA replication, DNA transcription, for example).
+in the various biological process (DNA replication, DNA transcription, for example).
 However, most of these changes are *neutral* and do not affect the organism in
-any way, while others are auto corrected by cellular machinery. Rarely, a few
-variations occur in critical regions of the genome (a gene that codes critical
+any way, while others are auto-corrected by cellular machinery. Rarely, a few
+variations occur in critical regions of the genome (a gene that codes an essential
 protein, for example) and manage to escape correction. This variation (including
 the phenotype or disease it may be responsible for!) could then propagate
 through the population via sexual recombination.</small>

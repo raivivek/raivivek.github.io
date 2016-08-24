@@ -50,6 +50,7 @@ closer to midnight. But I am too tired to think about <em>it</em> anymore.</p>
 friend is asking me to check the announcements of <a href="https://summerofcodewith.google.com">Google Summer of
 Code</a> project selections. I had applied
 too, just like previous two years.</p>
+<p><a href="https://summerofcode.withgoogle.com/serve/5261308333129728/">Proposal</a>  •  <a href="https://trello.com/b/ubBNKnmT/opensnp">Trello Board</a> • <a href="https://github.com/vivekiitkgp/snpr">GitHub</a></p>
 <hr />
 <h4>August, 2016</h4>
 <figure style="text-align:center;">
@@ -71,7 +72,7 @@ for <a href="https://opensnp.org">OpenSNP</a> under the umbrella of <a href="htt
 (OBF)</a>. This post
 is also a personal account of my experiences besides being a suitably technical
 introduction to my project.</p>
-<p>So, by the end of this post, I hope to provide everyone a clear idea of what
+<p>So, by the end of this post, I hope to provide everyone with a clear idea of what
 I have been working on and why it matters, describe my progress on the project,
 and share the marvelous experience of working with the OpenSNP team.</p>
 <h3>Project</h3>
@@ -107,11 +108,11 @@ portal</a>.</p>
 <p><em>What do I mean by linking?</em></p>
 <p><a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">SNPs</a> (pronounced
 <em>snips</em>), simply, are single nucleotide variations in DNA that occur with
-a certain percentage in a population.[<a href="#1">1</a>] They can affect how humans
+a certain percentage of a population.[<a href="#1">1</a>] They can affect how humans
 develop diseases and respond to pathogens, chemicals, drugs, vaccines, and other
-agents. A set of SNPs for a single individual can also act as an unique
+agents. A set of SNPs for a single individual can also act as a unique
 signature useful in identification and forensics. Naturally, figuring out the
-possible downstream effects of a SNP is really useful. And that’s exactly what
+possible downstream effects of an SNP is indeed useful. And that’s exactly what
 we mean by linking SNPs to phenotypes.[<a href="#2">2</a>]</p>
 <p>However, a <strong>word of caution</strong> here. Figuring out the <em>causal</em> effects of
 a particular SNP is a tricky task with significant computational and
@@ -135,21 +136,21 @@ domain. The web-portal, thus, is a critical component of the infrastructure. Fro
 understanding, I can imagine two immediate benefits of this project.</p>
 <ul>
 <li>Improve the overall user-experience by making to easier to understand possible
-    associations between a SNP to a phenotype and vice-versa.</li>
+    associations between an SNP to a phenotype and vice-versa.</li>
 <li>Build a semantic data structure (or network) of SNPs and Phenotypes linked
     based on literature information.</li>
 </ul>
 <p>Although the second point is not the obvious goal of this project, I believe it
 could potentially serve as a useful data source to openSNP users in future.</p>
 <h3>Progress</h3>
-<p>The main components of the project were (<a href="https://github.com/vivekiitkgp/snpr/commits/master">commits on GitHub</a>):</p>
+<p>The main components of the project were: [<a href="https://github.com/vivekiitkgp/snpr/commits/master">commits on GitHub</a>]</p>
 <ul>
-<li>Schema updates, database model, building association table</li>
-<li>Updating the controllers and views</li>
-<li>Algorithm to search and score literature for phenotypes</li>
-<li>Writing the worker script</li>
-<li>Writing tests for everything above</li>
-<li>Executing Rake tasks</li>
+<li>Schema updates, database model, building association table - ✓</li>
+<li>Updating the controllers and views - ✓</li>
+<li>Algorithm to search and score literature for phenotypes - ✓, <em>v1.0</em></li>
+<li>Writing the worker script - ✓</li>
+<li>Writing tests for everything above - <em>in progress</em></li>
+<li>Executing Rake tasks - <em>later</em></li>
 </ul>
 <p>In the first step, I familiarized myself with Rails and ActiveRecord pattern before
 moving to database associations. A useful strategy to learn fast was to set up
@@ -161,19 +162,19 @@ architecture, like the MVC pattern.  —  exciting start!</p>
 <p>Next step was to write code to score phenotype matches across the references
 corresponding to each SNP and rank the possible matches. The first strategy was
 to try a simple frequency lookup. While this sounds easy and attractive
-option, it <em>really</em> is a naive solution and there are some serious limitations
+option, it is a <em>naive</em> solution, and there are some serious limitations
 to it. For instance:</p>
 <ul>
 <li>OpenSNP’s <a href="https://opensnp.org/phenotypes">phenotypes table</a> is populated manually by users. The added phenotypes
     often do no correspond to the phenotypes as reported in references. Hence,
     there will be no match.</li>
 <li>Since we are not searching through the full text of the references but only through
-    title and summary (for certain papers, if available), it creates an issue
-    since many papers do not name a phenotype in title to avoid coming as too
+    title and summary (for some papers, if available), it creates an issue
+    since many references do not name a phenotype in the title to avoid coming as too
     strong when studies are only suggestive.</li>
 </ul>
 <p>All in all, you end up with too few phenotypes detected for a single SNP even
-though it has tons of references. We discussed about this and thought of several
+though it has tons of references. We discussed this and thought of several
 ideas - use additional data aggregation tools (for example,
 <a href="http://myvariant.info">myvariant.info</a>), use a standard list of phenotypes, or
 even <em>better</em> create a phenotype network and leverage phenotype associations.</p>
@@ -186,7 +187,7 @@ even <em>better</em> create a phenotype network and leverage phenotype associati
   </figcaption>
 </figure>
 
-<p>However, for sake of simplicity and as a first milestone, we proceeded with the
+<p>However, for the sake of simplicity and as a first milestone, we proceeded with the
 initial naive approach hoping to improve it in future iterations. The final
 logic was packed into a <code>Sidekiq</code> <a href="https://github.com/vivekiitkgp/snpr/blob/master/app/workers/link_snp_phenotype.rb">worker
 script</a>
@@ -195,17 +196,17 @@ script</a>
 implemented changes. This is what I have been mainly doing in the last
 few weeks of the project. In the remaining time, I hope to continue testing and
 improving on the worker script. I obtained an actual data dump from the
-production database that I can use to actually test and see the performance.
-Specially because it’s a per SNP operation and there are thousands of it. So, it
+production database that I can use actually to check and see the performance.
+Especially because it’s a per SNP operation and there are thousands of it. So, it
 would be crucial to see how much additional overhead it adds to the production
 server.</p>
-<p>Besides, during this process I came across several aspects of code that could be
-improved. For example, Phenotype table did not have an <a href="https://github.com/openSNP/snpr/issues/304">unique key
-constraint</a> on the characteristic
+<p>Besides, during this process, I came across several aspects of the code that could be
+improved. For example, Phenotype table did not have a <a href="https://github.com/openSNP/snpr/issues/304">unique key
+constraint</a> on the <code>characteristic</code>
 column. So, you could have two (or more!) rows describing <em>hair color</em> or
 <em>height</em>.</p>
-<p>Overall, I would not say that I delivered perfectly on each deliverable, but we
-definitely moved in a forward direction. Several new challenges came up but
+<p>Overall, I would not say that I delivered entirely on each deliverable, but we
+definitely moved in a forward direction. Several new challenges came up, but
 we hope to continue working on their resolution - after and beyond the scope of GSoC.</p>
 <h3>Journey</h3>
 <p>I cannot thank my mentors enough for their continuous effort throughout the
@@ -230,10 +231,10 @@ company throughout.</p>
 <hr />
 <ol>
 <li><small id=1>Variations in DNA arise all the time due to intrinsic error rates
-in various biological process (DNA replication, DNA transcription, for example).
+in the various biological process (DNA replication, DNA transcription, for example).
 However, most of these changes are <em>neutral</em> and do not affect the organism in
-any way, while others are auto corrected by cellular machinery. Rarely, a few
-variations occur in critical regions of the genome (a gene that codes critical
+any way, while others are auto-corrected by cellular machinery. Rarely, a few
+variations occur in critical regions of the genome (a gene that codes an essential
 protein, for example) and manage to escape correction. This variation (including
 the phenotype or disease it may be responsible for!) could then propagate
 through the population via sexual recombination.</small></li>
