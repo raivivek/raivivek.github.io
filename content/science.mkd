@@ -3,6 +3,5 @@ index: True
 category: science
 sort_key: date
 sort_reverse: True
-max_subpages: 10
-subtitle: From the little scientist in me
+subtitle: Knowing more, Knowing better
 ---

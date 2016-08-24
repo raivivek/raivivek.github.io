@@ -203,7 +203,7 @@ I cannot thank my mentors enough for their continuous effort throughout the
 project. [Philipp](https://twitter.com/PhilippBayer) and
 [Bastian](https://twitter.com/gedankenstuecke) are one of the most enthusiastic
 and voracious readers I have met so far. Thanks to an excellent stroke of luck,
-I got to meet Bastian at BOSC 2016 in Orlando, Florida. More about it soon!
+I got to meet Bastian at BOSC 2016 in Orlando, Florida. More about it soon! 
 
 <figure style="text-align:center">
 <img
@@ -216,7 +216,9 @@ I got to meet Bastian at BOSC 2016 in Orlando, Florida. More about it soon!
 </figcaption>
 </figure>
 
-Last but not the least, a big thanks to Google for the amazing program!
+Last but not the least, a big thanks to Google for the amazing program! Also,
+thanks to [Mateus](https://mateusjabour.github.io/) and [Graham](https://sxibolet.2pitau.org), also the GSoC students for OpenSNP for a great
+company throughout.
 
 --------
 

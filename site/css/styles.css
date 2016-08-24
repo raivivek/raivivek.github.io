@@ -93,7 +93,7 @@ article blockquote {
 }
 
 ul li {
-  margin: 1rem 0;
+  margin: 0.25rem 0;
 }
 
 .container {
@@ -101,7 +101,7 @@ ul li {
 }
 
 .content {
-  padding: 0 15% 5% 15%;
+  padding: 0 10% 5% 10%;
 }
 .content a:link, .content a:visited, .content a:active {
   color: #0D47A1;
@@ -134,7 +134,7 @@ ul li {
   text-transform: uppercase;
   font-size: 1.25rem;
   letter-spacing: 0.1em;
-  margin-bottom: 2em;
+  padding: 2rem 0 2rem 0;
 }
 
 .category {

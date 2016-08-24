@@ -1,26 +1,27 @@
 template: about.haml
 index: True
-subtitle: About Me
+subtitle: About
 ---
+<p> </p>
 
-Hi!
+Saluton!
 
-
-<br>
-I am a [Biology](science.html) enthusiast with a wide spectrum of interests in
-[computing](programming.html).
-
-* I like to [write](http://quora.com) and [read](books.html).
-* I love to [code](https://github.com/vivekiitkgp).
-* I enjoy sharing my [experiences](./).
+I am a [biology](science.html) enthusiast with a wide spectrum of interests in
+[computing](programming.html). Currently pursuing my final year of integrated
+master’s program at [Indian Institute of Technology Kharagpur,
+India](http://iitkgp.ac.in). This blog (fondly called *shorts*) is a personal
+destination to satisfy my cravings for [writing](http://quora.com),
+[books](books.html), [code](https://github.com/vivekiitkgp), and
+[science](/science.html).
 
 My older blog has retired and all posts are now [archived](/old/index.html).
+A few posts of relevant interest might be:
 
-Email: [vivekrai.iitkgp@gmail.com](mailto:vivekrai.iitkgp@gmail.com) <br> 
-Github: [vivekiitkgp](http://github.com/vivekiitkgp) <br>
-Resume: [Download](https://github.com/vivekiitkgp/resume/raw/master/resume.pdf)
-<br>
-GPG Key: [820BA5F1](http://pgp.mit.edu/pks/lookup?op=get&search=0x918E0EF6820BA5F1)
+* [BLAST+ and Its inconsistencies](http://vivekiitkgp.github.io/old/blog/blast-and-its-inconsistencies.html)
+* [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)
+* [Introduction to Functional Programming](http://vivekiitkgp.github.io/old/blog/introduction-to-functional-programming.html)
+
+[Email](mailto:vivekrai.iitkgp@gmail.com) • [LinkedIn](https://www.linkedin.com/in/vivek-rai) • [GitHub](http://github.com/vivekiitkgp) • [Resume (PDF)](https://github.com/vivekiitkgp/resume/raw/master/resume.pdf) • [PGP Key](http://pgp.mit.edu/pks/lookup?op=get&search=0x918E0EF6820BA5F1)
 
 ### Science
 
@@ -28,26 +29,22 @@ Science provides intellectual freedom. It enables us to explore and understand
 the nature around us — from tiny atoms, living cells and organisms, to
 the magnanimous universe.
 
-Doing science, however, requires a careful and systematic research, perseverance,
-and a lot of knowledge. In my view, it is more of a collective sport than an
-individual one.
+Doing science, however, requires a careful and systematic investigation and
+perseverance supported with a lot of knowledge. I see science as a collective
+sport than an individual one. With every project, term paper, conference, or
+internship I do, I seek to become part of this sport and develop my own *niche*.
 
-With every [project](science/journal-club-1.html), term paper,
-[conference](https://github.com/vivekiitkgp/qsb-school-diary), or
-[internship](https://github.com/vivekiitkgp/intern-diary) I do, I seek to
-become part of this sport and develop my own *niche*.
-
-I am becoming increasingly interested in the system level analysis of cellular
-phenomenon, with the aim of unifying *omics* data with biological networks.
+I am becoming increasingly interested in the systems level computational
+analysis of cellular phenomenon, populations, and diseases using high-throughput
+*omics* data.
 
 As this blog develops, I plan to write several primer
 [articles](science.html) on my topics of interest.
 
-(*Coming soon*)
+Lastly, a clichéd record of my published, public, or in progress work:
 
-Lastly, a record of my public published or in progress work:
-
-1. Priyam, A., Woodcroft, B.J., Rai V., et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142
+1. Priyam, Woodcroft, Rai et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142 ([link](http://sequenceserver.com), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
+2. Klein, Gupta, Rai et al. **Monitoring the Gender Gap with Wikidata Human Gender Indicators**  Opensym, 2016. ([link](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
 
 ### Programming
 
@@ -58,12 +55,28 @@ personal interests to create [free](https://www.gnu.org/philosophy/free-sw.html)
 
 I have learned a lot by contributing to these projects:
 
+* [OpenSNP](https://opensnp.org)
 * [Sequenceserver](https://github.com/wurlmab/sequenceserver)
-* [WIGI](https://github.com/notconfusing/WIGI) and [WIGI-website](https://github.com/hargup/WIGI-website)
+* [Wikidata Human Gender Indicators](http://whgi.wmflabs.org/) and [WHGI-website](https://github.com/hargup/WIGI-website)
 * [Afra](https://github.com/wurlmab/afra)
 
 I use [GNU/Linux](https://www.debian.org/releases/squeeze/i386/ch01s02.html.en),
 keep files under [version control](https://git-scm.com/), and edit using
 [Vim](http://vim.org).
 
-Languages I use: Python, Ruby, JavaScript, MATLAB, BASH. <br>
+I have used Python, R, Ruby, JavaScript, MATLAB, BASH in my works.
+
+### Interests
+
+I am interested in the ideas of [quantized
+self](https://en.wikipedia.org/wiki/Quantified_Self), [getting things
+done](https://en.wikipedia.org/wiki/Getting_Things_Done), [lateral
+thinking](https://en.wikipedia.org/wiki/Lateral_thinking), language and
+learning, open communities, free knowledge, and societal issues like gender
+biases.
+
+### Hobbies
+
+I have an unexplored sense of adventure that is unleashed whenever I’m outdoors.
+I enjoy hiking, playing table tennis, long no-purpose walks, sleeping under open
+starry sky, camping, and watching sunset as I sip on my coffee.
