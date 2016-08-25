@@ -11,9 +11,10 @@ title: "Open {data, science, source} - OpenSNP.org"
 
 #### April, 2016
 
-“What’s the worst that can happen? I have experienced it all anyway. Just get
-some sleep”, I tell myself anxiously. With every passing minute, the clock moves
-closer to midnight. But I am too tired to think about *it* anymore.
+“What’s the worst that can happen? I won’t get selected. There’s nothing new to
+it anyway. Just get some sleep”, I tell myself anxiously. With every passing
+minute, the clock moves closer to midnight. But I am too tired to think about
+*it* anymore.
 
 About half an hour in my dead sleep, I am startled by a loud phone call. My
 friend is asking me to check the announcements of [Google Summer of
@@ -74,7 +75,7 @@ components to allow for better interactivity and information conveyance.
 
 <footer>
 <cite>
-— (<a href="https://summerofcode.withgoogle.com/organizations/5693436329984000/#4637393399316480">Original proposal</a>, revised)
+— (<a href="">Original proposal</a>, revised)
 </cite>
 </footer>
 </small>
