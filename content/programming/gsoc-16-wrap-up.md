@@ -20,7 +20,7 @@ friend is asking me to check the announcements of [Google Summer of
 Code](https://summerofcodewith.google.com) project selections. I had applied
 too, just like previous two years.
 
-[Proposal](https://summerofcode.withgoogle.com/serve/5261308333129728/)  •  [Trello Board](https://trello.com/b/ubBNKnmT/opensnp) • [GitHub](https://github.com/vivekiitkgp/snpr)
+[Proposal](https://summerofcode.withgoogle.com/organizations/5693436329984000/#4637393399316480)  •  [Trello Board](https://trello.com/b/ubBNKnmT/opensnp) • [GitHub](https://github.com/vivekiitkgp/snpr)
 
 ------------
 
@@ -65,8 +65,8 @@ There is, however, a lot of scope in improving the impact and reach of the
 project by modernizing the interface, studying the aggregated data, and
 providing intuitive analysis to the users to allow for quicker yet improved and
 comprehensive understanding. For example, OpenSNP portal currently displays the
-<a href="https://en.wikipedia.org/wiki/Allele">allele</a> frequency of a genotype - a valuable insight into how rare your mutation
-is.
+<a href="https://en.wikipedia.org/wiki/Allele">allele</a> frequency of
+a genotype - a valuable insight into how rare your mutation is.
 
 <p></p>
 This proposal seeks to work on the second problem of bridging different
@@ -74,7 +74,7 @@ components to allow for better interactivity and information conveyance.
 
 <footer>
 <cite>
-— (<a href="https://summerofcode.withgoogle.com/serve/5261308333129728/">Original proposal</a>, revised)
+— (<a href="https://summerofcode.withgoogle.com/organizations/5693436329984000/#4637393399316480">Original proposal</a>, revised)
 </cite>
 </footer>
 </small>
