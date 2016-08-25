@@ -11,7 +11,7 @@ I am a [biology](science.html) enthusiast with a wide spectrum of interests in
 master’s program at [Indian Institute of Technology Kharagpur,
 India](http://iitkgp.ac.in). This blog (fondly called *shorts*) is a personal
 destination to satisfy my cravings for [writing](http://quora.com),
-[books](books.html), [code](https://github.com/vivekiitkgp), and
+[books](books.html), [code](/programming.html), and
 [science](/science.html).
 
 My older blog has retired and all posts are now [archived](/old/index.html).
@@ -72,8 +72,10 @@ I am interested in the ideas of [quantized
 self](https://en.wikipedia.org/wiki/Quantified_Self), [getting things
 done](https://en.wikipedia.org/wiki/Getting_Things_Done), [lateral
 thinking](https://en.wikipedia.org/wiki/Lateral_thinking), language and
-learning, open communities, free knowledge, and societal issues like gender
-biases.
+learning, history of humans, open communities, free knowledge, and societal
+issues like gender biases.
+
+I speak [English](https://en.wikipedia.org/wiki/English_language), [Hindi](https://en.wikipedia.org/wiki/Hindi), [Bengali](https://en.wikipedia.org/wiki/Bengali_language), and learning [Esperanto](https://en.wikipedia.org/wiki/Esperanto) still.
 
 ### Hobbies
 
