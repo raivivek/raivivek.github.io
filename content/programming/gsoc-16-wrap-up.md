@@ -213,7 +213,7 @@ I got to meet Bastian at BOSC 2016 in Orlando, Florida. More about it soon!
 <img
     src="/images/bastian-note.jpg"
     title="A lovely card along with cute OpenSNP stickers!"
-    style="width: 300px; height: auto"/>
+    style="width: 50%; height: auto"/>
 <figcaption>
   A little surprise by Bastian. A lovely card with a personal message and free
   OpenSNP stickers!
