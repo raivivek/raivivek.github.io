@@ -14,8 +14,8 @@ How the BEST ever internship concluded.
 
 The quote above quite vividly describes the experience I had at Indian
 Institute of Science. Finally after 8 weeks (May 11 - July 10) of work within the lab, our
-internship concluded on 10th of July with a [report](https://github.com/vivekiitkgp/intern-diary/tree/master/report) submission, followed by a
-[presentation](https://github.com/vivekiitkgp/intern-diary/tree/master/presentation) on the 15th of July.
+internship concluded on 10th of July with a [report](https://github.com/vivekiitkgp/intern-diary-15/tree/master/report) submission, followed by a
+[presentation](https://github.com/vivekiitkgp/intern-diary-15/tree/master/presentation) on the 15th of July.
 
 <figure style="text-align:center">
 <img src="/images/cover_ppt.png"
