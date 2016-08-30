@@ -1,16 +1,17 @@
 Shorts
 ======
 
-A simple, minimalistic approach inspired static site to contain my posts
-<strike>which don't really fit with the <strike> original
-[blog](https://vivekiitkgp.github.io) </strike>.
+A simple and minimalistic approach inspired static site to host my posts.
 
-The original website in now archived.
+The previous [blog](https://vivekiitkgp.github.io/old) is now archived.
 
-Uses [embellish](https://boscoh.github.io/embellish/#header1) and layout is
-highly inspired by its author Bosco K. Ho's [blog](http://boscoh.com/).
+The site uses [embellish](https://boscoh.github.io/embellish/#header1) and
+layout is highly inspired by its author Bosco K. Ho's
+[blog](http://boscoh.com/).
 
 License
 -------
 
 Content available under CC-BY-NC 4.0.
+
+Code is released under MIT License.
