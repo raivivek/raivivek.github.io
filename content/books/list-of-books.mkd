@@ -39,7 +39,7 @@ Challenge: 24
 6. **\*** Murakami, Haruki ‘1Q84 - Trilogy (#1)’
 7. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ [<small>[review](https://vivekiitkgp.github.io/books/inner-game.html)</small>]
 8. Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
-9. **\*** Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
+9. Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
 10. Ford, Michael T. ‘Suicide Notes’
 11. **++** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
 12. \- Sandel, Peter ‘101 Things Everyone .. about Economics’
@@ -48,6 +48,8 @@ Challenge: 24
 15. **\*** Mlodinow, Leonard ‘The Drunkard’s Walk’
 16. Fine, Debra ‘The Fine Art of Small Talk’
 17. **+** Keynes, Daniel ‘Flowers for Algernon’
+18. **\*** Harari, Yuval N. 'Sapiens: A Brief History of Mankind'
+19. **\*** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psycotherapy'
 
 ### 2015
 
