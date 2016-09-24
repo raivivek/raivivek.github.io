@@ -20,42 +20,51 @@ about why I was there.
 Several months ago, I wrote a [*short*](wikiproject-submission.html) describing my submission for ISCB
 Wikipedia article writing competition. For those who don’t know, the competition
 invited people to improve upon existing computational biology articles on
-Wikipedia by adding or improving upon existing existing resources. The simple
+Wikipedia by adding or improving upon existing resources. The simple
 aim of the initiative was to propagate the idea of open-science and
-open-research and to encourage collective community efforts for knowlege
+open-research, and to encourage collective community efforts for knowlege
 curation.
 
 So, after the official editing period finished in January, I got busy in other
-college activities and nearly forgot about it until one day in June, when
-I received an email from [Alex Bateman](https://en.wikipedia.org/wiki/Alex_Bateman). Long story short, my contributions were
-judged in top 3 by the review committee, so Alex invited me to ISMB and receive
-the award in person if possible.
+college activities and nearly forgot about it until one day in June when
+I received an email from [Alex
+Bateman](https://en.wikipedia.org/wiki/Alex_Bateman). He let me know, much to my
+suprise and joy, that my contributions were judged in top 3 by the review
+committee, and whether I would like to come to ISMB 2016 and receive the award
+in person if possible. He also generously agreed to partially sponsor my travel
+and accommodation for the conference!
 
-A week later, I was meandering around the hallways of wonderful Disney World
-resort marveling at the sheer scale of the conference—thousands of people from
-all over the world, enthusiastically swarming around conference halls and ball
-rooms
+A few weeks later, I was walking through the meandering hallways of the
+conference venue, the wonderful Disney World resort, marveling at the sheer
+scale of the conference—thousands of people from all over the world,
+enthusiastically swarming around conference halls and ball rooms.
 
 ### BOSC, ISMB and Dinner!
 
 Since I went a day before the main conference was scheduled to start, I could
 attend a half day session of [BOSC](https://en.wikipedia.org/wiki/Wellcome_Trust), a special interest group meeting, organized
-two days before ISMB. Bastian Greshake, my mentor for Google Summer of Code
-project, presented his talk on OpenSNP. It was a fun experience to my name
-feature twice on presentations as a Google Summer of Code student for OBF and
-OpenSNP. In the evening, I joined about 20 other people including [Peter Cock](http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/)
-(lead developer of BioPython), [Shaun Jackman](https://github.com/sjackman) (developer of LinuxBrew), [Bastian Greshake](http://ruleofthirds.de/) (founder of OpenSNP.org), and [Nomi Harris](http://www2.lbl.gov/msd/people/investigators.html) (co-chair of BOSC ‘17) for
-a dinner in Orlando city.
+two days before ISMB. Bastian Greshake, founder of OpenSNP and also my mentor
+for Google Summer of Code project, gave a talk about latest developments with
+the project. It was a fun experience to see my name feature twice on
+presentations as a Google Summer of Code student for OBF and OpenSNP. In the
+evening, I joined about 20 other people including [Peter
+Cock](http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/) (lead
+developer of BioPython), [Shaun Jackman](https://github.com/sjackman) (developer
+of LinuxBrew), [Bastian Greshake](http://ruleofthirds.de/) (founder of
+OpenSNP.org), and [Nomi
+Harris](http://www2.lbl.gov/msd/people/investigators.html) (co-chair of BOSC
+‘17) for a dinner in Orlando city.
 
 The main ISMB conference started from next day. It was, however, a struggle to
 wake up at 9 am in the morning while I was still jetlagged. As a result,
-I missed both the morning keynotes. It was really hard to decide which talks to
-attend since I did not know many of the speakers. I followed the talk
-descriptions and went to the ones I liked—mostly related to tackling
-challenges of big data and machine learning. Later that day, I met with Alex
-Bateman and we discussed about organizing the Wikipedia editathon the next day.
-He also introduced me to Alastair K., a post-doctoral student at UCSD and also
-one of the former winner of the ISCB competition.
+I missed the morning keynotes for consecutive two days. Furthermore, it was
+really hard to decide which talks to attend since I did not know many of the
+speakers. I followed the talk descriptions and went to the ones I liked—mostly
+related to challenges of machine learning and big-data in Biology. Later that
+day,
+I met with Alex Bateman and we discussed about organizing the Wikipedia
+editathon the next day. He also introduced me to Alastair K., a post-doctoral
+student at UCSD and also one of the former winner of the ISCB competition.
 
 <p>
 <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISMB_2016_Editathon">
@@ -66,17 +75,29 @@ one of the former winner of the ISCB competition.
 </a>
 </p>
 
-Finding food in Disney was a real struggle. Unless you are reimbursed for your
-expense, or are holidaying, moving around and relying on Disney World eateries
-will definitely burn your wallet. However, I survived somehow. I had to.
+Since I didn't explore much of area around Disney resort the previous day,
+I used the rest of my evening to enjoy the atmosphere and explore dinner
+options. Finding food, however, turned out to be a real struggle. Unless you can
+live on french fries and coke, or are ready to burn holes in your wallet (not
+a problem if your expenses are reimbursed), moving around and relying on Disney
+World eateries is best to be avoided. Guess which one I did?
+
+zzz...
 
 Next morning, I met Alex and Alastair again. We reviewed the presentation and
-a general workflow of the editathon to be organized the same evening. Alex also
-introduced us to [Sarah Teichmann](https://en.wikipedia.org/wiki/Sarah_Teichmann), Head of Cellular Genetics at the [Wellcome
-Trust Sanger Institute](https://en.wikipedia.org/wiki/Wellcome_Trust), one of the keynote speakers of the conference.
-Throughout the day, I spent quite some time walking to the posters and listening
-to the details. It was an overwhelming experience and somewhat sad too. I felt
-like I am missing something.
+a general workflow of the editathon to be organized later that evening. Alex also
+introduced me to [Sarah Teichmann](https://en.wikipedia.org/wiki/Sarah_Teichmann), Head of Cellular Genetics at the [Wellcome
+Trust Sanger Institute](https://en.wikipedia.org/wiki/Wellcome_Trust), one of
+the keynote speakers of the conference. For the rest of the day, I spent time
+walking around the posters and listening to the presentors. It was quite
+a coincidence when I run into Johannes Koster, one of the lead contributors to
+Bioconda project. He was quick to recognize my name since I had made several
+contributions to the repository. It's surprising how small the world can be
+sometimes. There were also a couple of
+funny instances when people mistook me for a graduate student.
+
+By the end of it, however, I felt overwhelmed and slighty sad too. I felt like
+I am missing something.
 
 <p class="side-card go-left">
 ISMB Wikipedia Editathon 2016
