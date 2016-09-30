@@ -1,0 +1,199 @@
+<head>
+  <meta charset='utf-8' />
+  <link href='/css/normalize.css' rel='stylesheet' />
+  <link href='/css/styles.css' rel='stylesheet' />
+  <title>Vim for Writing | Shorts by Vivek Rai</title>
+</head>
+<body>
+  <div class='container'>
+    <div class='banner no-print'>
+      <div class='banner-title'>
+        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+      </div>
+      <div class='banner-subclause'>
+        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
+      </div>
+      <div class='archive'>
+        <a href='../places.html'>places,</a>
+        <a href='../books.html'>books,</a>
+        <a href='../science.html'>science,</a>
+        <a href='../programming.html'>programming,</a>
+        <br>
+        <a href='../notes.html'>notes,</a>
+        <a href='../unfinished.html'>unfinished,</a>
+        <a href='../about.html'>about</a>
+      </div>
+    </div>
+    <div class='content'>
+      <article>
+        <div class='metadata'>
+          <div class='category'>
+            <a href='../programming.html'>
+              programming
+            </a>
+          </div>
+          <div class='timestamp'>
+            27 Sep 2016
+          </div>
+        </div>
+        <div class='title'>
+          <a href='../programming/vim-for-writing.html#main'>
+            Vim for Writing
+          </a>
+        </div>
+        <div class='post'>
+          <p>Today I am going to talk about how to configure your Vim and <code>.vimrc</code> for
+a better writing environment. <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> is the iMproved version of <a href="https://en.wikipedia.org/wiki/Vi">vi</a>, one of the
+famous early text editors on Unix. It was written by <a href="https://en.wikipedia.org/wiki/Bram_Moolenaar">Bram Moolenaar</a> and is still
+maintained by him till day. Owing to its native availability across most Unix
+systems and advanced editing capabilities, it became a part of notorious <a href="https://en.wikipedia.org/wiki/Flaming_(Internet)">flame war</a>
+between programmers — <a href="https://en.wikipedia.org/wiki/Editor_war">vim or emacs</a>, which editor to choose?</p>
+<p>I happen to be a <a href="https://github.com/vivekiitkgp/Dotfiles-vim">Vim user</a>. Not because I really understand and appreciate the
+features of Vim anymore than I would have done for <a href="https://en.wikipedia.org/wiki/Emacs">Emacs</a>, but because Vim
+is what I started with and had no reasons to move on. A lot of people find Vim
+to be a reasonable choice, but at the same time, a sizable minority also grows
+averse to it. That's a process of natural equilibrium in the community.</p>
+<p>One of the good aspects of Vim is its extreme level of customizability. Vim can
+be extended much beyond its 'out of the box' abilities by writing plugins in
+<a href="https://en.wikipedia.org/wiki/Vimscript">Vimscript</a> — a programming language
+written specifically for Vim. Since programmers seek to exploit the
+configurability and adapt their tools to their programming environment and
+experience, over thousands of plugins have been written and <a href="http://vim-scripts.org/">made
+available</a>. For example, plugins to add
+advanced auto-completion plugins, fuzzy-file searches, improved code search and
+navigation, custom shortcuts, and quick compile or debug tools. However, let's
+say this for record, you do not need to know Vimscript to use Vim and neither it
+is one of the most friendly languages to learn.</p>
+<p>Although, I do like Vim as an excellent code editor, it is also a fantastic
+choice for general-purpose writing. Almost all of my emails, homework, diary
+notes are written, edited and proof-read in Vim.</p>
+<p>An important component of this experience is a set of plugins I added to my
+configuration, allowing me to observe typos, spelling mistakes, auto-correct
+minor errors, and even perform an advanced thesaurus lookup. If you are
+interested in such a setup for your Vim, this post might be useful.</p>
+<h2>Plugins</h2>
+<p>I used the following plugins —  most of them are by <a href="https://github.com/reedes/">reedes</a>:</p>
+<p><strong><a href="https://github.com/reedes/vim-wordy">vim-wordy</a></strong></p>
+<p>Highlights weak patterns of writing, for example, weasel words, jargon, opinion,
+redundant words, similies.</p>
+<p><strong><a href="https://github.com/reedes/vim-ditto">vim-ditto</a></strong></p>
+<p>Highlights repeated use of a phrase of word in your text. For example, over
+usage of <em>very</em>, <em>much</em>, <em>like</em>.</p>
+<p><strong><a href="https://github.com/reedes/vim-ditto">vim-litecorrect</a></strong></p>
+<p>Lightweight auto-correct plugin that replaces commonly mistaken patterns of text
+with the correct one, for example, <em>teh</em> to <em>the</em>, <em>heer</em> to <em>here</em>, <em>Im</em> to
+<em>I’m</em>.</p>
+<p><strong><a href="https://github.com/reedes/vim-ditto">vim-lexical</a></strong></p>
+<p>Builds on Vim's spell-check and thesaurus/dictionary completion.</p>
+<p><strong>vim-textobj-user, vim-textobj-sentence, vim-textobj-quotes</strong></p>
+<p>Add additional text objects to Vim. For example, ‘,” (quotes) characters,
+sentence or paragraph level navigation and selection, quickly selecting and
+editing dates and times.</p>
+<p><strong> <a href="https://github.com/vim-scripts/LanguageTool">vim-LanguageTool</a> </strong></p>
+<p>Wrapper around LanguageTool that runs the application in background and allows
+navigation and correction from inside the Vim.</p>
+<p><strong> <a href="https://github.com/beloglazov/vim-online-thesaurus">vim-online-thesaurus</a> </strong></p>
+<p>Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
+details available.</p>
+<h2>Installation</h2>
+<p>The easiest way to set up and maintain these plugins is to use a Vim Plugin
+manager. There are many — <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>, <a href="https://github.com/Shougo/neobundle.vim/">NeoBundle</a>, <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, <a href="https://github.com/junegunn/vim-plug">Vim-Plug</a>, <a href="https://github.com/Shougo/dein.vim">Dein</a> — but
+I find <code>vim-plug</code> easiest to configure and use. The snippets given on this page,
+thus, can be directly used with your vim-plug configuration. However, if you are
+using any other plugin manager, you can find equivalent installation
+instructions on their respective web pages.</p>
+<p>Just add these plugins to your <code>.vimrc</code> :</p>
+<div class="codehilite"><pre>&quot; Writing and Text-Objects plugins {{{
+Plug &#39;kana/vim-textobj-user&#39;
+Plug &#39;vim-scripts/LanguageTool&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-textobj-quote&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-textobj-sentence&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-litecorrect&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-wordy&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-pencil&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-lexical&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;dbmrq/vim-ditto&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+&quot; }}}
+</pre></div>
+
+
+<p><small>
+<i>
+The <code>for</code> argument for each of the plugins specifies Vim to load these plugins
+only where certain file types are edited — it's called lazy-loading. Also, you
+must have <code>vim-plug</code> installed and the code pasted between the <code>call
+plug#begin()</code> and <code>call plug#end</code> statements.
+</i>
+</small></p>
+<p>Once done, save your <code>.vimrc</code> and exit. Open Vim again and run <code>PlugInstall</code>.
+Vim-Plug will install the plugins one by one.</p>
+<h2>Configuration</h2>
+<p>The installation is fairly complete — except the Language Tool plugin. It is simply a wrapper of the main
+program which you can download from the <a href="https://www.languagetool.org/">website</a> and extract in a convenient
+location on your disk. We'll need the path of <code>jar</code> files for proper plugin
+configuration.</p>
+<p>After the installation is complete, we need to add a few lines to initialize to
+initialize the setup:</p>
+<p><small>
+<i>
+Note that the lines should be added outside the <code>plug#begin</code> and <code>plug#end</code>
+calls — preferably towards the end.
+</i>
+</small></p>
+<div class="codehilite"><pre>&quot; Custom {{{
+augroup textobj_quote
+  autocmd!
+  autocmd FileType markdown call textobj#quote#init()
+  autocmd FileType textile call textobj#quote#init()
+  autocmd FileType text call textobj#quote#init({&#39;educate&#39;: 0})
+augroup END
+
+augroup textobj_sentence
+  autocmd!
+  autocmd FileType markdown call textobj#sentence#init()
+  autocmd FileType textile call textobj#sentence#init()
+  autocmd FileType text call textobj#sentence#init()
+augroup END
+
+augroup litecorrect
+  autocmd!
+  autocmd FileType markdown,mkd call litecorrect#init()
+  autocmd FileType textile call litecorrect#init()
+  autocmd FileType text call litecorrect#init()
+augroup END
+
+let g:languagetool_jar=&#39;&#39;
+}}}&quot;
+</pre></div>
+
+
+<p>In the last line, insert the path of <code>languagetool-commandline.jar</code> file that
+you extracted from Language Tool binaries downloaded in previous step.</p>
+<p>That's all. You are set. There are a few advanced usage options that you might
+be interested in setting up. The plugin documentations and help files are
+useful for that purpose. Alternatively, take a look at <a href="https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim">my configuration</a>.</p>
+<h2>Preview</h2>
+<hr />
+<p><img alt="demo" src="http://i.imgur.com/cXDCwdE.gif" /></p>
+<hr />
+<p><small> <i> Taken from vim-wordy GitHub repository readme. </i> </small></p>
+        </div>
+        <div class='article-end'>
+          
+            Published by Vivek Rai
+          
+        </div>
+        <div class='share'>
+          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Vim For Writing: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+
+        </div>
+      </article>
+    </div>
+  </div>
+  
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+  </script>
+</body>
