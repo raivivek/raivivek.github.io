@@ -73,13 +73,17 @@ minor errors, and even perform an advanced thesaurus lookup. If you are
 interested in such a setup for your Vim, this post might be useful.</p>
 <h2>Plugins</h2>
 <p>I used the following plugins —  most of them are by <a href="https://github.com/reedes/">reedes</a>:</p>
+<p><strong><a href="https://github.com/reedes/vim-pencil">vim-pencil</a></strong></p>
+<p>The pencil plugin aspires to make Vim as powerful a tool for writers as it is
+for coders by focusing narrowly on the handful of tweaks needed to smooth the
+path to writing prose.</p>
 <p><strong><a href="https://github.com/reedes/vim-wordy">vim-wordy</a></strong></p>
 <p>Highlights weak patterns of writing, for example, weasel words, jargon, opinion,
 redundant words, similies.</p>
 <p><strong><a href="https://github.com/reedes/vim-ditto">vim-ditto</a></strong></p>
 <p>Highlights repeated use of a phrase of word in your text. For example, over
 usage of <em>very</em>, <em>much</em>, <em>like</em>.</p>
-<p><strong><a href="https://github.com/reedes/vim-ditto">vim-litecorrect</a></strong></p>
+<p><strong><a href="https://github.com/reedes/vim-litecorrect">vim-litecorrect</a></strong></p>
 <p>Lightweight auto-correct plugin that replaces commonly mistaken patterns of text
 with the correct one, for example, <em>teh</em> to <em>the</em>, <em>heer</em> to <em>here</em>, <em>Im</em> to
 <em>I’m</em>.</p>
@@ -141,26 +145,34 @@ calls — preferably towards the end.
 </i>
 </small></p>
 <div class="codehilite"><pre>&quot; Custom {{{
-augroup textobj_quote
-  autocmd!
-  autocmd FileType markdown call textobj#quote#init()
-  autocmd FileType textile call textobj#quote#init()
-  autocmd FileType text call textobj#quote#init({&#39;educate&#39;: 0})
-augroup END
+function! Prose()
+  call pencil#init()
+  call lexical#init()
+  call litecorrect#init()
+  call textobj#quote#init()
+  call textobj#sentence#init()
 
-augroup textobj_sentence
-  autocmd!
-  autocmd FileType markdown call textobj#sentence#init()
-  autocmd FileType textile call textobj#sentence#init()
-  autocmd FileType text call textobj#sentence#init()
-augroup END
+  &quot; manual reformatting shortcuts
+  nnoremap &lt;buffer&gt; &lt;silent&gt; Q gqap
+  xnoremap &lt;buffer&gt; &lt;silent&gt; Q gq
+  nnoremap &lt;buffer&gt; &lt;silent&gt; &lt;leader&gt;Q vapJgqap
 
-augroup litecorrect
-  autocmd!
-  autocmd FileType markdown,mkd call litecorrect#init()
-  autocmd FileType textile call litecorrect#init()
-  autocmd FileType text call litecorrect#init()
-augroup END
+  &quot; force top correction on most recent misspelling
+  nnoremap &lt;buffer&gt; &lt;c-s&gt; [s1z=&lt;c-o&gt;
+  inoremap &lt;buffer&gt; &lt;c-s&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]A&lt;c-g&gt;u
+
+  &quot; replace common punctuation
+  iabbrev &lt;buffer&gt; -- –
+  iabbrev &lt;buffer&gt; --- —
+  iabbrev &lt;buffer&gt; &lt;&lt; «
+  iabbrev &lt;buffer&gt; &gt;&gt; »
+endfunction
+
+&quot; automatically initialize buffer by file type
+autocmd FileType markdown,mkd,text,rst call Prose()
+
+&quot; invoke manually by command for other file types
+command! -nargs=0 Prose call Prose()
 
 let g:languagetool_jar=&#39;&#39;
 }}}&quot;

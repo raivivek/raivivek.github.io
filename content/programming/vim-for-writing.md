@@ -46,6 +46,12 @@ interested in such a setup for your Vim, this post might be useful.
 
 I used the following plugins —  most of them are by [reedes](https://github.com/reedes/):
 
+**[vim-pencil](https://github.com/reedes/vim-pencil)**
+
+The pencil plugin aspires to make Vim as powerful a tool for writers as it is
+for coders by focusing narrowly on the handful of tweaks needed to smooth the
+path to writing prose.
+
 **[vim-wordy](https://github.com/reedes/vim-wordy)**
 
 Highlights weak patterns of writing, for example, weasel words, jargon, opinion,
@@ -56,7 +62,7 @@ redundant words, similies.
 Highlights repeated use of a phrase of word in your text. For example, over
 usage of *very*, *much*, *like*.
 
-**[vim-litecorrect](https://github.com/reedes/vim-ditto)**
+**[vim-litecorrect](https://github.com/reedes/vim-litecorrect)**
 
 Lightweight auto-correct plugin that replaces commonly mistaken patterns of text
 with the correct one, for example, *teh* to *the*, *heer* to *here*, *Im* to
@@ -137,26 +143,34 @@ calls — preferably towards the end.
 </small>
 
     " Custom {{{
-    augroup textobj_quote
-      autocmd!
-      autocmd FileType markdown call textobj#quote#init()
-      autocmd FileType textile call textobj#quote#init()
-      autocmd FileType text call textobj#quote#init({'educate': 0})
-    augroup END
+    function! Prose()
+      call pencil#init()
+      call lexical#init()
+      call litecorrect#init()
+      call textobj#quote#init()
+      call textobj#sentence#init()
 
-    augroup textobj_sentence
-      autocmd!
-      autocmd FileType markdown call textobj#sentence#init()
-      autocmd FileType textile call textobj#sentence#init()
-      autocmd FileType text call textobj#sentence#init()
-    augroup END
+      " manual reformatting shortcuts
+      nnoremap <buffer> <silent> Q gqap
+      xnoremap <buffer> <silent> Q gq
+      nnoremap <buffer> <silent> <leader>Q vapJgqap
 
-    augroup litecorrect
-      autocmd!
-      autocmd FileType markdown,mkd call litecorrect#init()
-      autocmd FileType textile call litecorrect#init()
-      autocmd FileType text call litecorrect#init()
-    augroup END
+      " force top correction on most recent misspelling
+      nnoremap <buffer> <c-s> [s1z=<c-o>
+      inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
+
+      " replace common punctuation
+      iabbrev <buffer> -- –
+      iabbrev <buffer> --- —
+      iabbrev <buffer> << «
+      iabbrev <buffer> >> »
+    endfunction
+
+    " automatically initialize buffer by file type
+    autocmd FileType markdown,mkd,text,rst call Prose()
+
+    " invoke manually by command for other file types
+    command! -nargs=0 Prose call Prose()
 
     let g:languagetool_jar=''
     }}}"
