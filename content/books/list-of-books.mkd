@@ -50,6 +50,7 @@ Challenge: 24
 17. **+** Keynes, Daniel ‘Flowers for Algernon’
 18. **\*** Harari, Yuval N. 'Sapiens: A Brief History of Mankind'
 19. **\*** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psycotherapy'
+20. **++** Clarke, Arthur C. 'Rendezvous with Rama'
 
 ### 2015
 
