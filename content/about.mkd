@@ -25,14 +25,18 @@ A few posts of relevant interest might be:
 
 ### Science
 
-Science provides intellectual freedom. It enables us to explore and understand
-the nature around us — from tiny atoms, living cells and organisms, to
-the magnanimous universe.
-
-Doing science, however, requires a careful and systematic investigation and
-perseverance supported with a lot of knowledge. I see science as a collective
-sport than an individual one. With every project, term paper, conference, or
-internship I do, I seek to become part of this sport and develop my own *niche*.
+> Science provides intellectual freedom. It enables us to explore and understand
+the nature of reality around us — from tiny atoms, living cells and organisms,
+to the magnanimous universe.
+>
+> Doing science, however, requires a careful and systematic investigation,
+perseverance, and an unshakable curiosity to seek knowledge. It is not a lone
+journey. It cannot be. To do science, is to participate in the largest
+collective experience of mankind.
+>
+> Thus, all my efforts – internships, projects, term papers,
+conferences – are a desperate reflection of my desire to become a useful member
+of this sport, to develop and explore own *niche*.
 
 I am becoming increasingly interested in the systems level computational
 analysis of cellular phenomenon, populations, and diseases using high-throughput
@@ -41,16 +45,17 @@ analysis of cellular phenomenon, populations, and diseases using high-throughput
 As this blog develops, I plan to write several primer
 [articles](science.html) on my topics of interest.
 
-Lastly, a clichéd record of my published, public, or in progress work:
+Lastly, a (tiny) list of published, public, or in progress work where I made
+non-trivial contributions:
 
-1. Priyam, Woodcroft, Rai et al. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** Biorxiv 1–18 (2015). doi:10.1101/033142 ([link](http://sequenceserver.com), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
-2. Klein, Gupta, Rai et al. **Monitoring the Gender Gap with Wikidata Human Gender Indicators**  Opensym, 2016. ([link](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
+1. Priyam, Woodcroft, Rai et al. 2015. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** *Biorxiv*. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
+2. Klein, Gupta, Rai et al. 2016. **Monitoring the Gender Gap with Wikidata Human Gender Indicators**  *Opensym '16*. ([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
 
 ### Programming
 
-I am hooked to open-source software development, an ambitious outgrowth of my
-personal interests to create [free](https://www.gnu.org/philosophy/free-sw.html)
-(as in [freedom!](http://c2.com/cgi/wiki?FreeAsInBeer)) and
+I am hooked to open-source software development — an ambitious outgrowth of my
+personal interest to create [free](https://www.gnu.org/philosophy/free-sw.html)
+(as in [free speech!](http://c2.com/cgi/wiki?FreeAsInBeer)) and
 [open-source](http://c2.com/cgi/wiki?OpenSource) content.
 
 I have learned a lot by contributing to these projects:
@@ -75,10 +80,12 @@ thinking](https://en.wikipedia.org/wiki/Lateral_thinking), language and
 learning, history of humans, open communities, free knowledge, and societal
 issues like gender biases.
 
-I speak [English](https://en.wikipedia.org/wiki/English_language), [Hindi](https://en.wikipedia.org/wiki/Hindi), [Bengali](https://en.wikipedia.org/wiki/Bengali_language), and learning [Esperanto](https://en.wikipedia.org/wiki/Esperanto) still.
+I speak [English](https://en.wikipedia.org/wiki/English_language),
+[Hindi](https://en.wikipedia.org/wiki/Hindi), and learning
+[Esperanto](https://en.wikipedia.org/wiki/Esperanto) in my free time.
 
 ### Hobbies
 
-I have an unexplored sense of adventure that is unleashed whenever I’m outdoors.
+I have an unexplored sense of adventure that is unleashed when I’m outdoors.
 I enjoy hiking, playing table tennis, long no-purpose walks, sleeping under open
-starry sky, camping, and watching sunset as I sip on my coffee.
+starry sky, camping, and watching sunset while sipping a delicious coffee.
