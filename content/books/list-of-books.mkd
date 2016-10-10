@@ -48,8 +48,8 @@ Challenge: 24
 15. **\*** Mlodinow, Leonard ‘The Drunkard’s Walk’
 16. Fine, Debra ‘The Fine Art of Small Talk’
 17. **+** Keynes, Daniel ‘Flowers for Algernon’
-18. **\*** Harari, Yuval N. 'Sapiens: A Brief History of Mankind'
-19. **\*** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psycotherapy'
+18. **++** Harari, Yuval N. 'Sapiens: A Brief History of Mankind'
+19. **++** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psycotherapy'
 20. **++** Clarke, Arthur C. 'Rendezvous with Rama'
 
 ### 2015
