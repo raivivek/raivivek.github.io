@@ -42,16 +42,22 @@ Challenge: 24
 9. Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
 10. Ford, Michael T. ‘Suicide Notes’
 11. **++** Sacks, Oliver ‘The Man Who Mistook His Wife for a Hat’
-12. \- Sandel, Peter ‘101 Things Everyone .. about Economics’
+12. \- Sandel, Peter ‘101 Things Everyone [..] about Economics’
 13. **++** Salinger, J. D. ‘The Catcher in The Rye’
 14. **\*** Lane, Nick ‘The Vital Question’
-15. **\*** Mlodinow, Leonard ‘The Drunkard’s Walk’
+15. Mlodinow, Leonard ‘The Drunkard’s Walk’
 16. Fine, Debra ‘The Fine Art of Small Talk’
 17. **+** Keynes, Daniel ‘Flowers for Algernon’
 18. **++** Harari, Yuval N. 'Sapiens: A Brief History of Mankind'
-19. **++** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psycotherapy'
+19. **++** Yalom, Irvin D. 'Love's Executioner: Ten Tales of Psychotherapy'
 20. **++** Clarke, Arthur C. 'Rendezvous with Rama'
 21. **+** Vizzini, Ned 'It's Kind of a Funny Story'
+22. **\*** Garder, Jostein 'Sophie's World'
+  <blockquote>
+  <small>On page 152/601 where author talks about different schools of
+  philosophy that emerged post-Aristotle; doing pretty good so far. I am really enjoying the
+  narrative style.</small>
+  </blockquote>
 
 ### 2015
 
