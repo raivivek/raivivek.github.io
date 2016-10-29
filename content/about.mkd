@@ -1,21 +1,21 @@
 template: about.haml
 index: True
-subtitle: About
+subtitle: About me
 ---
 <p> </p>
 
 Saluton!
 
 I am a [biology](science.html) enthusiast with a wide spectrum of interests in
-[computing](programming.html). Currently pursuing my final year of integrated
-master’s program at [Indian Institute of Technology Kharagpur,
+[computing](programming.html); currently pursuing my final year of integrated
+master’s program in Biotechnology at [Indian Institute of Technology Kharagpur,
 India](http://iitkgp.ac.in). This blog (fondly called *shorts*) is a personal
 destination to satisfy my cravings for [writing](http://quora.com),
-[books](books.html), [code](/programming.html), and
-[science](/science.html).
+[books](books.html), [code](/programming.html), and [science](/science.html).
 
 My older blog has retired and all posts are now [archived](/old/index.html).
-A few posts of relevant interest might be:
+_Shorts_ takes over the previous blog as a more active version with focus on
+short and frequent spurts of writing. A few posts of relevant interest might be:
 
 * [BLAST+ and Its inconsistencies](http://vivekiitkgp.github.io/old/blog/blast-and-its-inconsistencies.html)
 * [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)
@@ -25,22 +25,27 @@ A few posts of relevant interest might be:
 
 ### Science
 
+<small>
+
 > Science provides intellectual freedom. It enables us to explore and understand
-the nature of reality around us — from tiny atoms, living cells and organisms,
-to the magnanimous universe.
+> the nature of reality around us — from tiny atoms, living cells and organisms,
+> to the magnanimous universe.
 >
 > Doing science, however, requires a careful and systematic investigation,
-perseverance, and an unshakable curiosity to seek knowledge. It is not a lone
-journey. It cannot be. To do science, is to participate in the largest
-collective experience of mankind.
+> perseverance, and an unshakable curiosity to seek knowledge. It is not a lone
+> journey. It cannot be. To do science, is to participate in the largest
+> collective experience of mankind.
 >
-> Thus, all my efforts – internships, projects, term papers,
-conferences – are a desperate reflection of my desire to become a useful member
-of this sport, to develop and explore own *niche*.
+> Thus, all my efforts – internships, projects, term papers, conferences – are
+> a desperate reflection of my desire to become a useful member of this sport,
+> to develop and explore own *niche*.
 
-I am becoming increasingly interested in the systems level computational
-analysis of cellular phenomenon, populations, and diseases using high-throughput
-*omics* data.
+</small>
+
+I am interested in the systems level analysis of cellular
+phenomenon, populations, and diseases using high-throughput *omics* approaches.
+Focusing more on the methods development, I wish to work in areas that draw
+heavily from integrative quantitative and computational approaches.
 
 As this blog develops, I plan to write several primer
 [articles](science.html) on my topics of interest.
@@ -56,7 +61,10 @@ non-trivial contributions:
 I am hooked to open-source software development — an ambitious outgrowth of my
 personal interest to create [free](https://www.gnu.org/philosophy/free-sw.html)
 (as in [free speech!](http://c2.com/cgi/wiki?FreeAsInBeer)) and
-[open-source](http://c2.com/cgi/wiki?OpenSource) content.
+[open-source](http://c2.com/cgi/wiki?OpenSource) content. During summer 2016,
+I was selected for [Google Summer of Code](https://summerofcode.withgoogle.com)
+program, where I contributed to OpenSNP.org under umbrella of Open
+Bioinformatics Foundation.
 
 I have learned a lot by contributing to these projects:
 
@@ -73,7 +81,7 @@ I have used Python, R, Ruby, JavaScript, MATLAB, BASH in my works.
 
 ### Interests
 
-I am interested in the ideas of [quantized
+I am interested in the ideas of [quantified
 self](https://en.wikipedia.org/wiki/Quantified_Self), [getting things
 done](https://en.wikipedia.org/wiki/Getting_Things_Done), [lateral
 thinking](https://en.wikipedia.org/wiki/Lateral_thinking), language and
@@ -86,6 +94,6 @@ I speak [English](https://en.wikipedia.org/wiki/English_language),
 
 ### Hobbies
 
-I have an unexplored sense of adventure that is unleashed when I’m outdoors.
+I have an unexplored sense of adventure that is unleashed when I am outdoors.
 I enjoy hiking, playing table tennis, long no-purpose walks, sleeping under open
 starry sky, camping, and watching sunset while sipping a delicious coffee.
