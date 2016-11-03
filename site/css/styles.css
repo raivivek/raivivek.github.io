@@ -50,7 +50,6 @@ pre, kbd, samp, code, var {
     "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
   word-spacing: 0;
   letter-spacing: 0;
-  padding: 5px;
 }
 
 figcaption {
@@ -191,7 +190,6 @@ ul li {
 
 .codehilite {
   background-color: #fafafa;
-  padding: 5px;
 }
 
 .post p:first-of-type:first-letter {

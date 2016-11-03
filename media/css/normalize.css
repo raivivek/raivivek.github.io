@@ -29,11 +29,11 @@
 
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   body {
     margin-top: 2rem !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
   .content {
     padding: 0 5% !important;
