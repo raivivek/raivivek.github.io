@@ -13,7 +13,10 @@ July 8-12 in Orlando, Florida. But before I talk about my experience of the
 conference (and amazing Disney World!), let me roll back a bit and tell you
 about why I was there.
 
-<img alt="Wiki editathon ISMB 2016.jpg" src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg" height="240" width="200"></a>
+<img
+  alt="Wiki editathon ISMB 2016.jpg"
+  src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg"
+  height="30%" width="40%"></a>
 
 ### ISCB Competition
 
@@ -70,8 +73,8 @@ student at UCSD and also one of the former winner of the ISCB competition.
 <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISMB_2016_Editathon">
   <img
     alt="Wiki editathon ISMB 2016.jpg" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wiki_editathon_ISMB_2016.jpg"
-    height="480"
-    width="640">
+    height="60%"
+    width="90%">
 </a>
 </p>
 

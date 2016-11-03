@@ -25,7 +25,7 @@ the plot shown below where Y-axis has many identical values.
 <img
     src="/images/non_random.png"
     title="Boxplot demo"
-    style="width: 600px; height: auto"/>
+    style="width: 90%; height: auto"/>
 <figcaption>
 A stratified appearance of a non-random repeated data.
 </figcaption>
@@ -51,7 +51,7 @@ The result:
 <img
     src="/images/dy_nonrandom.png"
     title="Noise addition demo"
-    style="width: 600px; height: auto"/>
+    style="width: 90%; height: auto"/>
 <figcaption>
 Same as previous except with additional random noise.
 </figcaption>
@@ -71,7 +71,7 @@ regions. It also makes it easy to spot and estimate outliers.
 <img
     src="/images/quad_plot.png"
     title="Transparency demo"
-    style="width: 600px; height: auto"/>
+    style="width: 90%; height: auto"/>
 <figcaption>
 The <b>col</b> parameter is changed from top left (opaque) to bottom right (.3)
 with increasing transparency. Notice the edges as they appear more diffused.

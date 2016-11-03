@@ -44,7 +44,7 @@ classes.
 <img
     src="/images/class_age.png"
     title="Boxplot demo"
-    style="width: 600px; height: auto"/>
+    style="width: 90%; height: auto"/>
 <figcaption>
  The <span style='color: red;'>red </span> indicates overall age media while the
  individual class-wise median ages are displayed in thick <b> black </b> lines.
@@ -60,7 +60,7 @@ The histogram below is generated in a single line.
 <img
     src="/images/hist.png"
     title="A quick histogram."
-    style="width: 600px; height: auto"/>
+    style="width: 90%; height: auto"/>
 <figcaption>
 A quick histogram with some fancy colors, if you will.
 </figcaption>
