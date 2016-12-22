@@ -16,7 +16,7 @@ about why I was there.
 <img
   alt="Wiki editathon ISMB 2016.jpg"
   src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg"
-  height="30%" width="40%"></a>
+  height="25%" width="35%"></a>
 
 ### ISCB Competition
 
