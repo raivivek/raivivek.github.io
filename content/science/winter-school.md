@@ -43,14 +43,14 @@ excellent video recordings of all QSB sessions.
 
 ### Theme
 
-Typically, each school has a central theme, and accordingly distinguished
-speakers from around the world in the concerned fields are invited.
+Typically, each school has a central theme and accordingly distinguished
+speakers from around the world in the relevant fields are invited.
 Additionally, each session consists of an extra pre-school component where
-instructors introduce everyone to the relevant pre-requisite concepts for the
+instructors introduce everyone to the necessary pre-requisite concepts for the
 main school. This turns out to be an effective strategy and significantly
-reduces the learning effort in the main school for the people from another background.
-Primarily because the main school is quite intensive with a series of lectures,
-research talks, poster presentation, and discussion session scheduled in
+reduces the learning effort during the main school for the people from diverse backgrounds.
+Primarily because the main school is quite intensive with the series of lectures,
+research talks, poster presentation, and discussion sessions scheduled in
 succession. We even had a small project to do towards the end.
 
 The official description of QSB2015 reads:
@@ -64,12 +64,15 @@ The official description of QSB2015 reads:
 
 ### Participants
 
-To my surprise, most (~80%) of the [school participants](https://www.icts.res.in/additional_page/721/) were either physicists or
-mathematicians. Being in a crowd of this composition, as a biologist, provides
-you an excellent peek of how others perceive and understand the key concepts
-that we biologists often take for granted. For example, how to reduce the
-system, formulate the problem, model the system etc., are a few key questions
-that are well understood in company of people who typically are better at it.
+To my surprise, most (~80%) of the [school
+participants](https://www.icts.res.in/additional_page/721/) were either
+physicists or mathematicians. Being in a crowd of this composition, as
+a biologist (though my background is more on engineering side), provides you an
+excellent peek of how others perceive and understand the key concepts that we
+biologists often take for granted. For example, how to reduce the complexity of
+the system, formulate the problem, model the interactions etc., are a few key
+questions that are well understood in company of people who typically are
+better at it.
 
 ### Subjects - Overview
 
@@ -84,6 +87,7 @@ A gross categorization of topics along with speakers:
 * Metagenomics                      ([Nagasuma Chandra](http://biochem.iisc.ernet.in/nchandra.php))
 
 #### Main school
+
 * Bacterial cell physiology and growth <br> ([Matthew Scott](http://www.math.uwaterloo.ca/~mscott/), [Suckjoon Jun](http://jun.ucsd.edu))
 * Metabolism, regulation and response to the environment <br> ([Tom Khulmann](http://physics.illinois.edu/people/profile.asp?tkuhlman))
 * Structure and dynamics of biochemical networks <br>
@@ -110,7 +114,7 @@ they give rise to.
 
 We may ask, how does a cell use these simple motifs to generate increasingly
 complex behaviors? Can we predict them? Even harder to answer, how to
-ascertain these explanations experimentally? A lot remains to answer.
+ascertain these explanations experimentally? A lot remains to be answered.
 
 Additionally, I found the discussion of Savageau's [*Demand
 Theory*](http://www.ncbi.nlm.nih.gov/pubmed/9691027) and Riboswitches pretty
@@ -153,10 +157,10 @@ realization of a whole-cell model (ultimate goal of systems biology?).
 
 **Nathan Price** discussed some of standard techniques and algorithms used in
 metabolic network model construction and analysis. Apparently, creating a full
-genome scale metabolic network is significantly challenging and humongous task
+genome scale metabolic network is significantly challenging and a humongous task
 typically involving data collection, literature mining, processing, analysis,
-validation, and curation as essential steps. At each step, there are tricky of dealing
-with missing values, right scoring function, and database to use. Once you have
+validation, and curation as essential steps. At each step, there are tricky issues of dealing
+with missing values, and using right scoring function and database to use. Once you have
 reconstructed a network, next step is to find out its valid states. A widely
 used
 technique used for network reconstruction and analysis is COnstraint-Based

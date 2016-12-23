@@ -20,42 +20,42 @@ The primary motivation for participating in this workshop was to present
 my ongoing work on the knotted proteins. It seemed like a reasonable place to
 attract further ideas and help. Sadly, I could not get in touch with my advisor
 before the abstract submission deadline and did not submit a poster.
-Nevertheless, it was fun to listen to new speakers and learn about new developments
-in a field. You never know where ideas can come from.
+Nevertheless, it was fun to listen to new speakers and learn about new
+developments in the field. You never know where ideas can come from.
 
 The workshop consisted of 8 invited lectures, 6 short talks combined with
 a poster session spanning over two days. There were no *hands on* or practical
-component even though the workshop was called *a workshop*. I guess it is
-because of the short talks, a 15-minute presentation given by Ph.D. students as
-a demonstration of their work.
+sessions even though the event was called *a workshop*. I guess it is because of
+the short talks, a 15-minute presentation given by Ph.D. students as about their work.
 
 #### Venue
 
 IISER-K is
 [located](https://www.google.co.in/maps/place/Indian+Institute+of+Science+Education+and+Research+Kolkata/@22.962533,88.5201464,17z/data=!4m2!3m1!1s0x39f8bf0ebd68bc8b:0x92d423474389ff5c?hl=en)
-some 50 km off [Kolkata](https://en.wikipedia.org/wiki/Kolkata), the nearest metropolitan.
-Located in a countryside area with almost nothing around, the new Mohanpur
-campus of IISER-K stands proudly with its large and lush green beauty.
-Although, a few of building units are still under construction, the place will
-soon become a buzzing center of education and research in India.
+about 50 km from [Kolkata](https://en.wikipedia.org/wiki/Kolkata), the nearest
+metropolitan and also my home city. Located in a countryside with almost nothing
+around, the new Mohanpur campus of IISER-K stands proudly with its large and
+lush green beauty. Although, a few of buildings are still under construction,
+the place will soon become a buzzing center of education and research in India.
 
 #### Talks
 
 The complete list of research talks, short talks, the list of posters can be found
 on the
 [website](https://web.archive.org/web/20160111112304/http://www.iiserkol.ac.in/~mathbio/WMCB2016/).
-In space below, I'll talk in brief about my impression of the workshop along
-with short description as necessary.
+Below, I'll talk in brief about my impression of the workshop along with short
+descriptions as necessary.
 
 ##### Complex systems and networks
 
 There has been growing interest in modeling and analysis of complex biological
-networks in the past decade ([Barabasi](http://barabasilab.com/) *et al.*).
+networks in the past decade. ([Barabasi](http://barabasilab.com/) *et al.*)
 Primarily because advancement in data acquisition platforms has enabled us to
 generate a huge amount of *omics* data
 - genomics, transcriptomics, proteomics, metabolomics, fluxomics to name a few.
-Naturally, there is a lot of interdisciplinary participation from physics and
-mathematics departments.
+  The variety and complexity of data has attracted specialized knowledge of
+  different scientific domains, especially inter-disciplinary participation from
+  physics and mathematics.
 
 [**Sarika Jalan**](http://iiti.ac.in/people/~sarika/) heads the Complex Systems Lab at Indian Institute of Technology
 Indore. She is trying to create a universal framework for a generalized
@@ -70,7 +70,7 @@ the importance of noise and heterogeneity in the cellular system as an important
 component of the decision making including cell differentiation. I will list
 a couple of interesting papers she suggested for more information.
 
-##### Big Data Analysis
+##### Big data analysis
 
 It should no longer be surprising that a computational biology workshop involves
 a large number of talks on big data analysis or *multi-omics* integration. The
@@ -82,7 +82,7 @@ from single cell analysis or neuroimaging data. In these cases, often the
 breakthrough is in creating a new model that describes your data instead of
 trying to reduce its complexity.
 
-##### Computational Protein Design
+##### Computational protein design
 
 [**Pralay Mitra**](http://cse.iitkgp.ac.in/~pralay/) gave an interesting talk
 outlining a general computational strategy of protein design. For those who are
@@ -94,12 +94,13 @@ why not just carry out a single mutagenesis. The central idea, however, is not t
 generate just a different sequence but a novel sequence with strikingly
 different properties of interest. For example, we may want a protein structure
 with same sequence but different affinity so that it acts as an inhibitor.
-Similar to reverse engineering. One may also notice that protein design problem
-inherently involve a protein folding problem as well.
+A reverse engineering problem. One may also notice that protein design problem
+inherently involves a protein folding problem as well.
 
-But how do you do it? I will write about it in detail in my other posts.
+But how do you do it? Perhaps, I will write about it in detail in my other
+posts.
 
-##### Mechanical Organization of Cell
+##### Mechanical organization of cell
 
 The talks by [**Anirban
 Sain**](http://www.iitb.ac.in/en/employee/prof-anirban-sain) (IIT Bombay) and
@@ -111,14 +112,14 @@ processes that require force generation and modulation?
 A good part about these talks were the pretty electron microscopy pictures they
 show.
 
-##### Short Talks and Posters
+##### Short talks and Posters
 
-Several short talks and posters by Ph.D. students were presented. Several concepts
-like game theory, protein-protein interaction networks, molecular
-dynamics simulation, spectral graph theory and neuroscience came up in the
+Several short talks and posters by Ph.D. students were presented. Different
+concepts like game theory, protein-protein interaction networks, molecular
+dynamics simulation, spectral graph theory, and neuroscience came up in the
 discussion.
 
-##### Misc. Tech
+##### Other
 
 Some relevant techniques (or terms) that I wish to read upon and explore
 further are:
@@ -134,8 +135,11 @@ Possibly in my undergraduate thesis itself.
 
 One fact that disappoints me slightly is that most of the researchers do not
 really care about experimental evidence in support of the theory or analysis
-they put forward. The general attitude is, "*we're done. it is now up to
-experimentalists to build on this work.*" We need more collaborations.
+they put forward—or if they do, do not have a plan about it. The general
+attitude is, "*We're done. It is now up to others to build on this work and
+validate.*"
+
+We need more collaborations.
 
 Overall, a good workshop to spend the weekend. I am glad to have made a company
-like minded people as well.
+of like minded people as well.
