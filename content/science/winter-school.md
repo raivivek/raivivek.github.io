@@ -2,6 +2,7 @@ template: post.haml
 category: science
 author: Vivek Rai
 date: 01/15/2016
+math: true
 title: Notes from Systems Biology Winter School
 ---
 A comprehensive and thrilling experience
