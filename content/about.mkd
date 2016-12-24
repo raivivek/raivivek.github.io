@@ -25,33 +25,31 @@ short and frequent spurts of writing. A few posts of relevant interest might be:
 
 ### Science
 
-<small>
+<small> <blockquote> Science provides intellectual freedom. It enables us to
+explore and understand the nature of reality around us — from tiny atoms, living
+cells and organisms, to the magnanimous universe.
 
-> Science provides intellectual freedom. It enables us to explore and understand
-> the nature of reality around us — from tiny atoms, living cells and organisms,
-> to the magnanimous universe.
->
-> Doing science, however, requires a careful and systematic investigation,
-> perseverance, and an unshakable curiosity to seek knowledge. It is not a lone
-> journey. It cannot be. To do science, is to participate in the largest
-> collective experience of mankind.
->
-> Thus, all my efforts – internships, projects, term papers, conferences – are
-> a desperate reflection of my desire to become a useful member of this sport,
-> to develop and explore own *niche*.
+Doing science, however, requires a careful and systematic investigation,
+perseverance, and an unshakable curiosity to seek knowledge. However, it is not
+a lone journey. It cannot be. To do science, is to participate in the largest
+collective experience of mankind.
 
-</small>
+Thus, all my efforts – internships, projects, term papers, conferences – are
+a desperate reflection of my desire to become a useful member of this sport, to
+develop and explore own *niche*. </blockquote> </small>
 
-I am interested in the systems level analysis of cellular
-phenomenon, populations, and diseases using high-throughput *omics* approaches.
-Focusing more on the methods development, I wish to work in areas that draw
-heavily from integrative quantitative and computational approaches.
+I am interested in understanding how genome evolution, at molecular as well as
+systems level, alters cell phenotype, guides anthropological diversity in
+populations; and how it can be applied in understanding the genetics of complex
+diseases. Focusing more on the methods development, I wish to work in areas that
+draw heavily from *omics* data using integrated quantitative and computational
+approaches.
 
-As this blog develops, I plan to write several primer
-[articles](science.html) on my topics of interest.
+As this blog develops, I plan to write several primer [articles](science.html)
+on my topics of interest.
 
-Lastly, a (tiny) list of published, public, or in progress work where I made
-non-trivial contributions:
+Lastly, a (tiny) list of published, public, or in progress work where I have
+made non-trivial contributions:
 
 1. Priyam, Woodcroft, Rai et al. 2015. **Sequenceserver: A modern graphical user interface for custom BLAST databases.** *Biorxiv*. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
 2. Klein, Gupta, Rai et al. 2016. **Monitoring the Gender Gap with Wikidata Human Gender Indicators**  *Opensym '16*. ([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
@@ -74,7 +72,7 @@ I have learned a lot by contributing to these projects:
 * [Afra](https://github.com/wurlmab/afra)
 
 I use [GNU/Linux](https://www.debian.org/releases/squeeze/i386/ch01s02.html.en),
-keep files under [version control](https://git-scm.com/), and edit using
+keep files under [version control](https://git-scm.com/) and edit using
 [Vim](http://vim.org).
 
 I have used Python, R, Ruby, JavaScript, MATLAB, BASH in my works.
@@ -89,7 +87,7 @@ learning, history of humans, open communities, free knowledge, and societal
 issues like gender biases.
 
 I speak [English](https://en.wikipedia.org/wiki/English_language),
-[Hindi](https://en.wikipedia.org/wiki/Hindi), and learning
+[Hindi](https://en.wikipedia.org/wiki/Hindi) (native), and I am learning
 [Esperanto](https://en.wikipedia.org/wiki/Esperanto) in my free time.
 
 ### Hobbies
