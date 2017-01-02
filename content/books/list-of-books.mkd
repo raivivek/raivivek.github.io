@@ -9,9 +9,17 @@ Books are magic.
 
 <small>[*] currently reading, [+] recommended, [-] annoying</small>
 
+### 2017
+
+Challenge: **40**
+
+1. **\*** Bloom, Paul 'How Pleasure Works'
+
 ### 2016
 
-Challenge: 24
+Challenge: **24**<br>
+Completed: **20**<br>
+Partially completed: 4
 
 1. \* Mahajan, Sanjoy 'Street-Fighting Mathematics'
 2. Orwell, George ‘Burmese Days’ [<small>[review](https://vivekiitkgp.github.io/books/burmese-days.html)</small>]
@@ -51,6 +59,7 @@ Challenge: 24
   philosophy that emerged post-Aristotle; doing pretty good so far. I am really enjoying the
   narrative style.</small> </blockquote>
 23. \- Ball, Jesse 'Silence Once Begun'
+24. **\+** Wells, H.G. 'The Time Machine'
 
 ### 2015
 
@@ -68,7 +77,7 @@ Completed: 13
 9. \* Sompayrac, Lauren M. 'How the Immune System Works'
 10. Wodehouse, P. G. 'The Code of the Woosters'
 11. **+** Khandekar, V. S. 'Yayati: A Classic Tale of Lust'
-12. \- Gladwell, Malcolm 'The Tipping Point'
+12. Gladwell, Malcolm 'The Tipping Point'
 13. Camus, Albert 'The Outsider'
 14. **++** Murakami, Haruki 'Kafka On The Shore'
 15. **+** Duhigg, Charles 'The Power of Habit'
