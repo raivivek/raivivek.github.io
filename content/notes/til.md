@@ -27,24 +27,23 @@ about people you may or may not know and create subtle judgments in your mind.
   </figcaption>
 </figure>
 
-And I am not even talking about the non-informative, banal talks, and gossips
-that you experience through regular office meetings or non-personal verbal
-gestures that consume majority of our time. Like it or not, most of it is
-inevitable.
+And I am not even talking about the non-informative banal talks and gossips that
+you experience through regular office meetings or non-personal verbal gestures
+that consume majority of our time. In fact, most of it is inevitable.
 
-At the end of the day, however, you might wonder if you have learned anything new at
-all. You may try hard to remember the neat command-line trick your friend showed
-you or the intellectual discussion with the programmer girl in your
+At the end of the day, however, you might wonder if you have learned anything
+new at all. You may try hard to recall the neat command-line trick your friend
+showed you or the intellectual discussion with the programmer girl in your
 office, but alas, nothing comes up at all. You are too tired by now, and you
 defer things for later assuming that you can find out when needed. What could
 possibly be wrong?
 
 Well, just that the day never comes!
 
-It has been happening a lot with me. Tons of newsletters, reddit board, research
-papers, general news and other links referred by friends - there’s a ton of
-interesting content out there that I receive every day and would like to read and
-consume. However, I suffer the same fate the person described above. I have had
+It has been happening a lot with me. Tons of newsletters, reddit, research
+papers, general news, and other links referred by friends - there’s a ton of
+interesting content that I receive every day and would like to read and consume.
+However, I suffer the same fate as the person described above. I have had
 countless moments where I would search for a solution, only to realize that
 I have had it *bookmarked* in an obscure place the last time I had the same
 problem.
