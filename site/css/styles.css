@@ -174,12 +174,12 @@ ul li {
 }
 
 .article-end {
-  text-align: center;
+  text-align: right;
+  font-style: italic;
   text-transform: lowercase;
   clear: both;
-  width: 300px;
-  margin: 40px auto 30px auto;
-  border-bottom: 2px solid #B92B27;
+  margin: 6rem auto 0 auto;
+  border-top: 2px solid #B92B27;
 }
 
 .share {

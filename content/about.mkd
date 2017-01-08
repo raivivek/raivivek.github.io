@@ -1,5 +1,6 @@
 template: about.haml
 index: True
+author: Vivek Rai
 subtitle: About me
 ---
 <p> </p>
@@ -13,9 +14,10 @@ India](http://iitkgp.ac.in). This blog (fondly called *shorts*) is a personal
 destination to satisfy my cravings for [writing](http://quora.com),
 [books](books.html), [code](/programming.html), and [science](/science.html).
 
-My older blog has retired and all posts are now [archived](/old/index.html).
+My older blog has retired and all previous posts are now [archived](/old/index.html).
 _Shorts_ takes over the previous blog as a more active version with focus on
-short and frequent spurts of writing. A few posts of relevant interest might be:
+concise and frequent spurts of writing. A few useful posts from my older blog
+are:
 
 * [BLAST+ and Its inconsistencies](http://vivekiitkgp.github.io/old/blog/blast-and-its-inconsistencies.html)
 * [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)

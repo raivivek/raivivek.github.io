@@ -1,8 +1,0 @@
-template: index.haml
-index: True
-category: places
-sort_key: date
-sort_reverse: True
-max_subpages: 10
-subtitle: Miles to go before I sleep
----

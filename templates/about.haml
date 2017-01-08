@@ -8,7 +8,7 @@
         Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
       -#.divider
       .archive
-        %a{href:"{{ page.rel_site_url }}/places.html"} places,
+        %a{href:"{{ page.rel_site_url }}/quotes.html"} quotes,
         %a{href:"{{ page.rel_site_url }}/books.html"} books,
         %a{href:"{{ page.rel_site_url }}/science.html"} science,
         %a{href:"{{ page.rel_site_url }}/programming.html"} programming,
@@ -24,3 +24,14 @@
             {{ page.subtitle }}
         .post
           {{ page.content }}
+        .article-end
+          - if page.author:
+            blog by
+            %a{href:"{{ page.rel_site_url }}/about.html"}
+              {{ page.author }} 
+        .share
+          %a{href:"https://twitter.com/share",class:"twitter-share-button",
+          data-text:"{{page.title.title()}}: Shorts by Vivek Rai", data-via:"vivek_ziel",
+          data-hashtags:"{{page.category}}",data-dnt:"true"} tweet |&nbsp;
+          %a{href:"https://twitter.com/vivek_ziel",class:"twitter-follow-button",
+          data-show-count:"false",data-show-screen-name:"false",data-dnt:"true"} follow @vivek_ziel

@@ -1,6 +1,7 @@
 template: post.haml
 category: books
 pinned: True
+author: Vivek Rai
 hover: Pinned Post
 title: List of books I have read
 ---
