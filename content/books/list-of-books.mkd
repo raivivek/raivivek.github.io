@@ -14,8 +14,10 @@ Books are magic.
 
 Challenge: **40**
 
-1. **\*** Bloom, Paul 'How Pleasure Works'
-2. MacAskill, William 'Doing Good Better'
+1. Bloom, Paul 'How Pleasure Works'
+2. **+** MacAskill, William 'Doing Good Better'
+3. Mistry, Rohinton 'Family Matters'
+4. **+** Gowers, Timothy 'Mathematics: A Very Short Introduction'
 
 
 ### 2016
