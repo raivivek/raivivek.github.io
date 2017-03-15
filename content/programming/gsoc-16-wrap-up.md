@@ -14,9 +14,9 @@ title: "Open {data, science, source} - OpenSNP.org"
 “What’s the worst that can happen? I won’t get selected. There’s nothing new to
 it anyway. Just get some sleep”, I tell myself anxiously. With every passing
 minute, the clock moves closer to midnight. But I am too tired to think about
-*it* anymore.
+it anymore.
 
-About half an hour in my dead sleep, I am startled by a loud phone call. My
+About half an hour in my sleep, I am startled by a loud phone call. My
 friend is asking me to check the announcements of [Google Summer of
 Code](https://summerofcodewith.google.com) project selections. I had applied
 too, just like previous two years.
@@ -90,14 +90,15 @@ portal](https://github.com/openSNP/snpr/blob/master/ROADMAP.md#long-term-6-month
 
 [SNPs](https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism) (pronounced
 *snips*), simply, are single nucleotide variations in DNA that occur with
-a certain percentage of a population.[[1](#1)] They can affect how humans
-develop diseases and respond to pathogens, chemicals, drugs, vaccines, and other
-agents. A set of SNPs for a single individual can also act as a unique
-signature useful in identification and forensics. Naturally, figuring out the
-possible downstream effects of an SNP is indeed useful. And that’s exactly what
-we mean by linking SNPs to phenotypes.[[2](#2)]
+a certain percentage of a population.<sup id="a1">[1](#id1)</sup> They can
+affect how humans develop diseases and respond to pathogens, chemicals, drugs,
+vaccines, and other agents. A set of SNPs for a single individual can also act
+as a unique signature useful in identification and forensics. Naturally,
+figuring out the possible downstream effects of an SNP is indeed useful. And
+that’s exactly what we mean by linking SNPs to phenotypes.<sup
+id="a2">[2](#id2)</sup>
 
-However, a **word of caution** here. Figuring out the *causal* effects of
+However, a word of caution here. Figuring out the *causal* effects of
 a particular SNP is a tricky task with significant computational and
 experimental challenges, enough to be a [widely
 studied](https://en.wikipedia.org/wiki/Genome-wide_association_study) biological
@@ -117,8 +118,8 @@ and available to us as valuable references — through secondary analysis using
 
 [OpenSNP.org](https://opensnp.org) has a single purpose —  to act as a free,
 open-data repository by collecting personal genomics data into the public
-domain. The web-portal, thus, is a critical component of the infrastructure. From my
-understanding, I can imagine two immediate benefits of this project.
+domain. The web-portal, thus, is the critical component of the infrastructure.
+From my understanding, I can imagine two immediate benefits of this project.
 
 * Improve the overall user-experience by making to easier to understand possible
     associations between an SNP to a phenotype and vice-versa.
@@ -226,15 +227,15 @@ company throughout.
 
 --------
 
-1. <small id=1>Variations in DNA arise all the time due to intrinsic error rates
+1. <small id=id1>Variations in DNA arise all the time due to intrinsic error rates
 in the various biological process (DNA replication, DNA transcription, for example).
 However, most of these changes are *neutral* and do not affect the organism in
 any way, while others are auto-corrected by cellular machinery. Rarely, a few
 variations occur in critical regions of the genome (a gene that codes an essential
 protein, for example) and manage to escape correction. This variation (including
 the phenotype or disease it may be responsible for!) could then propagate
-through the population via sexual recombination.</small>
-2. <small id=2>May be not exactly. What we are doing here is very limited
+through the population via sexual recombination.</small>[↩](#a1)
+2. <small id=id2>May be not exactly. What we are doing here is very limited
 expression of what could be done. In any case, if you are interested in the
 techniques with which SNPs are detected then take a look at <a
-href="https://en.wikipedia.org/wiki/SNP_genotyping">SNP Genotyping</a>. </small>
+href="https://en.wikipedia.org/wiki/SNP_genotyping">SNP Genotyping</a>. </small>[↩](#a2)
