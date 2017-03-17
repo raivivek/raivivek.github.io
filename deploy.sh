@@ -9,6 +9,6 @@ git subtree split --prefix site -b gh-pages
 git push -f blog gh-pages:master
 # Remove so that later the process can be repeated
 git branch -D gh-pages
-# Push master
-git push blog master:shorts -f
-git push origin master -f
+# Push shorts (master branch)
+git push blog shorts:shorts -f
+git push origin shorts:shorts -f
