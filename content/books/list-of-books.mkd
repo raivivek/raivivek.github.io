@@ -19,18 +19,13 @@ Challenge: **40**
 3. Mistry, Rohinton 'Family Matters'
 4. **+** Gowers, Timothy 'Mathematics: A Very Short Introduction'
 5. **+** Eco, Umberto 'How to Write a Thesis'
-  <blockquote>
-  <small> As a continuing graduate student, I found the suggestions put forward
+  <blockquote> <small> As a continuing graduate student, I found the suggestions put forward
   by the author extremely helpful. Although most of the examples in the book are
   sourced from the study of classical literature, the suggested ideas are
   still highly relevant. On a bonus point, the author also clarifies a few issues
   commonly faced by new graduate students related to their research (impact of
   their research, breadth and depth etc.). Highly recommended if you are
-  planning to write a thesis or research proposal.
-  </small>
-  </blockquote>
-
-
+  planning to write a thesis or research proposal. </small> </blockquote>
 6. \* Norman, Dan 'Design of Everyday Things'
 
 ### 2016
@@ -41,11 +36,9 @@ Partially completed: 4
 
 1. \* Mahajan, Sanjoy 'Street-Fighting Mathematics'
 2. Orwell, George ‘Burmese Days’ [<small>[review](https://vivekiitkgp.github.io/books/burmese-days.html)</small>]
-3. Murakami, Haruki ‘The Elephant Vanishes’ <br>
-  <blockquote>
-  <small> Not as good as <i>Kafka on the Shore</i>, but hey, we are talking
-  about Murakami here!</small>
-  </blockquote>
+3. Murakami, Haruki ‘The Elephant Vanishes’ <br> <blockquote> <small> Not as
+   good as <i>Kafka on the Shore</i>, but Murakami knows how to hook the reader
+   nonetheless!</small> </blockquote>
 4. **+** Satrapi, Marjane ‘The Complete Persepolis’
 5. Thorsby, Øyvind ‘Transdimensional Brain Chip’ (*comic*)<br>
   <blockquote>
