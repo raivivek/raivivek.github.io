@@ -29,13 +29,14 @@ But despite significant advances in recent decades, there are more questions to
 explore than ever before. A fundamental shift is happening in the nature and
 method of scientific discovery than the past. Single disciplinary science is
 becoming rarer, and so is the era of monogamous collaboration. A lot of exciting
-stuff is coming from the people working on these interfaces and borrowing ideas
-from multiple disciplines, highly collaborative and consortium like projects are
+stuff is coming from the people working on the interfaces and borrowing ideas
+from multiple disciplines. Thanks to the internet and digital revolution,
+highly collaborative and consortium like projects are becoming a norm and are
 being increasingly proposed and carried out.
 
-This is where  In such a rapidly transforming world of science, it would be
-naive to imagine a world of biology without the use of advances in physics,
-chemistry, mathematics and engineering. That's where a program like the [Physics of
+In such a rapidly transforming world of science, it would be naive to imagine
+a world of biology without the use of advances in physics, chemistry,
+mathematics and engineering. That is where a program like the [Physics of
 Life](https://theory.ncbs.res.in/physlife2017) comes into the picture.
 
 Physics of Life is an annual monsoon school organized by Simons Centre for Study
