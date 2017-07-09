@@ -1,21 +1,7 @@
 {% include "header.haml" %}
 %body
   .container
-    .banner.no-print
-      .banner-title
-        %a{href:"{{ site.url }}"} Shorts
-      .banner-subclause
-        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
-      -#.divider
-      .archive
-        %a{href:"{{ page.rel_site_url }}/quotes.html"} quotes,
-        %a{href:"{{ page.rel_site_url }}/books.html"} books,
-        %a{href:"{{ page.rel_site_url }}/science.html"} science,
-        %a{href:"{{ page.rel_site_url }}/programming.html"} programming,
-        <br>
-        %a{href:"{{ page.rel_site_url }}/notes.html"} notes,
-        %a{href:"{{ page.rel_site_url }}/unfinished.html"} unfinished,
-        %a{href:"{{ page.rel_site_url }}/about.html"} about
+    {% include "banner.haml" %}
       -#.divider
     #main.content
       %article

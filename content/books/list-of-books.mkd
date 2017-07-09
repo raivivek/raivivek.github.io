@@ -35,7 +35,7 @@ Completed: **20**<br>
 Partially completed: 4
 
 1. \* Mahajan, Sanjoy 'Street-Fighting Mathematics'
-2. Orwell, George ‘Burmese Days’ [<small>[review](https://vivekiitkgp.github.io/books/burmese-days.html)</small>]
+2. Orwell, George ‘Burmese Days’ ([review](https://vivekiitkgp.github.io/books/burmese-days.html))
 3. Murakami, Haruki ‘The Elephant Vanishes’ <br> <blockquote> <small> Not as
    good as <i>Kafka on the Shore</i>, but Murakami knows how to hook the reader
    nonetheless!</small> </blockquote>
@@ -49,7 +49,7 @@ Partially completed: 4
   Spy</a>.</small>
   </blockquote>
 6. **\*** Murakami, Haruki ‘1Q84 - Trilogy (#1)’
-7. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ [<small>[review](https://vivekiitkgp.github.io/books/inner-game.html)</small>]
+7. **+** Gallwey, W. Timothy ‘The Inner Game of Tennis’ ([review](https://vivekiitkgp.github.io/books/inner-game.html))
 8. Adams, Douglas ‘Hitchhiker’s Guide to Galaxy (#1)’
 9. Adams, Douglas ‘The Restaurant at the End of the Universe (#2)’
 10. Ford, Michael T. ‘Suicide Notes’

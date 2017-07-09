@@ -26,13 +26,14 @@ advances have revolutionized the way we live today by integrating into the
 deepest spheres of our lives.
 
 But despite significant advances in recent decades, there are more questions to
-explore than ever before. A fundamental shift is happening in the nature and
-method of scientific discovery than the past. Single disciplinary science is
-becoming rarer, and so is the era of monogamous collaboration. A lot of exciting
-stuff is coming from the people working on the interfaces and borrowing ideas
-from multiple disciplines. Thanks to the internet and digital revolution,
-highly collaborative and consortium like projects are becoming a norm and are
-being increasingly proposed and carried out.
+explore than ever before. We are witnessing a fundamental shift in the nature
+and method of the scientific discovery process from the past. Single
+disciplinary science is becoming rarer, and so is the era of monogamous
+collaboration. A lot of exciting stuff is coming from the people working on the
+interfaces and borrowing ideas from multiple disciplines. Thanks to the
+internet and digital revolution, highly collaborative and consortium like
+projects are becoming a norm and are being increasingly proposed and carried
+out.
 
 In such a rapidly transforming world of science, it would be naive to imagine
 a world of biology without the use of advances in physics, chemistry,

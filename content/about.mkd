@@ -7,17 +7,25 @@ subtitle: About me
 
 Saluton!
 
-I am a [biology](science.html) enthusiast with a wide spectrum of interests in
-[computing](programming.html); currently pursuing my final year of integrated
-master’s program in Biotechnology at [Indian Institute of Technology Kharagpur,
-India](http://iitkgp.ac.in). This blog (fondly called *shorts*) is a personal
-destination to satisfy my cravings for [writing](http://quora.com),
-[books](books.html), [code](/programming.html), and [science](/science.html).
+I am Vivek Rai, a biotechnology graduate student from [Indian Institute of
+Technology Kharagpur, India](http://iitkgp.ac.in). I am interested in learning
+about biology through hybrid computational and experimental approaches.
 
-My older blog has retired and all previous posts are now [archived](/old/index.html).
-_Shorts_ takes over the previous blog as a more active version with focus on
-concise and frequent spurts of writing. A few useful posts from my older blog
-are:
+I will be joining [Program in Biomedical Sciences
+(PIBS)](https://medicine.umich.edu/medschool/education/phd-programs/phd-admissions)
+at [University of Michigan, Ann Arbor](https://umich.edu) this fall as a PhD
+student.
+
+This blog (fondly called *shorts*) is
+a personal destination to satisfy my cravings for writing,
+[science](/science.html), [code](/programming.html), and [books](books.html).
+
+
+
+My older blog is retired and all previous posts are now
+[archived](/old/index.html). _Shorts_ takes over the previous blog as a more
+active version with focus on concise and frequent spurts of writing. A few
+useful posts from my older blog are:
 
 * [BLAST+ and Its inconsistencies](http://vivekiitkgp.github.io/old/blog/blast-and-its-inconsistencies.html)
 * [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)
@@ -66,7 +74,9 @@ I was selected for [Google Summer of Code](https://summerofcode.withgoogle.com)
 program, where I contributed to OpenSNP.org under umbrella of Open
 Bioinformatics Foundation.
 
-I have learned a lot by contributing to these projects:
+I am also one of the founding members of [metaKGP](http://wiki.metakgp.org).
+
+Few projects with my significant contributions are:
 
 * [OpenSNP](https://opensnp.org)
 * [Sequenceserver](https://github.com/wurlmab/sequenceserver)
@@ -94,6 +104,5 @@ I speak [English](https://en.wikipedia.org/wiki/English_language),
 
 ### Hobbies
 
-I have an unexplored sense of adventure that is unleashed when I am outdoors.
-I enjoy hiking, playing table tennis, long no-purpose walks, sleeping under open
-starry sky, camping, and watching sunset while sipping a delicious coffee.
+I enjoy hiking, playing table tennis, long no-purpose walks, camping,
+open-spaces, and a delicious coffee.

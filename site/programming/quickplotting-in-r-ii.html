@@ -1,34 +1,36 @@
 <head>
   <meta charset='utf-8' />
   <meta content='width=device-width, initial-scale=1' name='viewport' />
-  <meta content='Musings of a free mind, treasured recollections & visions of a distant future. Short notes on biology, programming, and science!' name='description' />
+  <meta content='Musings of a free mind, treasured recollections, and visions of a distant future. Short notes on biology, programming, and science!' name='description' />
   <meta content='Vivek Rai' name='author' />
   <link href='/css/normalize.css' rel='stylesheet' />
   <link href='/css/styles.css' rel='stylesheet' />
   <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' />
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' />
+  <link href='/css/codehilite.css' rel='stylesheet' />
   <title>Quick Data Plotting in R - II | Shorts by Vivek Rai</title>
 
 </head>
 <body>
   <div class='container'>
     <div class='banner no-print'>
-      <div class='banner-title'>
-        <a href='https://vivekiitkgp.github.io/'>Shorts</a>
-      </div>
-      <div class='banner-subclause'>
-        Musings of a free mind, treasured recollections <br> &amp; <br> visions of a distant future
-      </div>
-      <div class='archive'>
-        <a href='../quotes.html'>quotes,</a>
-        <a href='../books.html'>books,</a>
-        <a href='../science.html'>science,</a>
-        <a href='../programming.html'>programming,</a>
-        <br>
-        <a href='../notes.html'>notes,</a>
-        <a href='../unfinished.html'>unfinished,</a>
-        <a href='../about.html'>about</a>
-      </div>
-    </div>
+  <div class='banner-title'>
+    <a href='https://vivekiitkgp.github.io/'>Shorts</a>
+  </div>
+  <div class='banner-subclause'>
+    <i> Musings of a Free Mind, Recollections &amp; <br> Visions of the Distant Future </i>
+  </div>
+  <div class='archive'>
+    <a href='../quotes.html'>quotes,</a>
+    <a href='../books.html'>books,</a>
+    <a href='../science.html'>science,</a>
+    <a href='../programming.html'>programming,</a>
+    <a href='../notes.html'>notes,</a>
+    <a href='../unfinished.html'>unfinished,</a>
+    <a href='../about.html'>about</a>
+  </div>
+
+</div>
     <div id='main' class='content'>
       <article>
         <div class='metadata'>
@@ -48,16 +50,19 @@
         </div>
         <div class='post'>
           <p>In the
-<a href="https://vivekiitkgp.github.io/programming/quickplotting-in-r.html">first</a> part
+<a rel="nofollow" href="https://vivekiitkgp.github.io/programming/quickplotting-in-r.html">first</a> part
 of the posts on R, I outlined a couple of useful strategies for quick
 exploratory data analysis and visualization using R programming language. In
 this post, I will share a few more examples (in a case-study like manner) along
 with relevant plots for better demonstration.</p>
+
 <h4>Getting rid of artificial patterns</h4>
+
 <p>Plotting a graph where one or more attributes have identical values results in
 a graph which looks stratified. Closely spaced points with similar values tend
 to fall along a line and create artificial patterns. Consider for example,
 the plot shown below where Y-axis has many identical values.</p>
+
 <figure style="text-align:center">
 <img
     src="/images/non_random.png"
@@ -74,16 +79,17 @@ we add a small random noise independently to the axes which have many identical
 values and contribute to the artifact. It will cause the values to shift
 sufficiently enough to appear dispersed without influencing your analyses (since
 there perturbations are random).</p>
-<div class="codehilite"><pre>&gt; dy &lt;- runif(length(y))
-&gt; plot(x, y+dy)
 
-# in case plotting two independent variables
-&gt; dx &lt;- runif(length(x))
-&gt; plot(x+dx, y+dy)
-</pre></div>
+<div class="codehilite"><pre><code><span class="o">&gt;</span> dy <span class="o">&lt;-</span> runif<span class="p">(</span><span class="kp">length</span><span class="p">(</span>y<span class="p">))</span>
+<span class="o">&gt;</span> plot<span class="p">(</span>x<span class="p">,</span> y<span class="o">+</span>dy<span class="p">)</span>
 
+<span class="c1"># in case plotting two independent variables</span>
+<span class="o">&gt;</span> dx <span class="o">&lt;-</span> runif<span class="p">(</span><span class="kp">length</span><span class="p">(</span>x<span class="p">))</span>
+<span class="o">&gt;</span> plot<span class="p">(</span>x<span class="o">+</span>dx<span class="p">,</span> y<span class="o">+</span>dy<span class="p">)</span>
+</code></pre></div>
 
 <p>The result:</p>
+
 <figure style="text-align:center">
 <img
     src="/images/dy_nonrandom.png"
@@ -95,14 +101,15 @@ Same as previous except with additional random noise.
 </figure>
 
 <h4>Transparency helps</h4>
+
 <p>If we have a large number of data points, our scatter plot can easily become
 a blob despite using <code>pch='.'</code>. A good idea in those cases is to color the
 points with a level of transparency. This allows the regions of the plot with
 dense cluster of points to show up as dark regions when compared to less dense
 regions. It also makes it easy to spot and estimate outliers.</p>
-<div class="codehilite"><pre>&gt; plot(x+dx, y+dy, col=gray(0, .5))
-</pre></div>
 
+<div class="codehilite"><pre><code><span class="o">&gt;</span> plot<span class="p">(</span>x<span class="o">+</span>dx<span class="p">,</span> y<span class="o">+</span>dy<span class="p">,</span> col<span class="o">=</span>gray<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">.5</span><span class="p">))</span>
+</code></pre></div>
 
 <figure style="text-align:center">
 <img
@@ -116,9 +123,11 @@ with increasing transparency. Notice the edges as they appear more diffused.
 </figure>
 
 <p>One can further enrich these visuals by drawing the outlier boundaries
-<a href="https://en.wikipedia.org/wiki/Median_absolute_deviation">MAD-Median rule</a>) and
+<a rel="nofollow" href="https://en.wikipedia.org/wiki/Median_absolute_deviation">MAD-Median rule</a>) and
 coloring the points that lie outside the range.</p>
+
 <p>That’s all for now. Will add more later.</p>
+
         </div>
         <div class='article-end'>
           

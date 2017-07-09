@@ -21,21 +21,24 @@ struggle with visualizations in Python (a short back-story at the end).
 Plotting figures is real quick. An example below using the famous [Titanic](https://www.kaggle.com/c/titanic/data)
 dataset from [Kaggle](http://kaggle.com) competition.
 
-    > data <- read.table(‘data.txt’, header=TRUE) # TSV file
-    > names(d) # fetch columns
-    [1]  "PassengerId" "Survived"   "Pclass"    "Name"        "Sex"
-    [6]  "Age"         "SibSp"      "Parch"     "Ticket"      "Fare"
-    [11] "Cabin"       "Embarked"
-
+```r
+> data <- read.table(‘data.txt’, header=TRUE) # TSV file
+> names(d) # fetch columns
+[1]  "PassengerId" "Survived"   "Pclass"    "Name"        "Sex"
+[6]  "Age"         "SibSp"      "Parch"     "Ticket"      "Fare"
+[11] "Cabin"       "Embarked"
+```
 
 Looking at the columns, it would be interesting to explore the age distribution
 of the people, along with their survivor, class and sex distribution. Let’s take
 a look.
 
-    > boxplot(Age ~ as.factor(Pclass), data=data)
-    > title(xlab='Passenger class', ylab='Passenger age',
-    +       main='Boxplot: Passenger Age vs Class')
-    > abline(h=median(data$Age, na.rm = TRUE), col='red')
+```r
+> boxplot(Age ~ as.factor(Pclass), data=data)
+> title(xlab='Passenger class', ylab='Passenger age',
++       main='Boxplot: Passenger Age vs Class')
+> abline(h=median(data$Age, na.rm = TRUE), col='red')
+```
 
 Boxplot is a good way to visualize the age distribution across passenger
 classes.
@@ -53,8 +56,10 @@ classes.
 
 The histogram below is generated in a single line.
 
-    > hist(data$Age, xlab='Age', main='Histogram of Age', col='brown',
-    +      breaks=50, border='white')
+```r
+> hist(data$Age, xlab='Age', main='Histogram of Age', col='brown',
++      breaks=50, border='white')
+```
 
 <figure style="text-align:center">
 <img
@@ -103,8 +108,11 @@ and helpful functions are compiled below with relevant examples.
 * Use ``pch='.'`` in ``plot``commands to use dots in place of big circles. This
     saves a lot of time especially if there are many points. In case points are
     too small to see, use `cex=2` or higher to increase the point size. Use
-    `par(pch='.')` to set the behavior for all plots.<br><br>
-      ``> plots(data$Age, pch='.', cex=2)`` <br>
+    `par(pch='.')` to set the behavior for all plots.
+    ```r
+    > plots(data$Age, pch='.', cex=2)
+    ```
+
 * Use `data.table` library to load very large tables quickly. This could be upto
     10x faster than default `read.table` function of R. Read more [here](https://github.com/vivekiitkgp/til/blob/master/misc/r-large-data.md).
 

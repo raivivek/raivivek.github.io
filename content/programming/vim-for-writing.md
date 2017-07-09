@@ -8,20 +8,22 @@ title: Vim for Writing
 Extended configuration and plugins for improved experience
 ---
 
-Today I am going to talk about how to configure your Vim and `.vimrc` for
-a better writing environment. [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) is the iMproved version of [vi](https://en.wikipedia.org/wiki/Vi), one of the
-famous early text editors on Unix. It was written by [Bram Moolenaar](https://en.wikipedia.org/wiki/Bram_Moolenaar) and is still
-maintained by him till day. Owing to its native availability across most Unix
-systems and advanced editing capabilities, it became a part of notorious [flame war](https://en.wikipedia.org/wiki/Flaming_(Internet))
-between programmers — [vim or emacs](https://en.wikipedia.org/wiki/Editor_war), which editor to choose?
+I happen to be a [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) [user](https://github.com/vivekiitkgp/Dotfiles-vim)—not
+because I practice terminal voodoo or intend to push the limits of keyboard
+efficiency—because Vim is what I started with and had no reasons to move on.
+A lot of people find Vim to be a reasonable choice, but at the same time,
+a sizable minority also grows averse to it. That's the process of natural
+equilibrium in the community.
 
-I happen to be a [Vim user](https://github.com/vivekiitkgp/Dotfiles-vim). Not because I really understand and appreciate the
-features of Vim anymore than I would have done for [Emacs](https://en.wikipedia.org/wiki/Emacs), but because Vim
-is what I started with and had no reasons to move on. A lot of people find Vim
-to be a reasonable choice, but at the same time, a sizable minority also grows
-averse to it. That's a process of natural equilibrium in the community.
+Over years, I have spent countless hours learning my editor environment and
+customizing it to my needs. It was not an easy task, and to to some extent,
+justified the funny [learning curves of classical text
+editors](https://www.thejach.com/imgs/vim_learning.jpg). Nonetheless, With time
+Vim went beyond an excellent code editor and developed into my primary writing tool for composing
+emails, editing and proof-reading drafts, and writing thesis. Naturally, some configurations adopted
+for code-heavy environment demanded a revisit.
 
-One of the good aspects of Vim is its extreme level of customizability. Vim can
+However, one of the good aspects of Vim is its extreme level of customizability. Vim can
 be extended much beyond its 'out of the box' abilities by writing plugins in
 [Vimscript](https://en.wikipedia.org/wiki/Vimscript) — a programming language
 written specifically for Vim. Since programmers seek to exploit the
@@ -32,10 +34,6 @@ advanced auto-completion plugins, fuzzy-file searches, improved code search and
 navigation, custom shortcuts, and quick compile or debug tools. However, let's
 say this for record, you do not need to know Vimscript to use Vim and neither it
 is one of the most friendly languages to learn.
-
-Although, I do like Vim as an excellent code editor, it is also a fantastic
-choice for general-purpose writing. Almost all of my emails, homework, diary
-notes are written, edited and proof-read in Vim.
 
 An important component of this experience is a set of plugins I added to my
 configuration, allowing me to observe typos, spelling mistakes, auto-correct
@@ -78,12 +76,12 @@ Add additional text objects to Vim. For example, ‘,” (quotes) characters,
 sentence or paragraph level navigation and selection, quickly selecting and
 editing dates and times.
 
-** [vim-LanguageTool](https://github.com/vim-scripts/LanguageTool) **
+**[vim-LanguageTool](https://github.com/vim-scripts/LanguageTool)**
 
 Wrapper around LanguageTool that runs the application in background and allows
 navigation and correction from inside the Vim.
 
-** [vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus) **
+**[vim-online-thesaurus](https://github.com/beloglazov/vim-online-thesaurus)**
 
 Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
 details available.

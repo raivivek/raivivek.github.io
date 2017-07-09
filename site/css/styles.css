@@ -12,7 +12,8 @@ html, body {
 }
 
 body {
-  font: large / 1.556 "Linux Libertine O", "Palatino Linotype", Georgia, serif;
+  font: 18px / 1.566 "Libre Baskerville", "Linux Libertine O", "Palatino Linotype",
+    Georgia, serif;
   word-spacing: 0.1em;
   max-width: 960px;
   margin: 0 auto;
@@ -52,7 +53,11 @@ pre, kbd, samp, code, var {
 
 figcaption {
   padding: 10px;
-  font-size: 0.75em;
+  font-size: 0.75rem;
+}
+
+.footnotes {
+  font-size: small;
 }
 
 ::-moz-selection {
@@ -112,11 +117,11 @@ ul li {
 }
 .banner .banner-title {
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 4rem;
   letter-spacing: 0.3em;
 }
 .banner .banner-subclause {
-  font-size: large;
+  font-size: 1rem;
   margin: 0.5em auto 1em auto;
   padding: 0 5em 0 5em;
 }
@@ -146,6 +151,7 @@ ul li {
 }
 
 .archive {
+  font-size: 0.9rem;
   padding: 0.5em 0 0.5em 0;
   text-align: center;
 }
@@ -187,16 +193,7 @@ ul li {
 }
 
 .codehilite {
-  background-color: #fafaf3;
-  padding: 0.5rem;
-}
-
-.post p:first-of-type:first-letter {
-  font-size: 4em;
-  float: left;
-  margin-top: 7px;
-  margin-right: 5px;
-  line-height: 1;
+  padding: 0.25rem;
 }
 
 .hint {

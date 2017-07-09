@@ -41,9 +41,12 @@ associated features change and are applied to your page dynamically as soon as
 any of them evaluates to `true`.
 
 #### Pseudo code
-    @media (query) {
-    /* CSS Rules used when query matches */
-    }
+
+```css
+@media (query) {
+/* CSS Rules used when query matches */
+}
+```
 
 The expressions can be defined using `media-features` and several
 of them combined into powerful expressions using logical operators `and`,
@@ -51,11 +54,13 @@ of them combined into powerful expressions using logical operators `and`,
 
 #### Example
 
-    @media (min-width: 700px) and (orientation: landscape) {
-        .sidebar {
-            margin: 0;
-        }
+```css
+@media (min-width: 700px) and (orientation: landscape) {
+    .sidebar {
+        margin: 0;
     }
+}
+```
 
 In this example, the expression will evaluate to `true` if your viewport size
 is more than `700px` and orientation set in `landscape` mode, thereby applying
@@ -73,14 +78,16 @@ at [responsivetest.net](http://responsivetest.net/).
 
 An example from my own site:
 
-    /* Apply this rule if the device type is screen and minimum
-     * screen width is 800px.
-     */
+```css
+/* Apply this rule if the device type is screen and minimum
+  * screen width is 800px.
+  */
 
-    @media only screen and (min-width: 50em) {
-        html { font-size: 90%; }
-        #banner { width: 750px; }
-        article { width: 600px; }
-    }
+@media only screen and (min-width: 50em) {
+    html { font-size: 90%; }
+    #banner { width: 750px; }
+    article { width: 600px; }
+}
+```
 
 Few hours spent for worth!

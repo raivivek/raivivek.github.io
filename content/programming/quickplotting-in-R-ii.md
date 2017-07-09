@@ -38,12 +38,14 @@ values and contribute to the artifact. It will cause the values to shift
 sufficiently enough to appear dispersed without influencing your analyses (since
 there perturbations are random).
 
-    > dy <- runif(length(y))
-    > plot(x, y+dy)
+```r
+> dy <- runif(length(y))
+> plot(x, y+dy)
 
-    # in case plotting two independent variables
-    > dx <- runif(length(x))
-    > plot(x+dx, y+dy)
+# in case plotting two independent variables
+> dx <- runif(length(x))
+> plot(x+dx, y+dy)
+```
 
 The result:
 
@@ -65,7 +67,9 @@ points with a level of transparency. This allows the regions of the plot with
 dense cluster of points to show up as dark regions when compared to less dense
 regions. It also makes it easy to spot and estimate outliers.
 
-    > plot(x+dx, y+dy, col=gray(0, .5))
+```r
+> plot(x+dx, y+dy, col=gray(0, .5))
+```
 
 <figure style="text-align:center">
 <img
