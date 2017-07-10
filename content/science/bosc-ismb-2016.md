@@ -14,9 +14,8 @@ conference (and amazing Disney World!), let me roll back a bit and tell you
 about why I was there.
 
 <img
-  alt="Wiki editathon ISMB 2016.jpg"
-  src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg"
-  height="25%" width="35%"></a>
+src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg"
+height="25%" width="30%" alt="ISMB2016">
 
 ### ISCB Competition
 
