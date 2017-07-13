@@ -28,7 +28,7 @@ too, just like previous two years.
 #### August, 2016
 
 <figure style="text-align:center;">
-  <img src="/images/GSoC2016Logo.jpg" width="80%">  </img>
+  <img src="/images/GSoC2016Logo.jpg" style="width:60%;">  </img>
   <figcaption>
     (Google, <a
     href="http://creativecommons.org/licenses/by-nc-nd/3.0/">CC-BY-NC-ND</a>)
@@ -131,7 +131,7 @@ could potentially serve as a useful data source to openSNP users in future.
 
 ### Progress
 
-The main components of the project were: [[commits on GitHub](https://github.com/vivekiitkgp/snpr/commits/master)]
+The main components of the project were: ([commits on GitHub](https://github.com/vivekiitkgp/snpr/commits/master))
 
 * Schema updates, database model, building association table - ✓
 * Updating the controllers and views - ✓

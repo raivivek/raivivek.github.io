@@ -13,9 +13,8 @@ July 8-12 in Orlando, Florida. But before I talk about my experience of the
 conference (and amazing Disney World!), let me roll back a bit and tell you
 about why I was there.
 
-<img
-src="https://www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg"
-height="25%" width="30%" alt="ISMB2016">
+<img alt='ISMB2016' height="35%" width="45%"
+src="//www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg">
 
 ### ISCB Competition
 

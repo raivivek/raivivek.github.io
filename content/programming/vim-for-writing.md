@@ -10,10 +10,10 @@ Extended configuration and plugins for improved experience
 
 I happen to be a [Vim](https://en.wikipedia.org/wiki/Vim_(text_editor)) [user](https://github.com/vivekiitkgp/Dotfiles-vim)—not
 because I practice terminal voodoo or intend to push the limits of keyboard
-efficiency—because Vim is what I started with and had no reasons to move on.
-A lot of people find Vim to be a reasonable choice, but at the same time,
-a sizable minority also grows averse to it. That's the process of natural
-equilibrium in the community.
+efficiency—because Vim is what I started with and had no reasons to move on. If
+you do not find Vim to be a reasonable choice, that is perfectly fine. There
+exists a natural equilibrium in the community where users keep keep updating
+their preferences as the tools evolve.
 
 Over years, I have spent countless hours learning my editor environment and
 customizing it to my needs. It was not an easy task, and to to some extent,
@@ -26,14 +26,14 @@ for code-heavy environment demanded a revisit.
 However, one of the good aspects of Vim is its extreme level of customizability. Vim can
 be extended much beyond its 'out of the box' abilities by writing plugins in
 [Vimscript](https://en.wikipedia.org/wiki/Vimscript) — a programming language
-written specifically for Vim. Since programmers seek to exploit the
-configurability and adapt their tools to their programming environment and
-experience, over thousands of plugins have been written and [made
-available](http://vim-scripts.org/). For example, plugins to add
-advanced auto-completion plugins, fuzzy-file searches, improved code search and
-navigation, custom shortcuts, and quick compile or debug tools. However, let's
-say this for record, you do not need to know Vimscript to use Vim and neither it
-is one of the most friendly languages to learn.
+written specifically for Vim. Since programmers like to configure and adapt
+their tools to their programming environment and experience, over thousands of
+plugins have been written and [made available](http://vim-scripts.org/) for Vim.
+For example, plugins to add advanced auto-completion plugins, fuzzy-file
+searches, improved code search and navigation, custom shortcuts, and quick
+compile or debug tools. However, let's say this for record, you do not need to
+know Vimscript to use Vim and neither it is one of the most friendly languages
+to learn.
 
 An important component of this experience is a set of plugins I added to my
 configuration, allowing me to observe typos, spelling mistakes, auto-correct
