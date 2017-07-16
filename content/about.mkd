@@ -3,13 +3,14 @@ index: True
 author: Vivek Rai
 subtitle: About me
 ---
-<p> </p>
 
-Saluton!
+<div style="margin: 0 auto; width:25%; height:25%; border-radius:50%;
+background-image:url('images/me.jpg'); background-position: center center;
+background-size: cover;"> </div>
 
 I am Vivek Rai, a biotechnology graduate student from [Indian Institute of
-Technology Kharagpur, India](http://iitkgp.ac.in). I am interested in learning
-about biology through hybrid computational and experimental approaches.
+Technology Kharagpur, India](http://iitkgp.ac.in). My research interests lie at
+the intersection of biology, computer science and engineering.
 
 I will be joining [Program in Biomedical Sciences
 (PIBS)](https://medicine.umich.edu/medschool/education/phd-programs/phd-admissions)
@@ -55,14 +56,42 @@ Focusing more on the methods development, I wish to work in *omics* driven areas
 that draw heavily from integrated experimental, quantitative, and computational
 approaches.
 
+Previously, I have worked in [Dr. Gustavo
+Glusman](https://www.systemsbiology.org/bio/gustavo-glusman-phd/) in [Dr. Leroy
+Hood's lab](https://www.systemsbiology.org/people/faculty/hood-lab/) at
+[Institute for Systems Biology](https://systemsbiology.org), and [Prof Sandhya
+S Vishweswariah](http://mrdg.iisc.ernet.in/sandhyav/) at [Indian Institute of
+Science, Bangalore](http://www.iisc.ac.in/).
+
 As this blog develops, I plan to write several primer [articles](science.html)
 on my topics of interest.
 
 Lastly, a (tiny) list of published, public, or in progress work where I have
 made non-trivial contributions:
 
-1. Priyam, Woodcroft, **Rai** et al. 2015. *Sequenceserver: A modern graphical user interface for custom BLAST databases.* Biorxiv. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
-2. Klein, Gupta, **Rai** et al. 2016. *Monitoring the Gender Gap with Wikidata Human Gender Indicators*.  Opensym '16. ([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
+<div class="divider"> </div>
+
+<small>
+
+O'Neill, **Rai**, Kilpatrick; *The International Society for Computational
+Biology and WikiProject Computational Biology: Celebrating Ten Years of
+Collaboration Towards Open Access.* Bioinformatics 2017.
+([abstract](https://doi.org/10.1093/bioinformatics/btx388), [pdf](https://academic.oup.com/bioinformatics/article-pdf/doi/10.1093/bioinformatics/btx388/17744260/btx388.pdf))
+
+Priyam, Woodcroft, **Rai** et al; *Sequenceserver: A modern graphical user
+interface for custom BLAST databases.* Biorxiv
+2015. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142),
+      [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
+
+Klein, Gupta, **Rai** et al; *Monitoring the Gender Gap with Wikidata
+Human Gender Indicators*.  Opensym 2016.
+([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/),
+[pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
+
+</small>
+
+<div class="divider"> </div>
+
 
 ### Programming
 
