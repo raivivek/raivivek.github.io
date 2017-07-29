@@ -32,7 +32,7 @@ useful posts from my older blog are:
 * [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)
 * [Introduction to Functional Programming](http://vivekiitkgp.github.io/old/blog/introduction-to-functional-programming.html)
 
-[Email](mailto:vivekrai.iitkgp@gmail.com) • [LinkedIn](https://www.linkedin.com/in/vivek-rai) • [GitHub](http://github.com/vivekiitkgp) • [Resume (PDF)](https://github.com/vivekiitkgp/resume/raw/master/resume.pdf) • [PGP Key](http://pgp.mit.edu/pks/lookup?op=get&search=0x918E0EF6820BA5F1)
+[Email](mailto:vivekrai.iitkgp@gmail.com) • [LinkedIn](https://www.linkedin.com/in/vivek-rai) • [GitHub](http://github.com/raivivek) • [Resume (PDF)](https://github.com/raivivek/resume/raw/master/resume.pdf) • [PGP Key](http://pgp.mit.edu/pks/lookup?op=get&search=0x918E0EF6820BA5F1)
 
 ### Science
 
