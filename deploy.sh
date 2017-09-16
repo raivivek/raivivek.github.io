@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ensure that you have rebuilt the site and commited your changes
-echo "Deploying to https://vivekiitkgp.github.io's master..."
+echo "Deploying to https://raivivek.github.io's master..."
 
 # Create the subtree
 git subtree split --prefix site -b gh-pages
