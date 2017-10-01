@@ -8,10 +8,11 @@ subtitle: About me
 background-image:url('images/me.jpg'); background-position: center center;
 background-size: cover;"> </div>
 
-I am Vivek, currently a PhD student with [Program in Biomedical Sciences (PIBS)](https://medicine.umich.edu/medschool/education/phd-programs/phd-admissions)
+I am Vivek, a PhD student with [Program in Biomedical Sciences (PIBS)](https://medicine.umich.edu/medschool/education/phd-programs/phd-admissions)
 at [University of Michigan Medical
-School](https://medicine.umich.edu/medschool/). I have an engineering masters in Biotechnology from [Indian
-Institute of Technology Kharagpur, India](http://iitkgp.ac.in).
+School](https://medicine.umich.edu/medschool/). I earned my masters in
+Biotechnology and Biochemical Engineering from [Indian Institute of Technology
+Kharagpur, India](http://iitkgp.ac.in).
 
 This blog (fondly called *shorts*) is
 a personal destination to satisfy my cravings for writing,
@@ -20,9 +21,9 @@ a personal destination to satisfy my cravings for writing,
 My older blog is retired and all previous posts are now
 [archived](/old/index.html). A few useful posts from my older blog are:
 
-* [BLAST+ and Its inconsistencies](http://vivekiitkgp.github.io/old/blog/blast-and-its-inconsistencies.html)
-* [Curated List of Biology Resources - awesome/biology](http://vivekiitkgp.github.io/old/blog/curated-list-of-biology-resources.html)
-* [Introduction to Functional Programming](http://vivekiitkgp.github.io/old/blog/introduction-to-functional-programming.html)
+* [BLAST+ and Its inconsistencies](https://raivivek.in/old/blog/blast-and-its-inconsistencies.html)
+* [Curated List of Biology Resources - awesome/biology](https://raivivek.in/old/blog/curated-list-of-biology-resources.html)
+* [Introduction to Functional Programming](https://raivivek.in/old/blog/introduction-to-functional-programming.html)
 
 [Email](mailto:mail@raivivek.in) • [LinkedIn](https://www.linkedin.com/in/vivek-rai) • [GitHub](http://github.com/raivivek) • [Resume (PDF)](https://github.com/raivivek/resume/raw/master/resume.pdf) • [PGP Key](/gpg.key) ([pgp.mit](https://pgp.mit.edu/pks/lookup?op=get&search=0x3D8880E3484134D3))
 
@@ -88,10 +89,10 @@ personal interest to create [free](https://www.gnu.org/philosophy/free-sw.html)
 (as in [free speech!](http://c2.com/cgi/wiki?FreeAsInBeer)) and
 [open-source](http://c2.com/cgi/wiki?OpenSource) content. During summer 2016,
 I was selected for [Google Summer of Code](https://summerofcode.withgoogle.com)
-program, where I contributed to OpenSNP.org under umbrella of Open
+program, where I contributed to [OpenSNP.org](https://opensnp.org) under umbrella of Open
 Bioinformatics Foundation.
 
-I am also one of the founding members of [metaKGP](http://wiki.metakgp.org).
+I am also one of the founding members of [MetaKGP](http://wiki.metakgp.org).
 
 Few projects with my significant contributions are:
 
@@ -101,25 +102,18 @@ Few projects with my significant contributions are:
 * [Afra](https://github.com/wurlmab/afra)
 
 I use [GNU/Linux](https://www.debian.org/releases/squeeze/i386/ch01s02.html.en),
-keep files under [version control](https://git-scm.com/) and edit using
-[Vim](http://vim.org).
+keep files under [version control](https://git-scm.com/), and use [Vim](http://vim.org).
 
 I have used Python, R, Ruby, JavaScript, MATLAB, BASH in my works.
 
 ### Interests
 
 I am interested in the ideas of [quantified
-self](https://en.wikipedia.org/wiki/Quantified_Self), [getting things
-done](https://en.wikipedia.org/wiki/Getting_Things_Done), [lateral
+self](https://en.wikipedia.org/wiki/Quantified_Self), [lateral
 thinking](https://en.wikipedia.org/wiki/Lateral_thinking), language and
-learning, history of humans, open communities, free knowledge, and societal
-issues like gender biases.
-
-I speak [English](https://en.wikipedia.org/wiki/English_language),
-[Hindi](https://en.wikipedia.org/wiki/Hindi) (native), and I am learning
-[Esperanto](https://en.wikipedia.org/wiki/Esperanto) in my free time.
+learning, anthropology, and open-access knowledge.
 
 ### Hobbies
 
-I enjoy hiking, playing table tennis, long no-purpose walks, camping,
-open-spaces, and a delicious coffee.
+I enjoy hiking, playing table tennis, long walks, camping, open-spaces, and
+coffee.
