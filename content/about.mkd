@@ -4,19 +4,21 @@ author: Vivek Rai
 subtitle: About me
 ---
 
-<div style="margin: 0 auto; width:20%; height:20%; border-radius:50%;
+<div style="margin: 0 auto; width:12vh; height:12vh; border-radius:50%;
 background-image:url('images/me.jpg'); background-position: center center;
 background-size: cover;"> </div>
 
 I am Vivek, a PhD student with [Program in Biomedical Sciences (PIBS)](https://medicine.umich.edu/medschool/education/phd-programs/phd-admissions)
 at [University of Michigan Medical
-School](https://medicine.umich.edu/medschool/). I earned my masters in
+School](https://medicine.umich.edu/medschool/). I earned my bachelors and masters in
 Biotechnology and Biochemical Engineering from [Indian Institute of Technology
 Kharagpur, India](http://iitkgp.ac.in).
 
-This blog (fondly called *shorts*) is
-a personal destination to satisfy my cravings for writing,
-[science](/science.html), [code](/programming.html), and [books](books.html).
+This blog (called *shorts*) is
+a destination to satisfy my cravings for writing, [communicating
+science](/science.html), [code](/programming.html), and [books](books.html).
+The blog name also encapsulates my philosophy of being as concise and clear as
+possible at these things.
 
 My older blog is retired and all previous posts are now
 [archived](/old/index.html). A few useful posts from my older blog are:
@@ -56,7 +58,7 @@ S Vishweswariah](http://mrdg.iisc.ernet.in/sandhyav/) at [Indian Institute of
 Science, Bangalore](http://www.iisc.ac.in/).
 
 Lastly, a (tiny) list of published, public, or in progress work where I have
-made non-trivial contributions:
+contributed:
 
 <div class="divider"> </div>
 
@@ -92,7 +94,7 @@ I was selected for [Google Summer of Code](https://summerofcode.withgoogle.com)
 program, where I contributed to [OpenSNP.org](https://opensnp.org) under umbrella of Open
 Bioinformatics Foundation.
 
-I am also one of the founding members of [MetaKGP](http://wiki.metakgp.org).
+I am also one of the founding members of [MetaKGP](http://wiki.metakgp.org)
 
 Few projects with my significant contributions are:
 
@@ -115,5 +117,4 @@ learning, anthropology, and open-access knowledge.
 
 ### Hobbies
 
-I enjoy hiking, playing table tennis, long walks, camping, open-spaces, and
-coffee.
+I enjoy hiking, table tennis, long walks, camping, open-spaces, and coffee.

@@ -4,18 +4,17 @@
 
 html
   overflow-y: scroll
-  -webkit-font-smoothing: antialiased
   text-rendering:optimizeLegibility
+  -webkit-font-smoothing: antialiased
 
 html, body
   background: #fff
-  color: #000
+  color: #333
   margin: 0
   padding: 0
 
 body
-  font: 18px/1.566 "Libre Baskerville", "Linux Libertine O", "Palatino Linotype", Georgia, serif
-  word-spacing: 0.1em
+  font-family: "Libre Baskerville", "Linux Libertine O", Georgia, serif
   max-width: 960px
   margin: 0 auto
   padding-bottom: 2em
@@ -41,9 +40,9 @@ h3
   font-size:x-large
 
 pre, kbd, samp, code, var
-  font-size: small
   word-spacing: 0
   letter-spacing: 0
+  font-size: .8rem
 
 pre
   white-space: pre-wrap
@@ -73,9 +72,6 @@ a:link, a:visited, a:active
   text-decoration:none
   color: black
 
-ol
-  line-height: 1.5em
-
 img
   display: block
   margin: 0 auto
@@ -93,15 +89,13 @@ ul li
   margin: 0 auto
 
 .content
+  margin: 0 10% 5% 10%
+  line-height: 1.556rem
+
   a:link, a:visited, a:active
-    // color: #0D47A1
-    // color: rgb(128, 64, 64)
-    // color: #2200CC
     color: #2A5DB0
   a:hover
     border-bottom: 1px dotted
-
-  padding: 0 10% 5% 10%
 
 .banner
   text-align: center
@@ -113,13 +107,12 @@ ul li
 
   .banner-subclause
     font-family: "Satisfy", cursive
-    font-size: 1.5rem
-    margin: .5em auto 1em auto
-    padding: 0 5% 0 5%
+    font-size: 1.3rem
+    margin: .5rem auto 1rem auto
 
 .metadata
   text-align: center
-  margin: 0 0 2em 0
+  margin: 1rem 0
 
 .title
   text-align: center
@@ -139,7 +132,7 @@ ul li
 
 .archive
   font-size: .9rem
-  padding: .5em 0 .5em 0
+  padding: .5rem
   text-align: center
 
 .divider
@@ -161,48 +154,30 @@ ul li
   font-style: italic
 
 .article-end
-  text-align: right
-  font-style: italic
+  text-align: center
   text-transform: lowercase
   clear: both
-  margin: 6rem auto 0 auto
-  border-top: 2px solid #B92B27
+  margin: 2rem auto
 
 .share
   text-align: center
-  font-size: 8px
-  padding-bottom: 2em
+  padding: 3rem
 
 .codehilite
   padding: .25rem
-
-// .post
-//   p:first-of-type:first-letter
-//     font-size: 4em
-//     float: left
-//     margin-top: 7px
-//     margin-right: 5px
-//     line-height: 1
 
 .hint
   color: #060
 
 .side-card
-  font-size: 1.1rem
-  width: 25%
-  height: 10%
   display: inline-block
-  font-style: italic
+  clear: both
   color: grey
+  font-size: .8rem
+  list-style-type: none
+  width: 25%
+  margin: 1rem 0
 
 .go-left
   float: left
   text-align: left
-  margin-right: 1rem
-  border-right: 1px solid black
-
-.go-right
-  float: right
-  text-align: right
-  margin-left: 1rem
-  border-left: 1px solid black

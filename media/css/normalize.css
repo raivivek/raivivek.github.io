@@ -29,30 +29,16 @@
 
 @media (max-width: 480px) {
   html {
-    font-size: 16px !important;
-  }
-  body {
-    font-size: 16px !important;
-    /* margin-top: 2rem !important; */
+    font-size: 14px !important;
   }
   .content {
-    padding: 0 5% !important;
+    margin: 0 5% !important;
   }
-  /* .banner-title { */
-  /*   font-size: 4rem !important; */
-  /* } */
-  /* .banner-subclause { */
-  /*   padding: 0px !important; */
-  /*   font-size: small !important; */
-  /* } */
 }
 
 /* @media (max-width: 800px) and (min-width: 480px) { */
 /*   html { */
-/*     font-size: 18px !important; */
-/*   } */
-/*   body { */
-/*     font-size: 18px !important; */
+/*     font-size: 16px !important; */
 /*   } */
 /*   .content { */
 /*     padding: 0 10% !important; */

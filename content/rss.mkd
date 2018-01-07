@@ -1,0 +1,6 @@
+template: rss.haml
+index: True
+sort_key: date
+sort_reverse: True
+author: Vivek Rai
+---
