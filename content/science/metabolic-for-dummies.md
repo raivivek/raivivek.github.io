@@ -18,7 +18,7 @@ generality. The related exercises should help build a theoretical background
 along with necessary programming skills.  
 
 <figure style="text-align:center;">
-  <img src="/images/metabolic_network.png" height="350px">  </img>
+  <img src="/images/metabolic_network.png" style="width:25%;">  </img>
   <figcaption>
       Metabolic network showing interactions between enzymes and metabolites in the
       Arabidopsis thaliana citric acid cycle. Enzymes and metabolites are the red dots

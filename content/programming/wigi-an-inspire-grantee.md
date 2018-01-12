@@ -14,12 +14,14 @@ of Minnesota. The project aims at quantifying and presenting the situation of
 gender gap on Wikipedia by observing the *trends of gender in biography
 articles*.
 
-<figure style="text-align:center"> <a> <img src="/images/wigi_map.png"
-title="Wikipedia Gender Indicators infographic by Maximilian Klein and Frances
-Soong." target="https://github.com/notconfusing/WIGI/issues/22" style="width:
-400px; height: auto"/> </a> <figcaption> An infographic showing some indicators
-of gender trends in Wikipedia biography articles, which is much easier to
-measure and reliable. Designed by Frances Soong and Max Klein. </figcaption>
+<figure>
+<a href="https://github.com/notconfusing/WIGI/issues/22">
+  <img src="/images/wigi_map.png"
+  title="Wikipedia Gender Indicators infographic by Maximilian Klein and Frances Soong." />
+</a>
+<figcaption> An infographic showing some indicators of gender trends in
+Wikipedia biography articles, which is much easier to measure and reliable.
+<div class="credits clear">Designed by Frances Soong and Max Klein.</div> </figcaption>
 </figure>
 
 The obvious question that arises here is that why should we investigate the

@@ -8,9 +8,7 @@ How the BEST ever internship concluded.
 ---
 
 > “Give a man a fish and you feed him for a day. Teach a man to fish and you
-> feed him for a lifetime.”
->
-> Chinese Proverb
+> feed him for a lifetime.” -- Chinese Proverb
 
 The quote above quite vividly describes the experience I had at Indian
 Institute of Science. Finally after 8 weeks (May 11 - July 10) of work within the lab, our
@@ -22,7 +20,7 @@ internship concluded on 10th of July with a [report](https://github.com/vivekiit
      title="Cover page of my presentation delivered at MRDG seminar hall, IISc."
      style="width:auto; height:350px; border:solid 1px #ccc"/>
 <figcaption>
-    A first page of my 12 minute presentation delivered to a group of
+    The first page of my 12 minute presentation delivered to the group of
 professors and students at MRDG seminar hall at Indian Institute of Science,
 Bangalore.
 </figcaption>

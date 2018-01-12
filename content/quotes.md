@@ -13,3 +13,5 @@ subtitle: Epigrams, aphorisms, and quotes!
 > There is a principle which is a bar against all information, which is proof against all arguments, and which cannot fail to keep a man in everlasting ignorance—that principle is contempt prior to investigation. — Herbert Spencer
 
 > One can overcommit to skepticism, just as one can overcommit to certainty. — [fivethirtyeight.com](fivethirtyeight.com)
+
+> “…you can put all kinds of furniture in, but you gotta have steel in the walls.” — Jerry Sienfeld

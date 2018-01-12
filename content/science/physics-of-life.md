@@ -55,11 +55,11 @@ seeks to expose students to an interdisciplinary approach towards doing science,
 and motivate them to seek problems at the interface of biology and other
 sciences.
 
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/simons.png"
     title="9.30am to 5pm schedule with lots of learning and refreshments!"
-    style="width: 125%; margin-left:-12.5%; height: auto"/>
+    style="width: 100%; height: auto"/>
 <figcaption>
   Seven day schedule of talks and presentations. <a href="https://theory.ncbs.res.in/physlife2017">(Further details)</a>
 </figcaption>
@@ -135,7 +135,7 @@ working on during the school.
 <figcaption>
     Participants of 5th Simons-NCBS Physics of Life Monsoon School. Mukund
     Thattai (front row, right) and Sandeep Krishna (extreme right) were one of the organizers
-    and instructors for the school. (Photo credits: Living Machines @ NCBS)
+    and instructors for the school. <div class='credits'>Photo credits: Living Machines @ NCBS</div>
 </figcaption>
 </figure>
 

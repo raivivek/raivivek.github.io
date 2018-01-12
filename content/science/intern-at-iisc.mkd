@@ -11,9 +11,10 @@ An introduction to my research internship
 >
 > Douglas Adams, *The Salmon of Doubt*
 
-THEY SAY EXPERIENCE IS THE best teacher and unless you have had a moment during
-your work when you scream, "Never do it this way again!", you haven't really
-learned it to your heart.
+Douglas Adam was correct about Experience. It is a harsh teacher. The fact that
+words like "struggle", "fail fast", "don't give up" are commonly used to describe some of
+its lessons, speaks about the inherent difficulty of the whole process --- and none
+of it more visible anywhere than when learning something new.
 
 <figure style="text-align:center">
 <img src="/images/alphahemolysin.jpg"

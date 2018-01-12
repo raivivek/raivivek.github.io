@@ -10,9 +10,19 @@ Books are magic.
 
 <small>[*] currently reading, [+] recommended, [-] annoying</small>
 
+### 2018
+
+Challenge: 24
+
 ### 2017
 
+<blockquote><small style="color:brown;"> The year was an eventful one considering other aspects of my
+personal and professional life, but very disappointing for my book reading
+challenge. Will reduce the reading challenge to a realistic goal for next
+year.</small></blockquote>
+
 Challenge: **40**
+Completed: **5**
 
 1. Bloom, Paul 'How Pleasure Works'
 2. **+** MacAskill, William 'Doing Good Better'
@@ -26,7 +36,6 @@ Challenge: **40**
   commonly faced by new graduate students related to their research (impact of
   their research, breadth and depth etc.). Highly recommended if you are
   planning to write a thesis or research proposal. </small> </blockquote>
-6. \* Norman, Dan 'Design of Everyday Things'
 
 ### 2016
 

@@ -29,36 +29,13 @@ once remarked, *“The important thing is not to stop questioning.”*
 
     Dear Prof. XXX:
 
-    I'm sorry for coming up to you with frequent questions. However, it is
-    something that is bugging me for some time, and I am hopeful that your
-    ideas will be of great help in improving my understanding. I will
-    refrain from providing a context at the moment as it may act as a
-    primer.
+    I'm sorry for coming up to you with frequent questions. However, it is something that is bugging me for some time, and I am hopeful that your ideas will be of great help in improving my understanding. I will refrain from providing a context at the moment as it may act as a primer.
 
-    I have grown through years in close unison with areas of computer
-    science, where there is a tradition of publishing ideas in conferences
-    and doing things in open aka open-source way. This ideology has
-    influenced me a lot, and I have striven to appropriately license my
-    work in a manner that allows maximum reuse and persistence even if the
-    work has just started. However, I realize that this tradition is far
-    from true in domains like biology. There is an invisible force pushing
-    for secrecy, patents, rights protection, publish-or-perish. People
-    want to preserve ideas first at any cost, irrespective of whether
-    they'll ever work on that idea or not. I guess most of these arise to
-    internal competition on funding and other resources. But anyway.
+    I have grown through years in close unison with areas of computer science, where there is a tradition of publishing ideas in conferences and doing things in open aka open-source way. This ideology has influenced me a lot, and I have striven to appropriately license my work in a manner that allows maximum reuse and persistence even if the work has just started. However, I realize that this tradition is far from true in domains like biology. There is an invisible force pushing for secrecy, patents, rights protection, publish-or-perish. People want to preserve ideas first at any cost, irrespective of whether they'll ever work on that idea or not. I guess most of these arise to internal competition on funding and other resources. But anyway.
 
-    I wish to know your ideas on ethics and ways of doing science,
-    especially in the context of topics above. Do you think it open
-    research, open science is an unaccepted methodology in the current
-    state of scientific development? What advantages does working behind
-    the screens bring compared to the mutually sharing knowledge and
-    working for advancement in general? Or is it that everything boils
-    down to an act of garnering fame and funding in academia since these
-    two are highly likely to affect the success rate (and research rate)
-    for anyone? What do you think of pre-publication?
+    I wish to know your ideas on ethics and ways of doing science, especially in the context of topics above. Do you think it open research, open science is an unaccepted methodology in the current state of scientific development? What advantages does working behind the screens bring compared to the mutually sharing knowledge and working for advancement in general? Or is it that everything boils down to an act of garnering fame and funding in academia since these two are highly likely to affect the success rate (and research rate) for anyone? What do you think of pre-publication?
 
-    Sorry if I jumbled up a lot of questions in the last paragraph. Please
-    take your time to respond :)
+    Sorry if I jumbled up a lot of questions in the last paragraph. Please take your time to respond :)
 
     Sincerely,
     Vivek

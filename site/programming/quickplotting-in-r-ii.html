@@ -51,24 +51,20 @@
         </div>
         <div class='post'>
           <p>In the
-<a target="_blank" rel="nofollow" href="https://vivekiitkgp.github.io/programming/quickplotting-in-r.html">first</a> part
+<a href="https://vivekiitkgp.github.io/programming/quickplotting-in-r.html">first</a> part
 of the posts on R, I outlined a couple of useful strategies for quick
 exploratory data analysis and visualization using R programming language. In
 this post, I will share a few more examples (in a case-study like manner) along
 with relevant plots for better demonstration.</p>
-
-<h4>Getting rid of artificial patterns</h4>
-
+<h4 id="getting-rid-of-artificial-patterns">Getting rid of artificial patterns</h4>
 <p>Plotting a graph where one or more attributes have identical values results in
 a graph which looks stratified. Closely spaced points with similar values tend
 to fall along a line and create artificial patterns. Consider for example,
 the plot shown below where Y-axis has many identical values.</p>
-
-<figure style="text-align:center">
+<figure> 
 <img
     src="/images/non_random.png"
-    title="Boxplot demo"
-    style="width: 90%; height: auto"/>
+    title="Boxplot demo" />
 <figcaption>
 A stratified appearance of a non-random repeated data.
 </figcaption>
@@ -80,43 +76,39 @@ we add a small random noise independently to the axes which have many identical
 values and contribute to the artifact. It will cause the values to shift
 sufficiently enough to appear dispersed without influencing your analyses (since
 there perturbations are random).</p>
-
-<div class="codehilite"><pre><code><span class="o">&gt;</span> dy <span class="o">&lt;-</span> runif<span class="p">(</span><span class="kp">length</span><span class="p">(</span>y<span class="p">))</span>
+<div class="codehilite"><pre><span></span><span class="o">&gt;</span> dy <span class="o">&lt;-</span> runif<span class="p">(</span><span class="kp">length</span><span class="p">(</span>y<span class="p">))</span>
 <span class="o">&gt;</span> plot<span class="p">(</span>x<span class="p">,</span> y<span class="o">+</span>dy<span class="p">)</span>
 
 <span class="c1"># in case plotting two independent variables</span>
 <span class="o">&gt;</span> dx <span class="o">&lt;-</span> runif<span class="p">(</span><span class="kp">length</span><span class="p">(</span>x<span class="p">))</span>
 <span class="o">&gt;</span> plot<span class="p">(</span>x<span class="o">+</span>dx<span class="p">,</span> y<span class="o">+</span>dy<span class="p">)</span>
-</code></pre></div>
+</pre></div>
+
 
 <p>The result:</p>
-
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/dy_nonrandom.png"
-    title="Noise addition demo"
-    style="width: 125%; margin: 0 -12.5%"/>
+    title="Noise addition demo" />
 <figcaption>
 Same as previous except with additional random noise.
 </figcaption>
 </figure>
 
-<h4>Transparency helps</h4>
-
+<h4 id="transparency-helps">Transparency helps</h4>
 <p>If we have a large number of data points, our scatter plot can easily become
 a blob despite using <code>pch='.'</code>. A good idea in those cases is to color the
 points with a level of transparency. This allows the regions of the plot with
 dense cluster of points to show up as dark regions when compared to less dense
 regions. It also makes it easy to spot and estimate outliers.</p>
+<div class="codehilite"><pre><span></span><span class="o">&gt;</span> plot<span class="p">(</span>x<span class="o">+</span>dx<span class="p">,</span> y<span class="o">+</span>dy<span class="p">,</span> col<span class="o">=</span>gray<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">.5</span><span class="p">))</span>
+</pre></div>
 
-<div class="codehilite"><pre><code><span class="o">&gt;</span> plot<span class="p">(</span>x<span class="o">+</span>dx<span class="p">,</span> y<span class="o">+</span>dy<span class="p">,</span> col<span class="o">=</span>gray<span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">.5</span><span class="p">))</span>
-</code></pre></div>
 
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/quad_plot.png"
-    title="Transparency demo"
-    style="width: 125%; margin: 0 -12.5%"/>
+    title="Transparency demo" />
 <figcaption>
 The <b>col</b> parameter is changed from top left (opaque) to bottom right (.3)
 with increasing transparency. Notice the edges as they appear more diffused.
@@ -124,11 +116,9 @@ with increasing transparency. Notice the edges as they appear more diffused.
 </figure>
 
 <p>One can further enrich these visuals by drawing the outlier boundaries
-<a target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Median_absolute_deviation">MAD-Median rule</a>) and
+<a href="https://en.wikipedia.org/wiki/Median_absolute_deviation">MAD-Median rule</a>) and
 coloring the points that lie outside the range.</p>
-
 <p>That’s all for now. Will add more later.</p>
-
         </div>
         <div class='share'>
           Enjoyed the story? <br>

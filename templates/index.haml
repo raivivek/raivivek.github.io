@@ -16,7 +16,7 @@
           {{ page.content }}
         - for subpage in page.subpages:
           - if subpage.pinned:
-            .list-item
+            .list-item.index-title
               .list-nav
                   - if subpage['category']:
                     {{ subpage.category }}, {{ subpage.date.strftime("%d %b %Y") }}
@@ -28,7 +28,7 @@
                 {{ subpage.excerpt }}
         - for subpage in page.subpages:
           - if not (subpage.type == 404 or subpage.draft or subpage.pinned):
-            .list-item
+            .list-item.index-title
               .list-nav
                   - if subpage['category']:
                     {{ subpage.category }}, {{ subpage.date.strftime("%d %b %Y") }}

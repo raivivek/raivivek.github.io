@@ -50,138 +50,108 @@
           </a>
         </div>
         <div class='post'>
-          <p>I happen to be a <a target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> <a target="_blank" rel="nofollow" href="https://github.com/vivekiitkgp/Dotfiles-vim">user</a>—not
+          <p>I happen to be a <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim</a> <a href="https://github.com/vivekiitkgp/Dotfiles-vim">user</a>—not
 because I practice terminal voodoo or intend to push the limits of keyboard
 efficiency—because Vim is what I started with and had no reasons to move on. If
 you do not find Vim to be a reasonable choice, that is perfectly fine. There
 exists a natural equilibrium in the community where users keep keep updating
 their preferences as the tools evolve.</p>
-
 <p>Over years, I have spent countless hours learning my editor environment and
 customizing it to my needs. It was not an easy task, and to to some extent,
-justified the funny <a target="_blank" rel="nofollow" href="https://www.thejach.com/imgs/vim_learning.jpg">learning curves of classical text
+justified the funny <a href="https://www.thejach.com/imgs/vim_learning.jpg">learning curves of classical text
 editors</a>. Nonetheless, With time
 Vim went beyond an excellent code editor and developed into my primary writing tool for composing
 emails, editing and proof-reading drafts, and writing thesis. Naturally, some configurations adopted
 for code-heavy environment demanded a revisit.</p>
-
 <p>However, one of the good aspects of Vim is its extreme level of customizability. Vim can
-be extended much beyond its &#8217;out of the box&#8217; abilities by writing plugins in
-<a target="_blank" rel="nofollow" href="https://en.wikipedia.org/wiki/Vimscript">Vimscript</a> — a programming language
+be extended much beyond its &lsquo;out of the box&rsquo; abilities by writing plugins in
+<a href="https://en.wikipedia.org/wiki/Vimscript">Vimscript</a> — a programming language
 written specifically for Vim. Since programmers like to configure and adapt
 their tools to their programming environment and experience, over thousands of
-plugins have been written and <a target="_blank" rel="nofollow" href="http://vim-scripts.org/">made available</a> for Vim.
+plugins have been written and <a href="http://vim-scripts.org/">made available</a> for Vim.
 For example, plugins to add advanced auto-completion plugins, fuzzy-file
 searches, improved code search and navigation, custom shortcuts, and quick
-compile or debug tools. However, let&#8217;s say this for record, you do not need to
+compile or debug tools. However, let&rsquo;s say this for record, you do not need to
 know Vimscript to use Vim and neither it is one of the most friendly languages
 to learn.</p>
-
 <p>An important component of this experience is a set of plugins I added to my
 configuration, allowing me to observe typos, spelling mistakes, auto-correct
 minor errors, and even perform an advanced thesaurus lookup. If you are
 interested in such a setup for your Vim, this post might be useful.</p>
-
-<h2>Plugins</h2>
-
-<p>I used the following plugins —  most of them are by <a target="_blank" rel="nofollow" href="https://github.com/reedes/">reedes</a>:</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/reedes/vim-pencil">vim-pencil</a></strong></p>
-
+<h2 id="plugins">Plugins</h2>
+<p>I used the following plugins —  most of them are by <a href="https://github.com/reedes/">reedes</a>:</p>
+<p><strong><a href="https://github.com/reedes/vim-pencil">vim-pencil</a></strong></p>
 <p>The pencil plugin aspires to make Vim as powerful a tool for writers as it is
 for coders by focusing narrowly on the handful of tweaks needed to smooth the
 path to writing prose.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/reedes/vim-wordy">vim-wordy</a></strong></p>
-
+<p><strong><a href="https://github.com/reedes/vim-wordy">vim-wordy</a></strong></p>
 <p>Highlights weak patterns of writing, for example, weasel words, jargon, opinion,
 redundant words, similies.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/reedes/vim-ditto">vim-ditto</a></strong></p>
-
+<p><strong><a href="https://github.com/reedes/vim-ditto">vim-ditto</a></strong></p>
 <p>Highlights repeated use of a phrase of word in your text. For example, over
 usage of <em>very</em>, <em>much</em>, <em>like</em>.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/reedes/vim-litecorrect">vim-litecorrect</a></strong></p>
-
+<p><strong><a href="https://github.com/reedes/vim-litecorrect">vim-litecorrect</a></strong></p>
 <p>Lightweight auto-correct plugin that replaces commonly mistaken patterns of text
 with the correct one, for example, <em>teh</em> to <em>the</em>, <em>heer</em> to <em>here</em>, <em>Im</em> to
 <em>I’m</em>.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/reedes/vim-ditto">vim-lexical</a></strong></p>
-
-<p>Builds on Vim&#8217;s spell-check and thesaurus/dictionary completion.</p>
-
+<p><strong><a href="https://github.com/reedes/vim-ditto">vim-lexical</a></strong></p>
+<p>Builds on Vim&rsquo;s spell-check and thesaurus/dictionary completion.</p>
 <p><strong>vim-textobj-user, vim-textobj-sentence, vim-textobj-quotes</strong></p>
-
 <p>Add additional text objects to Vim. For example, ‘,” (quotes) characters,
 sentence or paragraph level navigation and selection, quickly selecting and
 editing dates and times.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/vim-scripts/LanguageTool">vim-LanguageTool</a></strong></p>
-
+<p><strong><a href="https://github.com/vim-scripts/LanguageTool">vim-LanguageTool</a></strong></p>
 <p>Wrapper around LanguageTool that runs the application in background and allows
 navigation and correction from inside the Vim.</p>
-
-<p><strong><a target="_blank" rel="nofollow" href="https://github.com/beloglazov/vim-online-thesaurus">vim-online-thesaurus</a></strong></p>
-
+<p><strong><a href="https://github.com/beloglazov/vim-online-thesaurus">vim-online-thesaurus</a></strong></p>
 <p>Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
 details available.</p>
-
-<h2>Installation</h2>
-
+<h2 id="installation">Installation</h2>
 <p>The easiest way to set up and maintain these plugins is to use a Vim Plugin
-manager. There are many — <a target="_blank" rel="nofollow" href="https://github.com/tpope/vim-pathogen">Pathogen</a>, <a target="_blank" rel="nofollow" href="https://github.com/Shougo/neobundle.vim/">NeoBundle</a>, <a target="_blank" rel="nofollow" href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, <a target="_blank" rel="nofollow" href="https://github.com/junegunn/vim-plug">Vim-Plug</a>, <a target="_blank" rel="nofollow" href="https://github.com/Shougo/dein.vim">Dein</a> — but
+manager. There are many — <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>, <a href="https://github.com/Shougo/neobundle.vim/">NeoBundle</a>, <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, <a href="https://github.com/junegunn/vim-plug">Vim-Plug</a>, <a href="https://github.com/Shougo/dein.vim">Dein</a> — but
 I find <code>vim-plug</code> easiest to configure and use. The snippets given on this page,
 thus, can be directly used with your vim-plug configuration. However, if you are
 using any other plugin manager, you can find equivalent installation
 instructions on their respective web pages.</p>
-
 <p>Just add these plugins to your <code>.vimrc</code> :</p>
+<div class="codehilite"><pre><span></span>&quot; Writing and Text-Objects plugins {{{
+Plug &#39;kana/vim-textobj-user&#39;
+Plug &#39;vim-scripts/LanguageTool&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-textobj-quote&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-textobj-sentence&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-litecorrect&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-wordy&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-pencil&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;reedes/vim-lexical&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+Plug &#39;dbmrq/vim-ditto&#39;, {&#39;for&#39;: [&#39;text&#39;, &#39;markdown&#39;]}
+&quot; }}}
+</pre></div>
 
-<pre><code>" Writing and Text-Objects plugins {{{
-Plug 'kana/vim-textobj-user'
-Plug 'vim-scripts/LanguageTool', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-textobj-quote', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-textobj-sentence', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-litecorrect', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-wordy', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-pencil', {'for': ['text', 'markdown']}
-Plug 'reedes/vim-lexical', {'for': ['text', 'markdown']}
-Plug 'dbmrq/vim-ditto', {'for': ['text', 'markdown']}
-" }}}
-</code></pre>
 
 <p><small>
 <i>
 The <code>for</code> argument for each of the plugins specifies Vim to load these plugins
-only where certain file types are edited — it&#8217;s called lazy-loading. Also, you
+only where certain file types are edited — it&rsquo;s called lazy-loading. Also, you
 must have <code>vim-plug</code> installed and the code pasted between the <code>call
 plug#begin()</code> and <code>call plug#end</code> statements.
 </i>
 </small></p>
-
 <p>Once done, save your <code>.vimrc</code> and exit. Open Vim again and run <code>PlugInstall</code>.
 Vim-Plug will install the plugins one by one.</p>
-
-<h2>Configuration</h2>
-
+<h2 id="configuration">Configuration</h2>
 <p>The installation is fairly complete — except the Language Tool plugin. It is simply a wrapper of the main
-program which you can download from the <a target="_blank" rel="nofollow" href="https://www.languagetool.org/">website</a> and extract in a convenient
-location on your disk. We&#8217;ll need the path of <code>jar</code> files for proper plugin
+program which you can download from the <a href="https://www.languagetool.org/">website</a> and extract in a convenient
+location on your disk. We&rsquo;ll need the path of <code>jar</code> files for proper plugin
 configuration.</p>
-
 <p>After the installation is complete, we need to add a few lines to initialize to
 initialize the setup:</p>
-
 <p><small>
 <i>
 Note that the lines should be added outside the <code>plug#begin</code> and <code>plug#end</code>
 calls — preferably towards the end.
 </i>
 </small></p>
-
-<pre><code>" Custom {{{
+<div class="codehilite"><pre><span></span>&quot; Custom {{{
 function! Prose()
   call pencil#init()
   call lexical#init()
@@ -189,49 +159,43 @@ function! Prose()
   call textobj#quote#init()
   call textobj#sentence#init()
 
-  " manual reformatting shortcuts
+  &quot; manual reformatting shortcuts
   nnoremap &lt;buffer&gt; &lt;silent&gt; Q gqap
   xnoremap &lt;buffer&gt; &lt;silent&gt; Q gq
   nnoremap &lt;buffer&gt; &lt;silent&gt; &lt;leader&gt;Q vapJgqap
 
-  " force top correction on most recent misspelling
+  &quot; force top correction on most recent misspelling
   nnoremap &lt;buffer&gt; &lt;c-s&gt; [s1z=&lt;c-o&gt;
   inoremap &lt;buffer&gt; &lt;c-s&gt; &lt;c-g&gt;u&lt;Esc&gt;[s1z=`]A&lt;c-g&gt;u
 
-  " replace common punctuation
+  &quot; replace common punctuation
   iabbrev &lt;buffer&gt; -- –
   iabbrev &lt;buffer&gt; --- —
   iabbrev &lt;buffer&gt; &lt;&lt; «
   iabbrev &lt;buffer&gt; &gt;&gt; »
 endfunction
 
-" automatically initialize buffer by file type
+&quot; automatically initialize buffer by file type
 autocmd FileType markdown,mkd,text,rst call Prose()
 
-" invoke manually by command for other file types
+&quot; invoke manually by command for other file types
 command! -nargs=0 Prose call Prose()
 
-let g:languagetool_jar=''
-}}}"
-</code></pre>
+let g:languagetool_jar=&#39;&#39;
+}}}&quot;
+</pre></div>
+
 
 <p>In the last line, insert the path of <code>languagetool-commandline.jar</code> file that
 you extracted from Language Tool binaries downloaded in previous step.</p>
-
-<p>That&#8217;s all. You are set. There are a few advanced usage options that you might
+<p>That&rsquo;s all. You are set. There are a few advanced usage options that you might
 be interested in setting up. The plugin documentations and help files are
-useful for that purpose. Alternatively, take a look at <a target="_blank" rel="nofollow" href="https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim">my configuration</a>.</p>
-
-<h2>Preview</h2>
-
+useful for that purpose. Alternatively, take a look at <a href="https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim">my configuration</a>.</p>
+<h2 id="preview">Preview</h2>
 <hr />
-
-<p><img src="http://i.imgur.com/cXDCwdE.gif" alt="demo" /></p>
-
+<p><img alt="demo" src="http://i.imgur.com/cXDCwdE.gif" /></p>
 <hr />
-
 <p><small> <i> Taken from vim-wordy GitHub repository readme. </i> </small></p>
-
         </div>
         <div class='share'>
           Enjoyed the story? <br>

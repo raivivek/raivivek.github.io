@@ -13,9 +13,13 @@ html, body {
 
 body {
   font-family: "Libre Baskerville", "Linux Libertine O", Georgia, serif;
-  max-width: 960px;
+  max-width: 860px;
   margin: 0 auto;
   padding-bottom: 2em;
+}
+
+.clear {
+  clear: both;
 }
 
 h1:before {
@@ -46,7 +50,14 @@ h3 {
 pre, kbd, samp, code, var {
   word-spacing: 0;
   letter-spacing: 0;
-  font-size: 0.8rem;
+}
+
+hr {
+  width: 50%;
+  border: none;
+  height: 2px;
+  color: #666;
+  background-color: #666;
 }
 
 pre {
@@ -57,13 +68,34 @@ pre {
   word-wrap: break-word;
 }
 
-figcaption {
-  padding: 10px;
-  font-size: 0.75rem;
+figure {
+  margin: 0 0 2rem 0;
 }
 
-.footnotes {
+figcaption {
+  font-size: 14px;
+  padding: 10px;
+  color: #666;
+  line-height: 1rem;
+  text-align: left;
+}
+
+figcaption .credits {
+  color: #999;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.footnote, small[id^="id"] {
+  line-height: 1.4rem;
+  color: #666;
   font-size: small;
+}
+.footnote ol li, .footnote ul li, small[id^="id"] ol li, small[id^="id"] ul li {
+  padding: 0;
+}
+.footnote p, small[id^="id"] p {
+  margin-left: 1rem;
 }
 
 ::-moz-selection {
@@ -86,6 +118,7 @@ a:link, a:visited, a:active {
 img {
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 article {
@@ -96,8 +129,12 @@ article blockquote {
   color: #555;
 }
 
-ul li {
-  margin: 0.25rem 0;
+article p, article blockquote, article ol, article ul, article h1, article h2,
+article h3, article h4, article h5 {
+  margin: 1rem 5% 1rem 5%;
+}
+article ul li, article ol li {
+  padding: 0 0 1rem 0;
 }
 
 .container {
@@ -105,14 +142,30 @@ ul li {
 }
 
 .content {
-  margin: 0 10% 5% 10%;
   line-height: 1.556rem;
 }
 .content a:link, .content a:visited, .content a:active {
-  color: #2A5DB0;
+  color: #326891;
 }
 .content a:hover {
-  border-bottom: 1px dotted;
+  border-bottom: 1px solid;
+}
+
+.index-title a:link, .index-title a:visited, .index-title a:active, .title a:link,
+.title a:visited, .title a:active, .metadata a:link, .metadata a:visited,
+.metadata a:active {
+  color: black;
+}
+
+.toc {
+  margin-bottom: 2em;
+}
+.toc ul li, .toc ol li {
+  margin: 0;
+  padding: 0;
+}
+.toc ul, .toc ol {
+  padding: 0;
 }
 
 .banner {

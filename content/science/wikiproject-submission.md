@@ -15,7 +15,7 @@ a particular genre or of specific interest to a group. In loose terms, WikiProje
 [subreddits](https://www.reddit.com/subreddits) are to [reddit](https://reddit.com).
 
 <figure style="text-align:center;">
-  <img src="/images/quarter_genome.png" height="350px">  </img>
+  <img src="/images/quarter_genome.png" style="width:35%">  </img>
   <figcaption>
     <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology">WikiProject Computational Biology</a>. Figured adapted from The
     Arthrobacter arilaitensis Re117 Genome Sequence Reveals Its Genetic

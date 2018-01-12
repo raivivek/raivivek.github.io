@@ -21,11 +21,10 @@ a graph which looks stratified. Closely spaced points with similar values tend
 to fall along a line and create artificial patterns. Consider for example,
 the plot shown below where Y-axis has many identical values.
 
-<figure style="text-align:center">
+<figure> 
 <img
     src="/images/non_random.png"
-    title="Boxplot demo"
-    style="width: 90%; height: auto"/>
+    title="Boxplot demo" />
 <figcaption>
 A stratified appearance of a non-random repeated data.
 </figcaption>
@@ -49,11 +48,10 @@ there perturbations are random).
 
 The result:
 
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/dy_nonrandom.png"
-    title="Noise addition demo"
-    style="width: 125%; margin: 0 -12.5%"/>
+    title="Noise addition demo" />
 <figcaption>
 Same as previous except with additional random noise.
 </figcaption>
@@ -71,11 +69,10 @@ regions. It also makes it easy to spot and estimate outliers.
 > plot(x+dx, y+dy, col=gray(0, .5))
 ```
 
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/quad_plot.png"
-    title="Transparency demo"
-    style="width: 125%; margin: 0 -12.5%"/>
+    title="Transparency demo" />
 <figcaption>
 The <b>col</b> parameter is changed from top left (opaque) to bottom right (.3)
 with increasing transparency. Notice the edges as they appear more diffused.

@@ -75,7 +75,7 @@ the system, formulate the problem, model the interactions etc., are a few key
 questions that are well understood in company of people who typically are
 better at it.
 
-### Subjects - Overview
+### Overview
 
 A gross categorization of topics along with speakers:
 
@@ -143,13 +143,9 @@ parameters of a bacterial cell that can explain the phenomenon of size and
 growth homeostasis. They have proposed **adder theory** as an explanation to
 cell size homeostasis and hypothesize growth \\( (\lambda) \\) and size \\((\Delta)\\) as two independent
 and sufficient control parameters for bacterial physiological regulation.
-A great example of theory backed by rigid experiments.
+A great example of theory backed by rigid experiments.[^1]
 
-\* <small> Thanks to
-[Cooper](https://www.researchgate.net/profile/Stephen_Cooper/citations),
-[Monod](https://en.wikipedia.org/wiki/Jacques_Monod), [Helmstetter](https://medicine.umich.edu/dept/microbiology-immunology/frederick-c-neidhardt-phd),
-[Schaechter](http://www.bio.sdsu.edu/faculty/schaechter.htm) et al. in 50s.
-</small>
+[^1]: Thanks to [Cooper](https://www.researchgate.net/profile/Stephen_Cooper/citations), [Monod](https://en.wikipedia.org/wiki/Jacques_Monod), [Helmstetter](https://medicine.umich.edu/dept/microbiology-immunology/frederick-c-neidhardt-phd), [Schaechter](http://www.bio.sdsu.edu/faculty/schaechter.htm) et al. in 50s.
 
 #### Metabolism and biochemical networks
 
@@ -234,14 +230,14 @@ I encourage anyone to look up in his papers.
 
 #### Energy, information and computation in cells
 
-How do cells perform computation?(*) And what is it that requires energy? Is
+How do cells perform computation?[^2] And what is it that requires energy? Is
 everything inside a cell only driven by thermodynamics and a careful design of
 free energy cascade? Do these processes have any fundamental limitations that
 biological systems have to obey?
 
 As it turns out, *reality* is not so simple.
 
-\* <small>Sensing the chemical gradient, Random walks, [Slime molds](http://www.nature.com/news/how-brainless-slime-molds-redefine-intelligence-1.11811) etc.</small> 
+[^2]: Sensing the chemical gradient, Random walks, [Slime molds](http://www.nature.com/news/how-brainless-slime-molds-redefine-intelligence-1.11811) etc.</small> 
 
 **Pankaj Mehta**, a physicist from Boston University, works on elegant theories
 to answer these questions. They key motivation of his talks was to investigate

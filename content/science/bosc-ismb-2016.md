@@ -13,8 +13,10 @@ July 8-12 in Orlando, Florida. But before I talk about my experience of the
 conference (and amazing Disney World!), let me roll back a bit and tell you
 about why I was there.
 
-<img alt='ISMB2016' height="35%" width="45%"
+<figure>
+<img alt='ISMB2016' style="width:35%;"
 src="//www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg">
+</figure>
 
 ### ISCB Competition
 
@@ -40,7 +42,7 @@ conference venue, the wonderful Disney World resort, marveling at the sheer
 scale of the conference—thousands of people from all over the world,
 enthusiastically swarming around conference halls and ball rooms.
 
-### BOSC, ISMB and Dinner!
+### BOSC, ISMB, and Dinner!
 
 Since I went a day before the main conference was scheduled to start, I could
 attend a half day session of [BOSC](https://en.wikipedia.org/wiki/Wellcome_Trust), a special interest group meeting, organized
@@ -67,14 +69,12 @@ I met with Alex Bateman and we discussed about organizing the Wikipedia
 editathon the next day. He also introduced me to Alastair K., a post-doctoral
 student at UCSD and also one of the former winner of the ISCB competition.
 
-<p>
+<figure>
 <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISMB_2016_Editathon">
-  <img
-    alt="Wiki editathon ISMB 2016.jpg" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wiki_editathon_ISMB_2016.jpg"
-    height="60%"
-    width="90%">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wiki_editathon_ISMB_2016.jpg" width="100%">
 </a>
-</p>
+</figure>
+
 
 Since I didn't explore much of area around Disney resort the previous day,
 I used the rest of my evening to enjoy the atmosphere and explore dinner

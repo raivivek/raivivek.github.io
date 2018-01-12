@@ -15,9 +15,12 @@ html, body
 
 body
   font-family: "Libre Baskerville", "Linux Libertine O", Georgia, serif
-  max-width: 960px
+  max-width: 860px
   margin: 0 auto
   padding-bottom: 2em
+
+.clear
+  clear: both
 
 h1:before
   content:''
@@ -42,7 +45,14 @@ h3
 pre, kbd, samp, code, var
   word-spacing: 0
   letter-spacing: 0
-  font-size: .8rem
+
+hr
+  width: 50%
+  border: none;
+  height: 2px;
+  /* Set the hr color */
+  color: #666; /* old IE */
+  background-color: #666; /* Modern Browsers */
 
 pre
   white-space: pre-wrap
@@ -51,12 +61,29 @@ pre
   white-space: -o-pre-wrap
   word-wrap: break-word
 
-figcaption
-  padding: 10px
-  font-size: .75rem
+figure
+  margin: 0 0 2rem 0
 
-.footnotes
+figcaption
+  font-size: 14px
+  padding: 10px
+  color: #666
+  line-height: 1rem
+  text-align: left
+
+figcaption .credits
+  color: #999
+  text-transform: uppercase
+  display: inline
+
+.footnote, small[id^="id"]
+  line-height: 1.4rem
+  color:#666 
   font-size: small
+  ol li, ul li
+    padding: 0
+  p
+    margin-left: 1rem
 
 ::-moz-selection
   background: #333
@@ -75,6 +102,7 @@ a:link, a:visited, a:active
 img
   display: block
   margin: 0 auto
+  width: 100%
 
 article
   margin: 0 auto
@@ -82,20 +110,36 @@ article
 article blockquote
   color: #555
 
-ul li
-  margin: .25rem 0
+article
+  p, blockquote, ol, ul, h1, h2, h3, h4, h5
+    margin: 1rem 5% 1rem 5%
+
+  ul li, ol li
+    padding:0 0 1rem 0;
 
 .container
   margin: 0 auto
 
 .content
-  margin: 0 10% 5% 10%
   line-height: 1.556rem
 
   a:link, a:visited, a:active
-    color: #2A5DB0
+    color: #326891
   a:hover
-    border-bottom: 1px dotted
+    border-bottom: 1px solid
+
+.index-title, .title, .metadata
+  a:link, a:visited, a:active
+    color: black
+
+.toc
+  ul li, ol li
+    margin: 0
+    padding: 0
+  ul, ol
+    padding: 0
+  margin-bottom: 2em
+
 
 .banner
   text-align: center

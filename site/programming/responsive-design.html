@@ -50,91 +50,81 @@
           </a>
         </div>
         <div class='post'>
-          <p>Anyone who has subscribed to a web design magazine, a blog, or any <em>hacker&#8217;s</em>
+          <p>Anyone who has subscribed to a web design magazine, a blog, or any <em>hacker&rsquo;s</em>
 newsletter for that matter, must be having their inbox crammed up with
 suggestions on how to create a responsive interface, responsive images, smart
 CSS, or better <em>real life</em> web design. If you too, are wondering as I did, about all
 this fuss and what does it mean to have your website respond, then I hope that this
 short can provide you an initial understanding of concepts.</p>
-
 <p>With an increasing fraction of public connecting to Internet and accessing
-content through their mobile devices, it has become necessary to design your website&#8217;s
+content through their mobile devices, it has become necessary to design your website&rsquo;s
 interface keeping in mind proper layout and display across most of these
 devices (if not all). These devices may vary significantly in resolution,
 aspect-ratio, orientation and other features making it difficult to write clean
 CSS and design a layout that displays appropriately across all.</p>
-
 <p>No worries!</p>
-
-<p><a target="_blank" rel="nofollow" href="https://developer.mozilla.org/en-US/docs/CSS/CSS3">CSS3</a> introduced media
+<p><a href="https://developer.mozilla.org/en-US/docs/CSS/CSS3">CSS3</a> introduced media
 queries that greatly simplified the task of tailoring the content presentation
 without having to change the content itself. As appropriately summed up in this
 responsive web design
-<a target="_blank" rel="nofollow" href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en">guide</a>
+<a href="https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en">guide</a>
 by Google -</p>
-
 <blockquote>
-  <p>Media queries are simple filters that can be applied to CSS styles. They make
-  it easy to change styles based on the characteristics of the device rendering
-  the content, including the display type, width, height, orientation and even
-  resolution.</p>
+<p>Media queries are simple filters that can be applied to CSS styles. They make
+it easy to change styles based on the characteristics of the device rendering
+the content, including the display type, width, height, orientation and even
+resolution.</p>
 </blockquote>
-
 <p>Media queries are simple rules that take a <code>media-type</code> and at least one
 expression that defines the scope of CSS styles within the block of that
 particular query. These queries are evaluated each time as the values of
 associated features change and are applied to your page dynamically as soon as
 any of them evaluates to <code>true</code>.</p>
-
-<h4>Pseudo code</h4>
-
-<div class="codehilite"><pre><code><span class="k">@media</span> <span class="o">(</span><span class="nt">query</span><span class="o">)</span> <span class="p">{</span>
+<h4 id="pseudo-code">Pseudo code</h4>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">query</span><span class="o">)</span> <span class="p">{</span>
 <span class="c">/* CSS Rules used when query matches */</span>
 <span class="p">}</span>
-</code></pre></div>
+</pre></div>
+
 
 <p>The expressions can be defined using <code>media-features</code> and several
 of them combined into powerful expressions using logical operators <code>and</code>,
 <code>not</code>, <code>only</code> and commas (equivalent to <code>or</code>).</p>
-
-<h4>Example</h4>
-
-<div class="codehilite"><pre><code><span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">700px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">orientation</span><span class="o">:</span> <span class="nt">landscape</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nc">.sidebar</span> <span class="p">{</span>
-        <span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+<h4 id="example">Example</h4>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">700px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">orientation</span><span class="o">:</span> <span class="nt">landscape</span><span class="o">)</span> <span class="p">{</span>
+    <span class="p">.</span><span class="nc">sidebar</span> <span class="p">{</span>
+        <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
+</pre></div>
+
 
 <p>In this example, the expression will evaluate to <code>true</code> if your viewport size
 is more than <code>700px</code> and orientation set in <code>landscape</code> mode, thereby applying
 the styles within the block and setting the sidebar margin to 0. Also, note
-that in this example we didn&#8217;t specify any <code>media-type</code> which means <code>media-type
+that in this example we didn&rsquo;t specify any <code>media-type</code> which means <code>media-type
 all</code>. For complete description of supported media types and media features, you
-can refer to <a target="_blank" rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Pseudo-BNF_(for_those_of_you_that_like_that_kind_of_thing)">Mozilla Web
+can refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries#Pseudo-BNF_(for_those_of_you_that_like_that_kind_of_thing)">Mozilla Web
 Guide</a>.</p>
-
 <p>Once you have the media expressions set up based on the devices you want to
 support, you need to design the corresponding rules like changing the layout,
 updating font size, hiding/showing elements and so on depending on your
-requirements. Once you&#8217;re done, go ahead and test for the intended effects
-at <a target="_blank" rel="nofollow" href="http://responsivetest.net/">responsivetest.net</a>.</p>
-
+requirements. Once you&rsquo;re done, go ahead and test for the intended effects
+at <a href="http://responsivetest.net/">responsivetest.net</a>.</p>
 <p>An example from my own site:</p>
-
-<div class="codehilite"><pre><code><span class="c">/* Apply this rule if the device type is screen and minimum</span>
+<div class="codehilite"><pre><span></span><span class="c">/* Apply this rule if the device type is screen and minimum</span>
 <span class="c">  * screen width is 800px.</span>
 <span class="c">  */</span>
 
-<span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">50em</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nt">html</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">90%</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nf">#banner</span> <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">750px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">article</span> <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">600px</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">50em</span><span class="o">)</span> <span class="p">{</span>
+    <span class="nt">html</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">#</span><span class="nn">banner</span> <span class="p">{</span> <span class="k">width</span><span class="p">:</span> <span class="mi">750</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nt">article</span> <span class="p">{</span> <span class="k">width</span><span class="p">:</span> <span class="mi">600</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
+</pre></div>
+
 
 <p>Few hours spent for worth!</p>
-
         </div>
         <div class='share'>
           Enjoyed the story? <br>
