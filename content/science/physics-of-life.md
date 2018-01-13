@@ -11,12 +11,12 @@ Monsoon school on biology by Simons@NCBS
 Frans Johansson, in his popular bestseller book [*The Medici Effect*](https://en.wikipedia.org/wiki/The_Medici_Effect:_Breakthrough_Insights_at_the_Intersection_of_Ideas,_Concepts,_and_Cultures), makes an
 argument:
 
-<small> <blockquote> The <u>intersection</u> is the best place to innovate.
+<blockquote> <p> The <u>intersection</u> is the best place to innovate.
 These innovations change the world in leaps along new directions by opening up
 new fields, creating new information and allowing creators to become leaders.
 This intersection is the place where wildly different ideas from various
-areas bump into each other and build upon each other.
-</blockquote> </small>
+areas bump into each other and build upon each other. </p>
+</blockquote>
 
 He goes on to illustrate, with examples and appealing case studies,
 how starting from artists and painters in the ancient city of Florence to the
@@ -46,7 +46,7 @@ Sciences](http://www.ncbs.res.in) (NCBS), Bangalore. NCBS is a research
 institute, a unit of [Tata Institute of Fundamental
 Research](http://www.tifr.res.in) (TIFR), specializing in biological research.
 It is worth mentioning that TIFR and its centres are one of the top contributors to
-total research output from India.<sup id="a1">[1](#id1)</sup>
+total research output from India.[^1]
 
 The school consists of a seven-day program involving didactic lectures, research
 talks, laboratory visits, interactive sessions, and a final project component.
@@ -58,10 +58,9 @@ sciences.
 <figure>
 <img
     src="/images/simons.png"
-    title="9.30am to 5pm schedule with lots of learning and refreshments!"
-    style="width: 100%; height: auto"/>
+    title="9.30am to 5pm schedule with lots of learning and refreshments!" />
 <figcaption>
-  Seven day schedule of talks and presentations. <a href="https://theory.ncbs.res.in/physlife2017">(Further details)</a>
+  The seven day schedule of talks and presentations. <a href="https://theory.ncbs.res.in/physlife2017">(Further details)</a>
 </figcaption>
 </figure>
 
@@ -80,12 +79,14 @@ of evolution and how it has evolved from Darwin's original ideas from *The
 Origin of Species*. With a discussion on important evolutionary processes, she
 delved into ideas of population genetics using simple models (Hardy-Weinberg
 equilibrium, Wright-Fisher process for example) to understand the role of genetic drift, mutation,
-selection and stochasticity in a population.  [Manoj Gopalkrishnan](http://www.ee.iitb.ac.in/~manojg) from IIT
+selection and stochasticity in a population.
+
+[Manoj Gopalkrishnan](http://www.ee.iitb.ac.in/~manojg) from IIT
 Bombay talked about implications of life and what does it mean to be living,
 from a biological and physical point of view. He then build upon those ideas to
 draw a parallel between [ thermodynamics of a cell and information theory](https://en.wikipedia.org/wiki/Entropy_in_thermodynamics_and_information_theory),
 discussing the design and limitations of [Maxwell's demon](https://www.auburn.edu/~smith01/notes/maxdem.htm) and [Szilard's engine](https://en.wikipedia.org/?title=Szilard_engine&redirect=no);
-and finally building towards The Szilard-Landauer Correspondence.<sup id="a2">[2](#id2)</sup>
+and finally building towards The Szilard-Landauer Correspondence.[^2]
 
 [Vijay Krishnamurthy](https://home.icts.res.in/~vijay/) from ICTS studies physical biology and soft-condensed matter
 physics, and he built upon the same ideas. Posing questions like *What states
@@ -97,7 +98,7 @@ interesting study of which is the [digit patterning in a mouse](https://www.ncbi
 a biological background, I was highly impressed by Vijay's lecture and the way
 he told his story.
 
-On Thursday, Mukund Thattai got back to his ideas from the first day and posed
+On Thursday, [Mukund Thattai](https://www.ncbs.res.in/faculty/thattai) got back to his ideas from the first day and posed
 a question on the precision of life. Specifically, *how precise is life and
 how is his precision generated?* For demonstration, he discussed the famous
 paper by [Berg and Purcell (1977)](https://www.ncbi.nlm.nih.gov/pubmed/911982).
@@ -105,7 +106,7 @@ However, in his approach, he relied very little on the directly borrowing ideas
 from the article and instead discussed the assumptions and approach from the ground
 up. In fact, he went as far as to derive and explain the calculation of sample mean
 and variance. In his last lecture, he discussed his paper on stochastic/noisy
-expression of single gene and modeled its dynamics.<sup id="a3">[3](#id3)</sup>
+expression of single gene and modeled its dynamics.[^3]
 
 On Friday, [Sandeep Krishna](https://www.ncbs.res.in/faculty/sandeep) from NCBS held an interactive session in which we had
 to borrow ideas from biological systems and develop them into a playable game.
@@ -127,15 +128,14 @@ a form of apprenticeship but with more independence and a demand of novelty and
 rigor. Following this session, different groups presented what they have been
 working on during the school.
 
-<figure style="text-align:center">
+<figure>
 <img
     src="/images/simons_all.jpg"
-    title="The Physics of Life team"
-    style="width: 125%; margin-left:-12.5%; height: auto"/>
+    title="The Physics of Life team"/>
 <figcaption>
     Participants of 5th Simons-NCBS Physics of Life Monsoon School. Mukund
     Thattai (front row, right) and Sandeep Krishna (extreme right) were one of the organizers
-    and instructors for the school. <div class='credits'>Photo credits: Living Machines @ NCBS</div>
+    and instructors for the school. <div class='credits'>Living Machines @ NCBS</div>
 </figcaption>
 </figure>
 
@@ -148,8 +148,6 @@ more suitable for junior students, preferably those in their sophomore or junior
 years. Lastly, the school provided an excellent opportunity to meet new friends and
 learn from their interest and enthusiasm.
 
------------
-
-1. <small id=id1> Van Noorden, R. (2015, May 13). India by the numbers. Nature. Springer Nature. [https://doi.org/10.1038/521142a](https://doi.org/10.1038/521142a) </small>[↩](#a1)
-2. <small id=id2> Gopalkrishnan Manoj (2013, Nov 15). The Hot Bit I: The Szilard-Landauer Correspondence. [arXiv:1311.3533v2](https://arxiv.org/abs/1311.3533)</small> [↩](#a2)
-3. <small id=id3>  Ozbudak, E. M., Thattai, M., Kurtser, I., Grossman, A. D., & van Oudenaarden, A. (2002, April 22). Regulation of noise in the expression of a single gene. Nature Genetics. Springer Nature. [ https://doi.org/10.1038/ng869 ](https://doi.org/10.1038/ng869)</small> [↩](#a3)
+[^1]: Van Noorden, R. (2015, May 13). India by the numbers. Nature. Springer Nature. [https://doi.org/10.1038/521142a](https://doi.org/10.1038/521142a)
+[^2]: Gopalkrishnan Manoj (2013, Nov 15). The Hot Bit I: The Szilard-Landauer Correspondence. [arXiv:1311.3533v2](https://arxiv.org/abs/1311.3533)
+[^3]: Ozbudak, E. M., Thattai, M., Kurtser, I., Grossman, A. D., & van Oudenaarden, A. (2002, April 22). Regulation of noise in the expression of a single gene. Nature Genetics. Springer Nature. [ https://doi.org/10.1038/ng869 ](https://doi.org/10.1038/ng869)

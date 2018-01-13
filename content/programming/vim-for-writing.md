@@ -186,5 +186,5 @@ useful for that purpose. Alternatively, take a look at [my configuration](https:
 
 - - -
 ![demo](http://i.imgur.com/cXDCwdE.gif)
+<div class="credits"> Taken from vim-wordy GitHub repository readme. </div>
 - - -
-<small> <i> Taken from vim-wordy GitHub repository readme. </i> </small>

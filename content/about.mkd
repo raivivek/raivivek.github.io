@@ -31,18 +31,18 @@ My older blog is retired and all previous posts are now
 
 ### Science
 
-<small> <blockquote> Science provides intellectual freedom. It enables us to
+<blockquote> <p> Science provides intellectual freedom. It enables us to
 explore and understand the nature of reality around us—from tiny atoms, living
-cells and organisms, to the magnanimous universe. 
+cells and organisms, to the magnanimous universe. </p>
 
-Doing science requires a careful and systematic investigation, perseverance, and
+<p>Doing science requires a careful and systematic investigation, perseverance, and
 an unshakable curiosity to seek knowledge. However, many mistake the path of
 science to be cold and lonely. It is not. It cannot be. It is the most
-intellectual and largest collective experience of the mankind. 
+intellectual and largest collective experience of the mankind. </p>
 
-Thus, all my efforts—internships, projects, term papers, conferences—are
+<p>Thus, all my efforts—internships, projects, term papers, conferences—are
 a desperate reflection of my desire to become a useful member of this community,
-to develop, and explore own *niche*. </blockquote> </small>
+to develop, and explore own *niche* </p>. </blockquote>
 
 I am interested in understanding the structure of genome and its evolution at
 molecular and as well as systems level, how it alters the cell phenotype and
@@ -60,7 +60,7 @@ Science, Bangalore](http://www.iisc.ac.in/).
 Lastly, a (tiny) list of published, public, or in progress work where I have
 contributed:
 
-<div class="divider"> </div>
+----
 
 <small>
 
@@ -69,20 +69,13 @@ Biology and WikiProject Computational Biology: Celebrating Ten Years of
 Collaboration Towards Open Access.* Bioinformatics 2017.
 ([abstract](https://doi.org/10.1093/bioinformatics/btx388), [pdf](https://academic.oup.com/bioinformatics/article-pdf/doi/10.1093/bioinformatics/btx388/17744260/btx388.pdf))
 
-Priyam, Woodcroft, **Rai** et al; *Sequenceserver: A modern graphical user
-interface for custom BLAST databases.* Biorxiv
-2015. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142),
-      [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
+Priyam, Woodcroft, **Rai** et al; *Sequenceserver: A modern graphical user interface for custom BLAST databases.* Biorxiv 2015. ([abstract](http://www.biorxiv.org/content/early/2015/11/27/033142), [pdf](http://www.biorxiv.org/content/biorxiv/early/2015/11/27/033142.full.pdf))
 
-Klein, Gupta, **Rai** et al; *Monitoring the Gender Gap with Wikidata
-Human Gender Indicators*.  Opensym 2016.
-([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/),
-[pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
+Klein, Gupta, **Rai** et al; *Monitoring the Gender Gap with Wikidata Human Gender Indicators*.  Opensym 2016. ([abstract](http://www.opensym.org/2016/08/16/monitoring-the-gender-gap-with-wikidata-human-gender-indicators/), [pdf](http://whgi.wmflabs.org/monitoring-gender-gap.pdf))
 
 </small>
 
-<div class="divider"> </div>
-
+----
 
 ### Programming
 

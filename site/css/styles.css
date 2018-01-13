@@ -76,11 +76,11 @@ figcaption {
   font-size: 14px;
   padding: 10px;
   color: #666;
-  line-height: 1rem;
+  line-height: 1.2rem;
   text-align: left;
 }
 
-figcaption .credits {
+.credits {
   color: #999;
   text-transform: uppercase;
   display: inline;
@@ -142,7 +142,7 @@ article ul li, article ol li {
 }
 
 .content {
-  line-height: 1.556rem;
+  line-height: 1.625rem;
 }
 .content a:link, .content a:visited, .content a:active {
   color: #326891;
