@@ -184,7 +184,9 @@ useful for that purpose. Alternatively, take a look at [my configuration](https:
 
 ## Preview
 
-- - -
-![demo](http://i.imgur.com/cXDCwdE.gif)
-<div class="credits"> Taken from vim-wordy GitHub repository readme. </div>
-- - -
+<figure>
+<img src="http://i.imgur.com/cXDCwdE.gif" />
+<figcaption>
+  Taken from vim-wordy repository.
+</figcaption>
+</figure>

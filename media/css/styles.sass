@@ -14,7 +14,7 @@ html, body
   padding: 0
 
 body
-  font-family: "Libre Baskerville", "Linux Libertine O", Georgia, serif
+  font-family: "Libre Baskerville", "Linux Libertine O", serif
   max-width: 860px
   margin: 0 auto
   padding-bottom: 2em
@@ -32,6 +32,7 @@ h1, h2, h3
   line-height:64px
   text-align:center
   clear:both
+  font-family: 'Libre Franklin', sans-serif
 
 h1
   text-transform:uppercase
@@ -45,6 +46,7 @@ h3
 pre, kbd, samp, code, var
   word-spacing: 0
   letter-spacing: 0
+  font-family: 'PT Mono', monospace
 
 hr
   width: 50%
@@ -59,7 +61,8 @@ pre
   white-space: moz-pre-wrap
   white-space: -pre-wrap
   white-space: -o-pre-wrap
-  word-wrap: break-word
+  overflow-x: auto
+  display: block
 
 figure
   margin: 0 0 2rem 0
@@ -80,10 +83,8 @@ figcaption
   line-height: 1.4rem
   color:#666 
   font-size: small
-  ol li, ul li
-    padding: 0
   p
-    margin-left: 1rem
+    margin: .25rem
 
 ::-moz-selection
   background: #333
@@ -104,54 +105,50 @@ img
   margin: 0 auto
   width: 100%
 
-article
-  margin: 0 auto
-
 article blockquote
   color: #555
 
 article
-  p, blockquote, ol, ul, h1, h2, h3, h4, h5
-    margin: 1rem 5% 1rem 5%
+  p, blockquote, ol, ul, h1, h2, h3, h4, h5, h6
+    margin: 1.5rem 3rem 1.5rem 3rem
 
   ul li, ol li
-    padding:0 0 1rem 0;
+    padding-bottom: .25rem
+  ul, ol
+    padding-left: 0
+    list-style-position: inside
 
 .container
   margin: 0 auto
 
 .content
-  line-height: 1.625rem
+  line-height: 1.725rem
 
   a:link, a:visited, a:active
     color: #326891
   a:hover
     border-bottom: 1px solid
 
-.index-title, .title, .metadata
-  a:link, a:visited, a:active
-    color: black
-
 .toc
+  margin-bottom: 2em
   ul li, ol li
     margin: 0
     padding: 0
   ul, ol
     padding: 0
-  margin-bottom: 2em
-
 
 .banner
   text-align: center
 
   .banner-title
+    font-family: 'Libre Franklin', sans-serif
     text-transform: uppercase
-    font-size: 3.5rem
-    letter-spacing: 0.3em
+    font-size: 4rem
+    letter-spacing: 0.2em
 
   .banner-subclause
     font-family: "Satisfy", cursive
-    font-size: 1.3rem
+    font-size: 1.2rem
     margin: .5rem auto 1rem auto
 
 .metadata
@@ -162,20 +159,21 @@ article
   text-align: center
   text-transform: uppercase
   font-size: 1.25rem
-  letter-spacing: .1em
+  letter-spacing: .1rem
   padding: 2rem 0 2rem 0
 
 .category
   color: black
-  letter-spacing: 0.1em
+  letter-spacing: 0.1rem
 
 .timestamp
   font-style: italic
-  font-size: 15px
-  letter-spacing: 0.1em
+  font-size: .6rem
 
 .archive
-  font-size: .9rem
+  font-size: 0.6rem
+  text-transform: uppercase
+  letter-spacing: 0.1rem
   padding: .5rem
   text-align: center
 
@@ -188,13 +186,13 @@ article
   text-align: center
   margin-top: 1.25em
 
-  a
+  a, a:hover, a:link, a:visited
     text-transform: uppercase
     color: black
     letter-spacing: 0.1em
 
 .list-nav
-  font-size: .75em
+  font-size: .75rem
   font-style: italic
 
 .article-end
@@ -209,6 +207,7 @@ article
 
 .codehilite
   padding: .25rem
+  background: #f3f3f3 !important
 
 .hint
   color: #060

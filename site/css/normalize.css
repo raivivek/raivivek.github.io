@@ -24,83 +24,17 @@
  */
 
 @media all {
-  html { font-size: 16px; }
+  html { font-size: 18px; }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
   html {
     font-size: 14px;
   }
-  .content {
-    /*margin: 0 5% !important;*/
-  }
 }
-
-/* @media (max-width: 800px) and (min-width: 480px) { */
-/*   html { */
-/*     font-size: 16px !important; */
-/*   } */
-/*   .content { */
-/*     padding: 0 10% !important; */
-/*   } */
-/*   .banner-subclause { */
-/*     padding: 0px !important; */
-/*     font-size: 1rem !important; */
-/*   } */
-/* } */
-
-/* Print styles
- */
-
-@media print {
-  *,
-    *:before,
-    *:after {
-      margin: 1em 0 0 0;
-      background: transparent !important;
-      color: #000 !important;
-      box-shadow: none !important;
-      text-shadow: none !important;
-      font-size: 50%;
-    }
-
-    .no-print, .no-print * {
-      display: none !important;
-    }
-
-    a,
-    a:visited {
-      text-decoration: underline;
-    }
-
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-
-    thead {
-      display: table-header-group;
-    }
-
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-
-    img {
-      max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
-  }

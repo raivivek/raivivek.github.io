@@ -21,7 +21,7 @@ content. Like it or not, every day you draw new inferences from things you hear
 about people you may or may not know and create subtle judgments in your mind.
 
 <figure style="text-align:center;">
-  <img src="/images/til.jpg" height="350px">  </img>
+  <img src="/images/til.jpg">  </img>
   <figcaption>
     On a humorous note.
   </figcaption>
