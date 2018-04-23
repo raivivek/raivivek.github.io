@@ -1,6 +1,8 @@
-/* main elements */
 /* few elements inspired from Dive into * by Mark Pilgrim's CSS */
-/* All due acknowledgement to the original source for the relevant parts */
+/* due acknowledgement to the original source for the relevant parts */
+
+
+/* Base CSS */
 
 html
   overflow-y: scroll
@@ -15,7 +17,7 @@ html, body
 
 body
   font-family: "Libre Baskerville", "Linux Libertine O", serif
-  max-width: 860px
+  max-width: 720px
   margin: 0 auto
   padding-bottom: 2em
 
@@ -25,14 +27,18 @@ body
 h1:before
   content:''
 
-h1, h2, h3
+h1, h2, h3, h4, h5, h6
   padding:0
   margin:0
   border:0
   line-height:64px
-  text-align:center
   clear:both
   font-family: 'Libre Franklin', sans-serif
+
+pre, kbd, samp, code, var
+  word-spacing: 0
+  letter-spacing: 0
+  font-family: 'PT Mono', monospace
 
 h1
   text-transform:uppercase
@@ -43,10 +49,6 @@ h2
 h3
   font-size:x-large
 
-pre, kbd, samp, code, var
-  word-spacing: 0
-  letter-spacing: 0
-  font-family: 'PT Mono', monospace
 
 hr
   width: 50%
@@ -63,6 +65,7 @@ pre
   white-space: -o-pre-wrap
   overflow-x: auto
   display: block
+  margin: 1rem
 
 figure
   margin: 0 0 2rem 0
@@ -79,12 +82,20 @@ figcaption
   text-transform: uppercase
   display: inline
 
-.footnote, small[id^="id"]
-  line-height: 1.4rem
-  color:#666 
-  font-size: small
-  p
-    margin: .25rem
+.footer
+  text-align: center
+  margin: 1rem
+
+.social-icons
+  list-style: none
+  margin: auto
+  li
+    display: inline
+    padding: 5px
+
+  li a:hover
+    color: brown
+
 
 ::-moz-selection
   background: #333
@@ -105,29 +116,40 @@ img
   margin: 0 auto
   width: 100%
 
-article blockquote
-  color: #555
-
-article
-  p, blockquote, ol, ul, h1, h2, h3, h4, h5, h6
-    margin: 1.5rem 3rem 1.5rem 3rem
-
-  ul li, ol li
-    padding-bottom: .25rem
-  ul, ol
-    padding-left: 0
-    list-style-position: inside
-
 .container
   margin: 0 auto
 
 .content
-  line-height: 1.725rem
+  line-height: 2rem
+  margin-bottom: 3rem
 
   a:link, a:visited, a:active
-    color: #326891
+    color: #23527c
+    outline: 0
   a:hover
-    border-bottom: 1px solid
+    text-decoration: underline
+
+  p, h1, h2, h3, h4, h5, h6
+    margin: 0 3.5rem 1.5rem 3.5rem
+
+  blockquote
+    color: #555
+
+  ul li, ol li
+    padding-bottom: .25rem
+
+  ul, ol
+    margin: 0 3.5rem 1.5rem 3.5rem
+    padding-left: 0
+
+
+.footnote
+  line-height: 1.4rem
+  color:#666 
+  font-size: small
+  p
+    margin: .25rem !important
+
 
 .toc
   margin-bottom: 2em
@@ -171,7 +193,7 @@ article
   font-size: .6rem
 
 .archive
-  font-size: 0.6rem
+  font-size: 0.75rem
   text-transform: uppercase
   letter-spacing: 0.1rem
   padding: .5rem
@@ -206,7 +228,6 @@ article
   padding: 3rem
 
 .codehilite
-  padding: .25rem
   background: #f3f3f3 !important
 
 .hint
@@ -219,7 +240,7 @@ article
   font-size: .8rem
   list-style-type: none
   width: 25%
-  margin: 1rem 0
+  margin-left: 0rem !important
 
 .go-left
   float: left

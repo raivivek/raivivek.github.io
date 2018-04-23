@@ -4,7 +4,7 @@ author: Vivek Rai
 subtitle: About me
 ---
 
-<div style="margin: 0 auto; width:12vh; height:12vh; border-radius:50%;
+<div style="margin: 2rem auto; width:12vh; height:12vh; border-radius:50%;
 background-image:url('images/me.jpg'); background-position: center center;
 background-size: cover;"> </div>
 
@@ -87,7 +87,7 @@ I was selected for [Google Summer of Code](https://summerofcode.withgoogle.com)
 program, where I contributed to [OpenSNP.org](https://opensnp.org) under umbrella of Open
 Bioinformatics Foundation.
 
-I am also one of the founding members of [MetaKGP](http://wiki.metakgp.org)
+I am also one of the founding members of [MetaKGP](http://wiki.metakgp.org).
 
 Few projects with my significant contributions are:
 

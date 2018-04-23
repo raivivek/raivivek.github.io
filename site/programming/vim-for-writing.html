@@ -1,8 +1,10 @@
 <head>
   <meta charset='utf-8' />
-  <meta content='width=device-width, initial-scale=1' name='viewport' />
+  <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport' />
   <meta content='Musings of a free mind, treasured recollections, and visions of a distant future. Short notes on biology, programming, and science!' name='description' />
   <meta content='Vivek Rai' name='author' />
+  <meta content='index,follow' name='robots' />
+  <meta content='no-referrer' name='referrer' />
   <link href='/css/normalize.css' rel='stylesheet' />
   <link href='/css/styles.css' rel='stylesheet' />
   <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' />
@@ -77,7 +79,7 @@ to learn.</p>
 configuration, allowing me to observe typos, spelling mistakes, auto-correct
 minor errors, and even perform an advanced thesaurus lookup. If you are
 interested in such a setup for your Vim, this post might be useful.</p>
-<h2 id="plugins">Plugins</h2>
+<h3 id="plugins">Plugins</h3>
 <p>I used the following plugins —  most of them are by <a href="https://github.com/reedes/">reedes</a>:</p>
 <p><strong><a href="https://github.com/reedes/vim-pencil">vim-pencil</a></strong></p>
 <p>The pencil plugin aspires to make Vim as powerful a tool for writers as it is
@@ -105,7 +107,7 @@ navigation and correction from inside the Vim.</p>
 <p><strong><a href="https://github.com/beloglazov/vim-online-thesaurus">vim-online-thesaurus</a></strong></p>
 <p>Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
 details available.</p>
-<h2 id="installation">Installation</h2>
+<h3 id="installation">Installation</h3>
 <p>The easiest way to set up and maintain these plugins is to use a Vim Plugin
 manager. There are many — <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>, <a href="https://github.com/Shougo/neobundle.vim/">NeoBundle</a>, <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>, <a href="https://github.com/junegunn/vim-plug">Vim-Plug</a>, <a href="https://github.com/Shougo/dein.vim">Dein</a> — but
 I find <code>vim-plug</code> easiest to configure and use. The snippets given on this page,
@@ -137,7 +139,7 @@ plug#begin()</code> and <code>call plug#end</code> statements.
 </small></p>
 <p>Once done, save your <code>.vimrc</code> and exit. Open Vim again and run <code>PlugInstall</code>.
 Vim-Plug will install the plugins one by one.</p>
-<h2 id="configuration">Configuration</h2>
+<h3 id="configuration">Configuration</h3>
 <p>The installation is fairly complete — except the Language Tool plugin. It is simply a wrapper of the main
 program which you can download from the <a href="https://www.languagetool.org/">website</a> and extract in a convenient
 location on your disk. We&rsquo;ll need the path of <code>jar</code> files for proper plugin
@@ -190,9 +192,9 @@ you extracted from Language Tool binaries downloaded in previous step.</p>
 <p>That&rsquo;s all. You are set. There are a few advanced usage options that you might
 be interested in setting up. The plugin documentations and help files are
 useful for that purpose. Alternatively, take a look at <a href="https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim">my configuration</a>.</p>
-<h2 id="preview">Preview</h2>
+<h3 id="preview">Preview</h3>
 <figure>
-<img src="http://i.imgur.com/cXDCwdE.gif" />
+<img src="http://i.imgur.com/cXDCwdE.gif"/>
 <figcaption>
   Taken from vim-wordy repository.
 </figcaption>
@@ -200,8 +202,8 @@ useful for that purpose. Alternatively, take a look at <a href="https://github.c
         </div>
         <div class='share'>
           Enjoyed the story? <br>
-          <a class='twitter-share-button' data-dnt='true' data-via='vivek_ziel' data-text='Vim For Writing: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
-          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='false' href='https://twitter.com/vivek_ziel'>follow @vivek_ziel</a>
+          <a class='twitter-share-button' data-dnt='true' data-via='raivivek_' data-text='Vim For Writing: Shorts by Vivek Rai' href='https://twitter.com/share' data-hashtags='programming'>tweet |&nbsp;</a>
+          <a class='twitter-follow-button' data-show-screen-name='false' data-dnt='true' data-show-count='true' href='https://twitter.com/raivivek_'>follow @raivivek_</a>
 
         </div>
       </article>

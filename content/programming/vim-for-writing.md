@@ -40,7 +40,7 @@ configuration, allowing me to observe typos, spelling mistakes, auto-correct
 minor errors, and even perform an advanced thesaurus lookup. If you are
 interested in such a setup for your Vim, this post might be useful.
 
-## Plugins
+### Plugins
 
 I used the following plugins —  most of them are by [reedes](https://github.com/reedes/):
 
@@ -87,7 +87,7 @@ Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
 details available.
 
 
-## Installation
+### Installation
 
 The easiest way to set up and maintain these plugins is to use a Vim Plugin
 manager. There are many — [Pathogen](https://github.com/tpope/vim-pathogen), [NeoBundle](https://github.com/Shougo/neobundle.vim/), [Vundle](https://github.com/VundleVim/Vundle.vim), [Vim-Plug](https://github.com/junegunn/vim-plug), [Dein](https://github.com/Shougo/dein.vim) — but
@@ -123,7 +123,7 @@ plug#begin()` and `call plug#end` statements.
 Once done, save your `.vimrc` and exit. Open Vim again and run `PlugInstall`.
 Vim-Plug will install the plugins one by one.
 
-## Configuration
+### Configuration
 
 The installation is fairly complete — except the Language Tool plugin. It is simply a wrapper of the main
 program which you can download from the [website](https://www.languagetool.org/) and extract in a convenient
@@ -182,10 +182,10 @@ That's all. You are set. There are a few advanced usage options that you might
 be interested in setting up. The plugin documentations and help files are
 useful for that purpose. Alternatively, take a look at [my configuration](https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim).
 
-## Preview
+### Preview
 
 <figure>
-<img src="http://i.imgur.com/cXDCwdE.gif" />
+<img src="http://i.imgur.com/cXDCwdE.gif"/>
 <figcaption>
   Taken from vim-wordy repository.
 </figcaption>

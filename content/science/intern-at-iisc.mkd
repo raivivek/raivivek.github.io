@@ -22,7 +22,7 @@ of it more visible anywhere than when learning something new.
      style="width:auto; height:350px"/>
 <figcaption>
     Ribbon diagram of &alpha;-hemolysin 7-subunit membrane protein (PDB file <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/7ahl">7AHL</a>,
-    view down transmembrane pore). </br> <a href="https://commons.wikimedia.org/wiki/File:AlphaHemolysin_membrane_heptamer_7AHL_VwDownPore.jpg"> Wikipedia </a>.
+    view down transmembrane pore). [<a href="https://commons.wikimedia.org/wiki/File:AlphaHemolysin_membrane_heptamer_7AHL_VwDownPore.jpg"> Wikipedia </a>]
 </figcaption>
 </figure>
 

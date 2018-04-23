@@ -13,7 +13,7 @@ html, body {
 
 body {
   font-family: "Libre Baskerville", "Linux Libertine O", serif;
-  max-width: 860px;
+  max-width: 720px;
   margin: 0 auto;
   padding-bottom: 2em;
 }
@@ -26,14 +26,19 @@ h1:before {
   content: '';
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   padding: 0;
   margin: 0;
   border: 0;
   line-height: 64px;
-  text-align: center;
   clear: both;
   font-family: 'Libre Franklin', sans-serif;
+}
+
+pre, kbd, samp, code, var {
+  word-spacing: 0;
+  letter-spacing: 0;
+  font-family: 'PT Mono', monospace;
 }
 
 h1 {
@@ -46,12 +51,6 @@ h2 {
 
 h3 {
   font-size: x-large;
-}
-
-pre, kbd, samp, code, var {
-  word-spacing: 0;
-  letter-spacing: 0;
-  font-family: 'PT Mono', monospace;
 }
 
 hr {
@@ -69,6 +68,7 @@ pre {
   white-space: -o-pre-wrap;
   overflow-x: auto;
   display: block;
+  margin: 1rem;
 }
 
 figure {
@@ -89,13 +89,21 @@ figcaption {
   display: inline;
 }
 
-.footnote, small[id^="id"] {
-  line-height: 1.4rem;
-  color: #666;
-  font-size: small;
+.footer {
+  text-align: center;
+  margin: 1rem;
 }
-.footnote p, small[id^="id"] p {
-  margin: 0.25rem;
+
+.social-icons {
+  list-style: none;
+  margin: auto;
+}
+.social-icons li {
+  display: inline;
+  padding: 5px;
+}
+.social-icons li a:hover {
+  color: brown;
 }
 
 ::-moz-selection {
@@ -121,34 +129,43 @@ img {
   width: 100%;
 }
 
-article blockquote {
-  color: #555;
-}
-
-article p, article blockquote, article ol, article ul, article h1, article h2,
-article h3, article h4, article h5, article h6 {
-  margin: 1.5rem 3rem 1.5rem 3rem;
-}
-article ul li, article ol li {
-  padding-bottom: 0.25rem;
-}
-article ul, article ol {
-  padding-left: 0;
-  list-style-position: inside;
-}
-
 .container {
   margin: 0 auto;
 }
 
 .content {
-  line-height: 1.725rem;
+  line-height: 2rem;
+  margin-bottom: 3rem;
 }
 .content a:link, .content a:visited, .content a:active {
-  color: #326891;
+  color: #23527c;
+  outline: 0;
 }
 .content a:hover {
-  border-bottom: 1px solid;
+  text-decoration: underline;
+}
+.content p, .content h1, .content h2, .content h3, .content h4, .content h5,
+.content h6 {
+  margin: 0 3.5rem 1.5rem 3.5rem;
+}
+.content blockquote {
+  color: #555;
+}
+.content ul li, .content ol li {
+  padding-bottom: 0.25rem;
+}
+.content ul, .content ol {
+  margin: 0 3.5rem 1.5rem 3.5rem;
+  padding-left: 0;
+}
+
+.footnote {
+  line-height: 1.4rem;
+  color: #666;
+  font-size: small;
+}
+.footnote p {
+  margin: 0.25rem !important;
 }
 
 .toc {
@@ -201,7 +218,7 @@ article ul, article ol {
 }
 
 .archive {
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 0.5rem;
@@ -242,7 +259,6 @@ article ul, article ol {
 }
 
 .codehilite {
-  padding: 0.25rem;
   background: #f3f3f3 !important;
 }
 
@@ -257,7 +273,7 @@ article ul, article ol {
   font-size: 0.8rem;
   list-style-type: none;
   width: 25%;
-  margin: 1rem 0;
+  margin-left: 0rem !important;
 }
 
 .go-left {

@@ -7,14 +7,14 @@ title: Writing My Journal of *TILs*
 A collection of Today I Learned objects
 ---
 
-Have you ever wondered about your daily *Niagara of words*?[1]
+Have you ever wondered about your daily *Niagara of words*?[^1]
 
 <br>
 From the moment you wake up in the morning till the moment you go to bed, you
 are exposed to constant sources of information. Whether it’s your morning
 newspaper, your boss, a group of friends that you hang out with, or the
 multitude of feed applications on your smartphone; your brain is being flooded
-by a Niagara of words.[2] Each of these sources has the power to shape
+by a Niagara of words.[^2] Each of these sources has the power to shape
 your thoughts and inevitably your actions by carefully
 <strike>manipulating</strike> controlling the nature, time and placement of the
 content. Like it or not, every day you draw new inferences from things you hear
@@ -67,16 +67,13 @@ that is the trick.*
 So far, it has only been a [few entries](https://github.com/vivekiitkgp/til). It
 is surprisingly challenging, but I am liking it. You may wish to implement such
 a journal of yours as well. And remember, it need not be about code or
-technology. It can be anything that you find useful and wish to remember.[3]
+technology. It can be anything that you find useful and wish to remember.[^3]
 
----
-1. <small>The term is taken from a classic book ‘Language in Thought and
-Action’ by S.I. Hayakawa. </small>
-2. <small>“<i>that by 2015, the sum of media asked for and delivered to consumers on
+[^1]: ‘Language in Thought and Action’ by S.I. Hayakawa.
+[^2]: “<i>that by 2015, the sum of media asked for and delivered to consumers on
    mobile devices and to their homes would take more than 15 hours a day to see
    or hear. That volume is equal to 6.9 million-million gigabytes of
    information, or a daily consumption of nine DVDs worth of data per person per
-   day.</i>” - <b> <a
-   href="http://www.marshall.usc.edu/faculty/centers/ctm/research/how-much-media">How
-   Much Media? 2015, Report on American Consumers</a>. </b> </small>
-3. <small>**[Reddit board - r/todayilearned](https://www.reddit.com/r/todayilearned/)**</small>
+   day.</i>” - <b> <a href="http://www.marshall.usc.edu/faculty/centers/ctm/research/how-much-media">How
+   Much Media? 2015, Report on American Consumers</a>. </b>
+[^3]: [Reddit board - r/todayilearned](https://www.reddit.com/r/todayilearned/)

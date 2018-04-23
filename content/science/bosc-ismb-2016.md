@@ -76,6 +76,9 @@ competition.
 <a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISMB_2016_Editathon">
   <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Wiki_editathon_ISMB_2016.jpg" width="100%">
 </a>
+<figcaption>
+  Edit-a-thon participants at work!
+</figcaption>
 </figure>
 
 Since I didn't explore much of area around Disney resort the previous day,
@@ -143,7 +146,7 @@ It was an exciting experience to be up there on stage! Hope to continue contribu
 <a href="https://twitter.com/hashtag/wikidata?src=hash">#wikidata</a>
 <a href="https://twitter.com/hashtag/wikipedia?src=hash">#wikipedia</a>
 <a href="https://twitter.com/hashtag/ismb16?src=hash">#ismb16</a>
-<a href="https://t.co/rnAzHXTnrd">https://t.co/rnAzHXTnrd</a></p>&mdash; Vivek Rai (@vivek_ziel)
+<a href="https://t.co/rnAzHXTnrd">https://t.co/rnAzHXTnrd</a></p>&mdash; Vivek Rai (@raivivek_)
 <a href="https://twitter.com/vivek_ziel/status/753011721858613248">July 12, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
