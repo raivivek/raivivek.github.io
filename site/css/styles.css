@@ -5,7 +5,6 @@ html {
 }
 
 html, body {
-  background: #fff;
   color: #333;
   margin: 0;
   padding: 0;
@@ -15,7 +14,27 @@ body {
   font-family: "Libre Baskerville", "Linux Libertine O", serif;
   max-width: 720px;
   margin: 0 auto;
-  padding-bottom: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  border-bottom: 1px #333 solid;
+}
+
+::-moz-selection {
+  background: #333;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #333;
+  color: white;
+  text-shadow: none;
 }
 
 .clear {
@@ -27,18 +46,18 @@ h1:before {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Franklin', sans-serif;
   padding: 0;
   margin: 0;
   border: 0;
   line-height: 64px;
   clear: both;
-  font-family: 'Libre Franklin', sans-serif;
 }
 
 pre, kbd, samp, code, var {
+  font-family: 'PT Mono', monospace;
   word-spacing: 0;
   letter-spacing: 0;
-  font-family: 'PT Mono', monospace;
 }
 
 h1 {
@@ -106,20 +125,9 @@ figcaption {
   color: brown;
 }
 
-::-moz-selection {
-  background: #333;
-  color: white;
-  text-shadow: none;
-}
-
-::selection {
-  background: #333;
-  color: white;
-  text-shadow: none;
-}
-
-a:link, a:visited, a:active {
+.no-a a, .no-a a:hover, .no-a a:link, .no-a a:visited {
   text-decoration: none;
+  border: 0;
   color: black;
 }
 
@@ -130,19 +138,22 @@ img {
 }
 
 .container {
+  display: flex;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 .content {
-  line-height: 2rem;
+  line-height: 1.8rem;
   margin-bottom: 3rem;
 }
 .content a:link, .content a:visited, .content a:active {
   color: #23527c;
   outline: 0;
 }
-.content a:hover {
-  text-decoration: underline;
+.content article {
+  display: flex;
+  flex-direction: column;
 }
 .content p, .content h1, .content h2, .content h3, .content h4, .content h5,
 .content h6 {
@@ -161,8 +172,10 @@ img {
 
 .footnote {
   line-height: 1.4rem;
-  color: #666;
+  color: #777;
   font-size: small;
+  border-top: 1px solid #EAEDF0;
+  padding-top: 1rem;
 }
 .footnote p {
   margin: 0.25rem !important;
@@ -179,8 +192,15 @@ img {
   padding: 0;
 }
 
+.banner > * {
+  flex: 1 100%;
+  margin-bottom: 1rem;
+}
+
 .banner {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .banner .banner-title {
   font-family: 'Libre Franklin', sans-serif;
@@ -191,7 +211,18 @@ img {
 .banner .banner-subclause {
   font-family: "Satisfy", cursive;
   font-size: 1.2rem;
-  margin: 0.5rem auto 1rem auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.archive {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.archive a {
+  margin-right: 0.5rem;
 }
 
 .metadata {
@@ -216,13 +247,8 @@ img {
   font-style: italic;
   font-size: 0.6rem;
 }
-
-.archive {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  padding: 0.5rem;
-  text-align: center;
+.timestamp a {
+  margin-right: 0.25rem;
 }
 
 .divider {
@@ -254,8 +280,22 @@ img {
 }
 
 .share {
-  text-align: center;
-  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem;
+  max-width: 100%;
+  border-top: 1px solid #EAEDF0;
+  padding-top: 1rem;
+}
+
+.author-left {
+  align-self: center;
+  flex: 1;
+}
+
+.author-right {
+  flex: 3;
+  align-self: center;
 }
 
 .codehilite {

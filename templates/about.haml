@@ -11,11 +11,14 @@
         .post
           {{ page.content }}
         .share
-          Enjoyed the story? <br>
-          %a{href:"https://twitter.com/share",class:"twitter-share-button",
-          data-text:"{{page.title.title()}}: Shorts by Vivek Rai", data-via:"raivivek_",
-          data-hashtags:"{{page.category}}", data-dnt:"true"} tweet |&nbsp;
-          %a{href:"https://twitter.com/raivivek_",class:"twitter-follow-button",
-          data-show-count:"true", data-show-screen-name:"true", data-dnt:"true"} follow @raivivek_
+          .author-left
+            <div style="width:8vh; height:8vh; border-radius:30%; background-image:url('/images/me.jpg'); background-position: center center; background-size: cover;"/> </div>
+          .author-right
+            Enjoyed the story?<br>
+            %a{href:"https://twitter.com/share",class:"twitter-share-button",
+            data-text:"{{page.title.title()}}: Shorts by Vivek Rai", data-via:"raivivek_",
+            data-hashtags:"{{page.category}}",data-dnt:"true"} tweet |&nbsp;
+            %a{href:"https://twitter.com/raivivek_",class:"twitter-follow-button",
+            data-show-count:"true",data-show-screen-name:"false",data-dnt:"true"} follow @raivivek_
   %script
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');

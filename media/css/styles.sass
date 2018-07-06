@@ -1,7 +1,3 @@
-/* few elements inspired from Dive into * by Mark Pilgrim's CSS */
-/* due acknowledgement to the original source for the relevant parts */
-
-
 /* Base CSS */
 
 html
@@ -10,7 +6,6 @@ html
   -webkit-font-smoothing: antialiased
 
 html, body
-  background: #fff
   color: #333
   margin: 0
   padding: 0
@@ -19,7 +14,23 @@ body
   font-family: "Libre Baskerville", "Linux Libertine O", serif
   max-width: 720px
   margin: 0 auto
-  padding-bottom: 2em
+
+a
+  text-decoration: none
+  color: #333
+
+a:hover
+  border-bottom: 1px #333 solid
+
+::-moz-selection
+  background: #333
+  color:white
+  text-shadow: none
+
+::selection
+  background: #333
+  color:white
+  text-shadow: none
 
 .clear
   clear: both
@@ -28,17 +39,17 @@ h1:before
   content:''
 
 h1, h2, h3, h4, h5, h6
+  font-family: 'Libre Franklin', sans-serif
   padding:0
   margin:0
   border:0
   line-height:64px
   clear:both
-  font-family: 'Libre Franklin', sans-serif
 
 pre, kbd, samp, code, var
+  font-family: 'PT Mono', monospace
   word-spacing: 0
   letter-spacing: 0
-  font-family: 'PT Mono', monospace
 
 h1
   text-transform:uppercase
@@ -49,14 +60,12 @@ h2
 h3
   font-size:x-large
 
-
 hr
   width: 50%
-  border: none;
-  height: 2px;
-  /* Set the hr color */
-  color: #666; /* old IE */
-  background-color: #666; /* Modern Browsers */
+  border: none
+  height: 2px
+  color: #666
+  background-color: #666
 
 pre
   white-space: pre-wrap
@@ -89,6 +98,7 @@ figcaption
 .social-icons
   list-style: none
   margin: auto
+
   li
     display: inline
     padding: 5px
@@ -96,20 +106,11 @@ figcaption
   li a:hover
     color: brown
 
-
-::-moz-selection
-  background: #333
-  color:white
-  text-shadow: none
-
-::selection
-  background: #333
-  color:white
-  text-shadow: none
-
-a:link, a:visited, a:active
-  text-decoration:none
-  color: black
+.no-a
+  a, a:hover, a:link, a:visited
+    text-decoration:none
+    border: 0
+    color: black
 
 img
   display: block
@@ -117,17 +118,22 @@ img
   width: 100%
 
 .container
+  display: flex
   margin: 0 auto
+  flex-direction: column
+
 
 .content
-  line-height: 2rem
+  line-height: 1.8rem
   margin-bottom: 3rem
 
   a:link, a:visited, a:active
     color: #23527c
     outline: 0
-  a:hover
-    text-decoration: underline
+
+  article
+    display: flex
+    flex-direction: column
 
   p, h1, h2, h3, h4, h5, h6
     margin: 0 3.5rem 1.5rem 3.5rem
@@ -145,11 +151,13 @@ img
 
 .footnote
   line-height: 1.4rem
-  color:#666 
+  color: #777
   font-size: small
+  border-top: 1px solid #EAEDF0
+  padding-top: 1rem
+
   p
     margin: .25rem !important
-
 
 .toc
   margin-bottom: 2em
@@ -159,8 +167,14 @@ img
   ul, ol
     padding: 0
 
+.banner > *
+  flex: 1 100%
+  margin-bottom: 1rem
+
 .banner
-  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
 
   .banner-title
     font-family: 'Libre Franklin', sans-serif
@@ -171,7 +185,17 @@ img
   .banner-subclause
     font-family: "Satisfy", cursive
     font-size: 1.2rem
-    margin: .5rem auto 1rem auto
+    text-align: center
+    margin-bottom: 2rem
+
+.archive
+  font-size: 0.75rem
+  text-transform: uppercase
+  letter-spacing: 0.1rem
+  text-align: center
+
+  a
+    margin-right: .5rem
 
 .metadata
   text-align: center
@@ -192,12 +216,8 @@ img
   font-style: italic
   font-size: .6rem
 
-.archive
-  font-size: 0.75rem
-  text-transform: uppercase
-  letter-spacing: 0.1rem
-  padding: .5rem
-  text-align: center
+  a
+    margin-right: .25rem
 
 .divider
   width: 500px
@@ -224,8 +244,22 @@ img
   margin: 2rem auto
 
 .share
-  text-align: center
-  padding: 3rem
+  display: flex
+  justify-content: space-between
+  margin: 3rem
+  max-width: 100%
+  border-top: 1px solid #EAEDF0
+  padding-top: 1rem
+
+
+.author-left
+  align-self: center
+  flex: 1
+
+.author-right
+  flex: 3
+  align-self: center
+
 
 .codehilite
   background: #f3f3f3 !important
