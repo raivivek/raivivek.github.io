@@ -201,6 +201,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 225px;
 }
 .banner .banner-title {
   font-family: 'Libre Franklin', sans-serif;
