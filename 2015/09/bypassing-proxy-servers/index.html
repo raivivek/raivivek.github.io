@@ -1,0 +1,85 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=author content>
+<meta name=robots content="index,follow">
+<meta name=referrer content="no-referrer">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=https://raivivek.in/img/favicon.ico type=image/x-icon>
+<link rel=canonical href=https://raivivek.in/2015/09/bypassing-proxy-servers/>
+<title>Bypassing Proxy Servers | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css>
+<script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script>
+</head>
+<body>
+<div class=c-banner>
+<div class=c-banner-title>
+SHORTS
+</div>
+<div class=c-banner-subclause>
+<i>☘☘☘ by Vivek </i>
+</div>
+<div class=c-nav-bar>
+<a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a>
+</div>
+</div>
+<article>
+<header>
+<h2>Bypassing Proxy Servers</h2>
+<p class=subtitle> Using a DigitalOcean droplet, thanks to GitHub. </p>
+</header>
+<p>IIT Kharagpur uses a proxy server to enable outside internet connections. Whatever be the
+use case from the perspective of the institution, it is a nightmare to use for us
+students. Most of the standard ports are blocked resulting in SSH difficulties, accessing
+<em>ill-fated</em> websites, or inability to use programs that connect directory to a specific
+address or port. Further, not all applications honor the proxy settings further increasing
+your frustration, specially if you are a programmer.</p>
+<p>After being bugged by this for around 3 years and having specific difficulties
+working on <a href=http://vivekiitkgp.github.io/shorts/programming/wigi-an-inspire-grantee.html#main>WIGI
+project</a>,
+I finally decided to take care of this problem once and for all by purchasing
+myself a <a href=https://www.digitalocean.com>DigitalOcean</a>
+<a href=https://www.digitalocean.com/community/questions/what-is-a-droplet>droplet</a>, a virtual
+private server (VPS).
+Thanks to the <a href=https://education.github.com/pack>GitHub student developer
+pack</a>, which gives a 100$ credit in your
+account, I can now enjoy 20 months of seamless service at the rate of 5$ per
+month. If you are skeptical of
+being charged more, rest assured that exceeding 1 TB of bandwidth utilization
+per month is <em>very</em> difficult. The instance also offers you a 20 GB of SSD
+storage.</p>
+<p>The only requirement is that you need a credit card or PayPal account to
+activate your DigitalOcean account. This is also the case with Amazon Web
+Services (AWS), so it is not an issue if you were already using it. For others,
+procuring either of these essentially boils down to having an access to a
+credit card. During setup, your account is billed for one time with 5$ to
+ensure that payments are successfully processed. Don&rsquo;t worry, this money is added to
+your total account credit.</p>
+<h2 id=setup>Setup&nbsp;<a class=anchor href=#setup></a> </h2>
+<p>Setting up a droplet is surprisingly easy and much more comforting if you are a
+frequent user of Amazon services. Within minutes, I could log into my server,
+setup SSH configuration and add more accounts. Make sure you find a transient
+access to your server from other source (your mobile!) to configure <code>sshd</code> to
+listen on port 443.</p>
+<h2 id=proxy>Proxy&nbsp;<a class=anchor href=#proxy></a> </h2>
+<p>I also setup up local SSH configuration to quickly create a <a href=https://mikeash.com/ssh_socks.html>SOCKS
+proxy</a> for tunneling web traffic and some
+programs. <a href=https://topcoder.com>Topcoder</a> had given a lot of trouble in early
+days .. but now? a breeze.</p>
+</article>
+<div class=footer>
+<div class=footer-content>
+<div>
+<ul>
+</ul>
+<a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a>
+</div>
+</div>
+</div>
+</body>
+</html>
