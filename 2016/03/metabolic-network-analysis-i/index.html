@@ -1,0 +1,169 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=author content>
+<meta name=robots content="index,follow">
+<meta name=referrer content="no-referrer">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon>
+<link rel=canonical href=https://raivivek.in/2016/03/metabolic-network-analysis-i/>
+<title>Metabolic Network Analysis - I | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css>
+<script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script>
+</head>
+<body>
+<div class=c-banner>
+<div class=c-banner-title>
+SHORTS
+</div>
+<div class=c-banner-subclause>
+<i>by Vivek </i>
+</div>
+<div class=c-nav-bar>
+<a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a>
+</div>
+</div>
+<article>
+<header>
+<h2>Metabolic Network Analysis - I</h2>
+<p class=subtitle> The Beginners’ guide </p>
+</header>
+<p>In this short tutorial, we will explore the basic steps of a metabolic network
+analysis.</p>
+<p>For our convenience, we will avoid using full models or discuss their
+reconstruction methods, instead focus on simple reactions to create
+a theoretical background. However, the steps can be scaled without any loss of
+generality. The related exercises should help build a theoretical background
+along with necessary programming skills.<br>
+<label for=marginnote-2c4c82eec6e7d87a542530a4a491f980-0 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-2c4c82eec6e7d87a542530a4a491f980-0 class=margin-toggle>
+<span class=marginnote>
+<img src=/images/metabolic_network.png>
+Metabolic network showing interactions between enzymes and metabolites in the Arabidopsis thaliana citric acid cycle. Enzymes and metabolites are the red dots and interactions between them are the lines. <a href=https://en.wikipedia.org/wiki/Metabolic_network_modelling>Wikipedia</a>
+</span>
+</p>
+<h3 id=introduction>Introduction&nbsp;<a class=anchor href=#introduction></a> </h3>
+<h4 id=what-is-a-metabolic-network>What is a metabolic network?&nbsp;<a class=anchor href=#what-is-a-metabolic-network></a> </h4>
+<p>A metabolic network is just a collection of <em>nodes</em> and <em>edges</em> used to
+represent the relationship between different cellular components. These
+components could be genes, enzymes, reactions, metabolites or other factors.
+The nodes store data while edges relate them according to a specific nature of
+relationship. For example, think of a social network where people are nodes and edges
+store the friendship information.</p>
+<p>A metabolic network, thus, must represent the metabolic process using nodes and
+edges.</p>
+<h4 id=storing-the-data>Storing the data&nbsp;<a class=anchor href=#storing-the-data></a> </h4>
+<p>Thousands of chemical reactions occur at a time, even in relatively simpler
+organisms like <em>E.coli</em>. A popular and computationally amenable way to store
+this information is in the form of a matrix, called a <a href="http://www.bio-physics.at/wiki/index.php?title=Stoichiometric_Matrix"><strong>stoichiometry
+matrix</strong></a>.</p>
+<p>A stoichiometry matrix records the relationship between different metabolites and
+the particular chemical reactions they participate in. If you are familiar with
+networks already, it is similar to an <a href=https://en.wikipedia.org/wiki/Adjacency_matrix>adjacency matrix</a> representation.</p>
+<h4 id=example>Example&nbsp;<a class=anchor href=#example></a> </h4>
+<p>Consider the following sample of chemical reactions take from <em>E.coli</em> BL21(DE3)
+strain, a popularly used <a href=https://en.wikipedia.org/wiki/Protein_expression_%28biotechnology%29>expression host</a>.</p>
+<p>$$ ade_c + prpp_c → amp_c + ppi_c \tag{1} $$
+$$ 3amac_c + h_c + h2o_c → msa_c + nh4_c \tag{2} $$
+$$ accoa_c + h2o_c + oaa_c → cit_c + coa_c + h_c \tag{3} $$</p>
+<p><span class=hint>Hint: Confused about symbols? See <a href=http://bigg.ucsd.edu/models/iECD_1391/reactions/ADPT>1</a>, <a href=http://bigg.ucsd.edu/models/iECD_1391/reactions/3AMACHYD>2</a>, <a href=http://bigg.ucsd.edu/models/iECD_1391/reactions/CS>3</a> </span></p>
+<p>A complete set of reactions along with list of metabolites and genes for
+a particular organism can be obtained from online databases like
+<a href=http://bigg.ucsd.edu/>BiGG</a>, <a href=https://kegg.jp>KEGG</a>.</p>
+<p>The dataset can be obtained in several file formats like <a href=https://en.wikipedia.org/wiki/JSON>JSON</a>,
+<a href=http://sbml.org>SBML</a>, or <a href=http://www.mathworks.com/help/pdf_doc/matlab/matfile_format.pdf>MAT</a> depending on application used for further analysis. We’ll
+come back to this later.</p>
+<h3 id=network-construction>Network construction&nbsp;<a class=anchor href=#network-construction></a> </h3>
+<h4 id=creating-stoichiometry-matrix>Creating stoichiometry matrix&nbsp;<a class=anchor href=#creating-stoichiometry-matrix></a> </h4>
+<p>To construct a stoichiometry matrix, we need to have the following information
+(both of which are present in model file):</p>
+<ul>
+<li>Participating metabolites \(( \vec{m} )\)</li>
+<li>(Balanced) Chemical reactions \(( \vec{R} )\)</li>
+</ul>
+<p>Following from previous example, we can see that \( \vec{m} \) is
+a vector of size \( m = 13 \) (unique metabolites) and \( \vec{R} \) is of
+size \( n = 3 \). The resulting stoichiometry matrix \(( S )\) is of size \(
+m \times n \), where each row represents a metabolite and each column represents
+a reaction. Each cell \((c_{ij})\) populated using a simple rule — \(a\) if
+a metabolite is produced in that reaction, \(- a\) if consumed, 0 otherwise;
+where \(a\) is the stoichiometry coefficient of the metabolite.</p>
+<p>For example, a stoichiometry for reaction \( (1) \) will be:</p>
+<p>$$
+\mathbf{S} =
+\left(
+\begin{array}{c|c}
+ade_c & -1\\ prpp_c & -1\\ amp_c & 1\\ ppi_c & 1 \\
+\end{array}\right)
+$$</p>
+<span class=hint>
+Exercise: Try writing S matrix for all three reactions.<br>
+Exercise: Write a (Python?) script to create S matrix from a <a href=https://gist.github.com/vivekiitkgp/6474b821b96dfdb9b21a>list</a> of reactions. <br>
+Exercise: Write a program to find all the reactions in which a given metabolite participates.
+</span>
+<h4 id=other-matrices>Other matrices&nbsp;<a class=anchor href=#other-matrices></a> </h4>
+<p>Similarly, you can create different matrices containing other kind of reaction
+information. For example, elemental matrix (\( \vec{E} \)), charge-balance
+matrix, moiety matrix, flux matrix (\( \vec{v} \)).</p>
+<p>These matrices combined with a stoichiometry matrix yield necessary information
+about a reaction, like atoms and charged species involved, rate of concentration
+changes etc.</p>
+<p>The advantage of using matrices is that conservation principles can be verified
+through a simple matrix multiplication.</p>
+<h3 id=visualizing-the-network>Visualizing the network&nbsp;<a class=anchor href=#visualizing-the-network></a> </h3>
+<p>Once the metabolic network model grows beyond a few reactions and metabolites,
+it becomes increasingly difficult to visualize the relationship between the
+components. Visualization allows us to observe key network structures, critical
+pathways and important metabolites without much analysis.</p>
+<h4 id=reaction-and-compound-maps>Reaction and compound maps&nbsp;<a class=anchor href=#reaction-and-compound-maps></a> </h4>
+<p>A common strategy is to visualize the content of stoichiometry matrix in two
+ways - a <em>reaction map</em> and <em>metabolite map</em>.</p>
+<p>A reaction map is drawn with metabolites as nodes and reactions as edges. The
+edges link the metabolite nodes which are consumed in the reaction to the
+metabolite nodes which are produced in the reaction. The nature of
+(ir)reversible nature of reaction can be indicated by the direction of the link.</p>
+<p>On the other hand, a compound map consists of reactions as nodes and metabolites
+as edges. In a similar manner, edges link the reaction nodes where a metabolite
+is produced to the reaction where it is consumed.</p>
+<p>Both of these representations draw attention to different aspects of the same
+metabolic network. For example, the reaction map allows us to visualize
+the most important metabolites of the network while the metabolite map allows us
+to distinguish the core reactions.</p>
+<span class=hint>
+Exercise: Write the compound map for the S matrix of above three reactions.<br>
+Exercise: Write a program to generate reaction and compound map graphs in
+memory.
+</span>
+<h4 id=other-tools>Other tools&nbsp;<a class=anchor href=#other-tools></a> </h4>
+<p>Some common ways to visualize a network is to use a tool like
+<a href=http://www.cytoscape.org/>Cytospace</a> or <a href=http://visant.bu.edu/>visANT</a>.</p>
+<span class=hint>
+Exercise: Draw the graphs using a visualization library in your language of
+choice (networkx in Python).
+</span>
+<h3 id=further>Further&nbsp;<a class=anchor href=#further></a> </h3>
+<p>A lot remains to be discussed. In the next tutorial of this series, we’ll look
+closely at stoichiometry matrix, use complete models, derive useful properties,
+and learn ways to simulate the model. Towards the end, I hope that a small
+case-study will serve as a comprehensive example to assimilate all the
+information.</p>
+<p>In the meantime, feel free to experiment with the exercises and send in your
+suggestions.</p>
+</article>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML-full" type=text/javascript></script>
+<div class=footer>
+<div class=footer-content>
+<div>
+<ul>
+</ul>
+<a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a>
+</div>
+</div>
+</div>
+</body>
+</html>

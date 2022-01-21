@@ -1,0 +1,144 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta name=author content>
+<meta name=robots content="index,follow">
+<meta name=referrer content="no-referrer">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon>
+<link rel=canonical href=https://raivivek.in/2016/05/quick-data-plotting-in-r-i/>
+<title>Quick Data Plotting in R - I | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css>
+<script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script>
+</head>
+<body>
+<div class=c-banner>
+<div class=c-banner-title>
+SHORTS
+</div>
+<div class=c-banner-subclause>
+<i>by Vivek </i>
+</div>
+<div class=c-nav-bar>
+<a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a>
+</div>
+</div>
+<article>
+<header>
+<h2>Quick Data Plotting in R - I</h2>
+<p class=subtitle> Useful tips for exploratory data analysis </p>
+</header>
+<p>Python is my all time favorite programming language. I use it all the time. It
+is simple, readable and easy to get started, something which I picked up four
+years ago when I went through the first offering of <em>Interactive Programming
+with Python</em> course on Coursera. Python’s simplicity and appeal has continued to
+grow over time, supported by a wide community and a rich environment of
+packages.</p>
+<p>Today, however, I am not going to talk about Python. This post shares some of my
+experiences with <a href=https://www.r-project.org/>R programming language</a> and how it helped me postpone my
+struggle with visualizations in Python (a short back-story at the end).</p>
+<p>Plotting figures is real quick. An example below using the famous <a href=https://www.kaggle.com/c/titanic/data>Titanic</a>
+dataset from <a href=http://kaggle.com>Kaggle</a> competition.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>data &lt;- read.table(‘data.txt’, header=TRUE) # TSV file
+names(d) # fetch columns
+[1]  &#34;PassengerId&#34; &#34;Survived&#34;   &#34;Pclass&#34;    &#34;Name&#34;        &#34;Sex&#34;
+[6]  &#34;Age&#34;         &#34;SibSp&#34;      &#34;Parch&#34;     &#34;Ticket&#34;      &#34;Fare&#34;
+[11] &#34;Cabin&#34;       &#34;Embarked&#34;
+</code></pre></div><p>Looking at the columns, it would be interesting to explore the age distribution
+of the people, along with their survivor, class and sex distribution. Let’s take
+a look.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>boxplot(Age ~ as.factor(Pclass), data=data)
+title(xlab=&#39;Class&#39;, ylab=&#39;Age&#39;, main=&#39;Passenger age vs Class&#39;)
+abline(h=median(data_Age, na.rm = TRUE), col=&#39;red&#39;)
+</code></pre></div><p>Boxplot is a good way to visualize the age distribution across passenger classes.</p>
+<figure>
+<label for=marginnote-804fa29e92339c3dc61866c4d4d3b2dc-0 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-804fa29e92339c3dc61866c4d4d3b2dc-0 class=margin-toggle>
+<span class=marginnote>
+<strong>Boxplot. </strong>
+The <span style=color:red>red</span> indicates overall age media while the individual class-wise median ages are displayed in thick <b>black</b> lines.
+</span>
+<img src=/images/class_age.png>
+</figure>
+<p>The histogram below is generated in a single line.</p>
+<p><img src=/images/hist.png alt=Fig2 title="Quick histogram"></p>
+<p>While it may take a bit of time to find out which functions to use (most of the
+times they have intuitive names), it becomes super easy to generate complex
+figures by simply composing simple ones.</p>
+<p>Also, when handling a large amount of data, plotting with a few tweaked
+parameters can save quite a bit of processing time. A few of these suggestions
+and helpful functions are compiled below with relevant examples.</p>
+<h2 id=functions>Functions&nbsp;<a class=anchor href=#functions></a> </h2>
+<ul>
+<li><code>ifelse()</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>col &lt;- ifelse(dataSurvived == 1, &#39;red&#39;, &#39;gray&#39;))
+</code></pre></div><ul>
+<li><code>boxplot()</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>boxplot(Age ~ as.factor(Pclass), data=data)
+</code></pre></div><ul>
+<li><code>split()</code> - split dataframe, useful with <code>boxplot</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>df &lt;- split(data-Age, f=&#39;Pclass&#39;)
+</code></pre></div><ul>
+<li><code>hsv()</code> - generate colors</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>cols &lt;- hsv((2/3)*as.integer(data-Pclass)/25, 1, 7/8)
+</code></pre></div><ul>
+<li><code>points()</code> - draw points on a graph</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>points(data$Age, col=ifelse(dataSibSp &gt; 0, &#39;green&#39;, NA))
+</code></pre></div><ul>
+<li><code>abline()</code> - draw a line on the graph given by <code>y=a+bx</code></li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>abline(h=median(dataAge), na.rm=TRUE)
+</code></pre></div><ul>
+<li><code>par()</code>, <code>layout()</code> - set graph properties, split the graph</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>layout(c(2,1)) # split the graph in 2 rows
+</code></pre></div><ul>
+<li><code>title(), text(), legend()</code> - set graph title, axes labels, legends etc</li>
+<li><code>qqplot()</code> - a <a href=http://onlinestatbook.com/2/advanced_graphs/q-q_plots.html>quantile-quantile plot</a></li>
+</ul>
+<h2 id=tricks>Tricks&nbsp;<a class=anchor href=#tricks></a> </h2>
+<ul>
+<li>Use <code>pch='.'</code> in <code>plot</code> commands to use dots in place of big circles. This saves a lot of time especially if there are many points. In case points are too small to see, use <code>cex=2</code> or higher to increase the point size. Use <code>par(pch='.')</code> to set the behavior for all plots.</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-r data-lang=r><span class=nf>plots</span><span class=p>(</span><span class=n>dataAge</span><span class=p>,</span> <span class=n>pch</span><span class=o>=</span><span class=s>&#39;.&#39;</span><span class=p>,</span> <span class=n>cex</span><span class=o>=</span><span class=m>2</span><span class=p>)</span>
+</code></pre></div><ul>
+<li>Use <code>data.table</code> library to load very large tables quickly. This could be upto 10x faster than default <code>read.table</code> function of R. Read more <a href=https://github.com/vivekiitkgp/til/blob/master/misc/r-large-data.md>here</a>.</li>
+</ul>
+<h2 id=epilogue>Epilogue&nbsp;<a class=anchor href=#epilogue></a> </h2>
+<p>This post is an outgrowth of my struggle with generating exploratory
+visualizations in Python. While using <code>pandas</code>, <code>scipy</code> and <code>numpy</code> combination
+is a natural and super effective combination, visualization with <code>matplotlib</code>
+or its alternatives like <code>seaborn</code> is equally confusing. The documentation is
+too verbose and often there are many ways to do the same thing. While R is not
+without its own flaws, I was awestruck with the simplicity and ease of use in
+getting started with it (at least for the purpose I was interested in). All
+thanks to senior researcher Max.</p>
+<p>For a bit more perspective, I was analyzing several gigabytes of derivative
+data obtained from whole-genomes sequences of thousands of humans. Using the
+scipy stack above, combined with the power of <code>multiprocessing</code> module,
+I could spawn 16 processes on the multi-core cluster and reduced the
+processing time from 35 min to 2 min. A big win!</p>
+<p>However, I do hope to eventually return to Python stack and figure out things
+with a cool head. Who knows if that’s going to be my next blog post.</p>
+</article>
+<div class=footer>
+<div class=footer-content>
+<div>
+<ul>
+</ul>
+<a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a>
+</div>
+</div>
+</div>
+</body>
+</html>
