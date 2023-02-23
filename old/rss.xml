@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai</title><link>https://vivekiitkgp.github.io/</link><description>Code, Biology and bits of life...</description><atom:link rel="self" href="https://vivekiitkgp.github.io/rss.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 15 Nov 2015 06:27:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Contributing to Wikipedia WikiProjects</title><link>https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="https://wikipedia.org"&gt;Wikipedia&lt;/a&gt; is one of the largest openly editable, web-based encyclopedias with free
+content. Since its inception in 2001 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id5" id="id1"&gt;[1]&lt;/a&gt;, it has grown to over 34 million
+articles and now attracts 450 million unique visitors amounting to a staggering
+20 billion page views per month &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id6" id="id2"&gt;[2]&lt;/a&gt;. Not to mention that it is
+continually reviewed, refined and updated every moment &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id7" id="id3"&gt;[3]&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;While most of the edits made to Wikipedia are non-registered IP edits &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id8" id="id4"&gt;[4]&lt;/a&gt;, a
+significant portion of the active community is focused on improving particular
+sections of the site. People often team up according to their specific topic of
+interest, specific location or a specific kind of task and work in an organized
+manner. This results in the creation of more accurate, consistent and high-quality
+articles that are often promoted to the status of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:Featured_articles"&gt;featured articles&lt;/a&gt; or &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:GA"&gt;good articles&lt;/a&gt;. Currently, there are over &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:Database_reports/WikiProjects_by_changes"&gt;2000
+such WikiProjects&lt;/a&gt;
+on English Wikipedia alone with varying level of activity. Naturally, areas
+which demand specialization or expertise in a particular field (for example
+Mathematics, Biology, Physics) are less active than the ones more accessible to
+general public (for example places, monuments, biographies). A complete
+directory of already available WikiProjects can be found &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Council/Directory"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Initially, when I began contributing articles to Wikipedia, a local and regional
+familiarity prompted me to join the &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_India"&gt;WikiProject India&lt;/a&gt; and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_West_Bengal"&gt;WikiProject West
+Bengal&lt;/a&gt; groups. Both of them had a plenty of active and experienced contributors
+who would occasionally meet up and organize talks or events of interest. The community is very warm and welcoming to new users
+and soon I was invited to one such meetup. Unfortunately, I couldn't attend it
+because of college work.&lt;/p&gt;
+&lt;p&gt;Yesterday while reading an article on Ribonucleic acids on Wikipedia, my mind
+veered off for few minutes and came across the WikiProject pages of &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Molecular_and_Cellular_Biology"&gt;Cell and
+Molecular Biology&lt;/a&gt;
+and &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology"&gt;Computational Biology&lt;/a&gt;.
+The portal were neatly organized with significant instructions for a newcomer,
+but there was hardly any noticeable recent activity. Being a computational
+biology enthusiast myself, I thought this opportunity can readily be used for
+learning more about the subject and at the same time contributing more articles
+and content to this project. I quickly went through their scope and guidelines
+articles and drafted a vague timeline and coverage of my contributions.
+However, just then I came across a very interesting section on the homepage
+that highlighted an international &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Computational_Biology/ISCB_competition_announcement_2014"&gt;article writing competition&lt;/a&gt;
+organized in association with &lt;a class="reference external" href="http://www.iscb.org/"&gt;International Society for Computational Biology
+(ISCB)&lt;/a&gt;.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;ISCB article competition&lt;/dt&gt;
+&lt;dd&gt;The competition, running since 2012, awards students
+and trainees for the best contributions to computational biology-related
+articles. Entry is open internationally, to students and trainees of any
+level.
+We particularly encourage lecturers or course organisers to use this competition as a class assignment.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;This competition runs through August-January and allows participants to submit
+one article within the scope of the project, where they have added or improved
+significant content. The results are judged by a committee consisting of experienced Wiki editors, and scientists with
+expertise in the related field (for example, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/User:Alexbateman"&gt;Alex Bateman&lt;/a&gt;, Head of Protein Sequence
+Resources, &lt;a class="reference external" href="http://ebi.ac.uk/"&gt;EBI&lt;/a&gt;). The best part? A total cash prize of $1000 is awarded to the
+winners. What could be better than getting paid for learning!&lt;/p&gt;
+&lt;p&gt;However, the main goal of this post was not to encourage people to join my
+efforts or channel interests specifically towards Computational Biology (I
+would be more than happy if it happens). Rather to let others know about such
+exciting opportunities present around us all the time, in places where we least expect them to be.
+Who knows this was just one of such tons of activities
+going on there? Wikipedia is full of mysteries!&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:UuU"&gt;Wikipedia UuU&lt;/a&gt;, contains
+the earliest surviving edit on the English Wikipedia (and hence any Wikipedia
+and project in the Wikimedia Foundation), which was made on January 16, 2001 at
+20:08 UTC.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;WMF Labs, Report Card v2.0
+(&lt;a class="reference external" href="http://reportcard.wmflabs.org/#core-graphs-tab"&gt;http://reportcard.wmflabs.org/#core-graphs-tab&lt;/a&gt;)&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="https://stats.wikimedia.org"&gt;Wikipedia Stats&lt;/a&gt;, A statistic of &lt;a class="reference external" href="https://stats.wikimedia.org/EN/TablesArticlesNewPerDay.htm"&gt;new
+articles per day&lt;/a&gt;
+across all language wikipedias. Also see &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Wikipedia:About"&gt;About Wikipedia&lt;/a&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;See: &lt;a class="reference external" href="https://en.wikipedia.org/wiki/User:Opabinia_regalis/Article_statistics#Recent_mainspace_changes_survey"&gt;Opabinia regalis' studies&lt;/a&gt;, Feb 2007&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>biology</category><category>compbiol</category><category>wikipedia</category><guid>https://vivekiitkgp.github.io/blog/contributing-to-wikipedia-wikiprojects.html</guid><pubDate>Mon, 16 Feb 2015 04:53:11 GMT</pubDate></item><item><title>BLAST+ and Its Inconsistencies</title><link>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK1763/"&gt;BLAST+&lt;/a&gt; is an amazing tool and
+does it job in a pretty decent way.  However, anyone who has worked with it for
+some time and with some non trivial details has his own horror stories to tell.
+For the past few months where I have been engaged in development of
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver"&gt;SequenceServer&lt;/a&gt;, we got a lot
+of opportunities to see the ugly inconsistencies crept within the otherwise
+beautiful program.&lt;/p&gt;
+&lt;p&gt;BLAST+ is the newer and improved version of legacy BLAST executables with
+improved performance and feature inclusion. It goes through close to two cycles
+of release every year and includes further performance patches or fixes
+introduced against community bug reports.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;I will talk in brief about few problems that we encountered while developing
+SequenceServer.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;One of my major tasks with SS was to create a data layer which will be
+helpful in creating flexible interface. This required me to BLAST and obtain the
+results in XML format, parse and store it accordingly.&lt;/p&gt;
+&lt;p&gt;One of the curious things to notice in the XML file is the presence of
+&lt;tt class="docutils literal"&gt;&amp;lt;Iteration_stat&amp;gt;&lt;/tt&gt; tag within each query. Although if you compare the
+values you will find that each of these stats across all the queries are
+same, and indeed they represent statistical information based on the entire
+query and not per query. You can examine one sample XML file
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/blob/master/spec/ss_sample_blast_with_hits.xml"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you examined the XML file, you can notice that the sequence alignments,
+start, and end co-ordinates are all provided very nicely. When using the HTML
+format output option (provided with all BLAST programs) like prior versions
+of SS, we receive a well formatted output where longer sequences are properly
+broken on multiple lines along with start and end coordinates for the same.
+But as we were generating the HTML ourselves, we had to manually calculate
+the start and stop ends for each line.&lt;/p&gt;
+&lt;p&gt;In general, the start and end coordinates are agnostic of the reading frame and
+one has to properly infer them from the &lt;tt class="docutils literal"&gt;qframe&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;hframe&lt;/tt&gt; values. In
+other words, you need to see whether you are moving on the positive strand or
+the negative stand. However, &lt;tt class="docutils literal"&gt;blastn&lt;/tt&gt; makes an exception to this rule and
+automatically makes this informed decision. I don't know if that should be the
+scenario but whatever be the case, it certainly is not consistent. This had
+to be taken in care of separately in the commit shown below.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code ruby"&gt;&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="n"&gt;def28ff&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="n"&gt;cb236fa&lt;/span&gt; &lt;span class="mi"&gt;100644&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;+++&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-4"&gt;&lt;/a&gt;&lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;SequenceServer&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-5"&gt;&lt;/a&gt;                  &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-7"&gt;&lt;/a&gt;        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-8"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# blastn results are inconsistent with the other methods as it&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-9"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# automatically reverse the start and end coordinates (based on&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-10"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# frame), while for others it has to be inferred.&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-11"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'blastn'&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-12"&gt;&lt;/a&gt;            &lt;span class="n"&gt;nqseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-13"&gt;&lt;/a&gt;            &lt;span class="n"&gt;nsseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;
+&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;In an issue &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id3" id="id1"&gt;[1]&lt;/a&gt; opened
+by our early contributer &lt;a class="reference external" href="https://github.com/wwood"&gt;@wwood&lt;/a&gt;, we found that
+FASTA ids with only numbers in it didn't play very well with &lt;tt class="docutils literal"&gt;blastdbcmd&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;The bug since then, went on without activity until recently when we tried to fix it
+using a simple hack. As hits can also be queried using accession number and not only
+ids, we simply started using accession number with a &lt;tt class="docutils literal"&gt;lcl|&lt;/tt&gt; added to the start.
+This not only preserved the previous and desired behavior but also solved the problem
+of error with numeric ids (&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/commit/6d83a0833c42ec3a9e944ebc7873603f4a82d774"&gt;commit&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;However, soon with the release of BLAST+ 2.2.30 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id4" id="id2"&gt;[2]&lt;/a&gt; we noticed that our hack didn't play
+well with the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-target-only&lt;/span&gt;&lt;/tt&gt; option. Since, our implementation moves according to the
+latest version of BLAST+, we had to revert the commit.&lt;/p&gt;
+&lt;p&gt;As of now, the issue is still open and we wait for it to be fixed upstream. Apparently,
+the BLAST+ team is aware of the issue but it seems to be poorly documented.
+Here is what they had to say -&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+... but when lcl|integer is used (either directly on the definition line, or when
+only an integer is used), the programs assume that the integer is a gi
+number.We will investigate the feasibility of applying a check.
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Another weird issue popped us when we were playing around with some funky
+ids. These ids contained some symbols and weird characters like hashes and
+pipes. I'm not yet sure if this is an undesired behavior but it is certainly
+queer. Here is a small demo -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+$ cat funky_ids.fa
+&amp;gt;abc|def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abcdef#
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abc#def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+
+$ blastdbcmd -db funky_ids.fa -entry all -outfmt '%a'
+abc:def
+abcdef#
+abc#def
+&lt;/pre&gt;
+&lt;p&gt;If you noticed the first line of both commands you can see that the pipe
+character in first case is being weirdly displayed as a colon. As I said, I
+don't know yet if it is a desired or intentional behavior but whatever it is,
+it sure needs some explanation or documentation. I have already emailed the
+BLAST+ team about this and expecting their reply anytime soon.&lt;/p&gt;
+&lt;p&gt;I will have some more updates with my recent adventures with &lt;a class="reference external" href="https://github.com/yeban/afra"&gt;Afra (an
+annotation editor)&lt;/a&gt; in coming week.&lt;/p&gt;
+&lt;p&gt;Stay tuned!&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Retrieving blast sequences doesn't work well with numbers #88,
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/88"&gt;SequenceServer, GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;NCBI BLAST+ Release Notes, October 2nd, 2014. Christiam Camacho, NCBI,
+&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK131777/"&gt;http://www.ncbi.nlm.nih.gov/books/NBK131777/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>blast</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</guid><pubDate>Sun, 11 Jan 2015 06:33:17 GMT</pubDate></item><item><title>Introduction to Functional Programming</title><link>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;I had heard fascinating tales of Functional Programming and how it has been a
+food for thought to many exceptional programmers. Over a year ago when I was
+looking for Python mastery tips on the web, I came across &lt;a class="reference external" href="https://stackoverflow.com/questions/2573135/python-progression-path-from-apprentice-to-guru"&gt;this&lt;/a&gt;
+question on StackOverflow, that laid down an ultimate path for progression from an apprentice to
+guru. The highest voted answer recommended one to discover Haskell after they
+have learned almost all the key features of Python and embrace
+functional programming in the end. As much as I would have loved to explore it
+then and there; however, it wasn't possible until two weeks ago that I could
+actually delve into the subject with all my seriousness and attention. It's not
+that I didn't make any effort at all during this time. It's just that I wanted
+to have a guiding course that I could follow and use it to keep track of my
+progress.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Just a few weeks ago, a course on &lt;a class="reference external" href="https://courses.edx.org/courses/DelftX/FP101x/3T2014"&gt;Functional Programming&lt;/a&gt; by &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Delft_University_of_Technology"&gt;Delft University&lt;/a&gt; kicked off on
+&lt;a class="reference external" href="https://edx.org"&gt;edX platform&lt;/a&gt;.  I was very much influenced by the
+instructor and immediately signed up for the course. Its been several weeks
+now, and I must that this course has certainly met my expectations. The
+instructor for this course is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)"&gt;Erik Meijer&lt;/a&gt;, a highly
+acclaimed computer scientist who has been closely associated with aspects of
+functional programming throughout his career &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id5" id="id1"&gt;[1]&lt;/a&gt; &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id6" id="id2"&gt;[2]&lt;/a&gt;. I must however say that he's
+quite bold about his opinions &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id7" id="id3"&gt;[3]&lt;/a&gt; and doesn't like the idea of spoon feeding
+students. One can follow him on twitter (&lt;a class="reference external" href="https://twitter.com/headinthebox"&gt;@headinthebox&lt;/a&gt;) for interesting updates. Exactly during
+the same time, another famous researcher and computer scientist &lt;a class="reference external" href="http://pauillac.inria.fr/~huet/"&gt;Dr. Gérard
+Huet&lt;/a&gt; happened to visit out campus for a two
+days guest lecture on lambda calculus, type theory, functional programming, and
+semantics of programming languages. I was fortunate to interact to attend his
+lecture and see him in person. The lecture helped me understand the mathematical foundations of
+programming language design and its semantics &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id8" id="id4"&gt;[4]&lt;/a&gt; (being a Biotechnology
+student, we don't really get to do courses on Automata Theory, or Mathematical Logic).
+It was an overwhelming experience to have.&lt;/p&gt;
+&lt;p&gt;As far as the particulars of course are concerned, the exercises are really nice
+and encourage one to explore concepts on their own. Although the course can be
+done with the help of any language that supports functional programming,
+&lt;a class="reference external" href="http://haskell.org"&gt;Haskell&lt;/a&gt; is the recommended main language of the
+course (that is a thing I love). Supplementary reading material is readily
+provided for those who want to stay ahead of the course backed by a strong and
+supportive community in the discussion forums.  The assignment deadlines are
+quite stretched allowing one to comprehend material and attempt quizzes at
+their pace.&lt;/p&gt;
+&lt;p&gt;Also, I have been collecting all the resources that has been suggested by the
+instructor or the others during the course and maintaining a list on GitHub at
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/haskell"&gt;vivekiitkgp/haskell&lt;/a&gt;. It will also
+contain all the code that I would write during my learning experience. However,
+the course repository is hidden because the assignment dates are not yet over
+and releasing solutions would be violating honor code agreement for the course.
+Feel free to star and contribute.&lt;/p&gt;
+&lt;p&gt;In the end, as Erik would say, "Developers don't talk about code, they code".
+However, I would love to post more interesting content as I delve more into
+matter.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haskell 98 Language and Libraries: The Revised Report; December 2002. &lt;a class="reference external" href="http://www.haskell.org/onlinereport/"&gt;http://www.haskell.org/onlinereport/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://www.informatik.uni-trier.de/~ley/pers/hd/m/Meijer:Erik.html"&gt;List of published papers by Erik Meijer.&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://vimeo.com/110554082"&gt;One Hacker Way&lt;/a&gt;, a Rational Alternative to Agile by Erik Meijer, Presented at Reaktor Dev Day 2014&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;An executable computability theory course based on λ-calculus. &lt;a class="reference external" href="http://pauillac.inria.fr/~huet/PUBLIC/CCT.pdf"&gt;[PDF]&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>edx</category><category>fp</category><category>haskell</category><category>moocs</category><guid>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</guid><pubDate>Sun, 09 Nov 2014 02:47:17 GMT</pubDate></item><item><title>Wikipedia Resume</title><link>https://vivekiitkgp.github.io/blog/wikipedia-resume.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;It's been a couple of years since I made my first edit on Wikipedia. Over these
+years, I have garnered over 1600 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id6" id="id1"&gt;[1]&lt;/a&gt; edits of which most are on
+&lt;a class="reference external" href="https://en.wikiepdia.org"&gt;en.wikipedia.org&lt;/a&gt;. However, as you may notice, my
+contribution was highest during the first years and quickly it dwindled to a
+handful of rare patrol edits over the next two years. A part of the answer lies
+in the fact that I began my undergraduate studies in the same year and ever
+since then I could find very less time to edit or create articles.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Nevertheless, I am happy that I have accomplished a good stuff, if not great.
+Writing my first article, going through the guidelines, despair when first
+crap article is deleted, getting mentored, rolling back vandalism, tagging
+articles - all these perfectly document my growth over the years and bring back
+exciting (read embarrassing) moments of my learning phase. I learned a lot.&lt;/p&gt;
+&lt;p&gt;Now that over these years I have acquired knowledge across more domains, my
+contributions should be more effective and focused. I plan to write
+occasionally in whatever ways I can.&lt;/p&gt;
+&lt;div class="section" id="most-edited"&gt;
+&lt;h2&gt;Most edited&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Shree_Jain_Vidyalaya?redirect=no"&gt;Shree Jain Vidyalaya&lt;/a&gt; &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id8" id="id2"&gt;[*]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Save_Ganga_Movement?redirect=no"&gt;Save Ganga Movement&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Pari_Mahal?redirect=no"&gt;Pari Mahal&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="all-articles"&gt;
+&lt;h2&gt;All articles&lt;/h2&gt;
+&lt;p&gt;As of now, I have written around 30 articles &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id7" id="id3"&gt;[2]&lt;/a&gt; excluding 6 deleted ones and redirects. An approximate break up follows:&lt;/p&gt;
+&lt;div class="section" id="biographies"&gt;
+&lt;h3&gt;Biographies&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Nandkishore_Shamrao_Laud?redirect=no"&gt;Nandkishore Shamrao Laud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Mary_Clubwala_Jadhav?redirect=no"&gt;Mary Clubwala Jadhav&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Saloni_Malhotra?redirect=no"&gt;Saloni Malhotra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Madhavi_Mudgal?redirect=no"&gt;Madhavi Mudgal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Palle_Rama_Rao?redirect=no"&gt;Palle Rama Rao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Rajaram_Shastri?redirect=no"&gt;Rajaram Shastri&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Giri_Balasubramanium?redirect=no"&gt;Giri Balasubramanium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Dibyendu_Nandi?redirect=no"&gt;Dibyendu Nandi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Ajudhiya_Nath_Khosla?redirect=no"&gt;Ajudhiya Nath Khosla&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Ghananand_Pande?redirect=no"&gt;Ghananand Pande&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Sumati_Morarjee?redirect=no"&gt;Sumati Morarjee&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Jagat_Murari?redirect=no"&gt;Jagat Murari&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Akshay_Chandra_Sharma?redirect=no"&gt;Akshay Chandra Sharma&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/C._R._Krishnaswamy_Rao?redirect=no"&gt;C. R. Krishnaswamy Rao&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Aditya_Nath_Jha?redirect=no"&gt;Aditya Nath Jha&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="places-and-monuments"&gt;
+&lt;h3&gt;Places and Monuments&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Pari_Mahal?redirect=no"&gt;Pari Mahal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Indira_Gandhi_Memorial_Tulip_Garden?redirect=no"&gt;Indira Gandhi Memorial Tulip Garden&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="institutes"&gt;
+&lt;h3&gt;Institutes&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/The_Music_Therapy_Trust?redirect=no"&gt;The Music Therapy Trust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/National_Institute_of_Disaster_Management?redirect=no"&gt;National Institute of Disaster Management&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Central_Institute_for_Cotton_Research?redirect=no"&gt;Central Institute for Cotton Research&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Anandalok_Hospital?redirect=no"&gt;Anandalok Hospital&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="general"&gt;
+&lt;h3&gt;General&lt;/h3&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Tuberculosis_in_India?redirect=no"&gt;Tuberculosis in India&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Save_Ganga_Movement?redirect=no"&gt;Save Ganga Movement&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(&lt;em&gt;in progress&lt;/em&gt;)&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;X!'s tools - &lt;a class="reference external" href="https://tools.wmflabs.org/xtools/pcount/?user=Vivek+Rai&amp;amp;project=en.wikipedia.org"&gt;Edit Count&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id3"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;X!'s tools - &lt;a class="reference external" href="https://tools.wmflabs.org/xtools/pages/?user=Vivek+Rai&amp;amp;project=en.wikipedia.org&amp;amp;namespace=all&amp;amp;redirects=noredirects"&gt;Pages Created (with no redirects)&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/wikipedia-resume.html#id2"&gt;[*]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;My first and hence the most edited article. I was unaware of many Wikipedia editing rules and broke several guidelines (esp. copyright violations). Those portions unfortunately had to be removed. This was also the time when I strongly considered quitting Wiki.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>aboutme</category><category>personal</category><category>wikipedia</category><guid>https://vivekiitkgp.github.io/blog/wikipedia-resume.html</guid><pubDate>Sun, 02 Nov 2014 04:22:19 GMT</pubDate></item><item><title>Curated List Of Biology Resources</title><link>https://vivekiitkgp.github.io/blog/curated-list-of-biology-resources.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;It always has been a dreaded task for me to study during the examinations. For
+those who may not be aware of my college's curriculum, may note
+that we have a mid-semester and an end-semester evaluation exams; one during
+September and the other in November. However, I appreciate the idea of a more
+integrated and continuous evaluation schemes where the progress of students and
+their understanding is continuously being monitored through small, concept based
+tests, quizzes or other discussions than few life changing exams.
+Moreover, these require one to divert all their attention exclusively towards
+the exams, and it's preparation thereby hampering all the other engagements of a
+student. Regardless, I won't discuss the pros and cons of such a system because
+I have a more interesting thing to share.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Now while preparing from one of my subjects (&lt;em&gt;Genetics&lt;/em&gt;), I noticed that the
+information about different educational resources in Biology (or Biotechnology)
+is very much fragmented unlike Computer Science. The knowledge about
+established textbooks, popular research papers, and other resources is not
+readily available, and one often has to go through a larger number of searches,
+forums, and blogs to find some information worth reading. It's not surprising
+to see different papers which review, collect and organize other tools and
+resources, getting accepted into prestigious Journals. This effort is enough to
+show the need to organize the vast amount of content out there in public.&lt;/p&gt;
+&lt;p&gt;Meanwhile, I came upon &lt;a class="reference external" href="https://github.com/josephmisiti/awesome-machine-learning"&gt;this&lt;/a&gt; repository on GitHub, which curates a list of
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;awesome-machine-learning&lt;/span&gt;&lt;/tt&gt; frameworks, libraries and software (by language).
+This project itself was inspired from another project called &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;awesome-php&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;This motivated me to attempt a similar collection of biological resources with
+the help of online community. I don't know if it'd be the best place to
+end ones' search, but it'd be one of the best places to start with.&lt;/p&gt;
+&lt;p&gt;The repository is available at &lt;a class="reference external" href="https://github.com/vivekiitkgp/awesome-biology"&gt;vivekiitkgp/awesome-biology&lt;/a&gt;.  Feel free to send in your
+suggestions by creating a pull request, opening an issue or dropping me an
+email (please do). This desperately needs more and more contributers for
+ensuring visibility, and quality content. Let me know what you think.&lt;/p&gt;&lt;/div&gt;</description><category>awesome-biology</category><category>books</category><category>github</category><category>resources</category><guid>https://vivekiitkgp.github.io/blog/curated-list-of-biology-resources.html</guid><pubDate>Fri, 19 Sep 2014 20:09:40 GMT</pubDate></item><item><title>Creating graphical overview with D3</title><link>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;This is a follow up of the &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/understanding-blast-output.html"&gt;previous post&lt;/a&gt;
+where I was working with understanding and parsing the BLAST output data for
+creating the data layer in SequenceServer. A very critical and often demanded
+feature for the application was the ability to have a graphical overview of all
+the obtained hits. It had been sitting on project's urgent list for quite a
+long time and couldn't be delayed any longer. So, after having a discussion
+with project maintainer Priyam, I assigned this task to myself.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;There were a couple of options for solving this problem.  Initially, we
+considered using &lt;a class="reference external" href="http://chmille4.github.io/Scribl/"&gt;Scribl&lt;/a&gt;, an HTML5 canvas based library written specifically for
+drawing genomic regions, alignments, assembly data and so on. However, the
+features and flexibility that we were looking for wasn't simply available. And
+even if it was, it required a good amount of overriding on our part.&lt;/p&gt;
+&lt;img alt="../files/d3.png" class="align-center" src="https://vivekiitkgp.github.io/files/d3.png" style="width: 300pt;"&gt;
+&lt;p&gt;The second obvious choice was the use of &lt;a class="reference external" href="http://d3js.org"&gt;d3.js&lt;/a&gt; Javascript library, a powerful
+data-driven visualization generator. It's fairly low level and allows a large
+degree of custom control and manipulation over components, thereby allowing
+users to create rich, high quality graphics rendered in &lt;a class="reference external" href="https://developer.mozilla.org/en/docs/Web/SVG"&gt;SVG&lt;/a&gt;. The library can
+be easily powered by the data obtained directly from the backend layer.
+However, a more elegant choice was to remove this dependency on the backend and
+disperse all the necessary information inside the page itself using the HTML5
+data attributes. These data-attributes would then be highly useful, not only
+for obtaining data but also for applying custom styling and dynamic behavior
+using JS. For example, you could just do&lt;/p&gt;
+&lt;pre class="code js"&gt;&lt;a name="rest_code_b8368f8905864147b9818b4269655293-1"&gt;&lt;/a&gt;&lt;span class="cm"&gt;/* This iterates over all elements with the mentioned data-attrib&lt;/span&gt;
+&lt;a name="rest_code_b8368f8905864147b9818b4269655293-2"&gt;&lt;/a&gt;&lt;span class="cm"&gt;   See public/js/jquery.graphit.js */&lt;/span&gt;
+&lt;a name="rest_code_b8368f8905864147b9818b4269655293-3"&gt;&lt;/a&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"[data-graphit='overview']"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;a name="rest_code_b8368f8905864147b9818b4269655293-4"&gt;&lt;/a&gt;    &lt;span class="cm"&gt;/* Do stuff here */&lt;/span&gt;
+&lt;a name="rest_code_b8368f8905864147b9818b4269655293-5"&gt;&lt;/a&gt;&lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;After the basic idea was conceived, I started playing around a little with d3
+and found it quite interesting. Priyam then showed me the BLAST interface of
+&lt;a class="reference external" href="http://naked-mole-rat.org/blast"&gt;naked-mole-rat.org&lt;/a&gt;, a naked mole-rat
+genome resource. They had implemented a graphical overview feature similar to
+that used by NCBI except the fact that it was written using d3.&lt;/p&gt;
+&lt;div class="figure align-right" style="width: 350pt"&gt;
+&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/files/ncbi.png"&gt;&lt;img alt="Graphical overview shown by NCBI" src="https://vivekiitkgp.github.io/files/ncbi.png"&gt;&lt;/a&gt;
+&lt;p class="caption"&gt;NCBI's graphical overview (uses tables)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Since, I was relatively new to programming in Javascript, their implementation
+really helped me to think of my approach and come up with implementation of
+mine. The initial code I wrote went under a lot of changes with feedback from
+Priyam. Although we initially started with an inspiration from NCBI's graphical
+overview (shown beside) we improved many things over theirs e.g., the hits in
+our graphical overview were sorted by evalue, a gradient color scheme to
+display the strength and weakness of hits etc.,&lt;/p&gt;
+&lt;p&gt;Finally,&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Implemented the data collection using data-attribs,&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code rhtml"&gt;&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;%&lt;/span&gt; &lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hsps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-2"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-3"&gt;&lt;/a&gt;      &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"hsps"&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt;&lt;span class="s2"&gt;"Query_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_hit_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-4"&gt;&lt;/a&gt;      &lt;span class="na"&gt;data-hsp-evalue=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evalue&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-start=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-5"&gt;&lt;/a&gt;      &lt;span class="na"&gt;data-hsp-end=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt; &lt;span class="na"&gt;data-hsp-frame=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;%=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hframe&lt;/span&gt; &lt;span class="cp"&gt;%&amp;gt;&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-6"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;table&lt;/span&gt; &lt;span class="na"&gt;class=&lt;/span&gt;&lt;span class="s"&gt;"table-hsp"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-7"&gt;&lt;/a&gt;    ..
+&lt;a name="rest_code_d394c0d9c590471d996cd9510e39a8c0-8"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;Packed the whole code in the form of a Jquery &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js"&gt;plugin&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Connected the HSPs per hit by a thin line without which the
+interpretation of results was little non obvious.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the meantime, we were upgrading to &lt;strong&gt;Bootstrap 3&lt;/strong&gt; which broke and re-broke
+my implementation everytime. Each time, when I'll sit to rewrite the it again,
+I would come up with a new and better understanding of my code. All this
+however, happened only after a lot of experimentation which I didn't talk about
+much in the post due to lack of time. Nevertheless, there were also a bunch of
+critical bug fixes and improvements in the backend code which can be followed
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures"&gt;here&lt;/a&gt;. In the end, I feel that the newer and in development version is much
+more interactive, elegant and easy to use than the previous ones. Here is a
+quick snapshot of the graphical overview for a sample BLAST hit.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;a class="reference external image-reference" href="https://vivekiitkgp.github.io/files/graph.png"&gt;&lt;img alt="SequenceServer's graphical overview" src="https://vivekiitkgp.github.io/files/graph.png"&gt;&lt;/a&gt;
+&lt;p class="caption"&gt;SequenceServer's graphical overview (using D3)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The current source code of the plugin can be found on &lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/graphic_fixtures"&gt;Github&lt;/a&gt;.  Feel free to
+clone and run locally on your machine. If not, an online version has also been
+deployed at &lt;a class="reference external" href="http://antgeomes.org/sequenceserver"&gt;antgenomes.org/sequenceserver&lt;/a&gt; for convenient testing. However, I
+would like to point out that there will be a lot of planned and unplanned
+changes happening frequently. So, if you plan to use SequenceServer for
+production, please use &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver"&gt;this&lt;/a&gt;
+version until we roll out refined one (very soon).&lt;/p&gt;
+&lt;p&gt;I wanted to talk more about d3 and my plans to complete a couple of data analysis projects
+with its help. However, let's save it for some time later.&lt;/p&gt;&lt;/div&gt;</description><category>d3.js</category><category>javascript</category><category>jquery</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/creating-graphical-overview-with-d3.html</guid><pubDate>Fri, 22 Aug 2014 01:52:27 GMT</pubDate></item><item><title>Understanding BLAST Output</title><link>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;In the last post, I mentioned about a project I was trying to work on -
+&lt;a class="reference external" href="http://www.sequenceserver.com"&gt;SequenceServer&lt;/a&gt;. Also, in the end I
+said that I would be writing about the BLAST algorithm (which is the
+backbone of this project) and how does it works so efficiently in
+producing alignments even with very long sequences. However, In this
+post I would like to talk about BLAST program and it's output before we
+go into the algorithm some time later.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;After talking to &lt;a class="reference external" href="https://github.com/yeban"&gt;Priyam&lt;/a&gt; (one of the
+project collaborators), I decided to work towards solving the &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21"&gt;issue
+21&lt;/a&gt;, which
+in turn would help us to solve a large number of other dependent issues
+as well. This was supposed to be a major improvement and I really liked
+the idea of it. Especially since it was concerned with understanding the
+BLAST program and its output format.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Background&lt;/em&gt;: &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21"&gt;Issue
+21&lt;/a&gt; deals
+with displaying an overview graphic for the output results obtained from
+blasting. This is a nice feature as it adds more towards visualizing and
+understanding the data easily (than going over a large number of hits in
+many cases). The problem however is that because of the hacky way in
+which the current implementation worked for displaying the final output
+results, it was not very easy to work with generation of visuals. The
+data generated from BLAST output had to be parsed first into a data
+layer and then interfaced with other features like displaying overview
+graphic or other rich information. This required three things from my
+side - Ruby, BLAST, and Patience.&lt;/p&gt;
+&lt;div class="section" id="x-part-i"&gt;
+&lt;h2&gt;[x] Part I&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BLAST Output&lt;/strong&gt;: The blast output format can be reconfigured using the
+&lt;tt class="docutils literal"&gt;outfmt&lt;/tt&gt; option which is described in the NCBI's &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/www.ncbi.nlm.nih.gov/books/NBK1763/?report=reader#!po=91.5094"&gt;BLAST
+Manual&lt;/a&gt;.
+The sample XML output (standard settings) has the following structure
+(for a real example
+&lt;a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml"&gt;blast.xml&lt;/a&gt;):&lt;/p&gt;
+&lt;pre class="code xml"&gt;&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-3"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;BlastOutput&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-4"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_program&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-5"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_version&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-6"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_reference&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-7"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_db&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-8"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-ID&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-9"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-def&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-10"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-len&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-11"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_param&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-12"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;Parameters&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-13"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_matrix&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-14"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_expect&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-15"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_gap-open&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-16"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_gap-extend&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-17"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_filter&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-18"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;/Parameters&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-19"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;/BlastOutput_param&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-20"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;BlastOutput_iterations&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-21"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-22"&gt;&lt;/a&gt;  -- Iteration details --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-23"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration_hits&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-24"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-25"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_num&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-26"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_id&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-27"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_def&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-28"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_accession&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-29"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_len&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-30"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_hsps&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-31"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;Hsp&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-32"&gt;&lt;/a&gt;  -- HSP Details --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-33"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;/Hsp&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-34"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;/Hit_hsps&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-35"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-36"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Hit&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;/Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-37"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration_hits&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-38"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration_stat&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-39"&gt;&lt;/a&gt;  -- Statistics about Query --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-40"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration_stat&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-41"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-42"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/BlastOutput_iterations&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-43"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/BlastOutput&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;The XML output is as detailed as it could be including all the information
+about Hit's &lt;a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair"&gt;HSP&lt;/a&gt;, the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-database&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;alignment-lengths&lt;/span&gt;&lt;/tt&gt;, the &lt;tt class="docutils literal"&gt;query&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;aligned-sequences&lt;/span&gt;&lt;/tt&gt;
+along with the matches between them, and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-statistics&lt;/span&gt;&lt;/tt&gt;. This
+is as useful as it could be and helps to generate very detailed statistics and
+overview too. I would recommend one to look at the given example of blast.xml
+to understand what kind of data is generated. To parse this generated XML
+output easily, I used the &lt;a class="reference external" href="https://rubygems.org/gems/ox"&gt;Ox&lt;/a&gt; rubygem, which
+is a simple and &lt;a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html"&gt;faster&lt;/a&gt; alternative of
+other XML parsers available in Ruby. In the beginning, I generated a simple
+Hash out of this parsed data using recursive traversal along the elements.&lt;/p&gt;
+&lt;pre class="code ruby"&gt;&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;report!&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-2"&gt;&lt;/a&gt;  &lt;span class="c1"&gt;# Generates BLAST report which one or more multiple Query objects&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-3"&gt;&lt;/a&gt;  &lt;span class="c1"&gt;# based on the blast query string.&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-4"&gt;&lt;/a&gt;  &lt;span class="n"&gt;parsed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Ox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vi"&gt;@result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-5"&gt;&lt;/a&gt;  &lt;span class="n"&gt;hashed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node_to_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parsed_out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-6"&gt;&lt;/a&gt;  &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_program"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-7"&gt;&lt;/a&gt;  &lt;span class="vi"&gt;@querydb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_db"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-9"&gt;&lt;/a&gt;  &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_iterations"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-10"&gt;&lt;/a&gt;    &lt;span class="vi"&gt;@queries&lt;/span&gt; &lt;span class="o"&gt;||=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-11"&gt;&lt;/a&gt;    &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Statistics"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-13"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# Ensure a hit object is received. No hits, returns a newline.&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-14"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# Note that checking to "\n" doesn't work since n[4] = ["\n"]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]==[&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-16"&gt;&lt;/a&gt;      &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"No hits found."&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-18"&gt;&lt;/a&gt;      &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-19"&gt;&lt;/a&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-20"&gt;&lt;/a&gt;                                                 &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{})&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-21"&gt;&lt;/a&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hsp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;HSP&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Hsp"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-22"&gt;&lt;/a&gt;      &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-23"&gt;&lt;/a&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-24"&gt;&lt;/a&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-25"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;This Hash is then used for easy templating (using
+&lt;a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html"&gt;erb&lt;/a&gt;) and
+display of results in a more elegant and modular way. This keeps the
+data at one place which can then be used for overview graphic display or
+integration of other features and bug fixes in near future. All my work
+related to this can be found at
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/tree/issue21"&gt;@issue21&lt;/a&gt;
+branch. The code written till now, is very premature and &lt;em&gt;just&lt;/em&gt; works. I
+plan to refactor it majorily and incorporate some very nice features of
+Ruby language (which I am desperately trying to understand).&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://drive.google.com/file/d/0B3eGCB261PalWTJnODloLXAtdGM/edit?usp=sharing"&gt;Here&lt;/a&gt;
+is a snapshot of what current output looks like, when SS is run.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-part-ii"&gt;
+&lt;h2&gt;[O] Part II&lt;/h2&gt;
+&lt;p&gt;The second part of this task deals with actually displaying the overview
+graphic for the hits obtained using SS. To give an idea of what it looks
+like, see &lt;a class="reference external" href="http://www.biodalliance.org/"&gt;here&lt;/a&gt; and
+&lt;a class="reference external" href="http://canvasxpress.org/genome.html"&gt;here&lt;/a&gt;. The target is to display
+similar graphic (but simple and easy to load/configure) for each hit in
+the SS's output. I am yet to start working on and possibly the next post
+could be derived out of that work.&lt;/p&gt;
+&lt;p&gt;I would be very glad if you drop by to review my code and send in any
+suggestions. Feel free to reach me by whatever means.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>SSequenceserver</category><category>blast</category><category>ruby</category><guid>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</guid><pubDate>Sat, 12 Jul 2014 21:17:45 GMT</pubDate></item><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
+mission recently with few contributions to &lt;a class="reference external" href="http://www.sequenceserver.com/"&gt;SequenceServer - A BLAST tool&lt;/a&gt;, which lets you set up custom BLAST+ server to perform BLAST queries with your
+own database locally through a web interface. For those who are not familiar
+with &lt;strong&gt;BLAST&lt;/strong&gt; or Basic Local Search Alignment Tool &lt;a class="citation-reference" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#paper" id="id1"&gt;[paper]&lt;/a&gt; - it is an algorithm which allows
+quick comparison of biological sequence information which are long strings consisting
+of amino acids (in case of proteins) or nucleotides (in case of nucleic acids).
+It is exceedingly used by biologists all over the world to study newer
+organisms, discovery of genes and finding similarity between proteins and so
+on. One can see a working instance of the tool at &lt;a class="reference external" href="http://antgenomes.org/blast"&gt;Ant Genomes&lt;/a&gt; website, maintained by one of the developers
+and Professor at Queen Mary University London, &lt;a class="reference external" href="http://www.sbcs.qmul.ac.uk/staff/yannickwurm.html"&gt;Yannick Wurm&lt;/a&gt;. He's also the overseerer of the project.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;The program has already completed its major part of development and its stable version
+is readily available for use. However, there were many &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues"&gt;issues&lt;/a&gt; or feature requests
+that were pending and can be worked upon. I got in touch with the maintainers and submitted
+three pull requests for small few bugs and a feature. It was not a big task but I was
+quite motivated with this small experience of working with the community, engaging with
+the developers and obviously working with git. Also, since the tool is written in Ruby, I
+had to spend some time brushing up the concepts of Ruby and understanding the code structure,
+and methodologies followed for the development. Ruby is a concise and appealing language which is not very tough to
+understand once you are in with the flow. Anyway, I plan to continue my contribution to sequenceserver
+for quite some time and also encourage you to take a look if you are even just a little bit of
+Biology enthusiast.&lt;/p&gt;
+&lt;p&gt;I will talk more about BLAST algorithm in general in my next post.&lt;/p&gt;
+&lt;table class="docutils citation" frame="void" id="paper" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#id1"&gt;[paper]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;: &lt;a class="reference external" href="http://www.blastalgorithm.com/"&gt;http://www.blastalgorithm.com/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item><item><title>Blogging is fun!</title><link>https://vivekiitkgp.github.io/blog/blogging-is-fun.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;Writing a blog and personalized webpage had been one of primary tasks on my
+mind for quite a long time. However, Always I was caught in some acitivity
+thereby preventing it to happen. Finally, after lurking through many
+static website generators, I decided to go ahead with the &lt;a class="reference external" href="http://getnikola.com"&gt;Nikola&lt;/a&gt; and Github
+Pages pair as the best combination. Static websites are easy to maintain,
+fun, and simply effective for most of my needs. It took some time to get hold
+of how these work but in the process I learned about &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Web_template_system"&gt;templating engines&lt;/a&gt;,
+few javascript libraries and how they are used.&lt;/p&gt;
+&lt;p&gt;Like all my other projects, the source code for this site is also made
+available on &lt;a class="reference external" href="https://github.com/vivekiitkgp/vivekiitkgp.github.io/"&gt;Github&lt;/a&gt;. Obviously, whatever I have created is very premature
+and just a working solution. If anyone has anything to say, just drop in an email
+or fork the site and send me a pull request. I would be happy to accept constructive
+changes. In the meantime, the looks and structure of the site will be subjected to frequent
+modifications.&lt;/p&gt;&lt;/div&gt;</description><guid>https://vivekiitkgp.github.io/blog/blogging-is-fun.html</guid><pubDate>Sat, 03 May 2014 13:11:08 GMT</pubDate></item></channel></rss>

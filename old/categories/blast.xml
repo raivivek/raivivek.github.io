@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (blast)</title><link>https://vivekiitkgp.github.io/</link><description></description><atom:link rel="self" href="https://vivekiitkgp.github.io/categories/blast.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 15 Nov 2015 06:27:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>BLAST+ and Its Inconsistencies</title><link>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK1763/"&gt;BLAST+&lt;/a&gt; is an amazing tool and
+does it job in a pretty decent way.  However, anyone who has worked with it for
+some time and with some non trivial details has his own horror stories to tell.
+For the past few months where I have been engaged in development of
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver"&gt;SequenceServer&lt;/a&gt;, we got a lot
+of opportunities to see the ugly inconsistencies crept within the otherwise
+beautiful program.&lt;/p&gt;
+&lt;p&gt;BLAST+ is the newer and improved version of legacy BLAST executables with
+improved performance and feature inclusion. It goes through close to two cycles
+of release every year and includes further performance patches or fixes
+introduced against community bug reports.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;I will talk in brief about few problems that we encountered while developing
+SequenceServer.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;One of my major tasks with SS was to create a data layer which will be
+helpful in creating flexible interface. This required me to BLAST and obtain the
+results in XML format, parse and store it accordingly.&lt;/p&gt;
+&lt;p&gt;One of the curious things to notice in the XML file is the presence of
+&lt;tt class="docutils literal"&gt;&amp;lt;Iteration_stat&amp;gt;&lt;/tt&gt; tag within each query. Although if you compare the
+values you will find that each of these stats across all the queries are
+same, and indeed they represent statistical information based on the entire
+query and not per query. You can examine one sample XML file
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/blob/master/spec/ss_sample_blast_with_hits.xml"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you examined the XML file, you can notice that the sequence alignments,
+start, and end co-ordinates are all provided very nicely. When using the HTML
+format output option (provided with all BLAST programs) like prior versions
+of SS, we receive a well formatted output where longer sequences are properly
+broken on multiple lines along with start and end coordinates for the same.
+But as we were generating the HTML ourselves, we had to manually calculate
+the start and stop ends for each line.&lt;/p&gt;
+&lt;p&gt;In general, the start and end coordinates are agnostic of the reading frame and
+one has to properly infer them from the &lt;tt class="docutils literal"&gt;qframe&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;hframe&lt;/tt&gt; values. In
+other words, you need to see whether you are moving on the positive strand or
+the negative stand. However, &lt;tt class="docutils literal"&gt;blastn&lt;/tt&gt; makes an exception to this rule and
+automatically makes this informed decision. I don't know if that should be the
+scenario but whatever be the case, it certainly is not consistent. This had
+to be taken in care of separately in the commit shown below.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code ruby"&gt;&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-1"&gt;&lt;/a&gt;&lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="n"&gt;def28ff&lt;/span&gt;&lt;span class="o"&gt;..&lt;/span&gt;&lt;span class="n"&gt;cb236fa&lt;/span&gt; &lt;span class="mi"&gt;100644&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;---&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-3"&gt;&lt;/a&gt;&lt;span class="o"&gt;+++&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;sequenceserver&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;blast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rb&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-4"&gt;&lt;/a&gt;&lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;211&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt; &lt;span class="err"&gt;@@&lt;/span&gt; &lt;span class="k"&gt;module&lt;/span&gt; &lt;span class="nn"&gt;SequenceServer&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-5"&gt;&lt;/a&gt;                  &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;max&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-7"&gt;&lt;/a&gt;        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-8"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# blastn results are inconsistent with the other methods as it&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-9"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# automatically reverse the start and end coordinates (based on&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-10"&gt;&lt;/a&gt;&lt;span class="o"&gt;+&lt;/span&gt;        &lt;span class="c1"&gt;# frame), while for others it has to be inferred.&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-11"&gt;&lt;/a&gt;        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;'blastn'&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-12"&gt;&lt;/a&gt;            &lt;span class="n"&gt;nqseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;qend&lt;/span&gt;
+&lt;a name="rest_code_8fd9906cd7e04556a36c35aa29aa6425-13"&gt;&lt;/a&gt;            &lt;span class="n"&gt;nsseq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sframe&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;?&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sstart&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;hsp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send&lt;/span&gt;
+&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;In an issue &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id3" id="id1"&gt;[1]&lt;/a&gt; opened
+by our early contributer &lt;a class="reference external" href="https://github.com/wwood"&gt;@wwood&lt;/a&gt;, we found that
+FASTA ids with only numbers in it didn't play very well with &lt;tt class="docutils literal"&gt;blastdbcmd&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;The bug since then, went on without activity until recently when we tried to fix it
+using a simple hack. As hits can also be queried using accession number and not only
+ids, we simply started using accession number with a &lt;tt class="docutils literal"&gt;lcl|&lt;/tt&gt; added to the start.
+This not only preserved the previous and desired behavior but also solved the problem
+of error with numeric ids (&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/commit/6d83a0833c42ec3a9e944ebc7873603f4a82d774"&gt;commit&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;However, soon with the release of BLAST+ 2.2.30 &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id4" id="id2"&gt;[2]&lt;/a&gt; we noticed that our hack didn't play
+well with the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-target-only&lt;/span&gt;&lt;/tt&gt; option. Since, our implementation moves according to the
+latest version of BLAST+, we had to revert the commit.&lt;/p&gt;
+&lt;p&gt;As of now, the issue is still open and we wait for it to be fixed upstream. Apparently,
+the BLAST+ team is aware of the issue but it seems to be poorly documented.
+Here is what they had to say -&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+... but when lcl|integer is used (either directly on the definition line, or when
+only an integer is used), the programs assume that the integer is a gi
+number.We will investigate the feasibility of applying a check.
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Another weird issue popped us when we were playing around with some funky
+ids. These ids contained some symbols and weird characters like hashes and
+pipes. I'm not yet sure if this is an undesired behavior but it is certainly
+queer. Here is a small demo -&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+$ cat funky_ids.fa
+&amp;gt;abc|def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abcdef#
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+&amp;gt;abc#def
+GATGAACGCTGGCGGCGTGCCTAATACATGCAAGTCGAG
+
+$ blastdbcmd -db funky_ids.fa -entry all -outfmt '%a'
+abc:def
+abcdef#
+abc#def
+&lt;/pre&gt;
+&lt;p&gt;If you noticed the first line of both commands you can see that the pipe
+character in first case is being weirdly displayed as a colon. As I said, I
+don't know yet if it is a desired or intentional behavior but whatever it is,
+it sure needs some explanation or documentation. I have already emailed the
+BLAST+ team about this and expecting their reply anytime soon.&lt;/p&gt;
+&lt;p&gt;I will have some more updates with my recent adventures with &lt;a class="reference external" href="https://github.com/yeban/afra"&gt;Afra (an
+annotation editor)&lt;/a&gt; in coming week.&lt;/p&gt;
+&lt;p&gt;Stay tuned!&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id3" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Retrieving blast sequences doesn't work well with numbers #88,
+&lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/88"&gt;SequenceServer, GitHub&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id4" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;NCBI BLAST+ Release Notes, October 2nd, 2014. Christiam Camacho, NCBI,
+&lt;a class="reference external" href="http://www.ncbi.nlm.nih.gov/books/NBK131777/"&gt;http://www.ncbi.nlm.nih.gov/books/NBK131777/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>blast</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/blast-and-its-inconsistencies.html</guid><pubDate>Sun, 11 Jan 2015 06:33:17 GMT</pubDate></item><item><title>Understanding BLAST Output</title><link>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;In the last post, I mentioned about a project I was trying to work on -
+&lt;a class="reference external" href="http://www.sequenceserver.com"&gt;SequenceServer&lt;/a&gt;. Also, in the end I
+said that I would be writing about the BLAST algorithm (which is the
+backbone of this project) and how does it works so efficiently in
+producing alignments even with very long sequences. However, In this
+post I would like to talk about BLAST program and it's output before we
+go into the algorithm some time later.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;After talking to &lt;a class="reference external" href="https://github.com/yeban"&gt;Priyam&lt;/a&gt; (one of the
+project collaborators), I decided to work towards solving the &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21"&gt;issue
+21&lt;/a&gt;, which
+in turn would help us to solve a large number of other dependent issues
+as well. This was supposed to be a major improvement and I really liked
+the idea of it. Especially since it was concerned with understanding the
+BLAST program and its output format.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Background&lt;/em&gt;: &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues/21"&gt;Issue
+21&lt;/a&gt; deals
+with displaying an overview graphic for the output results obtained from
+blasting. This is a nice feature as it adds more towards visualizing and
+understanding the data easily (than going over a large number of hits in
+many cases). The problem however is that because of the hacky way in
+which the current implementation worked for displaying the final output
+results, it was not very easy to work with generation of visuals. The
+data generated from BLAST output had to be parsed first into a data
+layer and then interfaced with other features like displaying overview
+graphic or other rich information. This required three things from my
+side - Ruby, BLAST, and Patience.&lt;/p&gt;
+&lt;div class="section" id="x-part-i"&gt;
+&lt;h2&gt;[x] Part I&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;BLAST Output&lt;/strong&gt;: The blast output format can be reconfigured using the
+&lt;tt class="docutils literal"&gt;outfmt&lt;/tt&gt; option which is described in the NCBI's &lt;a class="reference external" href="https://vivekiitkgp.github.io/blog/www.ncbi.nlm.nih.gov/books/NBK1763/?report=reader#!po=91.5094"&gt;BLAST
+Manual&lt;/a&gt;.
+The sample XML output (standard settings) has the following structure
+(for a real example
+&lt;a class="reference external" href="https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml"&gt;blast.xml&lt;/a&gt;):&lt;/p&gt;
+&lt;pre class="code xml"&gt;&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-1"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;?xml version="1.0"?&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-2"&gt;&lt;/a&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd"&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-3"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;BlastOutput&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-4"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_program&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-5"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_version&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-6"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_reference&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-7"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_db&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-8"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-ID&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-9"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-def&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-10"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_query-len&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-11"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;BlastOutput_param&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-12"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;Parameters&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-13"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_matrix&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-14"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_expect&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-15"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_gap-open&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-16"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_gap-extend&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-17"&gt;&lt;/a&gt;      &lt;span class="nt"&gt;&amp;lt;Parameters_filter&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-18"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;/Parameters&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-19"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;/BlastOutput_param&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-20"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;BlastOutput_iterations&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-21"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-22"&gt;&lt;/a&gt;  -- Iteration details --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-23"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration_hits&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-24"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-25"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_num&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-26"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_id&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-27"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_def&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-28"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_accession&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-29"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_len&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-30"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;Hit_hsps&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-31"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;Hsp&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-32"&gt;&lt;/a&gt;  -- HSP Details --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-33"&gt;&lt;/a&gt;    &lt;span class="nt"&gt;&amp;lt;/Hsp&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-34"&gt;&lt;/a&gt;  &lt;span class="nt"&gt;&amp;lt;/Hit_hsps&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-35"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-36"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Hit&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;/Hit&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-37"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration_hits&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-38"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;Iteration_stat&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-39"&gt;&lt;/a&gt;  -- Statistics about Query --
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-40"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration_stat&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-41"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/Iteration&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-42"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/BlastOutput_iterations&amp;gt;&lt;/span&gt;
+&lt;a name="rest_code_0cec5c6687504c06b6542d9de2189486-43"&gt;&lt;/a&gt;&lt;span class="nt"&gt;&amp;lt;/BlastOutput&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;The XML output is as detailed as it could be including all the information
+about Hit's &lt;a class="reference external" href="https://genomevolution.org/wiki/index.php/High-scoring_segment_pair"&gt;HSP&lt;/a&gt;, the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-database&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;alignment-lengths&lt;/span&gt;&lt;/tt&gt;, the &lt;tt class="docutils literal"&gt;query&lt;/tt&gt; &amp;amp; &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;aligned-sequences&lt;/span&gt;&lt;/tt&gt;
+along with the matches between them, and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;query-statistics&lt;/span&gt;&lt;/tt&gt;. This
+is as useful as it could be and helps to generate very detailed statistics and
+overview too. I would recommend one to look at the given example of blast.xml
+to understand what kind of data is generated. To parse this generated XML
+output easily, I used the &lt;a class="reference external" href="https://rubygems.org/gems/ox"&gt;Ox&lt;/a&gt; rubygem, which
+is a simple and &lt;a class="reference external" href="http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html"&gt;faster&lt;/a&gt; alternative of
+other XML parsers available in Ruby. In the beginning, I generated a simple
+Hash out of this parsed data using recursive traversal along the elements.&lt;/p&gt;
+&lt;pre class="code ruby"&gt;&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-1"&gt;&lt;/a&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;report!&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-2"&gt;&lt;/a&gt;  &lt;span class="c1"&gt;# Generates BLAST report which one or more multiple Query objects&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-3"&gt;&lt;/a&gt;  &lt;span class="c1"&gt;# based on the blast query string.&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-4"&gt;&lt;/a&gt;  &lt;span class="n"&gt;parsed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Ox&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vi"&gt;@result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-5"&gt;&lt;/a&gt;  &lt;span class="n"&gt;hashed_out&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;node_to_dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parsed_out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;root&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-6"&gt;&lt;/a&gt;  &lt;span class="vi"&gt;@program&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_program"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-7"&gt;&lt;/a&gt;  &lt;span class="vi"&gt;@querydb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_db"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-9"&gt;&lt;/a&gt;  &lt;span class="n"&gt;hashed_out&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"BlastOutput_iterations"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-10"&gt;&lt;/a&gt;    &lt;span class="vi"&gt;@queries&lt;/span&gt; &lt;span class="o"&gt;||=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-11"&gt;&lt;/a&gt;    &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Query&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{},&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Statistics"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-13"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# Ensure a hit object is received. No hits, returns a newline.&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-14"&gt;&lt;/a&gt;    &lt;span class="c1"&gt;# Note that checking to "\n" doesn't work since n[4] = ["\n"]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-15"&gt;&lt;/a&gt;    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]==[&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-16"&gt;&lt;/a&gt;      &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"No hits found."&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-17"&gt;&lt;/a&gt;    &lt;span class="k"&gt;else&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-18"&gt;&lt;/a&gt;      &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-19"&gt;&lt;/a&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Hit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-20"&gt;&lt;/a&gt;                                                 &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{})&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-21"&gt;&lt;/a&gt;        &lt;span class="vi"&gt;@queries&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hits&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;]][&lt;/span&gt;&lt;span class="ss"&gt;:hsp&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;HSP&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;hits&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="s2"&gt;"Hsp"&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-22"&gt;&lt;/a&gt;      &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-23"&gt;&lt;/a&gt;    &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-24"&gt;&lt;/a&gt;  &lt;span class="k"&gt;end&lt;/span&gt;
+&lt;a name="rest_code_0f2b7b5485aa474a81a7500bff3f3fd7-25"&gt;&lt;/a&gt;&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;This Hash is then used for easy templating (using
+&lt;a class="reference external" href="http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html"&gt;erb&lt;/a&gt;) and
+display of results in a more elegant and modular way. This keeps the
+data at one place which can then be used for overview graphic display or
+integration of other features and bug fixes in near future. All my work
+related to this can be found at
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/sequenceserver/tree/issue21"&gt;@issue21&lt;/a&gt;
+branch. The code written till now, is very premature and &lt;em&gt;just&lt;/em&gt; works. I
+plan to refactor it majorily and incorporate some very nice features of
+Ruby language (which I am desperately trying to understand).&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://drive.google.com/file/d/0B3eGCB261PalWTJnODloLXAtdGM/edit?usp=sharing"&gt;Here&lt;/a&gt;
+is a snapshot of what current output looks like, when SS is run.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="o-part-ii"&gt;
+&lt;h2&gt;[O] Part II&lt;/h2&gt;
+&lt;p&gt;The second part of this task deals with actually displaying the overview
+graphic for the hits obtained using SS. To give an idea of what it looks
+like, see &lt;a class="reference external" href="http://www.biodalliance.org/"&gt;here&lt;/a&gt; and
+&lt;a class="reference external" href="http://canvasxpress.org/genome.html"&gt;here&lt;/a&gt;. The target is to display
+similar graphic (but simple and easy to load/configure) for each hit in
+the SS's output. I am yet to start working on and possibly the next post
+could be derived out of that work.&lt;/p&gt;
+&lt;p&gt;I would be very glad if you drop by to review my code and send in any
+suggestions. Feel free to reach me by whatever means.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>SSequenceserver</category><category>blast</category><category>ruby</category><guid>https://vivekiitkgp.github.io/blog/understanding-blast-output.html</guid><pubDate>Sat, 12 Jul 2014 21:17:45 GMT</pubDate></item><item><title>Easy BLAST tool - SequenceServer</title><link>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;Contributing to open source is quite an exciting journey. I embarked upon this
+mission recently with few contributions to &lt;a class="reference external" href="http://www.sequenceserver.com/"&gt;SequenceServer - A BLAST tool&lt;/a&gt;, which lets you set up custom BLAST+ server to perform BLAST queries with your
+own database locally through a web interface. For those who are not familiar
+with &lt;strong&gt;BLAST&lt;/strong&gt; or Basic Local Search Alignment Tool &lt;a class="citation-reference" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#paper" id="id1"&gt;[paper]&lt;/a&gt; - it is an algorithm which allows
+quick comparison of biological sequence information which are long strings consisting
+of amino acids (in case of proteins) or nucleotides (in case of nucleic acids).
+It is exceedingly used by biologists all over the world to study newer
+organisms, discovery of genes and finding similarity between proteins and so
+on. One can see a working instance of the tool at &lt;a class="reference external" href="http://antgenomes.org/blast"&gt;Ant Genomes&lt;/a&gt; website, maintained by one of the developers
+and Professor at Queen Mary University London, &lt;a class="reference external" href="http://www.sbcs.qmul.ac.uk/staff/yannickwurm.html"&gt;Yannick Wurm&lt;/a&gt;. He's also the overseerer of the project.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;The program has already completed its major part of development and its stable version
+is readily available for use. However, there were many &lt;a class="reference external" href="https://github.com/yannickwurm/sequenceserver/issues"&gt;issues&lt;/a&gt; or feature requests
+that were pending and can be worked upon. I got in touch with the maintainers and submitted
+three pull requests for small few bugs and a feature. It was not a big task but I was
+quite motivated with this small experience of working with the community, engaging with
+the developers and obviously working with git. Also, since the tool is written in Ruby, I
+had to spend some time brushing up the concepts of Ruby and understanding the code structure,
+and methodologies followed for the development. Ruby is a concise and appealing language which is not very tough to
+understand once you are in with the flow. Anyway, I plan to continue my contribution to sequenceserver
+for quite some time and also encourage you to take a look if you are even just a little bit of
+Biology enthusiast.&lt;/p&gt;
+&lt;p&gt;I will talk more about BLAST algorithm in general in my next post.&lt;/p&gt;
+&lt;table class="docutils citation" frame="void" id="paper" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html#id1"&gt;[paper]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;: &lt;a class="reference external" href="http://www.blastalgorithm.com/"&gt;http://www.blastalgorithm.com/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>alignment</category><category>biology</category><category>blast</category><category>genes</category><category>sequenceserver</category><guid>https://vivekiitkgp.github.io/blog/easy-blast-tool-sequenceserver.html</guid><pubDate>Mon, 26 May 2014 11:20:16 GMT</pubDate></item></channel></rss>

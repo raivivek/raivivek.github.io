@@ -1,0 +1,18 @@
+.. title: 404
+.. slug: 404
+.. date: 2014-08-22 17:05:23 UTC+05:30
+.. tags: 
+.. link: 
+.. description: error page
+.. type: text
+.. author: Vivek Rai
+
+.. image:: rtl.png
+    :align: center
+
+.. epigraph::
+
+   No matter where you go, there you are.
+
+   -- Buckaroo Banzai
+

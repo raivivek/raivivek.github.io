@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Vivek Rai (haskell)</title><link>https://vivekiitkgp.github.io/</link><description></description><atom:link rel="self" href="https://vivekiitkgp.github.io/categories/haskell.xml" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 15 Nov 2015 06:27:59 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Introduction to Functional Programming</title><link>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</link><dc:creator>Vivek Rai</dc:creator><description>&lt;div&gt;&lt;p&gt;I had heard fascinating tales of Functional Programming and how it has been a
+food for thought to many exceptional programmers. Over a year ago when I was
+looking for Python mastery tips on the web, I came across &lt;a class="reference external" href="https://stackoverflow.com/questions/2573135/python-progression-path-from-apprentice-to-guru"&gt;this&lt;/a&gt;
+question on StackOverflow, that laid down an ultimate path for progression from an apprentice to
+guru. The highest voted answer recommended one to discover Haskell after they
+have learned almost all the key features of Python and embrace
+functional programming in the end. As much as I would have loved to explore it
+then and there; however, it wasn't possible until two weeks ago that I could
+actually delve into the subject with all my seriousness and attention. It's not
+that I didn't make any effort at all during this time. It's just that I wanted
+to have a guiding course that I could follow and use it to keep track of my
+progress.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Just a few weeks ago, a course on &lt;a class="reference external" href="https://courses.edx.org/courses/DelftX/FP101x/3T2014"&gt;Functional Programming&lt;/a&gt; by &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Delft_University_of_Technology"&gt;Delft University&lt;/a&gt; kicked off on
+&lt;a class="reference external" href="https://edx.org"&gt;edX platform&lt;/a&gt;.  I was very much influenced by the
+instructor and immediately signed up for the course. Its been several weeks
+now, and I must that this course has certainly met my expectations. The
+instructor for this course is &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Erik_Meijer_(computer_scientist)"&gt;Erik Meijer&lt;/a&gt;, a highly
+acclaimed computer scientist who has been closely associated with aspects of
+functional programming throughout his career &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id5" id="id1"&gt;[1]&lt;/a&gt; &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id6" id="id2"&gt;[2]&lt;/a&gt;. I must however say that he's
+quite bold about his opinions &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id7" id="id3"&gt;[3]&lt;/a&gt; and doesn't like the idea of spoon feeding
+students. One can follow him on twitter (&lt;a class="reference external" href="https://twitter.com/headinthebox"&gt;@headinthebox&lt;/a&gt;) for interesting updates. Exactly during
+the same time, another famous researcher and computer scientist &lt;a class="reference external" href="http://pauillac.inria.fr/~huet/"&gt;Dr. Gérard
+Huet&lt;/a&gt; happened to visit out campus for a two
+days guest lecture on lambda calculus, type theory, functional programming, and
+semantics of programming languages. I was fortunate to interact to attend his
+lecture and see him in person. The lecture helped me understand the mathematical foundations of
+programming language design and its semantics &lt;a class="footnote-reference" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id8" id="id4"&gt;[4]&lt;/a&gt; (being a Biotechnology
+student, we don't really get to do courses on Automata Theory, or Mathematical Logic).
+It was an overwhelming experience to have.&lt;/p&gt;
+&lt;p&gt;As far as the particulars of course are concerned, the exercises are really nice
+and encourage one to explore concepts on their own. Although the course can be
+done with the help of any language that supports functional programming,
+&lt;a class="reference external" href="http://haskell.org"&gt;Haskell&lt;/a&gt; is the recommended main language of the
+course (that is a thing I love). Supplementary reading material is readily
+provided for those who want to stay ahead of the course backed by a strong and
+supportive community in the discussion forums.  The assignment deadlines are
+quite stretched allowing one to comprehend material and attempt quizzes at
+their pace.&lt;/p&gt;
+&lt;p&gt;Also, I have been collecting all the resources that has been suggested by the
+instructor or the others during the course and maintaining a list on GitHub at
+&lt;a class="reference external" href="https://github.com/vivekiitkgp/haskell"&gt;vivekiitkgp/haskell&lt;/a&gt;. It will also
+contain all the code that I would write during my learning experience. However,
+the course repository is hidden because the assignment dates are not yet over
+and releasing solutions would be violating honor code agreement for the course.
+Feel free to star and contribute.&lt;/p&gt;
+&lt;p&gt;In the end, as Erik would say, "Developers don't talk about code, they code".
+However, I would love to post more interesting content as I delve more into
+matter.&lt;/p&gt;
+&lt;hr class="docutils"&gt;
+&lt;table class="docutils footnote" frame="void" id="id5" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id1"&gt;[1]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Haskell 98 Language and Libraries: The Revised Report; December 2002. &lt;a class="reference external" href="http://www.haskell.org/onlinereport/"&gt;http://www.haskell.org/onlinereport/&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id6" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id2"&gt;[2]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://www.informatik.uni-trier.de/~ley/pers/hd/m/Meijer:Erik.html"&gt;List of published papers by Erik Meijer.&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id7" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id3"&gt;[3]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;&lt;a class="reference external" href="http://vimeo.com/110554082"&gt;One Hacker Way&lt;/a&gt;, a Rational Alternative to Agile by Erik Meijer, Presented at Reaktor Dev Day 2014&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame="void" id="id8" rules="none"&gt;
+&lt;colgroup&gt;&lt;col class="label"&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td class="label"&gt;&lt;a class="fn-backref" href="https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html#id4"&gt;[4]&lt;/a&gt;&lt;/td&gt;&lt;td&gt;An executable computability theory course based on λ-calculus. &lt;a class="reference external" href="http://pauillac.inria.fr/~huet/PUBLIC/CCT.pdf"&gt;[PDF]&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;</description><category>edx</category><category>fp</category><category>haskell</category><category>moocs</category><guid>https://vivekiitkgp.github.io/blog/introduction-to-functional-programming.html</guid><pubDate>Sun, 09 Nov 2014 02:47:17 GMT</pubDate></item></channel></rss>

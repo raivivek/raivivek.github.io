@@ -1,0 +1,59 @@
+a.footnote-reference,
+a.citation-reference {
+  position: relative; top: -0.5em; font-size: 60%;
+}
+
+code, pre {
+  font-family: monospace;
+  background-color: rgba(250, 250, 250, 0.4);
+  border: none;
+}
+
+.social-icons {
+  list-style: none;
+  margin: auto;
+}
+
+.social-icons li {
+  display: inline;
+  padding: 5px;
+}
+
+.social-icons li a:hover {
+  color: brown;
+}
+
+.tossing{
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(4deg);
+  }
+  100% {
+    -webkit-transform: rotate(-4deg);
+  }
+}
