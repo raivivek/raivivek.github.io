@@ -1,0 +1,92 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=author content><meta name=robots content="index,follow"><meta name=referrer content="no-referrer"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon><link rel=canonical href=https://raivivek.in/2014/08/diving-deeper-into-blast-ii/><title>Diving Deeper into BLAST - II | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css><script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script></head><body><div class=c-banner><div class=c-banner-title>SHORTS</div><div class=c-banner-subclause><i>by Vivek</i></div><div class=c-nav-bar><a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a></div></div><article><header><h2>Diving Deeper Into BLAST - II</h2><p class=subtitle>Creating a modern overview graphic with D3</p></header><p>This is a follow up of the
+<a href=/code/understanding-blast-output>previous post</a>
+where I was trying to parse the BLAST+ XML output to create an efficient data
+layer in SequenceServer. A critical and often demanded feature for the
+application was the ability to have a graphical overview of all the obtained
+hits. NCBI&rsquo;s BLAST portal, for instance, includes a graphical overview of
+your results that summarizes how many hits you got and how do they score.
+<label for=marginnote-0 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-0 class=margin-toggle>
+<span class=marginnote><img src=/images/ncbi.png>
+Graphical summary of BLAST results as displayed on NCBI portal.
+</span>However, we had nothing for SequenceServer.</p><p>The feature request had been sitting on project&rsquo;s urgent list for quite a long time and
+couldn&rsquo;t be delayed any longer. So, after having a discussion with project
+maintainer Anurag, I assigned this task to myself.</p><h2 id=approaches>Approaches&nbsp;<a class=anchor href=#approaches></a></h2><p>There were a couple of options for solving this problem. Initially, we
+considered using <a href=http://chmille4.github.io/Scribl/>Scribl</a>, an HTML5
+canvas based library written specifically for drawing genomic regions,
+alignments, assembly data and so on. However, the features and
+flexibility that we were looking for weren&rsquo;t available or not easy to
+integrate with our backend.
+<label for=marginnote-1 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-1 class=margin-toggle>
+<span class=marginnote><img src=/images/d3.png></span></p><p>The second obvious choice was the use of <a href=http://d3js.org>d3.js</a>
+Javascript library, a powerful data-driven visualization generator.
+It&rsquo;s fairly low level and allows a large degree of custom control and
+manipulation over components, thereby allowing users to create rich,
+high quality graphics rendered in
+<a href=https://developer.mozilla.org/en/docs/Web/SVG>SVG</a>. The library can be
+easily powered by the data obtained directly from the backend layer.
+However, a more elegant choice was to remove this dependency on the
+backend and disperse all the necessary information inside the page
+itself using the HTML5 data attributes. These data-attributes would then
+be highly useful, not only for obtaining data but also for applying
+custom styling and dynamic behavior using JS. For example, you could
+just do</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>// This iterates over all elements with the mentioned data-attrib
+</span></span><span class=line><span class=cl>// See public/js/jquery.graphit.js
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>$(&#34;[data-graphit=&#39;overview&#39;]&#34;).each(function(i) {
+</span></span><span class=line><span class=cl>    // Do stuff here
+</span></span><span class=line><span class=cl>});
+</span></span></code></pre></div><h2 id=implementation>Implementation&nbsp;<a class=anchor href=#implementation></a></h2><p>After the basic idea was conceived, I started playing around a little
+with d3 and found it quite interesting. Anurag then showed me the BLAST
+interface of <a href=http://naked-mole-rat.org>naked-mole-rat.org</a>, a
+naked mole-rat genome resource. They had implemented a graphical
+overview feature similar to that used by NCBI except the fact that it
+was written using d3.</p><p>Since, I was relatively new to programming in Javascript, their
+implementation really helped me to think of my approach and come up with the
+implementation of mine. The initial code I wrote went under a lot of
+changes with feedback from Anurag. Although we initially started with an
+inspiration from NCBI&rsquo;s graphical overview (shown beside) we improved
+many things over theirs e.g., the hits in our graphical overview were
+sorted by e-value, a gradient color scheme to display the strength and
+weakness of hits etc. We also saved these values within the <code>data-attribs</code> of
+each query result (example below) so that we can quickly render the vector
+graphics image.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;% hit.hsps.each do |hsp| %&gt;
+</span></span><span class=line><span class=cl>  &lt;div
+</span></span><span class=line><span class=cl>      class=&#34;hsps&#34; id=&#34;&lt;%=&#34;Query_#{query.number}_hit_#{hit.number}_#{hsp.number}&#34;%&gt;&#34;
+</span></span><span class=line><span class=cl>      data-hsp-evalue=&#34;&lt;%= hsp.evalue %&gt;&#34; data-hsp-start=&#34;&lt;%= hsp.qstart %&gt;&#34;
+</span></span><span class=line><span class=cl>      data-hsp-end=&#34;&lt;%= hsp.qend %&gt;&#34; data-hsp-frame=&#34;&lt;%= hsp.hframe %&gt;&#34;&gt;
+</span></span><span class=line><span class=cl>      &lt;table class=&#34;table-hsp&#34;&gt;
+</span></span><span class=line><span class=cl>    ..
+</span></span><span class=line><span class=cl>  &lt;/div&gt;
+</span></span></code></pre></div><p>The code was then bundled as a jQuery
+<a href=https://github.com/vivekiitkgp/sequenceserver/blob/14d9febd115b02fff1a98e9659e0cb756633e9c9/public/js/jquery.graphit.js>plugin</a>
+(&ldquo;graphIt&rdquo;) and served minified with the custom webserver.</p><p>One of the technical challenges I want to specifically highlight is the one
+where I had to figure out how to connect each high-scoring segment pair (HSP)
+with a thin line as there can be multiple HSPs per hit.</p><p>In the meantime, we were upgrading to <strong>Bootstrap 3</strong> which broke and
+re-broke my implementation. Each time, when I&rsquo;ll sit to
+rewrite the it again, I would come up with a new and better
+understanding of my code. All this however, happened only after a lot of
+experimentation which I didn&rsquo;t talk about much in the post due to lack
+of time. Nevertheless, there were also a bunch of critical bug fixes and
+improvements in the backend code which can be followed on <a href=https://github.com/vivekiitkgp/sequenceserver/commits/graph_fixtures>GitHub</a>.</p><p>In the end, I feel that the upcoming version is much more interactive,
+elegant and easy to use than the previous ones. I am excited to see it being
+released for wider adoption. Here is a quick snapshot of the graphical
+overview for an example BLAST hit.</p><figure class=fullwidth><img src=/images/graph.png><figcaption>Graphical summary designed using d3.js.</figcaption></figure><h2 id=epilogue>Epilogue&nbsp;<a class=anchor href=#epilogue></a></h2><p>The current source code of the plugin can be found on
+<a href=https://github.com/vivekiitkgp/sequenceserver/graphic_fixtures>Github</a>.
+Feel free to clone and run locally on your machine. If not, an online
+version has also been deployed at
+<a href=http://antgeomes.org/sequenceserver>antgenomes.org/sequenceserver</a> for
+convenient testing. However, I would like to point out that there will
+be a lot of planned and unplanned changes happening frequently. So, if
+you plan to use SequenceServer for production, please use
+<a href=https://github.com/yannickwurm/sequenceserver>this</a> version until we
+roll out refined one (very soon).</p><p>I wanted to talk more about d3 and my plans to complete a couple of data
+analysis projects with its help. However, let&rsquo;s save it for some time
+later.</p></article><div class=footer><div class=footer-content><div><ul></ul><a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a></div></div></div></body></html>

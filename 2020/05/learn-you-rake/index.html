@@ -1,0 +1,236 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=author content><meta name=robots content="index,follow"><meta name=referrer content="no-referrer"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon><link rel=canonical href=https://raivivek.in/2020/05/learn-you-rake/><title>Learn you Rake | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css><script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script></head><body><div class=c-banner><div class=c-banner-title>SHORTS</div><div class=c-banner-subclause><i>by Vivek</i></div><div class=c-nav-bar><a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a></div></div><article><header><h2>Learn You Rake</h2><p class=subtitle>Who needs a Makefile anyway?</p></header><nav id=TableOfContents><ul><li><a href=#usage>Usage</a></li><li><a href=#write-you-a-rakefile>Write you a <code>Rakefile</code></a><ul><li><a href=#hello-rake>Hello Rake</a></li><li><a href=#what-is-a-rake-task>What is a Rake Task?</a></li><li><a href=#augmenting-tasks>Augmenting Tasks</a></li><li><a href=#skeleton-of-a-task>Skeleton of a Task</a></li><li><a href=#types-of-tasks>Types of Tasks</a></li></ul></li><li><a href=#useful-powerups>Useful powerups</a><ul><li><a href=#filelists>FileLists</a></li><li><a href=#parallel-execution>Parallel execution</a></li><li><a href=#rules>Rules</a></li></ul></li><li><a href=#advanced-rakefile>Advanced Rakefile</a><ul><li><a href=#accessing-other-tasks>Accessing Other Tasks</a></li><li><a href=#namespaces>Namespaces</a></li></ul></li></ul></nav><p><a href=https://en.wikipedia.org/wiki/Rake_(software)>Rake</a> is a task runner, and in
+my opinion, a worthy replacement of Make. It is written in
+<a href=https://en.wikipedia.org/wiki/Ruby_(programming_language)>Ruby</a> and, as a result,
+has the immense benefit of being concise, pleasant to eyes, and fun to write.</p><p>Task runners, such as Rake or Make, provide many advantages over manual task
+management. You can program complex rules or conditional triggers to
+automate your tasks. They also come with a variety of in-built functions
+to help you write <a href=https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>DRY</a> code and reduce bugs. Finally, they help you write
+consistent and reproducible code to run on different systems.</p><p>For example, Rake can help you organize and manage analyses in a
+bioinformatics project. With a few simple commands, you can rerun all of your
+analyses in a desired ordered manner without worrying about mistyping file
+paths or forgetting important flags.</p><p>&ldquo;Very cool,&rdquo; you may say, &ldquo;but how do I use it?&rdquo; Fair enough. In this post, I
+will cover elements of Rake that I find useful on daily basis and covers
+almost all of my use cases.</p><p>So, in words of <em>Gandalf</em>, let&rsquo;s:</p><blockquote><p>Fly, You Fools!</p></blockquote><h2 id=usage>Usage&nbsp;<a class=anchor href=#usage></a></h2><p>macOS users should have rake preinstalled. If not, use the following command to install rake:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>gem install rake
+</span></span></code></pre></div><p>Once installed, using <code>rake</code> is as simple as following:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ <span class=nb>cd</span> my_dir
+</span></span><span class=line><span class=cl>$ tree -L <span class=m>1</span>
+</span></span><span class=line><span class=cl>.
+</span></span><span class=line><span class=cl>├── Rakefile
+</span></span><span class=line><span class=cl>├── file1.py
+</span></span><span class=line><span class=cl>├── file2.py
+</span></span><span class=line><span class=cl>├── data/
+</span></span><span class=line><span class=cl>└── src/
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>$ rake
+</span></span><span class=line><span class=cl><span class=o>(</span>in /home/user/my_dir<span class=o>)</span>
+</span></span><span class=line><span class=cl>...running...
+</span></span></code></pre></div><p>When invoked on command line without any options, <code>rake</code> searches for a file
+named <code>Rakefile</code> in the current directory and executes the <code>default</code> task
+within the file. We will see later how we can adjust which task gets executed and how.
+<span><label for=marginnote-0 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-0 class=margin-toggle>
+<span class=marginnote>Rakefile is the &ldquo;Makefile&rdquo; equivalent of Rake.</span></span></p><h2 id=write-you-a-rakefile>Write you a <code>Rakefile</code>&nbsp;<a class=anchor href=#write-you-a-rakefile></a></h2><p>First of all, there is no special format for a Rakefile. A Rakefile contains
+executable Ruby code. Anything legal in a ruby script is allowed in a
+Rakefile. However, <strong>there are conventions that we must follow.</strong><sup id=fnref:1><a href=#fn:1 class=footnote-ref role=doc-noteref>1</a></sup>
+<span><label for=marginnote-1 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-1 class=margin-toggle>
+<span class=marginnote>For a crash course in Ruby, consider <a href=https://learnxinyminutes.com/docs/ruby/>Learn X in Y minutes</a> tutorial for Ruby.</span></span></p><h3 id=hello-rake>Hello Rake&nbsp;<a class=anchor href=#hello-rake></a></h3><p>One of the primary building blocks of a Rakefile is a <code>task</code>. Task is an
+action you wish to perform which consumes an input and produces an output.
+Naturally, if you make the input of one task dependent on the output of
+another, you create a dependency between the tasks, and create what is
+called a <em>pipeline</em> or <em>workflow</em>. More on
+that later. For now, let us write a simple task that prints <em>hello world</em> to
+the terminal.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1># Rakefile</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:default</span> <span class=o>=&gt;</span> <span class=ss>:hello_world</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># cool ruby block syntax</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:hello_rake</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=c1># any valid Ruby code goes here</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Hello, Rake!&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>Save the snippet in a <code>Rakefile</code> inside a directory and run <code>rake</code>.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=err>$</span> <span class=n>rake</span> 
+</span></span><span class=line><span class=cl><span class=no>Hello</span><span class=p>,</span> <span class=no>Rake</span><span class=o>!</span>
+</span></span></code></pre></div><p>By default, Rake will build the <code>:default</code> task within the Rakefile. If you
+don&rsquo;t have a <code>:default</code> task, it will give you an error and ask to specify a
+task. In the case above, you could also get the same output by executing <code>rake hello_rake</code>.</p><p>So, to summarize, here&rsquo;s what we did so far:</p><ul><li>We wrote a &ldquo;hello world&rdquo; task that prints &ldquo;Hello, World!&rdquo; to the screen,</li><li>And because it is not the default task, we specified this task as a <strong>pre-requisite</strong> to the <em>default</em> task in the first line using the <code>=></code> syntax.</li></ul><h3 id=what-is-a-rake-task>What is a Rake Task?&nbsp;<a class=anchor href=#what-is-a-rake-task></a></h3><p>Based on what we see above, here&rsquo;s what an empty or pseudo-code style task looks like:
+<span><label for=marginnote-2 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-2 class=margin-toggle>
+<span class=marginnote>You can also use strings for task names and prerequisites, rake doesn&rsquo;t care.
+For example,<br><code>task 'name' => %w[prereq1 prereq2]</code></span></span></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=o>&lt;</span><span class=n>task_name</span><span class=o>&gt;</span> <span class=o>=&gt;</span> <span class=o>&lt;</span><span class=n>pre</span><span class=o>-</span><span class=n>requisites</span><span class=o>&gt;</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=c1># actions (may reference t or omit |t| from previous line)</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>As you can notice already, multiple pre-requisites are simply specified by putting them into an array or list.</p><h3 id=augmenting-tasks>Augmenting Tasks&nbsp;<a class=anchor href=#augmenting-tasks></a></h3><p>The existing skeleton, although simple, is quite effective. We can, however,
+add additional features to it that can make life easier in certain cases. For
+instance, say your task expects an <em>argument</em> and does something based on
+that. Say, run code assuming certain version of a program. Rake provides a
+way to achieve this as follows:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=c1># Rakefile</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:default</span> <span class=o>=&gt;</span> <span class=ss>:hello_world</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>desc</span> <span class=s2>&#34;Run Hello World with your name&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:hello_world</span><span class=p>,</span> <span class=o>[</span><span class=ss>:name</span><span class=o>]</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=p>,</span> <span class=n>args</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=c1># any valid Ruby code goes here</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Hello, </span><span class=si>#{</span><span class=n>args</span><span class=o>.</span><span class=n>name</span><span class=si>}</span><span class=s2>!&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>Now run it with a twist this time:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=err>$</span> <span class=n>rake</span> <span class=n>hello_world</span><span class=o>[</span><span class=no>Vivek</span><span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=no>Hello</span><span class=p>,</span> <span class=no>Vivek</span><span class=o>!</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=err>$</span> <span class=n>rake</span> <span class=o>-</span><span class=n>T</span>
+</span></span><span class=line><span class=cl><span class=n>rake</span> <span class=n>hello_world</span><span class=o>[</span><span class=nb>name</span><span class=o>]</span>  <span class=c1># Run hello_world with your name</span>
+</span></span></code></pre></div><p>The arguments specified on the command line were passed to the tasks through <code>args</code> which can then be used inside the block to perform specific functions. As before, you can pass multiple arguments at once.</p><p>You may also notice that we added a <code>desc</code> statement with a string describing what the task does. The benefit of doing that is that it shows up as help when a user runs <code>rake -T</code> as shown in the example.
+<span><label for=marginnote-3 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-3 class=margin-toggle>
+<span class=marginnote><span class=note-hint>RULE</span><br>Document your tasks.</span></span></p><p><strong>What if no arguments are supplied?</strong> In such cases, you can use <code>with_defaults</code> method in the task body to assume specific defaults.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=ss>:name</span><span class=p>,</span> <span class=o>[</span><span class=ss>:first_name</span><span class=p>,</span> <span class=ss>:last_name</span><span class=o>]</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=p>,</span> <span class=n>args</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>args</span><span class=o>.</span><span class=n>with_defaults</span><span class=p>(</span><span class=ss>:first_name</span> <span class=o>=&gt;</span> <span class=s2>&#34;John&#34;</span><span class=p>,</span> <span class=ss>:last_name</span> <span class=o>=&gt;</span> <span class=s2>&#34;Dough&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;First name is </span><span class=si>#{</span><span class=n>args</span><span class=o>.</span><span class=n>first_name</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Last  name is </span><span class=si>#{</span><span class=n>args</span><span class=o>.</span><span class=n>last_name</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p><strong>What if number of arguments is unknown or variable?</strong> In that case, use the <code>extras</code> method of <code>args</code> variable. This allows for tasks that can loop over a variable number of values, and its compatible with named parameters as well:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=ss>:email</span><span class=p>,</span> <span class=o>[</span><span class=ss>:message</span><span class=o>]</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=p>,</span> <span class=n>args</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>mail</span> <span class=o>=</span> <span class=no>Mail</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=n>args</span><span class=o>.</span><span class=n>message</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>recipients</span> <span class=o>=</span> <span class=n>args</span><span class=o>.</span><span class=n>extras</span>
+</span></span><span class=line><span class=cl>  <span class=n>recipients</span><span class=o>.</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>target</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>    <span class=n>mail</span><span class=o>.</span><span class=n>send_to</span><span class=p>(</span><span class=n>target</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><h3 id=skeleton-of-a-task>Skeleton of a Task&nbsp;<a class=anchor href=#skeleton-of-a-task></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=o>&lt;</span><span class=n>target</span><span class=o>&gt;</span><span class=p>,</span> <span class=o>[</span><span class=ss>:arg1</span><span class=p>,</span> <span class=ss>:arg2</span><span class=o>]</span> <span class=o>=&gt;</span> <span class=o>[</span><span class=ss>:pre_req1</span><span class=p>,</span> <span class=ss>:pre_req2</span><span class=o>]</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=p>,</span> <span class=n>args</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=c1># actions, may reference t, args here and use methods on them</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><h3 id=types-of-tasks>Types of Tasks&nbsp;<a class=anchor href=#types-of-tasks></a></h3><p>While <code>task</code> is a generic way of doing things using Rake, there are special types of tasks as well depending on what kind of output is expected.</p><ul><li><code>file</code> tasks</li><li><code>phony</code> tasks</li><li><code>directory</code> tasks</li><li><code>clean</code> or <code>clobber</code> tasks</li></ul><p><strong>File tasks</strong></p><p>As name suggests, <code>file</code> tasks are expected to create a file from one or more input files. These tasks would be skipped if the target files already exist.</p><ul><li>File tasks are declared using the <code>file</code> method instead of the <code>task</code> method.</li><li>File tasks are usually named with a string rather than a symbol.</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>file</span> <span class=s2>&#34;read_distribution.pdf&#34;</span> <span class=o>=&gt;</span> <span class=o>[</span><span class=s2>&#34;read_counts.csv&#34;</span><span class=o>]</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>sh</span> <span class=s2>&#34;Rscript plot_distribution </span><span class=si>#{</span><span class=n>t</span><span class=o>.</span><span class=n>prerequisites</span><span class=o>[</span><span class=mi>0</span><span class=o>]</span><span class=si>}</span><span class=s2> </span><span class=si>#{</span><span class=n>t</span><span class=o>.</span><span class=n>name</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>The great thing about <code>File</code> tasks is that rake provides useful file handling
+functions such as <code>cp</code>, <code>mv</code>, and <code>rm_r</code> to perform common file operations. For convenience,
+these are named after their equivalent command line programs. These functions are
+included in the <code>RakeFileUtils</code> module, an extended version of the standard ruby
+<code>fileutils</code> module and can be explored using <code>ri FileUtils</code> command.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=ss>:remove_all</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=n>rm_r</span><span class=p>(</span><span class=s2>&#34;./build&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p><strong>Phony Tasks</strong></p><p>A phony task is a file task but instead of other files are input, it uses non-file-based-tasks are prerequisites (without forcing them to rebuild). In <code>Makefile</code>, this is specified using <code>.PHONY</code>.</p><p>Use <code>require 'rake/phony'</code> to add the <code>phony</code> task.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;rake&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;rake/phony&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a phony task to generate a random phone number</span>
+</span></span><span class=line><span class=cl><span class=no>Rake</span><span class=o>::</span><span class=no>PhonyTask</span><span class=o>.</span><span class=n>new</span><span class=p>(</span><span class=s1>&#39;phone_number&#39;</span><span class=p>)</span> <span class=k>do</span> <span class=o>|</span><span class=n>t</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>t</span><span class=o>.</span><span class=n>area_codes</span> <span class=o>=</span> <span class=sx>%w[212 646 718]</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that uses the phone_number task</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:make_call</span> <span class=o>=&gt;</span> <span class=ss>:phone_number</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Dialing </span><span class=si>#{</span><span class=no>Rake</span><span class=o>.</span><span class=n>application</span><span class=o>[</span><span class=s1>&#39;phone_number&#39;</span><span class=o>].</span><span class=n>value</span><span class=si>}</span><span class=s2>...&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p><strong>Directory tasks</strong></p><p>It is common to need to create directories upon demand. The <code>directory</code> convenience method is a short-hand for creating a FileTask that creates the directory. However, the directory method does not accept prerequisites or actions, but both prerequisites and actions can be added later.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>directory</span> <span class=s2>&#34;testdata&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=s2>&#34;testdata&#34;</span> <span class=o>=&gt;</span> <span class=o>[</span><span class=s2>&#34;otherdata&#34;</span><span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=n>file</span> <span class=s2>&#34;testdata&#34;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=n>cp</span> <span class=no>Dir</span><span class=o>[</span><span class=s2>&#34;standard_data/*.data&#34;</span><span class=o>]</span><span class=p>,</span> <span class=s2>&#34;testdata&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p><strong>Clean and Clobber Tasks</strong></p><p>Through <code>require 'rake/clean'</code> Rake provides<code>clean</code> and <code>clobber</code> tasks:</p><ul><li><code>clean:</code> Clean up the project by deleting scratch files and backup files. Add files to the <code>CLEAN</code> FileList to have the <code>clean</code> target handle them.</li><li><code>clobber:</code> Clobber all generated and non-source files in a project. The task depends on <code>clean</code>, so all the <code>CLEAN</code> files will be deleted as
+well as files in the <code>CLOBBER</code> FileList. The intent of this task is to return a project to its pristine, just unpacked state.</li></ul><p>You can add file names or glob patterns to both the <code>CLEAN</code> and <code>CLOBBER</code> lists.
+<span><label for=marginnote-4 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-4 class=margin-toggle>
+<span class=marginnote><span class=note-hint>RULE</span><br>Include rules to cleanup temporary files.</span></span></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=nb>require</span> <span class=s1>&#39;rake/clean&#39;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define some files to be cleaned</span>
+</span></span><span class=line><span class=cl><span class=no>CLEAN</span><span class=o>.</span><span class=n>include</span><span class=p>(</span><span class=s1>&#39;*.o&#39;</span><span class=p>,</span> <span class=s1>&#39;*.obj&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define some files to be clobbered</span>
+</span></span><span class=line><span class=cl><span class=no>CLOBBER</span><span class=o>.</span><span class=n>include</span><span class=p>(</span><span class=s1>&#39;*.exe&#39;</span><span class=p>,</span> <span class=s1>&#39;*.dll&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that generates some object files</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:compile</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=c1># code to compile source files into object files</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that links the object files into an executable</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:link</span> <span class=o>=&gt;</span> <span class=ss>:compile</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=c1># code to link object files into an executable</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that depends on the link task and cleans up afterwards</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:build</span> <span class=o>=&gt;</span> <span class=ss>:link</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Build complete&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that cleans up the generated object files</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:clean</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=no>Rake</span><span class=o>::</span><span class=no>Task</span><span class=o>[</span><span class=s1>&#39;clean&#39;</span><span class=o>].</span><span class=n>invoke</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;Object files cleaned&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define a task that clobbers all generated files</span>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:clobber</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=no>Rake</span><span class=o>::</span><span class=no>Task</span><span class=o>[</span><span class=s1>&#39;clobber&#39;</span><span class=o>].</span><span class=n>invoke</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;All generated files clobbered&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><h2 id=useful-powerups>Useful powerups&nbsp;<a class=anchor href=#useful-powerups></a></h2><h3 id=filelists>FileLists&nbsp;<a class=anchor href=#filelists></a></h3><p><code>FileList</code> allows you to write tasks that process a lot of files. It is essentially an array of files with special methods available.</p><p>Creating a file list is easy. Just give it the list of file names:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>fl</span> <span class=o>=</span> <span class=no>FileList</span><span class=o>[</span><span class=s1>&#39;file1.rb&#39;</span><span class=p>,</span> <span class=n>file2</span><span class=o>.</span><span class=n>rb</span><span class=err>&#39;</span><span class=o>]</span>
+</span></span></code></pre></div><p>Or give it a glob pattern:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>fl</span> <span class=o>=</span> <span class=no>FileList</span><span class=o>[</span><span class=s1>&#39;*.rb&#39;</span><span class=o>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># more fun</span>
+</span></span><span class=line><span class=cl><span class=no>FileList</span><span class=o>[</span><span class=s1>&#39;*.rb&#39;</span><span class=o>].</span><span class=n>each</span> <span class=k>do</span> <span class=o>|</span><span class=n>src</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>	<span class=c1># add tasks that process files here	</span>
+</span></span><span class=line><span class=cl>	<span class=n>file</span> <span class=n>target</span> <span class=o>=&gt;</span> <span class=n>src</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>		<span class=c1># actions</span>
+</span></span><span class=line><span class=cl>	<span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><h3 id=parallel-execution>Parallel execution&nbsp;<a class=anchor href=#parallel-execution></a></h3><p>Rake allows parallel execution of prerequisites using the following syntax:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>multitask</span> <span class=ss>copy_files</span><span class=p>:</span> <span class=sx>%w[copy_src copy_doc copy_bin]</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;All Copies Complete&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>In this example, <code>copy_files</code> is a normal rake task. Its actions are executed
+whenever all of its prerequisites are done. The big difference is that the
+prerequisites (<code>copy_src</code>, <code>copy_bin</code> and <code>copy_doc</code>) are executed in
+parallel. Each of the prerequisites are run in their own Ruby thread,
+possibly allowing faster overall runtime.</p><h3 id=rules>Rules&nbsp;<a class=anchor href=#rules></a></h3><p>Rule tasks, also known as synthesized tasks, have the same characteristics as all other kinds of tasks: they have a name, they can have zero or more actions, they can have prerequisites, and if Rake determines the task needs to be run it will only be run once.</p><p>What makes rule tasks different is that you don’t actually give them a name – I know, I just said that rule tasks have names, just bear with me – instead when you declare the task you give it a pattern in place of a name.<sup id=fnref:2><a href=#fn:2 class=footnote-ref role=doc-noteref>2</a></sup></p><p>Regular expression based matching:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>rule</span> <span class=sr>/foo/</span> <span class=k>do</span> <span class=o>|</span><span class=n>task</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s1>&#39;called task named: %s&#39;</span> <span class=o>%</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>Specifying regular expression matched rules with syntactic sugar:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>rule</span> <span class=s1>&#39;.txt&#39;</span> <span class=k>do</span> <span class=o>|</span><span class=n>task</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s1>&#39;creating file: %s&#39;</span> <span class=o>%</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl>  <span class=n>touch</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>Specifying dependencies:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>rule</span> <span class=s1>&#39;.dependency&#39;</span> <span class=k>do</span> <span class=o>|</span><span class=n>task</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s1>&#39;called task: %s&#39;</span> <span class=o>%</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>rule</span> <span class=s1>&#39;.task&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;.dependency&#39;</span> <span class=k>do</span> <span class=o>|</span><span class=n>task</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s1>&#39;called task: %s&#39;</span> <span class=o>%</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p><strong>Rules for Files</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>rule</span> <span class=s1>&#39;.txt&#39;</span> <span class=o>=&gt;</span> <span class=s1>&#39;.template&#39;</span> <span class=k>do</span> <span class=o>|</span><span class=n>task</span><span class=o>|</span>
+</span></span><span class=line><span class=cl>  <span class=n>cp</span> <span class=n>task</span><span class=o>.</span><span class=n>source</span><span class=p>,</span> <span class=n>task</span><span class=o>.</span><span class=n>name</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><h2 id=advanced-rakefile>Advanced Rakefile&nbsp;<a class=anchor href=#advanced-rakefile></a></h2><h3 id=accessing-other-tasks>Accessing Other Tasks&nbsp;<a class=anchor href=#accessing-other-tasks></a></h3><p>You can directly manipulate the input, output, and actions of one task from another. For instance,</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>task</span> <span class=ss>:doit</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=nb>puts</span> <span class=s2>&#34;DONE&#34;</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>:dont</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=no>Rake</span><span class=o>::</span><span class=no>Task</span><span class=o>[</span><span class=ss>:doit</span><span class=o>].</span><span class=n>clear</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span></code></pre></div><p>Running this example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=err>$</span> <span class=n>rake</span> <span class=n>doit</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=k>in</span> <span class=sr>/Users/</span><span class=n>jim</span><span class=o>/</span><span class=n>working</span><span class=o>/</span><span class=n>git</span><span class=o>/</span><span class=n>rake</span><span class=o>/</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=no>DONE</span>
+</span></span><span class=line><span class=cl><span class=err>$</span> <span class=n>rake</span> <span class=n>dont</span> <span class=n>doit</span>
+</span></span><span class=line><span class=cl><span class=p>(</span><span class=k>in</span> <span class=sr>/Users/</span><span class=n>jim</span><span class=o>/</span><span class=n>working</span><span class=o>/</span><span class=n>git</span><span class=o>/</span><span class=n>rake</span><span class=o>/</span><span class=n>x</span><span class=p>)</span>
+</span></span></code></pre></div><h3 id=namespaces>Namespaces&nbsp;<a class=anchor href=#namespaces></a></h3><p>When your Rakefile grows, it&rsquo;s a good idea to bundle tasks into separate namespaces as an additional layer of organization. This is done using <code>namespace</code>.
+<span><label for=marginnote-5 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-5 class=margin-toggle>
+<span class=marginnote><span class=note-hint>CAUTION</span><br>File tasks are not scoped by namespace command since they refer to actual physical file on the system.</span></span></p><p>For example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=n>namespace</span> <span class=s2>&#34;main&#34;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=n>task</span> <span class=ss>:build</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Build the main program</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>namespace</span> <span class=s2>&#34;samples&#34;</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>  <span class=n>task</span> <span class=ss>:build</span> <span class=k>do</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Build the sample programs</span>
+</span></span><span class=line><span class=cl>  <span class=k>end</span>
+</span></span><span class=line><span class=cl><span class=k>end</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>task</span> <span class=ss>build</span><span class=p>:</span> <span class=sx>%w[main:build samples:build]</span>
+</span></span></code></pre></div><p>This post should provide you sufficient details to get started with a
+majority of tasks. If you are done with the post, But I highly recommend
+checking out <a href=https://github.com/ruby/rake>other</a>
+<a href=https://martinfowler.com/articles/rake.html>excellent</a>
+<a href=https://www.stuartellis.name/articles/rake/>resources</a> that dive deeper
+into specific details.</p><div class=footnotes role=doc-endnotes><hr><ol><li id=fn:1><p><a href=https://github.com/ruby/rake/blob/master/doc/rakefile.rdoc>Rakefile Format: A Ruby script for defining and running tasks with Rake</a>&#160;<a href=#fnref:1 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li><li id=fn:2><p><a href=http://jacobswanner.com/development/2014/rake-rule-tasks/>A tutorial on rake rule tasks</a>&#160;<a href=#fnref:2 class=footnote-backref role=doc-backlink>&#8617;&#xfe0e;</a></p></li></ol></div></article><div class=footer><div class=footer-content><div><ul></ul><a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a></div></div></div></body></html>

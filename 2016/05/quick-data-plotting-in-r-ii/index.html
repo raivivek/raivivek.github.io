@@ -1,0 +1,42 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=author content><meta name=robots content="index,follow"><meta name=referrer content="no-referrer"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon><link rel=canonical href=https://raivivek.in/2016/05/quick-data-plotting-in-r-ii/><title>Quick Data Plotting in R - II | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css><script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script></head><body><div class=c-banner><div class=c-banner-title>SHORTS</div><div class=c-banner-subclause><i>by Vivek</i></div><div class=c-nav-bar><a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a></div></div><article><header><h2>Quick Data Plotting in R - II</h2><p class=subtitle>(more) Useful tips for exploratory data analysis</p></header><p>In the
+<a href=../quickplotting-in-r>first</a> part
+of the posts on R, I outlined a couple of useful strategies for quick
+exploratory data analysis and visualization using R programming language. In
+this post, I will share a few more examples (in a case-study like manner) along
+with relevant plots for better demonstration.</p><h3 id=getting-rid-of-artificial-patterns>Getting rid of artificial patterns&nbsp;<a class=anchor href=#getting-rid-of-artificial-patterns></a></h3><p>Plotting a graph where one or more attributes have identical values results in
+a graph which looks stratified. Closely spaced points with similar values tend
+to fall along a line and create artificial patterns. Consider for example,
+the plot shown below where Y-axis has many identical values.</p><figure><label for=marginnote-0 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-0 class=margin-toggle>
+<span class=marginnote><strong>Scatter plot. </strong>A stratified appearance of a non-random repeated data.
+</span><img src=/images/non_random.png></figure><p>This artifact looks bad and hides the appearance of the data. It is difficult to
+figure out which regions are denser or sparser than the others. To get rid of it,
+we add a small random noise independently to the axes which have many identical
+values and contribute to the artifact. It will cause the values to shift
+sufficiently enough to appear dispersed without influencing your analyses (since
+there perturbations are random).</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=o>&gt;</span> <span class=n>dy</span> <span class=o>&lt;-</span> <span class=n>runif</span><span class=p>(</span><span class=n>length</span><span class=p>(</span><span class=n>y</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=o>&gt;</span> <span class=n>plot</span><span class=p>(</span><span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=o>+</span><span class=n>dy</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># in case plotting two independent variables</span>
+</span></span><span class=line><span class=cl><span class=o>&gt;</span> <span class=n>dx</span> <span class=o>&lt;-</span> <span class=n>runif</span><span class=p>(</span><span class=n>length</span><span class=p>(</span><span class=n>x</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=o>&gt;</span> <span class=n>plot</span><span class=p>(</span><span class=n>x</span><span class=o>+</span><span class=n>dx</span><span class=p>,</span> <span class=n>y</span><span class=o>+</span><span class=n>dy</span><span class=p>)</span>
+</span></span></code></pre></div><p>The result:</p><figure><label for=marginnote-1 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-1 class=margin-toggle>
+<span class=marginnote><strong>Scatter plot with jitter. </strong>Small random noise added to each point allows you to <em>visualize</em> better.
+</span><img src=/images/dy_nonrandom.png></figure><h3 id=transparency-helps>Transparency helps&nbsp;<a class=anchor href=#transparency-helps></a></h3><p>If we have a large number of data points, our scatter plot can easily become
+a blob despite using <code>pch='.'</code>. A good idea in those cases is to color the
+points with a level of transparency. This allows the regions of the plot with
+dense cluster of points to show up as dark regions when compared to less dense
+regions. It also makes it easy to spot and estimate outliers.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&gt; plot(x+dx, y+dy, col=gray(0, .5))
+</span></span></code></pre></div><figure><label for=marginnote-2 class=margin-toggle>⊕</label>
+<input type=checkbox id=marginnote-2 class=margin-toggle>
+<span class=marginnote><strong>Example figure using transparency. </strong>The col parameter is changed from top left (opaque) to bottom right (.3) with increasing transparency. Notice the edges as they appear more diffused.
+</span><img src=/images/quad_plot.png></figure><p>One can further enrich these visuals by drawing the outlier boundaries
+<a href=https://en.wikipedia.org/wiki/Median_absolute_deviation>MAD-Median rule</a>) and
+coloring the points that lie outside the range.</p><p>That’s all for now. Will add more later.</p></article><div class=footer><div class=footer-content><div><ul></ul><a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a></div></div></div></body></html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Code on Shorts</title><link>https://raivivek.in/code/</link><description>Recent content in Code on Shorts</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 23 Feb 2023 01:39:42 -0800</lastBuildDate><atom:link href="https://raivivek.in/code/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn you Rake</title><link>https://raivivek.in/2020/05/learn-you-rake/</link><pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate><guid>https://raivivek.in/2020/05/learn-you-rake/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Rake_(software)">Rake&lt;/a> is a task runner, and in
+my opinion, a worthy replacement of Make. It is written in
+&lt;a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby&lt;/a> and, as a result,
+has the immense benefit of being concise, pleasant to eyes, and fun to write.&lt;/p></description></item><item><title>Vim for Writing</title><link>https://raivivek.in/2016/09/vim-for-writing/</link><pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/09/vim-for-writing/</guid><description>&lt;p>I happen to be a &lt;a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim&lt;/a> &lt;a href="https://github.com/vivekiitkgp/Dotfiles-vim">user&lt;/a>—not
+because I practice terminal voodoo or intend to push the limits of keyboard
+efficiency—because Vim is what I started with and had no reasons to move on. If
+you do not find Vim to be a reasonable choice, that is perfectly fine. There
+exists a natural equilibrium in the community where users keep keep updating
+their preferences as the tools evolve.&lt;/p></description></item><item><title>Open {data, science, source} - OpenSNP.org</title><link>https://raivivek.in/2016/08/open-data-science-source-opensnp.org/</link><pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/08/open-data-science-source-opensnp.org/</guid><description>&lt;h2 id="april-2016">April, 2016&lt;/h2>
+&lt;p>“What’s the worst that can happen? Not like it will be different this time.
+some sleep”, I told myself as I prepared to brace the bad news. The clock moves
+closer to midnight with every passing moment, but I am too tired to think
+about it anymore.&lt;/p></description></item><item><title>Quick Data Plotting in R - II</title><link>https://raivivek.in/2016/05/quick-data-plotting-in-r-ii/</link><pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/quick-data-plotting-in-r-ii/</guid><description>&lt;p>In the
+&lt;a href="../quickplotting-in-r">first&lt;/a> part
+of the posts on R, I outlined a couple of useful strategies for quick
+exploratory data analysis and visualization using R programming language. In
+this post, I will share a few more examples (in a case-study like manner) along
+with relevant plots for better demonstration.&lt;/p></description></item><item><title>Quick Data Plotting in R - I</title><link>https://raivivek.in/2016/05/quick-data-plotting-in-r-i/</link><pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/quick-data-plotting-in-r-i/</guid><description>&lt;p>Python is my all time favorite programming language. I use it all the time. It
+is simple, readable and easy to get started, something which I picked up four
+years ago when I went through the first offering of &lt;em>Interactive Programming
+with Python&lt;/em> course on Coursera. Python’s simplicity and appeal has continued to
+grow over time, supported by a wide community and a rich environment of
+packages.&lt;/p></description></item><item><title>WIGI – an inspire grantee</title><link>https://raivivek.in/2016/05/wigi-an-inspire-grantee/</link><pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/wigi-an-inspire-grantee/</guid><description>&lt;p>&lt;a href="https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index">The Wikipedia Indicators of Gender
+Inequality&lt;/a>
+(WIGI) project aims to study and characterize gender representation on Wikipedia by studying
+trends in growth of biography articles. The project is led by
+&lt;a href="http://notconfusing.com">Maximilian Klein&lt;/a>, a PhD student at
+the University of Minnesota, and Dr. Piotr Konieczny.&lt;/p></description></item><item><title>Bypassing Proxy Servers</title><link>https://raivivek.in/2015/09/bypassing-proxy-servers/</link><pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/09/bypassing-proxy-servers/</guid><description>&lt;p>IIT Kharagpur uses a proxy server to enable outside internet connections. Whatever be the
+use case from the perspective of the institution, it is a nightmare to use for us
+students. Most of the standard ports are blocked resulting in SSH difficulties, accessing
+&lt;em>ill-fated&lt;/em> websites, or inability to use programs that connect directory to a specific
+address or port. Further, not all applications honor the proxy settings further increasing
+your frustration, specially if you are a programmer.&lt;/p></description></item><item><title>Diving Deeper into BLAST - III</title><link>https://raivivek.in/2014/11/diving-deeper-into-blast-iii/</link><pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/11/diving-deeper-into-blast-iii/</guid><description>&lt;p>&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK1763/">BLAST+&lt;/a> is an incredible tool
+and does it job in a pretty decent way. However, anyone who has worked
+with it for some time with some non trivial details has their own
+horror stories to tell. For the past few months where I have been
+engaged in development of
+&lt;a href="https://github.com/yannickwurm/sequenceserver">SequenceServer&lt;/a>, we got
+a lot of opportunities to see the ugly inconsistencies buried within an
+otherwise beautiful program.&lt;/p></description></item><item><title>Diving Deeper into BLAST - II</title><link>https://raivivek.in/2014/08/diving-deeper-into-blast-ii/</link><pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/08/diving-deeper-into-blast-ii/</guid><description>&lt;p>This is a follow up of the
+&lt;a href="https://raivivek.in/code/understanding-blast-output">previous post&lt;/a>
+where I was trying to parse the BLAST+ XML output to create an efficient data
+layer in SequenceServer. A critical and often demanded feature for the
+application was the ability to have a graphical overview of all the obtained
+hits. NCBI&amp;rsquo;s BLAST portal, for instance, includes a graphical overview of
+your results that summarizes how many hits you got and how do they score.
+
+
+
+
+
+
+ &lt;label for="marginnote-0" class="margin-toggle">⊕&lt;/label>
+ &lt;input type="checkbox" id="marginnote-0" class="margin-toggle">
+ &lt;span class="marginnote">
+ 
+ 
+ &lt;img src="https://raivivek.in/images/ncbi.png" >
+ 
+ 
+
+ 
+ Graphical summary of BLAST results as displayed on NCBI portal.
+ 
+ 
+ 
+
+ &lt;/span>
+
+
+
+
+ However, we had nothing for SequenceServer.&lt;/p></description></item><item><title>Diving Deeper into BLAST - I</title><link>https://raivivek.in/2014/07/diving-deeper-into-blast-i/</link><pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/07/diving-deeper-into-blast-i/</guid><description>&lt;p>In my previous post, I mentioned about a project I was trying to work
+on: &lt;a href="http://www.sequenceserver.com">SequenceServer&lt;/a>. Also, in the end I said that I would
+be writing about the BLAST algorithm (which is the backbone of this project) and how does
+it works so efficiently in producing alignments even with very long sequences. However, In
+this post I would like to talk about BLAST program and it's output before we go into the
+algorithm some time later.&lt;/p></description></item><item><title>Introduction to Sequenceserver</title><link>https://raivivek.in/2014/05/introduction-to-sequenceserver/</link><pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/05/introduction-to-sequenceserver/</guid><description>&lt;p>Contributing to open source is quite an exciting journey. I embarked
+upon this path recently with few contributions to &lt;a href="http://www.sequenceserver.com/">SequenceServer - A
+BLAST tool&lt;/a>, a bioinformatics software
+built around BLAST+ that lets you setup a custom BLAST+ server to perform BLAST queries
+with your own database locally through a web interface.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on Shorts</title><link>https://raivivek.in/</link><description>Recent content in Home on Shorts</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://raivivek.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Learn you Rake</title><link>https://raivivek.in/2020/05/learn-you-rake/</link><pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate><guid>https://raivivek.in/2020/05/learn-you-rake/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Rake_(software)">Rake&lt;/a> is a task runner, and in
+my opinion, a worthy replacement of Make. It is written in
+&lt;a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)">Ruby&lt;/a> and, as a result,
+has the immense benefit of being concise, pleasant to eyes, and fun to write.&lt;/p></description></item><item><title>List of books I have read</title><link>https://raivivek.in/2019/list-of-books-i-have-read/</link><pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate><guid>https://raivivek.in/2019/list-of-books-i-have-read/</guid><description>Books are magic.</description></item><item><title>Physics of Life 2017</title><link>https://raivivek.in/2017/06/physics-of-life-2017/</link><pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate><guid>https://raivivek.in/2017/06/physics-of-life-2017/</guid><description>&lt;p>&lt;span class="newthought"> Frans &lt;/span>
+Johansson, in his popular
+bestseller book &lt;a href="https://en.wikipedia.org/wiki/The_Medici_Effect:_Breakthrough_Insights_at_the_Intersection_of_Ideas,_Concepts,_and_Cultures">&lt;em>The Medici
+Effect&lt;/em>&lt;/a>,
+makes an argument:&lt;/p>
+&lt;blockquote cite="">
+&lt;p> The &lt;em>intersection&lt;/em> is the best place to innovate. These innovations change the
+world in leaps along new directions by opening up new fields, creating new
+information and allowing creators to become leaders. This intersection is the
+place where wildly different ideas from various areas bump into each other
+and build upon each other. &lt;/p></description></item><item><title>Vim for Writing</title><link>https://raivivek.in/2016/09/vim-for-writing/</link><pubDate>Tue, 27 Sep 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/09/vim-for-writing/</guid><description>&lt;p>I happen to be a &lt;a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim&lt;/a> &lt;a href="https://github.com/vivekiitkgp/Dotfiles-vim">user&lt;/a>—not
+because I practice terminal voodoo or intend to push the limits of keyboard
+efficiency—because Vim is what I started with and had no reasons to move on. If
+you do not find Vim to be a reasonable choice, that is perfectly fine. There
+exists a natural equilibrium in the community where users keep keep updating
+their preferences as the tools evolve.&lt;/p></description></item><item><title>Overview of BOSC and ISMB, 2016</title><link>https://raivivek.in/2016/09/overview-of-bosc-and-ismb-2016/</link><pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/09/overview-of-bosc-and-ismb-2016/</guid><description>&lt;p>This year I attended the Intelligent Systems for Molecular Biology (ISMB) from
+July 8-12 in Orlando, Florida. But before I talk about my experience of the
+conference (and amazing Disney World!), let me roll back a bit and tell you
+about why I was there.
+&lt;label for="marginnote-0" class="margin-toggle">⊕&lt;/label>
+&lt;input type="checkbox" id="marginnote-0" class="margin-toggle">
+&lt;span class="marginnote">
+&lt;img src="//www.iscb.org/images/stories/ismb2016/downloads/ISMB2016_vertical.jpeg" >
+ISMB 2016.
+&lt;/span>
+&lt;/p></description></item><item><title>A Letter in the Name of Science</title><link>https://raivivek.in/2016/08/a-letter-in-the-name-of-science/</link><pubDate>Sat, 27 Aug 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/08/a-letter-in-the-name-of-science/</guid><description>&lt;p>Posted below is an email that I rediscovered in my mailbox a few days ago. I had no memory
+of it whatsoever, perhaps because I never received a reply from the intended recipient.
+Whatever be the reasons, looking back at it today feels like discovering a diamond in the
+rough.&lt;/p></description></item><item><title>Open {data, science, source} - OpenSNP.org</title><link>https://raivivek.in/2016/08/open-data-science-source-opensnp.org/</link><pubDate>Mon, 22 Aug 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/08/open-data-science-source-opensnp.org/</guid><description>&lt;h2 id="april-2016">April, 2016&lt;/h2>
+&lt;p>“What’s the worst that can happen? Not like it will be different this time.
+some sleep”, I told myself as I prepared to brace the bad news. The clock moves
+closer to midnight with every passing moment, but I am too tired to think
+about it anymore.&lt;/p></description></item><item><title>Quick Data Plotting in R - II</title><link>https://raivivek.in/2016/05/quick-data-plotting-in-r-ii/</link><pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/quick-data-plotting-in-r-ii/</guid><description>&lt;p>In the
+&lt;a href="../quickplotting-in-r">first&lt;/a> part
+of the posts on R, I outlined a couple of useful strategies for quick
+exploratory data analysis and visualization using R programming language. In
+this post, I will share a few more examples (in a case-study like manner) along
+with relevant plots for better demonstration.&lt;/p></description></item><item><title>Quick Data Plotting in R - I</title><link>https://raivivek.in/2016/05/quick-data-plotting-in-r-i/</link><pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/quick-data-plotting-in-r-i/</guid><description>&lt;p>Python is my all time favorite programming language. I use it all the time. It
+is simple, readable and easy to get started, something which I picked up four
+years ago when I went through the first offering of &lt;em>Interactive Programming
+with Python&lt;/em> course on Coursera. Python’s simplicity and appeal has continued to
+grow over time, supported by a wide community and a rich environment of
+packages.&lt;/p></description></item><item><title>WIGI – an inspire grantee</title><link>https://raivivek.in/2016/05/wigi-an-inspire-grantee/</link><pubDate>Thu, 05 May 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/05/wigi-an-inspire-grantee/</guid><description>&lt;p>&lt;a href="https://meta.wikimedia.org/wiki/Grants:IdeaLab/WIGI:_Wikipedia_Gender_Index">The Wikipedia Indicators of Gender
+Inequality&lt;/a>
+(WIGI) project aims to study and characterize gender representation on Wikipedia by studying
+trends in growth of biography articles. The project is led by
+&lt;a href="http://notconfusing.com">Maximilian Klein&lt;/a>, a PhD student at
+the University of Minnesota, and Dr. Piotr Konieczny.&lt;/p></description></item><item><title>Review: The Inner Game of Tennis</title><link>https://raivivek.in/2016/review-the-inner-game-of-tennis/</link><pubDate>Sun, 17 Apr 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/review-the-inner-game-of-tennis/</guid><description>&lt;p>In the book ‘The Inner Game of Tennis’, author Timothy Gallway talks about
+different aspects of learning (or acquiring) a new skill. He argues that key to
+acquiring any new skill requires contribution from two distinct entities in your
+brain, which he calls &lt;em>Self-1&lt;/em> and &lt;em>Self-2&lt;/em>. Tennis is simply an example author
+uses to put forward his ideas and provide demonstration. More so, because he had
+been a tennis coach and a good player himself. The two &lt;em>selves&lt;/em> can loosely be
+equated to &lt;em>System 1&lt;/em> and &lt;em>System 2&lt;/em> discussed by Daniel Kahneman in his famous
+book &lt;a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow">&lt;em>Thinking Fast and
+Slow&lt;/em>&lt;/a>. I strongly
+recommend the latter if you haven’t read it yet.&lt;/p></description></item><item><title>Writing My Journal of *TILs*</title><link>https://raivivek.in/2016/03/writing-my-journal-of-tils/</link><pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/03/writing-my-journal-of-tils/</guid><description>&lt;p>Have you ever wondered about your daily &lt;em>Niagara of words&lt;/em>?
+&lt;span>
+&lt;label for="sidenote-0" class="margin-toggle sidenote-number">&lt;/label>
+&lt;input type="checkbox" id="sidenote-0" class="margin-toggle"/>
+&lt;span class="sidenote">‘Language in Thought and Action’ by &lt;em>S.I. Hayakawa&lt;/em>.&lt;/span>
+&lt;/span>
+&lt;/p>
+&lt;p>From the moment you wake up in the morning till the moment you go to bed, you
+are exposed to constant sources of information. Whether it’s your morning
+newspaper, your boss, a group of friends that you hang out with, or the
+multitude of feed applications on your smartphone; your brain is being flooded
+by a Niagara of words.
+&lt;span>
+&lt;label for="sidenote-1" class="margin-toggle sidenote-number">&lt;/label>
+&lt;input type="checkbox" id="sidenote-1" class="margin-toggle"/>
+&lt;span class="sidenote">&amp;ldquo;[&amp;hellip;] by 2015, the sum of media asked for and delivered to consumers on
+mobile devices and to their homes would take more than 15 hours a day to see
+or hear. That volume is equal to 6.9 million-million gigabytes of
+information, or a daily consumption of nine DVDs worth of data per person per
+day.&amp;rdquo; &lt;a href="http://www.marshall.usc.edu/faculty/centers/ctm/research/how-much-media">&lt;em>How Much Media? 2015, Report on American Consumers&lt;/em>&lt;/a>&amp;quot;&lt;/span>
+&lt;/span>
+Each of these sources has the power to shape
+your thoughts and inevitably your actions by carefully
+&lt;strike>manipulating&lt;/strike> controlling the nature, time and placement of the
+content. Like it or not, every day you draw new inferences from things you hear
+about people you may or may not know and create subtle judgments in your mind.&lt;/p></description></item><item><title>Metabolic Network Analysis - I</title><link>https://raivivek.in/2016/03/metabolic-network-analysis-i/</link><pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/03/metabolic-network-analysis-i/</guid><description>&lt;p>In this short tutorial, we will explore the basic steps of a metabolic network
+analysis.&lt;/p>
+&lt;p>For our convenience, we will avoid using full models or discuss their
+reconstruction methods, instead focus on simple reactions to create
+a theoretical background. However, the steps can be scaled without any loss of
+generality. The related exercises should help build a theoretical background
+along with necessary programming skills.&lt;br>
+&lt;label for="marginnote-0" class="margin-toggle">⊕&lt;/label>
+&lt;input type="checkbox" id="marginnote-0" class="margin-toggle">
+&lt;span class="marginnote">
+&lt;img src="https://raivivek.in/images/metabolic_network.png" >
+Metabolic network showing interactions between enzymes and metabolites in the Arabidopsis thaliana citric acid cycle. Enzymes and metabolites are the red dots and interactions between them are the lines. &lt;a href="https://en.wikipedia.org/wiki/Metabolic_network_modelling">Wikipedia&lt;/a>
+&lt;/span>
+&lt;/p></description></item><item><title>Review: Burmese Days</title><link>https://raivivek.in/2016/review-burmese-days/</link><pubDate>Thu, 18 Feb 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/review-burmese-days/</guid><description>&lt;div class="epigraph">
+&lt;blockquote>
+&lt;p>
+It is one of the tragedies of the half-educated that they develop late, when they are already committed to some wrong way of life.
+&lt;/p>
+&lt;footer>
+George Orwell,
+&lt;cite>Burmese Days&lt;/cite>
+&lt;/footer>
+&lt;blockquote>
+&lt;/div>
+&lt;p>&lt;a href="https://www.goodreads.com/book/show/1072932.Burmese_Days" style="float: left; padding-right: 20px">&lt;img border="0" alt="Burmese Days" src="https://d.gr-assets.com/books/1360566162m/1072932.jpg" />&lt;/a>&lt;a href="https://www.goodreads.com/book/show/1072932.Burmese_Days">Burmese Days&lt;/a> by &lt;a href="https://www.goodreads.com/author/show/3706.George_Orwell">George Orwell&lt;/a>&lt;br/>
+My rating: &lt;a href="https://www.goodreads.com/review/show/1544925544">4 of 5 stars&lt;/a>&lt;br />&lt;/p></description></item><item><title>How to Give a Good Talk</title><link>https://raivivek.in/2016/02/how-to-give-a-good-talk/</link><pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/02/how-to-give-a-good-talk/</guid><description>&lt;p>There are many more ways to get a presentation wrong than there are to get it
+right. Good presentors (and presentations) are hard to come by. But I believe
+it is a skill that can be learned and acquired.&lt;/p></description></item><item><title>WikiProject article submission</title><link>https://raivivek.in/2016/01/wikiproject-article-submission/</link><pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/01/wikiproject-article-submission/</guid><description>&lt;p>Almost an year ago, I had written a &lt;a href="https://raivivek.in/old/blog/contributing-to-wikipedia-wikiprojects.html">blog post&lt;/a> about different Wikipedia
+WikiProjects and how one could contribute to them. In short, A &lt;a href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject">WikiProject&lt;/a> is simply an
+organized effort by the community of editors on the Wikipedia, where they
+try to curate and improve the quality of articles belonging to
+a particular genre or of specific interest to a group. In loose terms, WikiProjects to Wikipedia are what
+&lt;a href="https://www.reddit.com/subreddits">subreddits&lt;/a> are to &lt;a href="https://reddit.com">reddit&lt;/a>.&lt;/p></description></item><item><title>Notes from Systems Biology Winter School</title><link>https://raivivek.in/2016/01/notes-from-systems-biology-winter-school/</link><pubDate>Fri, 15 Jan 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/01/notes-from-systems-biology-winter-school/</guid><description>&lt;p>This winter, I attended the fourth session of &lt;a href="https://www.icts.res.in/program/current/details/361/">Winter School on Quantitative
+Systems Biology&lt;/a> at &lt;a href="https://icts.res.in">International Centre for Theoretical Sciences (ICTS)&lt;/a>,
+Bangalore. The school is organized by the ICTS, Bangalore and &lt;a href="https://www.ictp.it">ICTP,
+Italy&lt;/a> in
+jointly as a part of their ICTP-ICTS Programme in Biology since 2012.&lt;/p></description></item><item><title>Notes from WMCB 2016</title><link>https://raivivek.in/2016/01/notes-from-wmcb-2016/</link><pubDate>Sat, 09 Jan 2016 00:00:00 +0000</pubDate><guid>https://raivivek.in/2016/01/notes-from-wmcb-2016/</guid><description>&lt;p>This weekend (Jan 9 - Jan 10), I participated in a workshop on mathematical and
+computational biology
+(&lt;a href="https://web.archive.org/web/20160111112304/http://www.iiserkol.ac.in/~mathbio/WMCB2016/">WMCB-2016&lt;/a>)
+organized at &lt;a href="http://www.iiserkol.ac.in/">Indian Institute of Science Education and Research
+Kolkata&lt;/a> (IISER-K). This annual workshop is co-sponsored
+by &lt;a href="http://www.iiserpune.ac.in/~mbio/?q=nnmcb">NNMCB&lt;/a>, a group of multiple
+premier institutions in India that coordinate activities in the area of
+interest.&lt;/p></description></item><item><title>Lessons for Good Life</title><link>https://raivivek.in/2015/12/lessons-for-good-life/</link><pubDate>Tue, 29 Dec 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/12/lessons-for-good-life/</guid><description>&lt;p>Robert Waldinger&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, a psychiatrist at Harvard Medical School talks about a famous
+long term study of adult development done by Harvard and shares his findings
+about what made the lives of the participants happy or sad as they aged. While
+the talk itself isn&amp;rsquo;t very detailed and offers a &lt;em>too long, didn&amp;rsquo;t read&lt;/em> summary, the
+publications page&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> on the website offers a comprehensive and has an interesting list of
+findings.
+&lt;span>
+&lt;label for="marginnote-0" class="margin-toggle">&amp;#8853;&lt;/label>
+&lt;input type="checkbox" id="marginnote-0" class="margin-toggle"/>
+&lt;span class="marginnote">
+&lt;a href="http://www.ted.com/talks/robert_waldinger_what_makes_a_good_life_lessons_from_the_longest_study_on_happiness/transcript?language=en">Robert Waldinger: What makes a good life? Lessons from the longest study on
+happiness&lt;/a>
+&lt;/span>
+&lt;/span>
+&lt;/p></description></item><item><title>A challenging course catalog</title><link>https://raivivek.in/2015/09/a-challenging-course-catalog/</link><pubDate>Tue, 15 Sep 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/09/a-challenging-course-catalog/</guid><description>&lt;p>I&amp;rsquo;m very excited to talk about my course catalog for the fall semester, specially
+because it&amp;rsquo;s turning about to be pretty challenging and full of new
+information.&lt;/p>
+&lt;p>&lt;strong>Prologue:&lt;/strong>
+During my research internship at Indian Institute of Science, I had the
+opportunity to attend several lecture series by eminent professors, who
+introduced us to different fields (e.g., Biomechanics, Systems Biology) and
+relevant research they have done in their careers. While all of the lectures
+were insightful, one which caught my most attention were those delivered
+Dr. Aditya Murthy on neuroscience. His amazing presentation skills, sense of
+humor and rigor left me in awe!&lt;/p></description></item><item><title>Bypassing Proxy Servers</title><link>https://raivivek.in/2015/09/bypassing-proxy-servers/</link><pubDate>Fri, 04 Sep 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/09/bypassing-proxy-servers/</guid><description>&lt;p>IIT Kharagpur uses a proxy server to enable outside internet connections. Whatever be the
+use case from the perspective of the institution, it is a nightmare to use for us
+students. Most of the standard ports are blocked resulting in SSH difficulties, accessing
+&lt;em>ill-fated&lt;/em> websites, or inability to use programs that connect directory to a specific
+address or port. Further, not all applications honor the proxy settings further increasing
+your frustration, specially if you are a programmer.&lt;/p></description></item><item><title>Protein Knots&amp;colon; A tangled story</title><link>https://raivivek.in/2015/08/protein-knotscolon-a-tangled-story/</link><pubDate>Sat, 22 Aug 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/08/protein-knotscolon-a-tangled-story/</guid><description>&lt;p>Journal Club is a weekly paper presentation session organized in our department
+by us, where one could present an remarkable research finding,
+discuss a new experimental technique or simply introduce everyone to a new or
+less explored field in the area of biology. I have mentioned about this
+initiative in my earlier posts, and it is something that I really feel excited
+to talk about. The audience size is pretty decent (around 15-20 people)
+consisting of professors, research scholar, graduates and undergraduate
+students.&lt;/p></description></item><item><title>Working with pore forming toxin - II</title><link>https://raivivek.in/2015/07/working-with-pore-forming-toxin-ii/</link><pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/07/working-with-pore-forming-toxin-ii/</guid><description>&lt;div class="epigraph">
+&lt;blockquote>
+&lt;p>
+Give a man a fish and you feed him for a day. Teach a man to fish and you feed him for a lifetime.
+&lt;/p>
+&lt;footer>
+&lt;cite>Chinese Proverb&lt;/cite>
+&lt;/footer>
+&lt;blockquote>
+&lt;/div>
+&lt;p>This chinese proverb accurately describes my summer experience at the Indian
+Institute of Science this year. After weeks of hard work &amp;ndash; wet-lab
+experiments with long hours, nearly two hours of commute everyday, and
+precarious meal planning &amp;ndash; my internship finally concluded on July 10 after
+eight long weeks (May 11 - July 10).&lt;/p></description></item><item><title>Working with pore forming toxin - I</title><link>https://raivivek.in/2015/05/working-with-pore-forming-toxin-i/</link><pubDate>Sat, 23 May 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/05/working-with-pore-forming-toxin-i/</guid><description>&lt;blockquote>
+&lt;p>A learning experience is one of those things that says, “You know that thing
+you just did? Don&amp;rsquo;t do that.”&lt;/p>
+&lt;p>Douglas Adams, &lt;em>The Salmon of Doubt&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>Douglas Adam was correct about Experience. It is a harsh teacher. The fact that
+words like &amp;ldquo;struggle&amp;rdquo;, &amp;ldquo;fail fast&amp;rdquo;, &amp;ldquo;don&amp;rsquo;t give up&amp;rdquo; are commonly used to describe some of
+its lessons, speaks about the inherent difficulty of the whole process &amp;mdash; and none
+of it more visible anywhere than when learning something new.&lt;/p></description></item><item><title>research needs funding</title><link>https://raivivek.in/2015/04/research-needs-funding/</link><pubDate>Wed, 08 Apr 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/04/research-needs-funding/</guid><description>&lt;p>&lt;a href="https://www.quora.com/Brian-Farley-3">Brian Farley&lt;/a> writes ..&lt;/p>
+&lt;blockquote>
+&lt;p>I&amp;rsquo;ve said this before on Quora, and I&amp;rsquo;m probably going to say it many more
+times, but, all of the problems in academia can be traced back to &lt;strong>scarce
+funding and the ridiculous competition it engenders&lt;/strong>. The reluctance to fund
+academia and research, in turn, comes from a completely skewed perception by
+the public of what academia is supposed to accomplish &amp;ndash; which in no small part
+comes from the capitalist marketplace thinking that permeates almost everything
+our society does.&lt;/p></description></item><item><title>Papers per week</title><link>https://raivivek.in/2015/04/papers-per-week/</link><pubDate>Sat, 04 Apr 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/04/papers-per-week/</guid><description>&lt;div class="epigraph">
+&lt;blockquote>
+&lt;p>
+Research is to see what everybody else has seen, and to think what nobody else has thought.
+&lt;/p>
+&lt;footer>
+Albert Szent-Gyorgyi
+&lt;/footer>
+&lt;blockquote>
+&lt;/div>
+&lt;p>Reading research papers, literature survey as one may call it, is one of the
+primary tasks of any research enthusiast, student, academician, or researcher.
+As we advance through our academic career, the complexity and quantity of
+content keeps increasing until the text books give up. The inflow of
+information is too rapid and too vast to be contained and sufficiency conveyed
+to the target audience, thus necessitating the need of specialized sources.&lt;/p></description></item><item><title>The Importance of Reading</title><link>https://raivivek.in/2015/04/the-importance-of-reading/</link><pubDate>Sat, 04 Apr 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/04/the-importance-of-reading/</guid><description>&lt;div class="epigraph">
+&lt;blockquote>
+&lt;p>
+As he read, I fell in love the way you fall asleep: slowly, and then all at once.
+&lt;/p>
+&lt;footer>
+John Green,
+&lt;cite>&lt;a href="https://www.goodreads.com/book/show/11870085-the-fault-in-our-stars">The Fault in Our Stars&lt;/a>&lt;/cite>
+&lt;/footer>
+&lt;blockquote>
+&lt;/div>
+&lt;p>Reading is one of the fundamental habits that we learn as a child. Even
+before our temporal abilities are decently developed (usually by the end of
+third month after birth), people sing songs, lullabies, read stories or make
+interesting noises to stimulate our brain. Not much later, reading becomes
+out favorite activity where we have already irritated our parents to read
+&lt;em>Winnie-the-Pooh&lt;/em> over and again for umpteenth time. This habit, however,
+grows only up to the teenage years and then starts to diminish, only to
+increase again later in
+life.&lt;a href="http://files.eric.ed.gov/fulltext/ED496343.pdf">1&lt;/a>&lt;/p></description></item><item><title>Review: What is Life?</title><link>https://raivivek.in/2015/review-what-is-life/</link><pubDate>Tue, 10 Mar 2015 00:00:00 +0000</pubDate><guid>https://raivivek.in/2015/review-what-is-life/</guid><description>&lt;div class="epigraph">
+&lt;blockquote>
+&lt;p>
+If a man never contradicts himself, the reason must be that he virtually
+never says anything at all.
+&lt;/p>
+&lt;footer>
+&lt;cite>Erwin Schrödinger&lt;/cite>
+&lt;/footer>
+&lt;blockquote>
+&lt;/div>
+&lt;p>Written by &lt;a href="https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger">Erwin
+Schrödinger&lt;/a>, an eminent
+physicist and Nobel Prize winner, the book &lt;strong>What is Life?&lt;/strong> (&lt;a href="http://whatislife.stanford.edu/LoCo_files/What-is-Life.pdf">get
+here&lt;/a>) is an attempt
+to understand the aspects of life as manifested by living organisms. As
+philosophical it may sound, the author instead endeavors to understand the
+organization and behavior of &lt;em>life&lt;/em> &amp;ndash; from individual cells to higher organism,
+from the point of a physicist. The book is appealing even to lay readers and
+builds on important conceptual constructs of physics without delving too much
+into mathematical formulations.&lt;/p></description></item><item><title>Diving Deeper into BLAST - III</title><link>https://raivivek.in/2014/11/diving-deeper-into-blast-iii/</link><pubDate>Tue, 11 Nov 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/11/diving-deeper-into-blast-iii/</guid><description>&lt;p>&lt;a href="http://www.ncbi.nlm.nih.gov/books/NBK1763/">BLAST+&lt;/a> is an incredible tool
+and does it job in a pretty decent way. However, anyone who has worked
+with it for some time with some non trivial details has their own
+horror stories to tell. For the past few months where I have been
+engaged in development of
+&lt;a href="https://github.com/yannickwurm/sequenceserver">SequenceServer&lt;/a>, we got
+a lot of opportunities to see the ugly inconsistencies buried within an
+otherwise beautiful program.&lt;/p></description></item><item><title>Diving Deeper into BLAST - II</title><link>https://raivivek.in/2014/08/diving-deeper-into-blast-ii/</link><pubDate>Fri, 22 Aug 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/08/diving-deeper-into-blast-ii/</guid><description>&lt;p>This is a follow up of the
+&lt;a href="https://raivivek.in/code/understanding-blast-output">previous post&lt;/a>
+where I was trying to parse the BLAST+ XML output to create an efficient data
+layer in SequenceServer. A critical and often demanded feature for the
+application was the ability to have a graphical overview of all the obtained
+hits. NCBI&amp;rsquo;s BLAST portal, for instance, includes a graphical overview of
+your results that summarizes how many hits you got and how do they score.
+&lt;label for="marginnote-0" class="margin-toggle">⊕&lt;/label>
+&lt;input type="checkbox" id="marginnote-0" class="margin-toggle">
+&lt;span class="marginnote">
+&lt;img src="https://raivivek.in/images/ncbi.png" >
+Graphical summary of BLAST results as displayed on NCBI portal.
+&lt;/span>
+However, we had nothing for SequenceServer.&lt;/p></description></item><item><title>Diving Deeper into BLAST - I</title><link>https://raivivek.in/2014/07/diving-deeper-into-blast-i/</link><pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/07/diving-deeper-into-blast-i/</guid><description>&lt;p>In my previous post, I mentioned about a project I was trying to work
+on: &lt;a href="http://www.sequenceserver.com">SequenceServer&lt;/a>. Also, in the end I said that I would
+be writing about the BLAST algorithm (which is the backbone of this project) and how does
+it works so efficiently in producing alignments even with very long sequences. However, In
+this post I would like to talk about BLAST program and it's output before we go into the
+algorithm some time later.&lt;/p></description></item><item><title>Introduction to Sequenceserver</title><link>https://raivivek.in/2014/05/introduction-to-sequenceserver/</link><pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate><guid>https://raivivek.in/2014/05/introduction-to-sequenceserver/</guid><description>&lt;p>Contributing to open source is quite an exciting journey. I embarked
+upon this path recently with few contributions to &lt;a href="http://www.sequenceserver.com/">SequenceServer - A
+BLAST tool&lt;/a>, a bioinformatics software
+built around BLAST+ that lets you setup a custom BLAST+ server to perform BLAST queries
+with your own database locally through a web interface.&lt;/p></description></item></channel></rss>

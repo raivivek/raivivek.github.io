@@ -1,0 +1,106 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=author content><meta name=robots content="index,follow"><meta name=referrer content="no-referrer"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon><link rel=canonical href=https://raivivek.in/2016/09/vim-for-writing/><title>Vim for Writing | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css><script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script></head><body><div class=c-banner><div class=c-banner-title>SHORTS</div><div class=c-banner-subclause><i>by Vivek</i></div><div class=c-nav-bar><a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a></div></div><article><header><h2>Vim for Writing</h2><p class=subtitle>Extended configuration and plugins for improved experience</p></header><p>I happen to be a <a href=https://en.wikipedia.org/wiki/Vim_(text_editor)>Vim</a> <a href=https://github.com/vivekiitkgp/Dotfiles-vim>user</a>—not
+because I practice terminal voodoo or intend to push the limits of keyboard
+efficiency—because Vim is what I started with and had no reasons to move on. If
+you do not find Vim to be a reasonable choice, that is perfectly fine. There
+exists a natural equilibrium in the community where users keep keep updating
+their preferences as the tools evolve.</p><p>Over years, I have spent countless hours learning my editor environment and
+customizing it to my needs. It was not an easy task, and to to some extent,
+justified the funny <a href=https://www.thejach.com/imgs/vim_learning.jpg>learning curves of classical text
+editors</a>. Nonetheless, With time
+Vim went beyond an excellent code editor and developed into my primary writing tool for composing
+emails, editing and proof-reading drafts, and writing thesis. Naturally, some configurations adopted
+for code-heavy environment demanded a revisit.</p><p>However, one of the good aspects of Vim is its extreme level of customizability. Vim can
+be extended much beyond its &lsquo;out of the box&rsquo; abilities by writing plugins in
+<a href=https://en.wikipedia.org/wiki/Vimscript>Vimscript</a> — a programming language
+written specifically for Vim. Since programmers like to configure and adapt
+their tools to their programming environment and experience, over thousands of
+plugins have been written and <a href=http://vim-scripts.org/>made available</a> for Vim.
+For example, plugins to add advanced auto-completion plugins, fuzzy-file
+searches, improved code search and navigation, custom shortcuts, and quick
+compile or debug tools. However, let&rsquo;s say this for record, you do not need to
+know Vimscript to use Vim and neither it is one of the most friendly languages
+to learn.</p><p>An important component of this experience is a set of plugins I added to my
+configuration, allowing me to observe typos, spelling mistakes, auto-correct
+minor errors, and even perform an advanced thesaurus lookup. If you are
+interested in such a setup for your Vim, this post might be useful.</p><h3 id=plugins>Plugins&nbsp;<a class=anchor href=#plugins></a></h3><p>I used the following plugins — most of them are by <a href=https://github.com/reedes/>reedes</a>:</p><p><strong><a href=https://github.com/reedes/vim-pencil>vim-pencil</a></strong></p><p>The pencil plugin aspires to make Vim as powerful a tool for writers as it is
+for coders by focusing narrowly on the handful of tweaks needed to smooth the
+path to writing prose.</p><p><strong><a href=https://github.com/reedes/vim-wordy>vim-wordy</a></strong></p><p>Highlights weak patterns of writing, for example, weasel words, jargon, opinion,
+redundant words, similies.</p><p><strong><a href=https://github.com/reedes/vim-ditto>vim-ditto</a></strong></p><p>Highlights repeated use of a phrase of word in your text. For example, over
+usage of <em>very</em>, <em>much</em>, <em>like</em>.</p><p><strong><a href=https://github.com/reedes/vim-litecorrect>vim-litecorrect</a></strong></p><p>Lightweight auto-correct plugin that replaces commonly mistaken patterns of text
+with the correct one, for example, <em>teh</em> to <em>the</em>, <em>heer</em> to <em>here</em>, <em>Im</em> to
+<em>I’m</em>.</p><p><strong><a href=https://github.com/reedes/vim-ditto>vim-lexical</a></strong></p><p>Builds on Vim&rsquo;s spell-check and thesaurus/dictionary completion.</p><p><strong>vim-textobj-user, vim-textobj-sentence, vim-textobj-quotes</strong></p><p>Add additional text objects to Vim. For example, ‘,” (quotes) characters,
+sentence or paragraph level navigation and selection, quickly selecting and
+editing dates and times.</p><p><strong><a href=https://github.com/vim-scripts/LanguageTool>vim-LanguageTool</a></strong></p><p>Wrapper around LanguageTool that runs the application in background and allows
+navigation and correction from inside the Vim.</p><p><strong><a href=https://github.com/beloglazov/vim-online-thesaurus>vim-online-thesaurus</a></strong></p><p>Quickly look up any word on Thesaurus.com to get synonyms, antonyms and other
+details available.</p><h3 id=installation>Installation&nbsp;<a class=anchor href=#installation></a></h3><p>The easiest way to set up and maintain these plugins is to use a Vim Plugin
+manager. There are many — <a href=https://github.com/tpope/vim-pathogen>Pathogen</a>, <a href=https://github.com/Shougo/neobundle.vim/>NeoBundle</a>, <a href=https://github.com/VundleVim/Vundle.vim>Vundle</a>, <a href=https://github.com/junegunn/vim-plug>Vim-Plug</a>, <a href=https://github.com/Shougo/dein.vim>Dein</a> — but
+I find <code>vim-plug</code> easiest to configure and use. The snippets given on this page,
+thus, can be directly used with your vim-plug configuration. However, if you are
+using any other plugin manager, you can find equivalent installation
+instructions on their respective web pages.
+<span><label for=marginnote-0 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-0 class=margin-toggle>
+<span class=marginnote>The <code>for</code> argument for each of the plugins specifies Vim to load these plugins
+only where certain file types are edited — it&rsquo;s called lazy-loading. Also, you
+must have <code>vim-plug</code> installed and the code pasted between the <code>call plug#begin()</code> and <code>call plug#end</code> statements.</span></span></p><p>Just add these plugins to your <code>.vimrc</code> :</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=c>&#34; Writing and Text-Objects plugins {{{</span>
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;kana/vim-textobj-user&#39;</span>
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;vim-scripts/LanguageTool&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-textobj-quote&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-textobj-sentence&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-litecorrect&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-wordy&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-pencil&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;reedes/vim-lexical&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=nx>Plug</span> <span class=s1>&#39;dbmrq/vim-ditto&#39;</span><span class=p>,</span> {<span class=s1>&#39;for&#39;</span>: [<span class=s1>&#39;text&#39;</span><span class=p>,</span> <span class=s1>&#39;markdown&#39;</span>]}
+</span></span><span class=line><span class=cl><span class=c>&#34; }}}</span>
+</span></span></code></pre></div><p>Once done, save your <code>.vimrc</code> and exit. Open Vim again and run <code>PlugInstall</code>.
+Vim-Plug will install the plugins one by one.</p><h3 id=configuration>Configuration&nbsp;<a class=anchor href=#configuration></a></h3><p>The installation is almost complete — except the Language Tool plugin. It is simply a wrapper of the main
+program which you can download from the <a href=https://www.languagetool.org/>website</a> and extract in a convenient
+location on your disk. We&rsquo;ll need the path of <code>jar</code> files for proper plugin
+configuration.</p><p>After the installation is complete, we need to add a few lines to initialize to
+initialize the setup:
+<span><label for=marginnote-1 class=margin-toggle>&#8853;</label>
+<input type=checkbox id=marginnote-1 class=margin-toggle>
+<span class=marginnote>Note that the lines should be added outside the <code>plug#begin</code> and <code>plug#end</code>
+calls — preferably towards the end.</span></span></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-vim data-lang=vim><span class=line><span class=cl><span class=c>&#34; Custom {{{</span>
+</span></span><span class=line><span class=cl><span class=k>function</span><span class=p>!</span> <span class=nx>Prose</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>call</span> <span class=nx>pencil</span>#<span class=nx>init</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>call</span> <span class=nx>lexical</span>#<span class=nx>init</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>call</span> <span class=nx>litecorrect</span>#<span class=nx>init</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>call</span> <span class=nx>textobj</span>#<span class=nx>quote</span>#<span class=nx>init</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>  <span class=nx>call</span> <span class=nx>textobj</span>#<span class=nx>sentence</span>#<span class=nx>init</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>  &#34; manual reformatting shortcuts</span>
+</span></span><span class=line><span class=cl>  <span class=nx>nnoremap</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>silent</span><span class=p>&gt;</span> <span class=nx>Q</span> <span class=nx>gqap</span>
+</span></span><span class=line><span class=cl>  <span class=nx>xnoremap</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>silent</span><span class=p>&gt;</span> <span class=nx>Q</span> <span class=nx>gq</span>
+</span></span><span class=line><span class=cl>  <span class=nx>nnoremap</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>silent</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>leader</span><span class=p>&gt;</span><span class=nx>Q</span> <span class=nx>vapJgqap</span>
+</span></span><span class=line><span class=cl><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>  &#34; force top correction on most recent misspelling</span>
+</span></span><span class=line><span class=cl>  <span class=nx>nnoremap</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>c</span><span class=p>-</span><span class=nx>s</span><span class=p>&gt;</span> [<span class=nx>s1z</span><span class=p>=&lt;</span><span class=nx>c</span><span class=p>-</span><span class=nx>o</span><span class=p>&gt;</span>
+</span></span><span class=line><span class=cl>  <span class=nx>inoremap</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>c</span><span class=p>-</span><span class=nx>s</span><span class=p>&gt;</span> <span class=p>&lt;</span><span class=nx>c</span><span class=p>-</span><span class=nx>g</span><span class=p>&gt;</span><span class=nx>u</span><span class=p>&lt;</span><span class=nx>Esc</span><span class=p>&gt;</span>[<span class=nx>s1z</span><span class=p>=</span>`]<span class=nx>A</span><span class=p>&lt;</span><span class=nx>c</span><span class=p>-</span><span class=nx>g</span><span class=p>&gt;</span><span class=nx>u</span>
+</span></span><span class=line><span class=cl><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>  &#34; replace common punctuation</span>
+</span></span><span class=line><span class=cl>  <span class=nx>iabbrev</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>--</span> –
+</span></span><span class=line><span class=cl>  <span class=nx>iabbrev</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>---</span> —
+</span></span><span class=line><span class=cl>  <span class=nx>iabbrev</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&lt;&lt;</span> «
+</span></span><span class=line><span class=cl>  <span class=nx>iabbrev</span> <span class=p>&lt;</span><span class=nx>buffer</span><span class=p>&gt;</span> <span class=p>&gt;&gt;</span> »
+</span></span><span class=line><span class=cl><span class=k>endfunction</span>
+</span></span><span class=line><span class=cl><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; automatically initialize buffer by file type</span>
+</span></span><span class=line><span class=cl><span class=k>autocmd</span> <span class=nx>FileType</span> <span class=nx>markdown</span><span class=p>,</span><span class=nx>mkd</span><span class=p>,</span><span class=nx>text</span><span class=p>,</span><span class=nx>rst</span> <span class=nx>call</span> <span class=nx>Prose</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=c>
+</span></span></span><span class=line><span class=cl><span class=c>&#34; invoke manually by command for other file types</span>
+</span></span><span class=line><span class=cl><span class=nx>command</span><span class=p>!</span> <span class=p>-</span><span class=nx>nargs</span><span class=p>=</span><span class=m>0</span> <span class=nx>Prose</span> <span class=nx>call</span> <span class=nx>Prose</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>let</span> <span class=nx>g</span>:<span class=nx>languagetool_jar</span><span class=p>=</span><span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=cl>}}}&#34;
+</span></span></code></pre></div><p>In the last line, insert the path of <code>languagetool-commandline.jar</code> file that
+you extracted from Language Tool binaries downloaded in previous step.</p><p>That&rsquo;s all. You are set. There are a few advanced usage options that you might
+be interested in setting up. The plugin documentations and help files are
+useful for that purpose. Alternatively, take a look at <a href=https://github.com/vivekiitkgp/Dotfiles-vim/blob/vim-plug-2/config/general.vim>my configuration</a>.</p><h3 id=preview>Preview&nbsp;<a class=anchor href=#preview></a></h3><p><img src=http://i.imgur.com/cXDCwdE.gif, alt=vim-writing-mode-preview title="Taken from vim-wordy repository."></p></article><div class=footer><div class=footer-content><div><ul></ul><a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a></div></div></div></body></html>

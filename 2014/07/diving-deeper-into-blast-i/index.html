@@ -1,0 +1,132 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=author content><meta name=robots content="index,follow"><meta name=referrer content="no-referrer"><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=https://raivivek.in//favicon.ico type=image/x-icon><link rel=canonical href=https://raivivek.in/2014/07/diving-deeper-into-blast-i/><title>Diving Deeper into BLAST - I | Shorts</title>
+<link rel=stylesheet href=https://raivivek.in/style.min.css><script src=//instant.page/3.0.0 type=module defer integrity=sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1></script></head><body><div class=c-banner><div class=c-banner-title>SHORTS</div><div class=c-banner-subclause><i>by Vivek</i></div><div class=c-nav-bar><a href=https://raivivek.in/>home</a>
+<a href=https://raivivek.in/science>science</a>
+<a href=https://raivivek.in/code>code</a>
+<a href=https://raivivek.in/scribbles>scribbles</a>
+<a href=https://raivivek.in/books>books</a>
+<a href=https://raivivek.in/about>about</a></div></div><article><header><h2>Diving Deeper Into BLAST - I</h2><p class=subtitle>Understanding BLAST output</p></header><p>In my previous post, I mentioned about a project I was trying to work
+on: <a href=http://www.sequenceserver.com>SequenceServer</a>. Also, in the end I said that I would
+be writing about the BLAST algorithm (which is the backbone of this project) and how does
+it works so efficiently in producing alignments even with very long sequences. However, In
+this post I would like to talk about BLAST program and it's output before we go into the
+algorithm some time later.</p><p>After talking to <a href=https://github.com/yeban>Priyam</a> (one of the project
+collaborators), I decided to work towards solving the <a href=https://github.com/yannickwurm/sequenceserver/issues/21>issue
+#21</a>, which in
+turn would help us to solve a large number of other dependent issues as
+well. This was supposed to be a major improvement and I really liked the
+idea of it. Especially since it was concerned with understanding the
+BLAST program and its output format.</p><h3 id=background>Background&nbsp;<a class=anchor href=#background></a></h3><p><a href=https://github.com/yannickwurm/sequenceserver/issues/21>Issue 21</a> deals with
+displaying an overview graphic for the output results obtained from
+blasting. This is a nice feature as it adds more towards visualizing and
+understanding the data easily (than going over a large number of hits in
+many cases). The problem however is that because of the hacky way in
+which the current implementation worked for displaying the final output
+results, it was not very easy to work with generation of visuals. The
+data generated from BLAST output had to be parsed first into a data
+layer and then interfaced with other features like displaying overview
+graphic or other rich information. This required three things from my
+side - Ruby, BLAST, and Patience.</p><h3 id=diving-into-xml>Diving into XML&nbsp;<a class=anchor href=#diving-into-xml></a></h3><p>The blast output format can be reconfigured using the
+<code>outfmt</code> option which is described in the NCBI&rsquo;s <a href="www.ncbi.nlm.nih.gov/books/NBK1763/?report=reader#!po=91.5094">BLAST
+Manual</a>.
+The sample XML output (standard settings) has the following structure
+(for a real example
+<a href=https://gist.github.com/vivekiitkgp/e9fb422f177bec7f56b6#file-blast-xml>blast.xml</a>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>&lt;?xml version=&#34;1.0&#34;?&gt;
+</span></span><span class=line><span class=cl>&lt;!DOCTYPE BlastOutput PUBLIC &#34;-//NCBI//NCBI BlastOutput/EN&#34; &#34;http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd&#34;&gt;
+</span></span><span class=line><span class=cl>&lt;BlastOutput&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_program&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_version&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_reference&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_db&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_query-ID&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_query-def&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_query-len&gt;
+</span></span><span class=line><span class=cl>  &lt;BlastOutput_param&gt;
+</span></span><span class=line><span class=cl>    &lt;Parameters&gt;
+</span></span><span class=line><span class=cl>      &lt;Parameters_matrix&gt;
+</span></span><span class=line><span class=cl>      &lt;Parameters_expect&gt;
+</span></span><span class=line><span class=cl>      &lt;Parameters_gap-open&gt;
+</span></span><span class=line><span class=cl>      &lt;Parameters_gap-extend&gt;
+</span></span><span class=line><span class=cl>      &lt;Parameters_filter&gt;
+</span></span><span class=line><span class=cl>    &lt;/Parameters&gt;
+</span></span><span class=line><span class=cl>  &lt;/BlastOutput_param&gt;
+</span></span><span class=line><span class=cl>&lt;BlastOutput_iterations&gt;
+</span></span><span class=line><span class=cl>&lt;Iteration&gt;
+</span></span><span class=line><span class=cl>  -- Iteration details --
+</span></span><span class=line><span class=cl>&lt;Iteration_hits&gt;
+</span></span><span class=line><span class=cl>&lt;Hit&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_num&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_id&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_def&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_accession&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_len&gt;
+</span></span><span class=line><span class=cl>  &lt;Hit_hsps&gt;
+</span></span><span class=line><span class=cl>    &lt;Hsp&gt;
+</span></span><span class=line><span class=cl>  -- HSP Details --
+</span></span><span class=line><span class=cl>    &lt;/Hsp&gt;
+</span></span><span class=line><span class=cl>  &lt;/Hit_hsps&gt;
+</span></span><span class=line><span class=cl>&lt;/Hit&gt;
+</span></span><span class=line><span class=cl>&lt;Hit&gt; &lt;/Hit&gt;
+</span></span><span class=line><span class=cl>&lt;/Iteration_hits&gt;
+</span></span><span class=line><span class=cl>&lt;Iteration_stat&gt;
+</span></span><span class=line><span class=cl>  -- Statistics about Query --
+</span></span><span class=line><span class=cl>&lt;/Iteration_stat&gt;
+</span></span><span class=line><span class=cl>&lt;/Iteration&gt;
+</span></span><span class=line><span class=cl>&lt;/BlastOutput_iterations&gt;
+</span></span><span class=line><span class=cl>&lt;/BlastOutput&gt;
+</span></span></code></pre></div><p>The XML output is as detailed as it could be including all the
+information about Hit&rsquo;s High Scoring Segment Pair or <a href=https://genomevolution.org/wiki/index.php/High-scoring_segment_pair>HSP</a>,
+the <code>query-database</code>, <code>alignment-lengths</code>, the <code>query</code> &
+<code>aligned-sequences</code> along with the matches between them, and
+<code>query-statistics</code>. This is as useful as it could be and helps to
+generate very detailed statistics and overview too. I would recommend
+one to look at the given example of blast.xml to understand what kind of
+data is generated. To parse this generated XML output easily, I used the
+<a href=https://rubygems.org/gems/ox>Ox</a> rubygem, which is a simple and
+<a href=http://www.ohler.com/dev/xml_with_ruby/xml_with_ruby.html>faster</a>
+alternative of other XML parsers available in Ruby. In the beginning, I
+generated a simple Hash out of this parsed data using recursive
+traversal along the elements.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>def report! 
+</span></span><span class=line><span class=cl>  # Generates BLAST report which one or more multiple Query objects
+</span></span><span class=line><span class=cl>  # based on the blast query string.
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  parsed_out = Ox.parse(@result)
+</span></span><span class=line><span class=cl>  hashed_out = node_to_dict(parsed_out.root)
+</span></span><span class=line><span class=cl>  @program = hashed_out[&#34;BlastOutput_program&#34;]
+</span></span><span class=line><span class=cl>  @querydb = hashed_out[&#34;BlastOutput_db&#34;]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>  hashed_out[&#34;BlastOutput_iterations&#34;].each do |n|
+</span></span><span class=line><span class=cl>    @queries ||= {}
+</span></span><span class=line><span class=cl>    @queries[n[2]] = Query.new(n[1], n[2], n[3], {}, n[5][&#34;Statistics&#34;])
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    # Ensure a hit object is received. No hits, returns a newline.
+</span></span><span class=line><span class=cl>    # Note that checking to &#34;\n&#34; doesn&#39;t work since n[4] = [&#34;\n&#34;]
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    if n[4]==[&#34;\n&#34;]
+</span></span><span class=line><span class=cl>      @queries[n[2]][:hits] = &#34;No hits found.&#34;
+</span></span><span class=line><span class=cl>    else
+</span></span><span class=line><span class=cl>      n[4].each do |hits|
+</span></span><span class=line><span class=cl>        @queries[n[2]][:hits][hits[1]] = Hit.new(hits[0], hits[1], hits[2],
+</span></span><span class=line><span class=cl>                                                 hits[3], hits[4], {})
+</span></span><span class=line><span class=cl>        @queries[n[2]][:hits][hits[1]][:hsp] = HSP.new(*hits[5][&#34;Hsp&#34;].values)
+</span></span><span class=line><span class=cl>      end
+</span></span><span class=line><span class=cl>    end
+</span></span><span class=line><span class=cl>  end
+</span></span><span class=line><span class=cl>end
+</span></span></code></pre></div><p>This Hash is then used for easy templating (using
+<a href=http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html>erb</a>) and
+display of results in a more elegant and modular way. This keeps the
+data at one place which can then be used for overview graphic display or
+integration of other features and bug fixes in near future. All my work
+related to this can be found at
+<a href=https://github.com/vivekiitkgp/sequenceserver/tree/issue21>@issue21</a>
+branch. The code written till now, is very premature and <em>just</em> works. I
+plan to refactor it majorily and incorporate some very nice features of
+Ruby language (which I am desperately trying to understand).</p><p><a href="https://drive.google.com/file/d/0B3eGCB261PalWTJnODloLXAtdGM/edit?usp=sharing">Here</a>
+is a snapshot of what current output looks like, when SequenceServer is run.</p><h3 id=whats-next>What&rsquo;s next?&nbsp;<a class=anchor href=#whats-next></a></h3><p>The second part of this task deals with actually displaying the overview
+graphic for the hits obtained using SequenceServer. To give an idea of what it looks
+like, see <a href=http://www.biodalliance.org/>here</a> and
+<a href=http://canvasxpress.org/genome.html>here</a>. The target is to display
+similar graphic (but simple and easy to load/configure) for each hit in
+the Seqserv&rsquo;s output. I am yet to start working on and possibly the next
+post could be derived out of that work.</p><p>I would be very glad if you drop by to review my code and send in any
+suggestions. Feel free to reach me by whatever means.</p></article><div class=footer><div class=footer-content><div><ul></ul><a href=# class="pure-menu-link pull-right" id=gototop-btn>↑↑</a></div></div></div></body></html>
